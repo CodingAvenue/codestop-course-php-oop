@@ -37,4 +37,4 @@
     > Discover how you can organize and load class files automatically using `spl_autoload_register()` and `__autoload()` functions.
 
 * [Namespaces](content/Namespaces/Namespaces.q.md) ** -  minutes**
-    > Discover how you can group related classes, interfaces, methods and constants using the `namespace` keyword.
+    > Discover how you can group related classes, interfaces, methods, and constants using the `namespace` keyword.
