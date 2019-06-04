@@ -3,17 +3,20 @@
 * [Classes](content/Classes/Classes.q.md) ** -  minutes**
     > Classes are blueprints for objects. In this lesson, you will learn the basic building blocks of a class, its capabilities, and its uses.  
 
-* [Methods and Properties](content/MethodsAndProperties/MethodsAndProperties.q.md) ** -  minutes**
-    > Methods and properties are the basic building blocks of classes. In this lesson, you will learn how to add methods and properties to a class. 
-
 * [Objects](content/Objects/Objects.q.md) ** -  minutes**
     > Objects are the actual representation of a class. Discover how you can create objects from a class using the `new` keyword.
+
+* [Properties](content/Properties/Properties.q.md) ** -  minutes**
+    > Properties are the variables defined inside a class. In this lesson, you will learn how to add properties to a class. 
+
+* [Methods](content/Methods/Methods.q.md) ** -  minutes**
+    > Methods are one of the basic building blocks of classes. In this lesson, you will learn how to add methods to a class. 
 
 * [Visibility](content/Visibility/Visibility.q.md) ** -  minutes**
     > Explore the things you can do to manipulate the methods and properties of a class. In this lesson, you will learn what visibility is, how it works, and why it is important in Object Oriented PHP.
 
-* [Constructor and Destructor](content/ConstructorAndDestractor/ConstructorAndDestructor.q.md) ** -  minutes**
-    > Learn how you can use the `__construct()` and `__destruct()` methods to define constructor and destructor for a class.
+* [Constructor](content/Constructor/Constructor.q.md) ** -  minutes**
+    > Learn how you can use the `__construct()` method to define a constructor for a class.
 
 * [Inheritance](content/Inheritance/Inheritance.q.md) ** -  minutes**
     > Discover how classes inherit the methods and properties of another class using the `extends` keyword.
