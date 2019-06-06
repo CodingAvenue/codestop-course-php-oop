@@ -4,16 +4,14 @@
 
 ## Object-Oriented Programming (OOP) in PHP
 
-Object-Oriented Programming (OOP) in PHP is a programming language principle that helps in building complex and reusable web applications. 
+Object-Oriented Programming (OOP) in PHP is a programming language principle that helps in building complex and reusable web applications. It is designed for:
 
-Object-Oriented Programming (OOP) in PHP is designed for:
+* Learners who have completed `An Introduction to Basic PHP Programming` and `Intermediate PHP Programming`.
 
-* learners who have completed `An Introduction to Basic PHP Programming` and `Intermediate PHP Programming`.
+* Individuals who have backgrounds in PHP programming.
 
-* individuals who have backgrounds in PHP programming.
+* Experienced programmers who want to make a switch to an Object-Oriented approach.
 
-* experienced programmers who want to make a switch to an Object-Oriented approach.
+In this course, you will experience the step-by-step process of building and working with classes and objects using PHP's built-in Object-Oriented Programming capabilities. At the same time, you will learn the basic Object-Oriented Programming principles and how to use them in PHP.
 
-In this course, you will experience the step-by-step process of building and working with classes and objects using PHP's built-in Object-Oriented Programming (OOP) capabilities. At the same time, you will learn the basic Object-Oriented Programming (OOP) principles and how to use them in PHP.
-
-You will learn by answering questions and writing your own code. We skipped the lectures so that you will have more time to practice. Go beyond learning the syntax and experience how Object-Oriented Programming (OOP) in PHP works.
+You will learn by answering questions and writing your own code. We skipped the lectures so that you will have more time to practice. Go beyond learning the syntax and experience how Object-Oriented Programming in PHP works.
