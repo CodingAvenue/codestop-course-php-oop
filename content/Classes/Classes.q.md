@@ -458,7 +458,7 @@ On line 14, what does the statement `$myObject->myMethod();` do?
 
 /// type=SS, answer=[5]
 
-Which statements are true about a class?
+Which statement is true about a class?
 
  - It is an instance of an object.
 
