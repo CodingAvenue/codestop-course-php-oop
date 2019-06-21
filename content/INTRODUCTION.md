@@ -2,6 +2,14 @@
 
 **Duration**: 
 
+**Standards**: K-12 Computer Science Framework Core Concepts and Practices
+* Algorithms and Programming
+  - Collaborating Around Computing
+	- Recognizing and Defining Computational Problems
+	- Developing and Using Abstractions
+	- Creating Computational Artifacts
+	- Testing and Refining Computational Artifacts
+  
 ## Object-Oriented Programming (OOP) in PHP
 
 Object-Oriented Programming (OOP) in PHP is a programming language principle that helps in building complex and reusable web applications. It is designed for:
