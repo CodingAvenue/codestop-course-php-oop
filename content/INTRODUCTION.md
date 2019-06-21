@@ -5,10 +5,10 @@
 **Standards**: K-12 Computer Science Framework Core Concepts and Practices
 * Algorithms and Programming
   - Collaborating Around Computing
-	- Recognizing and Defining Computational Problems
-	- Developing and Using Abstractions
-	- Creating Computational Artifacts
-	- Testing and Refining Computational Artifacts
+  - Recognizing and Defining Computational Problems
+  - Developing and Using Abstractions
+  - Creating Computational Artifacts
+  - Testing and Refining Computational Artifacts
   
 ## Object-Oriented Programming (OOP) in PHP
 
