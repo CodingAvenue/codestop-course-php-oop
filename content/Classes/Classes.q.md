@@ -260,7 +260,7 @@ Which of the following is a method definition?
         }
     }
     	
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -327,7 +327,7 @@ Which of the following is a method?
 
 /// type=SS, answer=[2]
 
-In the statement `$myObject = new MyClass;` on line 12, what is `$myObject`?
+In the statement `$myObject = new MyClass();` on line 12, what is `$myObject`?
 
  - It is a method.
 
@@ -342,7 +342,7 @@ In the statement `$myObject = new MyClass;` on line 12, what is `$myObject`?
 
 /// type=SS, answer=[4]
 
-On line 12, what does the statement `$myObject = new MyClass;` do?
+On line 12, what does the statement `$myObject = new MyClass();` do?
 
  - It sets the value of `$myObject` to `MyClass`.
 
@@ -389,7 +389,7 @@ On line 14, what does the statement `echo $myObject->myProp;` do?
         }
     }
     	
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -427,7 +427,7 @@ On line 14, replace the statement `echo $myObject->myProp;` with `$myObject->myM
         }
     }
     	
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -539,7 +539,7 @@ Which statement is true about a method?
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -607,7 +607,7 @@ Correct the code so that it outputs the string `This is a class property.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -630,7 +630,7 @@ Correct the code so that it outputs the string `This is a class property.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -683,7 +683,7 @@ Correct the code so that it outputs the string `This is a class property.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -705,7 +705,7 @@ Correct the code so that it outputs the string `This is a class property.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -758,7 +758,7 @@ Correct the code so that it outputs the string `This is a class property.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     echo $myObject->myProp;
 ?>
@@ -780,7 +780,7 @@ Correct the code so that it outputs the string `This is a class property.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -833,7 +833,7 @@ Correct the code so that it outputs the string `This is a class method.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -856,7 +856,7 @@ Correct the code so that it outputs the string `This is a class method.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -909,7 +909,7 @@ Correct the code so that it outputs the string `This is a class method.`.
         }
     }
 
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -932,7 +932,7 @@ Correct the code so that it outputs the string `This is a class method.`.
         }
     }
     	
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -985,7 +985,7 @@ Remove the close curly brace `}` on line 10. Execute the program. What is the er
         }
     
     	
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -1023,7 +1023,7 @@ Remove the open curly brace `{` on line 7. Execute the program. What is the erro
         }
     
     	
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -1061,7 +1061,7 @@ Correct the code so that it outputs the string `This is a class method.`.
         }
     
     	
-    $myObject = new MyClass;
+    $myObject = new MyClass();
 
     $myObject->myMethod();
 ?>
@@ -1076,7 +1076,7 @@ Correct the code so that it outputs the string `This is a class method.`.
 
 /// type=CR, answer=[tests/Classes/CreateSimpleClassTest.php]
 
-Write a program that uses a `class` keyword to create a class definition of a `Person` class. First, use a `class` keyword to declare a class named `Person`. Within the curly braces `{}`, add a property definition of a class property `$name` with the value `Diana`. Next, add a method definition for `eat()` method. Inside the `eat()` method body, add an `echo` statement to display the string `This is an eat method.`. After the class declaration, add a statement `$pObject = new Person;` to instantiate a `Person` class. Then, add another statement `$pObject->eat();` to call a class method. Run the program to view the output.
+Write a program that uses a `class` keyword to create a class definition of a `Person` class. First, use a `class` keyword to declare a class named `Person`. Within the curly braces `{}`, add a property definition of a class property `$name` with the value `Diana`. Next, add a method definition for `eat()` method. Inside the `eat()` method body, add an `echo` statement to display the string `This is an eat method.`. After the class declaration, add a statement `$pObject = new Person();` to instantiate a `Person` class. Then, add another statement `$pObject->eat();` to call a class method. Run the program to view the output.
 
 ```php
 <?php
