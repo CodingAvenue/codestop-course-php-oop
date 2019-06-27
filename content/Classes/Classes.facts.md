@@ -16,8 +16,6 @@ class MyClass {
 }
 ```
 
-The name of the class is case-sensitive. `MyClass` and `myclass` are treated as two distinct classes.
-
 A class name should start with a letter or an underscore `_`, followed by any combination of alphanumeric characters and underscores (`A-Z`, `a-z`, `0-9`, `_`). 
 
 It is a good practice to capitalize the first letter of a class name to easily identify them from other variables. The examples of good class names are `MyClass`, `SuperHeroes`, and `Cars`.
