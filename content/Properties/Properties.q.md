@@ -1065,7 +1065,7 @@ Correct the code so that it outputs the string `Canada`.
 
 /// type=CR, answer=[tests/Properties/ManipulateObjectPropertiesTest.php]
 
-Write a program that manipulates the properties of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add a property definition of a class property `$type` with the value `Dog`. Add another property named `$breed`. Next, add a method definition for `move()` method. Inside the `move()` method body, add an `echo` statement to display the string `Animals move from one place to another.`. After the class declaration, add a statement that creates the `$pet` object an instance of an `Animal` class. Add another statement that assigns the value `Chihuahua` to the `$breed` property of the `$pet` object. Then, add an `echo` statement to display the value of the `$breed` property of `$pet`. Run the program to view the output.
+Write a program that manipulates the properties of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add a property definition of a class property `$type` with the value `Dog`. Add another property definition of a class property named `$breed`. Next, add a method definition for `move()` method. Inside the `move()` method body, add an `echo` statement to display the string `Animals move from one place to another.`. After the class declaration, add a statement that creates the `$pet` object an instance of an `Animal` class. Add another statement that assigns the value `Chihuahua` to the `$breed` property of the `$pet` object. Then, add an `echo` statement to display the value of the `$breed` property of `$pet`. Run the program to view the output.
 
 ```php
 <?php
