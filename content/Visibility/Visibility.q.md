@@ -152,7 +152,7 @@ Which statements correctly describe the code on line 5?
 
 /// type=SS, answer=[4]
 
-In the statement `if($this->checkAge($newAge))` on line 9, what is `$newAge`?
+In the statement `if ($this->checkAge($newAge))` on line 9, what is `$newAge`?
 
  - It is a property.
 
@@ -167,7 +167,7 @@ In the statement `if($this->checkAge($newAge))` on line 9, what is `$newAge`?
 
 /// type=SS, answer=[1]
 
-In the statement `if($this->checkAge($newAge))` on line 9, what is `checkAge()`?
+In the statement `if ($this->checkAge($newAge))` on line 9, what is `checkAge()`?
 
  - It is a method.
 
