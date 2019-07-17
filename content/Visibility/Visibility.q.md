@@ -17,7 +17,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -29,7 +29,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -210,7 +210,7 @@ On lines 9, 10, and 11, what does the `if` statement do?
  - It does not execute the statement `$this->age = $newAge;` if the method call inside the parentheses `()` evaluates to `false`. 
 
 
-/// type=MS, asnwer=[1,2,3,4]
+/// type=MS, answer=[1,2,3,4]
 
 Which statements correctly describe the `checkAge()` method of the `Person` class.
 
@@ -240,7 +240,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -252,7 +252,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -298,7 +298,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -310,7 +310,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -401,7 +401,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -413,7 +413,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -459,7 +459,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -471,7 +471,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -517,7 +517,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -529,7 +529,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -575,7 +575,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -587,7 +587,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -707,7 +707,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -719,7 +719,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -795,7 +795,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -807,7 +807,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -838,7 +838,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -850,7 +850,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -911,7 +911,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -923,7 +923,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -954,7 +954,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -966,7 +966,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -1027,7 +1027,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -1039,7 +1039,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -1070,7 +1070,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -1082,7 +1082,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -1143,7 +1143,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -1155,7 +1155,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -1186,7 +1186,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -1198,7 +1198,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -1241,7 +1241,7 @@ Remove the `new` keyword from the statement `$pObject = new Person();` on line 3
 
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR), expecting `';'` on line number 16
 
- -  syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
+ - syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -1259,7 +1259,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -1271,7 +1271,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
@@ -1299,7 +1299,7 @@ Remove the `if` construct on line 21, Execute the program. What is the error mes
 
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR), expecting `';'` on line number 16
 
- -  syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
+ - syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -1317,7 +1317,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -1357,7 +1357,7 @@ Remove the `$this` pseudo-variable from the statement `return $this->age;` on li
 
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR), expecting `';'` on line number 16
 
- -  syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
+ - syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -1375,7 +1375,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -1415,7 +1415,7 @@ Remove the `private` keyword from the property definition `private $age;` on lin
 
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR), expecting `';'` on line number 16
 
- -  syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
+ - syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -1433,7 +1433,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }

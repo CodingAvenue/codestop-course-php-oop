@@ -23,7 +23,7 @@ class Person
 
     public function setAge($newAge)
     {
-        if($this->checkAge($newAge)) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
         }
     }
@@ -35,7 +35,7 @@ class Person
 
     private function checkAge($age)
     {
-        if($age > 0) {
+        if ($age > 0) {
             return true;
         }
         return false;
