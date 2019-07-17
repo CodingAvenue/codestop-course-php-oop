@@ -661,16 +661,16 @@ Which statement best describes a method?
 
 Which statement is true about the `$this` pseudo-variable?
 
- - It is the value of a class.
+ - It closes a method of a class.
 
- - It is an instance of a class.
+ - It creates a method in a class.
 
- - It is a variable defined inside a class.
+ - It returns a method value in a class.
 
- - It is a function inside a class that performs a specific action.
+ - It sets the value of a method in a class.
 
- - It is a pseudo-variable that accesses the class properties and methods within a class. 
- 
+ - It accesses the properties and methods within a class. 
+
 
 /// type=SS, answer=[3]
 
