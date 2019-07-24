@@ -212,7 +212,7 @@ On lines 9, 10, and 11, what does the `if` statement do?
 
 /// type=MS, answer=[1,2,3,4]
 
-Which statements correctly describe the `checkAge()` method of the `Person` class.
+Which statements correctly describe the `checkAge()` method of the `Person` class?
 
  - It is accessible only within the `Person` class.
 
