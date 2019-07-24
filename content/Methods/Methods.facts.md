@@ -57,6 +57,6 @@ In the above example, the code breaks down as follows:
 
  - `public function getAge() { }` is the method definition without a parameter.
 
- - `return $this->age;` is a statement the returns the value of the `$age` property after the `getAge()` method is called.
+ - `return $this->age;` is a statement that returns the value of the `$age` property after the `getAge()` method is called.
 
  - `$pObject->setAge(18)` and `$pObject->getAge()` are the call to the `setAge()` and `getAge()` methods of the `$pObject` object.
