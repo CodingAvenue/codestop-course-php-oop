@@ -53,7 +53,7 @@ Which of the following is a visibility keyword?
  - `__construct()`
 
 
-/// type=SS, answer=[4,5]
+/// type=SS, answer=[5]
 
 Which of the following is a method?
 
@@ -219,7 +219,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -251,6 +251,7 @@ class Person
 }
 $pObject = new Person("James", 15);
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[5]
 
@@ -418,7 +419,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -451,6 +452,7 @@ class Person
 $pObject = new Person("James", 15);
 $pObject->setAge(45);
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[4]
 
@@ -498,7 +500,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -531,6 +533,7 @@ class Person
 $pObject = new Person("James", 15);
 $pObject->setAge(-45);
 $pObject->display();
+?>
 ```
 /// type=MS, answer=[4,5]
 
@@ -578,7 +581,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -611,6 +614,7 @@ class Person
 $pObject = new Person("James", 15);
 
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[4]
 
@@ -643,7 +647,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -676,6 +680,7 @@ class Person
 $pObject = new Person("James", 15);
 $pObject->name = "Diana";
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[2]
 
@@ -708,7 +713,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -741,6 +746,7 @@ class Person
 $pObject = new Person("James", 15);
 $pObject->name = "Diana";
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[5]
 
@@ -773,7 +779,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -805,6 +811,7 @@ class Person
 }
 $pObject = new Person("James", 15);
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[2]
 
@@ -1040,7 +1047,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1072,6 +1079,7 @@ class Person
 }
 $pObject = new Person("James" 15);
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[3]
 
@@ -1122,7 +1130,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Constructor/MissingCommaBetweenArgumentsTest.php]
 
-Correct the code so that it outputs the code `James is 15 years old.`.
+Correct the code so that it outputs the string `James is 15 years old.`.
 
 ```php
 <?php
@@ -1134,7 +1142,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1166,6 +1174,7 @@ class Person
 }
 $pObject = new Person("James" 15);
 $pObject->display();
+?>
 ```
 
 
@@ -1183,7 +1192,7 @@ class Person
 	public function __construct($name $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1215,6 +1224,7 @@ class Person
 }
 $pObject = new Person("James", 15);
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[2]
 
@@ -1250,7 +1260,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Constructor/MissingCommaBetweenParametersTest.php]
 
-Correct the code so that it outputs the code `James is 15 years old.`.
+Correct the code so that it outputs the string `James is 15 years old.`.
 
 ```php
 <?php
@@ -1262,7 +1272,7 @@ class Person
 	public function __construct($name $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1294,6 +1304,7 @@ class Person
 }
 $pObject = new Person("James", 15);
 $pObject->display();
+?>
 ```
 
 
@@ -1311,7 +1322,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1343,6 +1354,7 @@ class Person
 }
 $pObject = new Person("James");
 $pObject->display();
+?>
 ```
 /// type=MS, answer=[1,5]
 
@@ -1378,7 +1390,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Constructor/MissingOneArgumentTest.php]
 
-Correct the code so that it outputs the code `James is 15 years old.`.
+Correct the code so that it outputs the string `James is 15 years old.`.
 
 ```php
 <?php
@@ -1390,7 +1402,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1422,6 +1434,7 @@ class Person
 }
 $pObject = new Person("James");
 $pObject->display();
+?>
 ```
 
 
@@ -1439,7 +1452,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1471,6 +1484,7 @@ class Person
 }
 $pObject = new Person("James", 15);
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[5]
 
@@ -1518,7 +1532,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1550,6 +1564,7 @@ class Person
 }
 $pObject = new Person("James", 15);
 $pObject->display();
+?>
 ```
 /// type=SS, answer=[2]
 
@@ -1582,7 +1597,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge($age)) {
+		if ($this->checkAge($age)) {
 			$this->age = $age;
 		}
     }
@@ -1614,6 +1629,7 @@ class Person
 }
 $pObject = Person("James", 15);
 $pObject->display();
+?>
 ```
 /// type=MS, answer=[1,3,4]
 
@@ -1634,7 +1650,7 @@ Remove the argument `$age` from `if ($this->checkAge($age))` on line 10. Execute
 
 /// type=CR, answer=[tests/Constructor/CorrectMultipleErrorsTest.php]
 
-Correct the code so that it outputs the code `James is 15 years old.`.
+Correct the code so that it outputs the string `James is 15 years old.`.
 
 ```php
 <?php
@@ -1646,7 +1662,7 @@ class Person
 	public function __construct($name, $age)
 	{
 		$this->name = $name;
-		if($this->checkAge()) {
+		if ($this->checkAge()) {
 			$this->age = $age;
 		}
     }
@@ -1678,6 +1694,7 @@ class Person
 }
 $pObject = Person("James", 15);
 $pObject->display();
+?>
 ```
 
 
