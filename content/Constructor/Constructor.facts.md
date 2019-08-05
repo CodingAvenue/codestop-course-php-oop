@@ -33,10 +33,10 @@ Anna is 12 years old.
 
 In the above example, the code breaks down as follows:
 
- - `public function __construct($testName, $testAge) { }` is the constructor definition of the `Person` class with the parameters `$testName` and `$testAge`. It is automatically called when a new object is created.
+ - `public function __construct($testName, $testAge) { }` is the constructor definition of the `TestPerson` class with the parameters `$testName` and `$testAge`. It is automatically called when a new object is created.
 
- - `$this->testName = $testName;` and `$this->testAge = $testAge;` assign the values of the variables `$testName` and `$testAge` to the properties `$testName` and `$testAge` of the `Person` class.
+ - `$this->testName = $testName;` and `$this->testAge = $testAge;` assign the values of the variables `$testName` and `$testAge` to the properties `$testName` and `$testAge` of the `TestPerson` class.
 
- - `$pObject = new Person("Anna", 12);` creates the `$pObject` object of the `Person` class passing the arguments `Anna` and `12` and initializes the `$testName` and `$testAge` properties of the `$pObject` object.
+ - `$pObject = new TestPerson("Anna", 12);` creates the `$pObject` object of the `TestPerson` class passing the arguments `Anna` and `12` and initializes the `$testName` and `$testAge` properties of the `$pObject` object.
 
  - `$pObject->testName` and `$pObject->testAge` access the values of the `$pObject` object properties `$testName` and `$testAge`.
