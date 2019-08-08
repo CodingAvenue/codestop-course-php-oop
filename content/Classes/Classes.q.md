@@ -340,7 +340,7 @@ In the statement `$myObject = new MyClass();` on line 12, what is `$myObject`?
  - It is a class name.
 
 
-/// type=SS, answer=[4]
+/// type=SS, answer=[5]
 
 On line 12, what does the statement `$myObject = new MyClass();` do?
 
@@ -350,9 +350,9 @@ On line 12, what does the statement `$myObject = new MyClass();` do?
 
  - It accesses the value of `MyClass` through `$myObject`.
 
- - It creates the `$myObject` object of the `MyClass` class.
-
  - It assigns the value of the `MyClass` class to `$myObject`.
+
+ - It creates the `$myObject` object as an instance of the `MyClass` class.
 
 
 /// type=SS, answer=[5]
