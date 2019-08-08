@@ -144,7 +144,7 @@ In the statement `$pObject = new Person();` on line 12, what is `$pObject`?
  - It is an instance of the `Person` class.
 
 
-/// type=SS, answer=[4]
+/// type=SS, answer=[5]
 
 In the statement `$pObject = new Person();` on line 12, what does the `new` keyword do?
 
@@ -154,9 +154,9 @@ In the statement `$pObject = new Person();` on line 12, what does the `new` keyw
 
  - It defines the `$pObject` object in `Person()`.
 
- - It creates the `$pObject` object of the `Person` class.
-
  - It evaluates the `$pObject` object of the `Person` class.
+
+ - It creates the `$pObject` object as an instance of the `Person` class.
 
 
 /// type=MS, answer=[3,5]
