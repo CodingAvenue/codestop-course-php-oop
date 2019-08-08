@@ -144,7 +144,7 @@ Which statement best describes the code on line 5?
  - It declares and initializes the `$address` property of the `Person` class.
 
 
-/// type=SS, answer=[4]
+/// type=SS, answer=[5]
 
 On line 12, what does the statement `$pObject = new Person();` do?
 
@@ -154,9 +154,9 @@ On line 12, what does the statement `$pObject = new Person();` do?
 
  - It accesses the value of `Person` through `$pObject`.
 
- - It creates the `$pObject` object of the `Person` class.
-
  - It assigns the value of the `Person` class to `$pObject`.
+
+ - It creates the `$pObject` object as an instance of the `Person` class.
 
 
 /// type=SS, answer=[5]
