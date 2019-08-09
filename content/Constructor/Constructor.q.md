@@ -200,7 +200,7 @@ Which statements correctly describe `$pObject = new Person("John");` on line 11?
 
  - It declares the `$pObject` object of the `Person` class with the parameter `John`.
 
- - It creates the `$pObject` object of the `Person` class passing the argument `John`.
+ - It creates the `$pObject` object as an instance of the `Person` class passing the argument `John`.
 
 :::
 
@@ -400,7 +400,7 @@ Which statements correctly describe the code on line 40?
 
  - It declares the `$pObject` object of the `Person` class with the parameters `James` and `15`.
 
- - It creates the `$pObject` object of the `Person` class passing the arguments `James` and `15`.
+ - It creates the `$pObject` object as an instance of the `Person` class passing the arguments `James` and `15`.
 
 :::
 

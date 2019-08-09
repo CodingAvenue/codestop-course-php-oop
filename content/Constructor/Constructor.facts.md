@@ -37,6 +37,6 @@ In the above example, the code breaks down as follows:
 
  - `$this->testName = $testName;` and `$this->testAge = $testAge;` assign the values of the variables `$testName` and `$testAge` to the properties `$testName` and `$testAge` of the `TestPerson` class.
 
- - `$pObject = new TestPerson("Anna", 12);` creates the `$pObject` object of the `TestPerson` class passing the arguments `Anna` and `12` and initializes the `$testName` and `$testAge` properties of the `$pObject` object.
+ - `$pObject = new TestPerson("Anna", 12);` creates the `$pObject` object as an instance of the `TestPerson` class passing the arguments `Anna` and `12` and initializes the `$testName` and `$testAge` properties of the `$pObject` object.
 
  - `$pObject->testName` and `$pObject->testAge` access the values of the `$pObject` object properties `$testName` and `$testAge`.
