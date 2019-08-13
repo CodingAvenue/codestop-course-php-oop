@@ -216,12 +216,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -416,12 +416,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -497,12 +497,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -578,12 +578,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -644,12 +644,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -710,12 +710,12 @@ class Person
     private $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -776,12 +776,12 @@ class Person
     private $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1044,12 +1044,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1139,12 +1139,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1189,12 +1189,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1269,12 +1269,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1319,12 +1319,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1399,12 +1399,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1449,12 +1449,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1529,12 +1529,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1594,12 +1594,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge($age)) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
@@ -1659,12 +1659,12 @@ class Person
     public $name;
     private $age;
 	
-	public function __construct($name, $age)
-	{
-		$this->name = $name;
-		if ($this->checkAge()) {
-			$this->age = $age;
-		}
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge()) {
+            $this->age = $age;
+        }
     }
     
     public function setAge($newAge)
