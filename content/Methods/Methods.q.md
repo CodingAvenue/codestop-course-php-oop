@@ -1140,7 +1140,7 @@ Execute the program. What is its output?
 
 /// type=MS, answer=[2,3]
 
-Remove the object operator `->` from the statement `$pObjectdisplay();` on line 18. Execute the program. What are the error messages?
+Remove the object operator `->` from the statement `$pObject->display();` on line 18. Execute the program. What are the error messages?
 
  - Undefined variable: `newName` on line number 8
 
