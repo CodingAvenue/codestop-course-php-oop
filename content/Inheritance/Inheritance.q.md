@@ -631,7 +631,7 @@ $studObject->display();
 ```
 /// type=SS, answer=[5]
 
-In the `echo` statement on line 19 of `Student.php`, replace `parent::getName()` with `$this->name`. Execute the program? What is its output?
+In the `echo` statement on line 19 of `Student.php`, replace `parent::getName()` with `$this->name`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -2284,7 +2284,7 @@ studObject->display();
 ```
 /// type=SS, answer=[5]
 
-remove the `private` visibility keyword in the property definition `private $course;` on line 4 of `Student.php`. Execute the program. What is the error message?
+Remove the `private` visibility keyword in the property definition `private $course;` on line 4 of `Student.php`. Execute the program. What is the error message?
 
  - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 2
 

@@ -14,7 +14,7 @@ Defining a method in a child class with the same name and parameter of a parent 
 
 A process of changing the behavior of a parent class method in a child class is called `method overriding`.
 
-The `parent` keyword with the scope resolution operator `::` is used to access a parent class methods in a child class.
+The `parent` keyword with the scope resolution operator `::` is used to access a parent class method in a child class.
 
 Code:
 
@@ -72,7 +72,7 @@ Diana is 12 years old.Anna is taking up BSIT.
 
 In the `TestStudent` class declaration above, the code breaks down as follows:
 
- - `class TestStudent extends TestPerson` declares the `TestStudent` class as the child class of the `TestPerson` class
+ - `class TestStudent extends TestPerson` declares the `TestStudent` class as the child class of the `TestPerson` class.
 
  - `private $course;` is the definition of the `$course` property without a default value in the `TestStudent` class.
 
@@ -82,6 +82,6 @@ In the `TestStudent` class declaration above, the code breaks down as follows:
 
  - `$this->course = $course;` assigns the value of the variable `$course` to the `$course` property of the `TestStudent` class.
 
- - `public function display() {...}` the method definition that overrides the `display()` method of the parent class `TestPerson`. 
+ - `public function display() {...}` is the method definition that overrides the `display()` method of the parent class `TestPerson`. 
 
  - `parent::getTestName()` accesses the `getTestName()` method of the parent class `TestPerson`.
