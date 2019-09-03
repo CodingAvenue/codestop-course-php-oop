@@ -6,7 +6,7 @@ An abstract class is a class that has an abstract method.
 
 Instantiation is not allowed for abstract classes.
 
-Abstract methods are methods in a class that does not have a method body or implementation.
+Abstract methods are methods in a class that do not have a method body or implementation.
 
 The `abstract` keyword defines classes and methods as abstract.
 
