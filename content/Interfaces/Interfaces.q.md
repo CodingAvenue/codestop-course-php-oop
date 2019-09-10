@@ -925,9 +925,9 @@ Which statements correctly describe the error?
 
  - The `interface` keyword is misspelled as `interfaces` on line 2 of `LifeCycle.php`.
 
- - There is no open curly `{` after `interfaces LifeCycle` on line 2 of `LifeCycle.php`.
-
  - There are no parentheses `()` after `interfaces LifeCycle` on line 2 of `LifeCycle.php`.
+
+ - There is no open curly brace `{` after `interfaces LifeCycle` on line 2 of `LifeCycle.php`.
 
 :::
 
@@ -1097,13 +1097,13 @@ Execute the program. What is the error message?
  - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
-/// type=MS, answer=[2,4,5]
+/// type=MS, answer=[1,4,5]
 
 Which statements correctly describe the error?
 
- - There is no open curly `{` after `public function species();` on line 40 of `Person.php`.
-
  - On line 40 of `Person.php`, the method declaration `public function species();` is invalid.
+
+ - There is no open curly brace `{` after `public function species();` on line 40 of `Person.php`.
 
  - There is no `abstract` keyword before `public function species();` on line 40 of `Person.php`.
 
@@ -1288,7 +1288,7 @@ Execute the program. What is the error message?
  - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
-/// type=MS, answer=[2,4]
+/// type=MS, answer=[2,3]
 
 Which statements correctly describe the error?
 
@@ -1296,9 +1296,9 @@ Which statements correctly describe the error?
 
  - In the class declaration on line 2 of `Student.php`, the `implements` keyword is misspelled as `implement`. 
 
- - There is no open curly `{` after `class Student extends Person implement LifeCycle` on line 2 of `Student.php`.
-
  - On line 2 of `Student.php`, the class declaration `class Student extends Person implement LifeCycle` is invalid.
+
+ - There is no open curly brace `{` after `class Student extends Person implement LifeCycle` on line 2 of `Student.php`.
 
  - There is a semicolon `;` at the end of the class declaration `class Student extends Person implement LifeCycle` on line 2 of `Student.php`.
 
@@ -2388,7 +2388,7 @@ $studObject->display();
 
 /// type=CR, answer=[tests/Interfaces/CreateClassThatImplementsAnInterfaceTest.php], filename=[LifeCycle.php,Animal.php,Mammal.php]
 
-Given the `Animal` class and `LifeCycle` interface, write a program that uses an `implements` keyword to implement an interface. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the `Animal` class and `implements` the `LifeCycle` interface. Within the curly braces `{}`, add an implementation or method body to all abstract methods of the `LifeCycle` interface. Inside the `stage()` method body, add a statement `return "adult";`. Inside the `species()` method body, add a statement that returns the string `animal`. Then, add another `public` method `display()` that overrides the abstract `display()` method of the `Animal` class. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " is an " . $this->stage() . " " . $this->species() . "."`. After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
+Given the `Animal` class and `LifeCycle` interface, write a program that uses an `implements` keyword to implement an interface. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the `Animal` class and `implements` the `LifeCycle` interface. Within the curly braces `{}`, add an implementation or method body to all abstract methods of the `LifeCycle` interface. Inside the `stage()` method body, add the statement `return "adult";`. Inside the `species()` method body, add a statement that returns the string `animal`. Then, add another `public` method `display()` that overrides the abstract `display()` method of the `Animal` class. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " is an " . $this->stage() . " " . $this->species() . "."`. After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
 ```php
 <?php
