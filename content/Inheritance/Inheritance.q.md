@@ -53,6 +53,7 @@ class Person
 
 ```php
 <?php 
+require_once("Person.php");
 class Student extends Person
 {
 
@@ -214,7 +215,7 @@ Which statements correctly describe `class Student extends Person { }`?
 
 /// type=MS, answer=[4,5]
 
-Which statements correctly describe `$studObject = new Student("John", 15);` on line 7 of `Student.php`?
+Which statements correctly describe `$studObject = new Student("John", 15);` on line 8 of `Student.php`?
 
  - It sets the arguments `John` and `15` to the `$studObject` object.
 
@@ -229,7 +230,7 @@ Which statements correctly describe `$studObject = new Student("John", 15);` on 
 
 /// type=SS, answer=[1]
 
-Which statement best describes `$studObject->display();` on line 8 of `Student.php`?
+Which statement best describes `$studObject->display();` on line 9 of `Student.php`?
 
  - It calls the `display()` method of the `Student` class inherited from the `Person` class.
 
@@ -240,6 +241,21 @@ Which statement best describes `$studObject->display();` on line 8 of `Student.p
  - It returns the `display()` method of the `Student` class inherited from the `Person` class.
 
  - It removes the `display()` method of the `Student` class inherited from the `Person` class.
+
+
+/// type=SS, answer=[3]
+
+Which statement best describes `require_once("Person.php");` on line 2 of `Student.php`?
+
+- It updates the file `Person.php`.
+
+- It establishes a relationship between classes.
+
+- It includes the file `Person.php` in the file `Student.php`.
+
+- It removes the file `Person.php` in the file `Student.php`.
+
+- It excludes the file `Person.php` in the file `Student.php`.
 
 :::
 
@@ -298,6 +314,7 @@ class Person
 
 ```php
 <?php 
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -430,7 +447,7 @@ Which of the following are methods of the `Student` class?
 
 /// type=MS, answer=[2,4]
 
-Which statements correctly describe `private $course;` on line 4 of `Student.php`?
+Which statements correctly describe `private $course;` on line 5 of `Student.php`?
 
  - It calls the `$course` property of the `Student` class.
 
@@ -445,7 +462,7 @@ Which statements correctly describe `private $course;` on line 4 of `Student.php
 
 /// type=SS, answer=[3]
 
-In the statement `parent::__construct($name, $age);` on line 8 of `Student.php`, what is `parent`?
+In the statement `parent::__construct($name, $age);` on line 9 of `Student.php`, what is `parent`?
 
  - It is a value.
 
@@ -460,7 +477,7 @@ In the statement `parent::__construct($name, $age);` on line 8 of `Student.php`,
 
 /// type=SS, answer=[5]
 
-In the statement `parent::__construct($name, $age);` on line 8 of `Student.php`, what is `::`?
+In the statement `parent::__construct($name, $age);` on line 9 of `Student.php`, what is `::`?
 
  - It is a value.
 
@@ -490,7 +507,7 @@ Which statement best describes `parent::__construct($name, $age);`?
 
 /// type=SS, answer=[1]
 
-In the `echo` statement on line 19 of `Student.php`, what does `parent::getName()` do?
+In the `echo` statement on line 20 of `Student.php`, what does `parent::getName()` do?
 
  - It calls the `getName()` method of the parent class `Person` inside the child class `Student`.
 
@@ -520,7 +537,7 @@ Which statements correctly describe the `display()` method of the `Student` clas
 
 /// type=MS, answer=[2,5]
 
-Which statements correctly describe the code on line 23 of `Student.php`?
+Which statements correctly describe the code on line 24 of `Student.php`?
 
  - It sets the arguments `John`, `20`, and `BSCS` to the `$studObject` object.
 
@@ -535,7 +552,7 @@ Which statements correctly describe the code on line 23 of `Student.php`?
 
 /// type=MS, answer=[1,2]
 
-Which statements correctly describe the code on line 24 of `Student.php`?
+Which statements correctly describe the code on line 25 of `Student.php`?
 
  - It displays the string `John is taking up BSCS.`.
 
@@ -603,7 +620,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -631,7 +649,7 @@ $studObject->display();
 ```
 /// type=SS, answer=[5]
 
-In the `echo` statement on line 19 of `Student.php`, replace `parent::getName()` with `$this->name`. Execute the program. What is its output?
+In the `echo` statement on line 20 of `Student.php`, replace `parent::getName()` with `$this->name`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -699,7 +717,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -731,18 +750,18 @@ What makes the `$name` property of the `Person` class accessible inside the `Stu
 
  - The `$name` property of the `Person` class is accessible everywhere.
 
- - On line 4 of `Person.php`, the `$name` property is defined using the `public` visibility keyword.
+ - On line 5 of `Person.php`, the `$name` property is defined using the `public` visibility keyword.
 
- - On line 4 of `Person.php`, the `$name` property is defined using the `private` visibility keyword.
+ - On line 5 of `Person.php`, the `$name` property is defined using the `private` visibility keyword.
 
- - On line 4 of `Person.php`, the `$name` property is defined using the `protected` visibility keyword.
+ - On line 5 of `Person.php`, the `$name` property is defined using the `protected` visibility keyword.
 
  - The `protected` visibility keyword allows the child class `Student` to access the `$name` property of the parent class `Person`. 
 
 
 /// type=SS, answer=[3]
 
-In the statement `$studObject->display();` on line 24 of `Student.php`, replace `display` with `getName`. Execute the program. What is its output?
+In the statement `$studObject->display();` on line 25 of `Student.php`, replace `display` with `getName`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -811,6 +830,7 @@ class Person
 
 ```php
 <?php 
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -838,7 +858,7 @@ $studObject->getName();
 ```
 /// type=SS, answer=[2]
 
-Add the `echo` construct at the beginning of the statement `$studObject->getName();` on line 24 of `Student.php`. Execute the program. What is its output?
+Add the `echo` construct at the beginning of the statement `$studObject->getName();` on line 25 of `Student.php`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -907,6 +927,7 @@ class Person
 
 ```php
 <?php 
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -934,7 +955,7 @@ echo $studObject->getName();
 ```
 /// type=SS, answer=[1]
 
-In the statement `echo $studObject->getName();` on line 24 of `Student.php`, replace `getName()` with `getAge()`. Execute the program. What is its output?
+In the statement `echo $studObject->getName();` on line 25 of `Student.php`, replace `getName()` with `getAge()`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1002,7 +1023,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1030,7 +1052,7 @@ echo $studObject->getAge();
 ```
 /// type=SS, answer=[3]
 
-In the statement `echo $studObject->getAge();` on line 24 of `Student.php`, replace `getAge()` with `checkAge()`. Execute the program. What is its output?
+In the statement `echo $studObject->getAge();` on line 25 of `Student.php`, replace `getAge()` with `checkAge()`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1098,7 +1120,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1126,7 +1149,7 @@ echo $studObject->checkAge();
 ```
 /// type=SS, answer=[5]
 
-On line 24 of `Student.php`, replace the statement `echo $studObject->checkAge();` with `$studObject->display();`. Execute the program. What is its output?
+On line 25 of `Student.php`, replace the statement `echo $studObject->checkAge();` with `$studObject->display();`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1194,7 +1217,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1222,7 +1246,7 @@ $studObject->display();
 ```
 /// type=SS, answer=[4]
 
-Remove the `display()` method definition on lines 17, 18, 19, and 20 of `Student.php`. Execute the program. What is its output?
+Remove the `display()` method definition on lines 18, 19, 20, and 21 of `Student.php`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1362,7 +1386,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1407,30 +1432,30 @@ Execute the program. What is its output?
 
 What is the error message?
 
- - Undefined variable: `course` on line number 9
+ - Undefined variable: `course` on line number 10
 
  - Uncaught Error: Call to private method `Person::checkAge()` on line 24
 
  - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
 
- - Missing argument `3` for `Student::__construct()` on line 23 and defined on line number 6
+ - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
 
 /// type=MS, answer=[1,4]
 
 Which statements correctly describe the error?
 
- - On line 19 of `Student.php`, the method call `parent:getName()` is invalid.
+ - On line 20 of `Student.php`, the method call `parent:getName()` is invalid.
 
- - There are no parentheses `()` after `parent:getName()` on line 19 of `Student.php`.
+ - There are no parentheses `()` after `parent:getName()` on line 20 of `Student.php`.
 
- - There is no semicolon `;` at the end of the `echo` statement on line 19 of `Student.php`.
+ - There is no semicolon `;` at the end of the `echo` statement on line 20 of `Student.php`.
 
- - On line 19 of `Student.php`, the scope resolution operator `::` after `parent` is replaced with a colon `:`. 
+ - On line 20 of `Student.php`, the scope resolution operator `::` after `parent` is replaced with a colon `:`. 
 
- - There is no concatenation operator `.` between `parent:getName()` and `" is taking up "` on line 19 of `Student.php`.
+ - There is no concatenation operator `.` between `parent:getName()` and `" is taking up "` on line 20 of `Student.php`.
 
 :::
 
@@ -1488,7 +1513,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1569,7 +1595,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1599,30 +1626,30 @@ $studObject->display();
 
 Execute the program. What are the error messages?
 
- - Undefined variable: `course` on line number 9
+ - Undefined variable: `course` on line number 10
 
  - Uncaught Error: Call to private method `Person::checkAge()` on line 24
 
  - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
 
- - Missing argument `3` for `Student::__construct()` on line 23 and defined on line number 6
+ - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
 
 /// type=MS, answer=[2,3]
 
 Which statements correctly describe the error?
 
- - There is no comma `,` between `John` and `20` in the statement on line 23 of `Student.php`.
+ - There is no comma `,` between `John` and `20` in the statement on line 24 of `Student.php`.
 
- - There is no third argument specified in `Student("John", 20)` on line 23 of `Student.php`.
+ - There is no third argument specified in `Student("John", 20)` on line 24 of `Student.php`.
 
- - On line 23 of `Student.php`, the statement `$studObject = new Student("John", 20);` is invalid.
+ - On line 24 of `Student.php`, the statement `$studObject = new Student("John", 20);` is invalid.
 
- - On line 23 of `Student.php`, the argument `John` in `Student("John", 20)` is enclosed in double quotes `""`.
+ - On line 24 of `Student.php`, the argument `John` in `Student("John", 20)` is enclosed in double quotes `""`.
 
- - On line 23 of `Student.php`, the argument `20` in `Student("John", 20)` is not enclosed in double quotes `""`.
+ - On line 24 of `Student.php`, the argument `20` in `Student("John", 20)` is not enclosed in double quotes `""`.
 
 :::
 
@@ -1680,7 +1707,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1761,7 +1789,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php"); 
 class Student extends Person
 {
     private $course;
@@ -1791,28 +1820,28 @@ $studObject->display();
 
 Execute the program. What is the error message?
 
- - Undefined variable: `course` on line number 9
+ - Undefined variable: `course` on line number 10
 
  - Uncaught Error: Call to private method `Person::checkAge()` on line 24
 
  - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
 
- - Missing argument `3` for `Student::__construct()` on line 23 and defined on line number 6
+ - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
 
 /// type=MS, answer=[2,3,5]
 
 Which statements correctly describe the error?
 
- - There are no parentheses `()` after `$studObject->display()` on line 17 of `Student.php`.
+ - There are no parentheses `()` after `$studObject->display()` on line 18 of `Student.php`.
 
- - On line 17 of `Student.php`, the method definition `private function display()` is invalid.
+ - On line 18 of `Student.php`, the method definition `private function display()` is invalid.
 
- - On line 17 of `Student.php`, the `private` visibility keyword in the method definition is not allowed.
+ - On line 18 of `Student.php`, the `private` visibility keyword in the method definition is not allowed.
 
- - There is no semicolon `;` at the end of the statement `$studObject->display()` on line 17 of `Student.php`.
+ - There is no semicolon `;` at the end of the statement `$studObject->display()` on line 18 of `Student.php`.
 
  - Overriding the `display()` method of the parent class `Person` using the `private` visibility keyword is not allowed.
 
@@ -1872,7 +1901,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1953,7 +1983,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1996,17 +2027,17 @@ Execute the program. What is its output?
 
 /// type=SS, answer=[2]
 
-In the statement `$studObject->display();` on line 24 of `Student.php`, remove the dollar sign `$` from `$studObject`. Execute the program. What is the error message?
+In the statement `$studObject->display();` on line 25 of `Student.php`, remove the dollar sign `$` from `$studObject`. Execute the program. What is the error message?
 
- - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 2
+ - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 3
 
- - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 24
+ - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 25
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 6
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 7
 
- - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 23
+ - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 24
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 4
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -2064,7 +2095,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -2092,17 +2124,17 @@ studObject->display();
 ```
 /// type=SS, answer=[4]
 
-In the statement `$studObject = new Student("John", 20, "BSCS");` on line 23 of `Student.php`, remove the comma `,` between `John` and `20`. Execute the program. What is the error message?
+In the statement `$studObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`, remove the comma `,` between `John` and `20`. Execute the program. What is the error message?
 
- - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 2
+ - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 3
 
- - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 24
+ - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 25
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 6
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 7
 
- - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 23
+ - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 24
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 4
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -2160,7 +2192,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -2188,17 +2221,17 @@ studObject->display();
 ```
 /// type=SS, answer=[3]
 
-In the method definition `public function __construct($name, $age, $course)` on line 6 of `Student.php`, remove the comma `,` between `$age` and `$course`. Execute the program. What is the error message?
+In the method definition `public function __construct($name, $age, $course)` on line 7 of `Student.php`, remove the comma `,` between `$age` and `$course`. Execute the program. What is the error message?
 
- - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 2
+ - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 3
 
- - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 24
+ - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 25
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 6
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 7
 
- - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 23
+ - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 24
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 4
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -2256,7 +2289,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -2284,17 +2318,17 @@ studObject->display();
 ```
 /// type=SS, answer=[5]
 
-Remove the `private` visibility keyword in the property definition `private $course;` on line 4 of `Student.php`. Execute the program. What is the error message?
+Remove the `private` visibility keyword in the property definition `private $course;` on line 5 of `Student.php`. Execute the program. What is the error message?
 
- - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 2
+ - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 3
 
- - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 24
+ - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 25
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 6
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 7
 
- - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 23
+ - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 24
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 4
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -2352,7 +2386,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php"); 
 class Student extends Person
 {
      $course;
@@ -2380,17 +2415,17 @@ studObject->display();
 ```
 /// type=SS, answer=[1]
 
-Remove the `class` keyword before `Student` on line 2 of `Student.php`. Execute the program. What is the error message?
+Remove the `class` keyword before `Student` on line 3 of `Student.php`. Execute the program. What is the error message?
 
- - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 2
+ - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 3
 
- - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 24
+ - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 25
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 6
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting `')'` on line number 7
 
- - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 23
+ - syntax error, unexpected `'20'` (T_LNUMBER), expecting `','` or `')'` on line number 24
 
- - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 4
+ - syntax error, unexpected `'$course'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 5
 
 :::
 
@@ -2448,8 +2483,9 @@ class Person
 ```
 
 ```php
-<?php 
- Student extends Person
+<?php
+require_once("Person.php");
+Student extends Person
 {
      $course;
     	
@@ -2529,7 +2565,7 @@ class Animal
 
 ```php
 <?php
-
+require_once("Animal.php");
 
 
 ?>
