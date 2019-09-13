@@ -1,6 +1,6 @@
 ### Facts for Static Methods and Properties lesson:
 
-A static method and property are a special type of methods and properties that can be called without creating an object as an instance of a class.
+Static method and property are special types of methods and properties that can be called without creating an object as an instance of a class.
 
 The `static` keyword is used to define a static method and property.
 
