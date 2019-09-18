@@ -55,7 +55,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -284,7 +284,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -378,7 +378,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -472,7 +472,7 @@ abstract class Person
 
 ```php
 <?php 
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -566,7 +566,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -660,7 +660,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -813,7 +813,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -932,7 +932,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1006,7 +1006,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1115,7 +1115,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1194,7 +1194,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1303,7 +1303,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1382,7 +1382,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1491,7 +1491,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1570,7 +1570,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php"); 
+require_once('./Person.php'); 
 class Student extends Person
 {
     private $course;
@@ -1664,7 +1664,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1758,7 +1758,7 @@ abstract class Person
 
 ```php
 <?php
-require_once("Person.php"); 
+require_once('./Person.php'); 
 class Student extends Person
 {
     private $course;
@@ -1852,7 +1852,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1946,7 +1946,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php"); 
+require_once('./Person.php'); 
 class Student extends Person
 {
     private $course;
@@ -2040,7 +2040,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php"); 
+require_once('./Person.php'); 
 class Student  Person
 {
     private $course;
