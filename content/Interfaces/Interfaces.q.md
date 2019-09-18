@@ -20,6 +20,7 @@ interface LifeCycle
 
 ```php
 <?php
+require_once('./LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -185,7 +186,7 @@ Which statements correctly describe `public function stage();` on line 5 of `Lif
 
 /// type=SS, answer=[2]
 
-In the declaration `class Person implements LifeCycle` on line 2 of `Person.php`, what is `implements`?
+In the declaration `class Person implements LifeCycle` on line 3 of `Person.php`, what is `implements`?
 
  - It is a method.
 
@@ -200,7 +201,7 @@ In the declaration `class Person implements LifeCycle` on line 2 of `Person.php`
 
 /// type=MS, answer=[1,5]
 
-In the declaration `class Person implements LifeCycle` on line 2 of `Person.php`, what does the `implements` keyword do?
+In the declaration `class Person implements LifeCycle` on line 3 of `Person.php`, what does the `implements` keyword do?
 
  - It lets the `Person` class implement the `LifeCycle` interface.
 
@@ -215,7 +216,7 @@ In the declaration `class Person implements LifeCycle` on line 2 of `Person.php`
 
 /// type=MS, answer=[3,4]
 
-Which statements correctly describe `class Person implements LifeCycle` on line 2 of `Person.php`?
+Which statements correctly describe `class Person implements LifeCycle` on line 3 of `Person.php`?
 
  - It creates the `LifeCycle` interface as a child of the `Person` class.
 
@@ -350,7 +351,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -525,7 +528,7 @@ In the declaration `abstract class Person` on line 2 of `Person.php`, what does 
 
 /// type=MS, answer=[4,5]
 
-In the declaration `class Student extends Person implements LifeCycle` on line 2 of `Student.php`, what does the `extends` keyword do?
+In the declaration `class Student extends Person implements LifeCycle` on line 4 of `Student.php`, what does the `extends` keyword do?
 
  - It creates the `Student` class with the value `Person`.
 
@@ -540,7 +543,7 @@ In the declaration `class Student extends Person implements LifeCycle` on line 2
 
 /// type=MS, answer=[1,5]
 
-In the declaration `class Student extends Person implements LifeCycle` on line 2 of `Student.php`, what does the `implements` keyword do?
+In the declaration `class Student extends Person implements LifeCycle` on line 4 of `Student.php`, what does the `implements` keyword do?
 
  - It lets the `Student` class implement the `LifeCycle` interface.
 
@@ -645,6 +648,7 @@ interface LifeCycle
 
 ```php
 <?php
+require_once('./Person.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -726,11 +730,11 @@ What is the error message?
 
  - Interface function `LifeCycle::species()` cannot contain body on line number 4
 
- - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 40
+ - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 41
 
- - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 3
 
- - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
+ - Class Person contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
 /// type=MS, answer=[1,2,4]
@@ -766,6 +770,7 @@ interface LifeCycle
 
 ```php
 <?php
+require_once('./Person.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -842,6 +847,7 @@ interfaces LifeCycle
 
 ```php
 <?php
+require_once('./Person.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -908,11 +914,11 @@ Execute the program. What is the error message?
 
  - Interface function `LifeCycle::species()` cannot contain body on line number 4
 
- - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 40
+ - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 41
 
- - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 3
 
- - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
+ - Class Person contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
 /// type=MS, answer=[1,3]
@@ -948,6 +954,7 @@ interfaces LifeCycle
 
 ```php
 <?php
+require_once('./Person.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1024,6 +1031,7 @@ interface LifeCycle
 
 ```php
 <?php
+require_once('./Person.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1090,26 +1098,26 @@ Execute the program. What is the error message?
 
  - Interface function `LifeCycle::species()` cannot contain body on line number 4
 
- - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 40
+ - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 41
 
- - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 3
 
- - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
+ - Class Person contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
 /// type=MS, answer=[1,4,5]
 
 Which statements correctly describe the error?
 
- - On line 40 of `Person.php`, the method declaration `public function species();` is invalid.
+ - On line 41 of `Person.php`, the method declaration `public function species();` is invalid.
 
- - There is no open curly brace `{` after `public function species();` on line 40 of `Person.php`.
+ - There is no open curly brace `{` after `public function species();` on line 41 of `Person.php`.
 
- - There is no `abstract` keyword before `public function species();` on line 40 of `Person.php`.
+ - There is no `abstract` keyword before `public function species();` on line 41 of `Person.php`.
 
- - On line 40 of `Person.php`, the semicolon `;` at the end of `public function species();` is not allowed.
+ - On line 41 of `Person.php`, the semicolon `;` at the end of `public function species();` is not allowed.
 
- - There is a semicolon `;` at the end of the method declaration `public function species();` on line 40 of `Person.php`.
+ - There is a semicolon `;` at the end of the method declaration `public function species();` on line 41 of `Person.php`.
 
 :::
 
@@ -1130,6 +1138,7 @@ interface LifeCycle
 
 ```php
 <?php
+require_once('./Person.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1250,7 +1259,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implement LifeCycle
 {
     public function species()
@@ -1283,24 +1294,24 @@ Execute the program. What is the error message?
 
  - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 40
 
- - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 4
 
- - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
+ - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 4
 
 
 /// type=MS, answer=[2,3]
 
 Which statements correctly describe the error?
 
- - In the class declaration on line 2 of `Student.php`, the `extend` keyword is misspelled as `extends`.
+ - In the class declaration on line 4 of `Student.php`, the `extend` keyword is misspelled as `extends`.
 
- - In the class declaration on line 2 of `Student.php`, the `implements` keyword is misspelled as `implement`. 
+ - In the class declaration on line 4 of `Student.php`, the `implements` keyword is misspelled as `implement`. 
 
- - On line 2 of `Student.php`, the class declaration `class Student extends Person implement LifeCycle` is invalid.
+ - On line 4 of `Student.php`, the class declaration `class Student extends Person implement LifeCycle` is invalid.
 
- - There is no open curly brace `{` after `class Student extends Person implement LifeCycle` on line 2 of `Student.php`.
+ - There is no open curly brace `{` after `class Student extends Person implement LifeCycle` on line 4 of `Student.php`.
 
- - There is a semicolon `;` at the end of the class declaration `class Student extends Person implement LifeCycle` on line 2 of `Student.php`.
+ - There is a semicolon `;` at the end of the class declaration `class Student extends Person implement LifeCycle` on line 4 of `Student.php`.
 
 :::
 
@@ -1365,7 +1376,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implement LifeCycle
 {
     public function species()
@@ -1450,7 +1463,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1478,9 +1493,9 @@ Execute the program. What is the error message?
 
  - syntax error, unexpected `'{'`, expecting function (T_FUNCTION) on line number 40
 
- - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'implement'` (T_STRING), expecting `'{'` on line number 4
 
- - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
+ - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 4
 
 
 /// type=SS, answer=[1]
@@ -1493,9 +1508,9 @@ Which statement best describes the error?
 
  - In the class declaration on line 2 of `Student.php`, the `extend` keyword is misspelled as `extends`.
 
- - On line 2 of `Student.php`, the class declaration `class Student extends Person implements LifeCycle` is invalid.
+ - On line 4 of `Student.php`, the class declaration `class Student extends Person implements LifeCycle` is invalid.
 
- - There is a semicolon `;` at the end of the class declaration `class Student extends Person implements LifeCycle` on line 2 of `Student.php`.
+ - There is a semicolon `;` at the end of the class declaration `class Student extends Person implements LifeCycle` on line 4 of `Student.php`.
 
 :::
 
@@ -1560,7 +1575,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php'); 
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1640,7 +1657,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php'); 
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1675,22 +1694,22 @@ Execute the program. What is the error message?
 
  - Access level to `Student::display()` must be public (as in class Person) on line number 2
 
- - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
+ - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 4
 
 
 /// type=MS, answer=[1,3]
 
 Which statements correctly describe the error?
 
- - On line 14 of `Student.php`, the method declaration `private function display()` is invalid.
+ - On line 16 of `Student.php`, the method declaration `private function display()` is invalid.
 
- - There is a semicolon `;` at the end of `private function display()` on line 14 of `Student.php`.
+ - There is a semicolon `;` at the end of `private function display()` on line 16 of `Student.php`.
 
  - The `private` visibility keyword is not allowed when overriding the `display()` method of the `Person` class.
 
- - On line 2 of `Student.php`, the class declaration `class Student extends Person implements LifeCycle` is invalid.
+ - On line 4 of `Student.php`, the class declaration `class Student extends Person implements LifeCycle` is invalid.
 
- - There is a semicolon `;` at the end of the class declaration `class Student extends Person implements LifeCycle` on line 2 of `Student.php`.
+ - There is a semicolon `;` at the end of the class declaration `class Student extends Person implements LifeCycle` on line 4 of `Student.php`.
 
 :::
 
@@ -1755,7 +1774,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1840,7 +1861,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1880,13 +1903,13 @@ Execute the program. What is its output?
 
 /// type=SS, answer=[1]
 
-In the statement `$studObject = new Student("John", 15);` on line 20 of `Student.php`, replace `Student` with `Person`. Execute the program. What is the error message?
+In the statement `$studObject = new Student("John", 15);` on line 22 of `Student.php`, replace `Student` with `Person`. Execute the program. What is the error message?
 
- - Uncaught Error: Cannot instantiate abstract class `Person` on line number 20
+ - Uncaught Error: Cannot instantiate abstract class `Person` on line number 22
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 4
 
- - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 4
 
  - Abstract function `Person::display()` cannot be declared private on line number 46
 
@@ -1956,6 +1979,8 @@ abstract class Person
 
 ```php
 <?php 
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1984,9 +2009,9 @@ In the statement `abstract public function display();` on line 40 of `Person.php
 
  - Uncaught Error: Cannot instantiate abstract class `Person` on line number 20
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 4
 
- - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 4
 
  - Abstract function `Person::display()` cannot be declared private on line number 46
 
@@ -2055,7 +2080,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -2082,11 +2109,11 @@ $studObject->display();
 
 In the statement `public function species();` on line 4 of `LifeCycle.php`, replace `public` with `protected`. Execute the program. What is the error message?
 
- - Uncaught Error: Cannot instantiate abstract class `Person` on line number 20
+ - Uncaught Error: Cannot instantiate abstract class `Person` on line number 22
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 4
 
- - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 4
 
  - Abstract function `Person::display()` cannot be declared private on line number 46
 
@@ -2155,7 +2182,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -2180,13 +2209,13 @@ $studObject->display();
 ```
 /// type=SS, answer=[3]
 
-In `Student.php`, remove the `implements` keyword from `class Student extends Person implements LifeCycle`. Execute the program. What is the error message?
+In `Student.php`, remove the `implements` keyword from `class Student extends Person implements LifeCycle` on line 4. Execute the program. What is the error message?
 
- - Uncaught Error: Cannot instantiate abstract class `Person` on line number 20
+ - Uncaught Error: Cannot instantiate abstract class `Person` on line number 22
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 4
 
- - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 4
 
  - Abstract function `Person::display()` cannot be declared private on line number 46
 
@@ -2255,7 +2284,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student extends Person LifeCycle
 {
     public function species()
@@ -2280,13 +2311,13 @@ $studObject->display();
 ```
 /// type=SS, answer=[2]
 
-In `Student.php`, remove the `extends` keyword from `class Student extends Person LifeCycle`. Execute the program. What is the error message?
+In `Student.php`, remove the `extends` keyword from `class Student extends Person LifeCycle` on line 4. Execute the program. What is the error message?
 
- - Uncaught Error: Cannot instantiate abstract class `Person` on line number 20
+ - Uncaught Error: Cannot instantiate abstract class `Person` on line number 22
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 4
 
- - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'LifeCycle'` (T_STRING), expecting `'{'` on line number 4
 
  - Abstract function `Person::display()` cannot be declared private on line number 46
 
@@ -2355,7 +2386,9 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Student Person LifeCycle
 {
     public function species()
@@ -2440,7 +2473,8 @@ abstract class Animal
 
 ```php
 <?php
-
+require_once('./Animal.php');
+require_once('./LifeCycle.php');
 
 
 
