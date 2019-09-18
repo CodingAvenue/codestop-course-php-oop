@@ -53,7 +53,7 @@ class Person
 
 ```php
 <?php 
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
 
@@ -245,7 +245,7 @@ Which statement best describes `$studObject->display();` on line 9 of `Student.p
 
 /// type=SS, answer=[3]
 
-Which statement best describes `require_once("Person.php");` on line 2 of `Student.php`?
+Which statement best describes `require_once('./Person.php');` on line 2 of `Student.php`?
 
 - It updates the file `Person.php`.
 
@@ -314,7 +314,7 @@ class Person
 
 ```php
 <?php 
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -621,7 +621,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -718,7 +718,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -830,7 +830,7 @@ class Person
 
 ```php
 <?php 
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -927,7 +927,7 @@ class Person
 
 ```php
 <?php 
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1024,7 +1024,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1121,7 +1121,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1218,7 +1218,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1387,7 +1387,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1514,7 +1514,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1596,7 +1596,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1708,7 +1708,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1790,7 +1790,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php"); 
+require_once('./Person.php'); 
 class Student extends Person
 {
     private $course;
@@ -1902,7 +1902,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1984,7 +1984,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -2096,7 +2096,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -2193,7 +2193,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -2290,7 +2290,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -2387,7 +2387,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php"); 
+require_once('./Person.php'); 
 class Student extends Person
 {
      $course;
@@ -2484,7 +2484,7 @@ class Person
 
 ```php
 <?php
-require_once("Person.php");
+require_once('./Person.php');
 Student extends Person
 {
      $course;
