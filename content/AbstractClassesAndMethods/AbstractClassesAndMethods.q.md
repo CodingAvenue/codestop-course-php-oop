@@ -54,7 +54,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -142,7 +143,7 @@ In the definition `abstract public function display();` on line 40 of `Person.ph
 
 /// type=MS, answer=[2,4]
 
-Which statements correctly describe `class Student extends Person { }` on line 2 of `Student.php`?
+Which statements correctly describe `class Student extends Person { }` on line 3 of `Student.php`?
 
  - It is a definition of the `Student` class that replaces the `Person` class.
 
@@ -157,7 +158,7 @@ Which statements correctly describe `class Student extends Person { }` on line 2
 
 /// type=SS, answer=[2]
 
-Which statement best describes `parent::__construct($name, $age);` on line 8 of `Student.php`?
+Which statement best describes `parent::__construct($name, $age);` on line 9 of `Student.php`?
 
  - It creates the `__construct()` method of the parent class `Person` with the parameters `$name` and `$age` inside the child class `Student`.
 
@@ -172,7 +173,7 @@ Which statement best describes `parent::__construct($name, $age);` on line 8 of 
 
 /// type=SS, answer=[1]
 
-In the `echo` statement on line 19 of `Student.php`, what does `parent::getName()` do?
+In the `echo` statement on line 20 of `Student.php`, what does `parent::getName()` do?
 
  - It calls the `getName()` method of the parent class `Person` inside the child class `Student`.
 
@@ -202,7 +203,7 @@ Which statements correctly describe the `display()` method of the `Student` clas
 
 /// type=MS, answer=[2,5]
 
-Which statements correctly describe `$studObject = new Student("John", 20, "BSCS");` on line 23 of `Student.php`?
+Which statements correctly describe `$studObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`?
 
  - It sets the arguments `John`, `20`, and `BSCS` to the `$studObject` object.
 
@@ -217,7 +218,7 @@ Which statements correctly describe `$studObject = new Student("John", 20, "BSCS
 
 /// type=MS, answer=[1,2]
 
-Which statements correctly describe `$studObject->display();` on line 24 of `Student.php`?
+Which statements correctly describe `$studObject->display();` on line 25 of `Student.php`?
 
  - It displays the string `John is taking up BSCS.`.
 
@@ -282,7 +283,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -375,7 +377,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -403,7 +406,7 @@ $studObject->display();
 ```
 /// type=SS, answer=[2]
 
-In the method definition `public function display()` on line 17 of `Student.php`, replace `public` with `protected`. Execute the program. What is its output?
+In the method definition `public function display()` on line 18 of `Student.php`, replace `public` with `protected`. Execute the program. What is its output?
 
  - It prints `John`.
 
@@ -469,6 +472,7 @@ abstract class Person
 
 ```php
 <?php 
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -496,7 +500,7 @@ $studObject->display();
 ```
 /// type=SS, answer=[5]
 
-In `Student.php`, remove the `protected` keyword from the method definition `protected function display()` on line 17. Execute the program. What is its output?
+In `Student.php`, remove the `protected` keyword from the method definition `protected function display()` on line 18. Execute the program. What is its output?
 
  - It prints `John`.
 
@@ -561,7 +565,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -654,7 +659,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -806,7 +812,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -848,24 +855,24 @@ What is the error message?
 
  - Non-abstract method `Person::display()` must contain body on line number 40
 
- - Uncaught Error: Call to protected method `Student::display()` on line number 24
+ - Uncaught Error: Call to protected method `Student::display()` on line number 25
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
- - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 17
+ - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
 /// type=SS, answer=[5]
 
 Which statement best describes the error?
 
- - There is no semicolon `;` at the end of the statement on line 19 of `Student.php`.
+ - There is no semicolon `;` at the end of the statement on line 20 of `Student.php`.
 
- - There is no `abstract` keyword specified before `Person` on line 2 of `Student.php`.
+ - There is no `abstract` keyword specified before `Person` on line 3 of `Student.php`.
 
- - On line 19 of `Student.php`, the method call `$studObject->display();` is invalid.
+ - On line 29 of `Student.php`, the method call `$studObject->display();` is invalid.
 
  - On line 40 of `Person.php`, the method definition `abstract public function display();` is invalid.
 
@@ -924,7 +931,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -997,7 +1005,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1029,24 +1038,24 @@ Execute the program. What is the error message?
 
  - Non-abstract method `Person::display()` must contain body on line number 40
 
- - Uncaught Error: Call to protected method `Student::display()` on line number 24
+ - Uncaught Error: Call to protected method `Student::display()` on line number 25
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
- - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 17
+ - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
 /// type=MS, answer=[1,2]
 
 Which statements correctly describe the error?
 
- - On line 24 of `Student.php`, the method call `$studObject->display()` is invalid.
+ - On line 25 of `Student.php`, the method call `$studObject->display()` is invalid.
 
  - `$studObject` is not allowed to access the protected method `display()` of the `Student` class.
  
- - On line 17 of `Student.php`, the method definition `protected function display()` is invalid.
+ - On line 18 of `Student.php`, the method definition `protected function display()` is invalid.
 
  - On line 40 of `Person.php`, the method definition `abstract public function display();` is invalid.
 
@@ -1105,7 +1114,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1183,7 +1193,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1217,11 +1228,11 @@ Execute the program. What is the error message?
 
  - Abstract function `Person::display()` cannot be declared private on line number 40
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
- - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 17
+ - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
 /// type=MS, answer=[1,2,3]
@@ -1291,7 +1302,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1369,7 +1381,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1403,24 +1416,24 @@ Execute the program. What is the error message?
 
  - Abstract function `Person::display()` cannot be declared private on line number 40
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
- - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 17
+ - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
 /// type=MS, answer=[2,5]
 
 Which statements correctly describe the error?
 
- - On line 17 of `Student.php`, the method definition `public function display()` is invalid.
+ - On line 18 of `Student.php`, the method definition `public function display()` is invalid.
 
  - On line 40 of `Person.php`, the method definition `public function display();` is invalid.
 
  - There is a semicolon `;` at the end of `public function display();` on line 40 of `Person.php`.
 
- - There is no `abstract` keyword specified before `public function display()` on line 17 of `Student.php`.
+ - There is no `abstract` keyword specified before `public function display()` on line 18 of `Student.php`.
 
  - There is no `abstract` keyword specified before `public function display();` on line 40 of `Person.php`.
 
@@ -1477,7 +1490,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1555,7 +1569,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php"); 
 class Student extends Person
 {
     private $course;
@@ -1583,15 +1598,15 @@ $studObject->display();
 ```
 /// type=SS, answer=[4]
 
-In the method definition `public function display()` on line 17 of `Student.php`, replace `public` with `protected`. Execute the program. What is the error message?
+In the method definition `public function display()` on line 18 of `Student.php`, replace `public` with `protected`. Execute the program. What is the error message?
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 3
 
  - Non-abstract method `Person::display()` must contain body on line number 40
 
  - Abstract function `Person::display()` cannot be declared private on line number 40
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
@@ -1648,7 +1663,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1678,13 +1694,13 @@ $studObject->display();
 
 In the method definition `abstract public function display();` on line 40 of `Person.php`, replace `public` with `private`. Execute the program. What is the error message?
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 3
 
  - Non-abstract method `Person::display()` must contain body on line number 40
 
  - Abstract function `Person::display()` cannot be declared private on line number 40
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
@@ -1741,7 +1757,8 @@ abstract class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php"); 
 class Student extends Person
 {
     private $course;
@@ -1771,13 +1788,13 @@ $studObject->display();
 
 In `Person.php`, remove the `abstract` keyword from `abstract class Person` on line 2. Execute the program. What is the error message?
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 3
 
  - Non-abstract method `Person::display()` must contain body on line number 40
 
  - Abstract function `Person::display()` cannot be declared private on line number 40
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
@@ -1834,7 +1851,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php");
 class Student extends Person
 {
     private $course;
@@ -1864,13 +1882,13 @@ $studObject->display();
 
 In `Person.php`, remove the `abstract` keyword from `abstract public function display();` on line 40. Execute the program. What is the error message?
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 3
 
  - Non-abstract method `Person::display()` must contain body on line number 40
 
  - Abstract function `Person::display()` cannot be declared private on line number 40
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
@@ -1927,7 +1945,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php"); 
 class Student extends Person
 {
     private $course;
@@ -1955,15 +1974,15 @@ $studObject->display();
 ```
 /// type=SS, answer=[1]
 
-In `Student.php`, remove the `extends` keyword from `class Student extends Person` on line 2. Execute the program. What is the error message?
+In `Student.php`, remove the `extends` keyword from `class Student extends Person` on line 3. Execute the program. What is the error message?
 
- - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 2
+ - syntax error, unexpected `'Person'` (T_STRING), expecting `'{'` on line number 3
 
  - Non-abstract method `Person::display()` must contain body on line number 40
 
  - Abstract function `Person::display()` cannot be declared private on line number 40
 
- - Access level to `Student::display()` must be public (as in class Person) on line number 17
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
 
  - Class `Person` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 41
 
@@ -2020,7 +2039,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once("Person.php"); 
 class Student  Person
 {
     private $course;
@@ -2098,6 +2118,7 @@ class Animal
 
 ```php
 <?php
+require_once("Animal.php");
 
 
 ?>
