@@ -501,7 +501,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php'); 
 class Student extends Person
 {
     private $course;
@@ -589,7 +590,7 @@ Which of the following is a static property definition?
 
 /// type=SS, answer=[3]
 
-Which statement best describes `parent::$name` on line 19 of the `Student` class?
+Which statement best describes `parent::$name` on line 20 of the `Student` class?
 
  - It defines the static property `$name` of the parent class `Person` in the child class `Student`.
 
@@ -604,7 +605,7 @@ Which statement best describes `parent::$name` on line 19 of the `Student` class
 
 /// type=SS, answer=[1]
 
-Which statement best describes `parent::greeting("Good day")` on line 19 of the `Student` class?
+Which statement best describes `parent::greeting("Good day")` on line 20 of the `Student` class?
 
  - It calls the static method `greeting()` of the parent class `Person` in the child class `Student`.
 
@@ -687,7 +688,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -715,7 +717,7 @@ $studObject->display();
 ```
 /// type=SS, answer=[4]
 
-In the `echo` statement on line 19 of `Student.php`, replace all the `parent` keywords with `self`. Execute the program. What is its output?
+In the `echo` statement on line 20 of `Student.php`, replace all the `parent` keywords with `self`. Execute the program. What is its output?
 
  - It prints `Good day`.
 
@@ -783,7 +785,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -879,7 +882,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1781,7 +1785,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1830,11 +1835,11 @@ In the statement `return $greet . ", " . self::$name . "!";` on line 37 of `Pers
 
  - Uncaught Error: Using `$this` when not in object context thrown on line number 37
 
- - Missing argument `1` for `Person::greeting()`, called on line 19 and defined on line number 35
+ - Missing argument `1` for `Person::greeting()`, called on line 20 and defined on line number 35
 
  - Uncaught Error: Using `$this` when not in object context in `Person::greeting()` on line number 37
 
- - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 19
+ - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 20
 
 :::
 
@@ -1892,7 +1897,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -1920,17 +1926,17 @@ $studObject->display();
 ```
 /// type=MS, answer=[1,3,4]
 
-Remove the string `"Good day"` from the method call `parent::greeting("Good day")` on line 19 of `Student.php`. Execute the program. What are the error messages?
+Remove the string `"Good day"` from the method call `parent::greeting("Good day")` on line 20 of `Student.php`. Execute the program. What are the error messages?
 
  - Undefined variable: `greet` on line number 37
 
  - Uncaught Error: Using `$this` when not in object context thrown on line number 37
 
- - Missing argument `1` for `Person::greeting()`, called on line 19 and defined on line number 35
+ - Missing argument `1` for `Person::greeting()`, called on line 20 and defined on line number 35
 
  - Uncaught Error: Using `$this` when not in object context in `Person::greeting()` on line number 37
 
- - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 19
+ - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 20
 
 :::
 
@@ -1988,7 +1994,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
@@ -2022,11 +2029,11 @@ In the declaration `public static function greeting($greet)` on line 35 of `Pers
 
  - Uncaught Error: Using `$this` when not in object context thrown on line number 37
 
- - Missing argument `1` for `Person::greeting()`, called on line 19 and defined on line number 35
+ - Missing argument `1` for `Person::greeting()`, called on line 20 and defined on line number 35
 
  - Uncaught Error: Using `$this` when not in object context in `Person::greeting()` on line number 37
 
- - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 19
+ - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 20
 
 :::
 
@@ -2084,7 +2091,8 @@ class Person
 ```
 
 ```php
-<?php 
+<?php
+require_once('./Person.php');
 class Student extends Person
 {
     private $course;
