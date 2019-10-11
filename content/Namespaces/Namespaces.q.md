@@ -411,7 +411,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -611,7 +611,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -691,7 +691,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -769,7 +769,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -866,7 +866,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -1622,7 +1622,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -1719,7 +1719,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -1800,7 +1800,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -1880,7 +1880,7 @@ class Geometry
 
 ```php
 <?php
-namespace Math
+namespace Math;
 
 class Constants
 {
@@ -1931,7 +1931,7 @@ echo "The circumference of the circle is: " . $circle->getCircumference();
 
 /// type=CR, answer=[tests/Namespaces/DefineAndImportNamespacesTest.php], filename=[Constants.php,CircularShape.php,Circle.php,Main.php]
 
-Given the initial implementations of the classes below, add a statement that defines and assigns each class to a certain namespace. In the `Constants.php` tab, add a statement that defines the `Math` namespace using the `namespace` keyword after the `<?php` opening tag. In the `CircularShape.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace at the first line of the PHP file. In the `Circle.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace. Then, add two statements that import the `Constants` class in the `Math` namespace and the `CircularShape` class in the `Math\Geometry` namespace. In the `Main.php` tab, add a statement that imports the `Circle` class in the `Math\Geometry` namespace and aliased as `MyCircle`. Run the program to view the output.
+Given the initial implementations of the classes below, add a statement that defines namespaces and assigns each class to a certain namespace. In the `Constants.php` tab, add a statement that defines the `Math` namespace using the `namespace` keyword after the `<?php` opening tag. In the `CircularShape.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace at the first line of the PHP file. In the `Circle.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace. Then, add two statements that import the `Constants` class in the `Math` namespace and the `CircularShape` class in the `Math\Geometry` namespace. In the `Main.php` tab, add a statement that imports the `Circle` class in the `Math\Geometry` namespace and aliased as `MyCircle`. Run the program to view the output.
 
 ```php
 <?php
