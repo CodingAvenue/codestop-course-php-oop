@@ -4,9 +4,9 @@ An object is the actual representation or instance of a class.
 
 The `new` keyword is used to create an object as an instance of a class.
 
-`Instantiation` is the process of creating a new object of a class.
+`Instantiation` is the process of creating a new instance of a class.
 
-To create an object, write the name of the object followed by an equal sign `=`; the `new` keyword and its corresponding class name. One way to write it is this way:
+To create an object, write the name of the variable followed by an equal sign `=`; the `new` keyword and its corresponding class name. One way to write it is this way:
 
 ```php
 $objectName = new className();
