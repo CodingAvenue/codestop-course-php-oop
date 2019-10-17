@@ -21,13 +21,13 @@ Code:
     {
         public $myProp = "This is a class property.";
 
-        public function myMeth()
+        public function myMethod()
         {
             echo "This is a class method.";
         }
     }
     $myObject = new MyClass();
-    $myObject->myMeth();
+    $myObject->myMethod();
     echo $myObject->myProp;
 ?>
 ```
