@@ -1,6 +1,8 @@
 ### Facts for Namespaces lesson:
 
-A `namespace` is a process of organizing related classes, interfaces, functions, and constants into logical groups to prevent name conflicts. It is referred to as a virtual directory for a class in a global space.
+A `namespace` is a way of organizing related classes, interfaces, functions, and constants into logical groups to prevent name conflicts. It is referred to as a virtual directory for a class in a global space.
+
+The `global space` is the default namespace where all classes, interfaces, functions, and constants without any namespace definition are placed.  
 
 The `namespace` keyword defines a namespace.
 
@@ -10,7 +12,7 @@ A namespace declaration should be written at the first line of a PHP file.
 
 A backslash `\` is used to separate nested namespaces like `namespace App\Models;`.
 
-The `use` keyword imports namespaces and classes to a current PHP file. 
+The `use` keyword imports namespaces and classes into the current namespace. 
 
 The `as` keyword is used to create an alias of the imported class.
 
@@ -26,6 +28,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -50,6 +53,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }

@@ -16,7 +16,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -30,7 +30,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -52,11 +52,11 @@ Execute the program. What is its output?
 
  - No output is displayed.
 
- - It prints `This is a user in App namespace.`.
+ - It prints `This is a user in the App namespace.`.
 
- - It prints `This is a user in App\Model namespace.`.
+ - It prints `This is a user in the App\Model namespace.`.
 
- - It prints `This is a user in App namespace.` and `This is a user in App\Model namespace.` in separate lines.
+ - It prints `This is a user in the App namespace.` and `This is a user in the App\Model namespace.` in separate lines.
 
 
 /// type=SS, answer=[4]
@@ -149,7 +149,7 @@ Which statement best describes `require_once("./UserApp.php");` on line 2 of `Ma
 - It excludes the file `UserApp.php` in the file `Main.php`.
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, answer=[4,5]
 
 Which statements correctly describe `$user = new App\User();` on line 4 of `Main.php`?
 
@@ -157,11 +157,11 @@ Which statements correctly describe `$user = new App\User();` on line 4 of `Main
 
  - It sets the value of `$user` to `App\User()`.
 
- - It creates the `$user` instance of the `User` class in the `App` namespace.
-
- - It evaluates the `$user` object of the `User` class in the `App` namespace.
+ - It displays the value of `$user` in the `App` namespace.
 
  - It instantiates the `$user` object of the `User` class in the `App` namespace.
+
+ - It creates an instance of the `User` class in the `App` namespace and assigns it to `$user`.
 
 :::
 
@@ -178,7 +178,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -192,7 +192,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -216,11 +216,11 @@ Execute the program. What is its output?
 
  - No output is displayed.
 
- - It prints `This is a user in App namespace.`.
+ - It prints `This is a user in the App namespace.`.
 
- - It prints `This is a user in App\Model namespace.`.
+ - It prints `This is a user in the App\Model namespace.`.
 
- - It prints `This is a user in App namespace.` and `This is a user in App\Model namespace.` in separate lines.
+ - It prints `This is a user in the App namespace.` and `This is a user in the App\Model namespace.` in separate lines.
 
 
 /// type=MS, answer=[2,4]
@@ -282,7 +282,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -296,7 +296,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -306,9 +306,9 @@ class User
 <?php
 require_once("./UserModel.php");
 
-use App\Model\User as newUser;
+use App\Model\User as NewUser;
 
-$user = new newUser();
+$user = new NewUser();
 
 ?>
 ```
@@ -320,11 +320,11 @@ Execute the program. What is its output?
 
  - No output is displayed.
 
- - It prints `This is a user in App namespace.`.
+ - It prints `This is a user in the App namespace.`.
 
- - It prints `This is a user in App\Model namespace.`.
+ - It prints `This is a user in the App\Model namespace.`.
 
- - It prints `This is a user in App namespace.` and `This is a user in App\Model namespace.` in separate lines.
+ - It prints `This is a user in the App namespace.` and `This is a user in the App\Model namespace.` in separate lines.
 
 
 /// type=MS, answer=[1,3]
@@ -344,7 +344,7 @@ Which of the following are namespaces?
 
 /// type=SS, answer=[4]
 
-In the statement `use App\Model\User as newUser;` on line 4 of `Main.php`, what is `as`?
+In the statement `use App\Model\User as NewUser;` on line 4 of `Main.php`, what is `as`?
 
  - It is a value.
 
@@ -359,7 +359,7 @@ In the statement `use App\Model\User as newUser;` on line 4 of `Main.php`, what 
 
 /// type=SS, answer=[5]
 
-In the statement `use App\Model\User as newUser;` on line 4 of `Main.php`, what is `newUser`?
+In the statement `use App\Model\User as NewUser;` on line 4 of `Main.php`, what is `NewUser`?
 
  - It is a class.
 
@@ -374,17 +374,17 @@ In the statement `use App\Model\User as newUser;` on line 4 of `Main.php`, what 
 
 /// type=SS, answer=[3]
 
-Which statement best describes `use App\Model\User as newUser;` on line 4 of `Main.php`?
+Which statement best describes `use App\Model\User as NewUser;` on line 4 of `Main.php`?
 
- - It calls the `User` class in the `App\Model` namespace with the alias `newUser`.
+ - It calls the `User` class in the `App\Model` namespace with the alias `NewUser`.
 
- - It defines the `User` class in the `App\Model` namespace with the alias `newUser`.
+ - It defines the `User` class in the `App\Model` namespace with the alias `NewUser`.
 
- - It imports the `User` class in the `App\Model` namespace with the alias `newUser`.
+ - It imports the `User` class in the `App\Model` namespace with the alias `NewUser`.
 
- - It removes the `User` class in the `App\Model` namespace with the alias `newUser`.
+ - It removes the `User` class in the `App\Model` namespace with the alias `NewUser`.
 
- - It displays the `User` class in the `App\Model` namespace with the alias `newUser`.
+ - It displays the `User` class in the `App\Model` namespace with the alias `NewUser`.
 
 :::
 
@@ -403,6 +403,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -437,6 +438,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -603,6 +605,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -637,6 +640,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -683,6 +687,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -717,6 +722,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -761,6 +767,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -795,6 +802,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -858,6 +866,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -892,6 +901,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -945,7 +955,7 @@ Which statements correctly describe a namespace?
 
  - It is a relationship between classes that enables a child class to inherit the properties and methods of its parent class.
 
- - It is a process of organizing related classes, interfaces, functions, and constants into logical groups to prevent name conflicts.
+ - It is a way of organizing related classes, interfaces, functions, and constants into logical groups to prevent name conflicts.
 
 
 /// type=SS, answer=[1]
@@ -1011,7 +1021,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1025,7 +1035,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1047,11 +1057,11 @@ Execute the program. What is its output?
 
  - No output is displayed.
 
- - It prints `This is a user in App namespace.`.
+ - It prints `This is a user in the App namespace.`.
 
- - It prints `This is a user in App\Model namespace.`.
+ - It prints `This is a user in the App\Model namespace.`.
 
- - It prints `This is a user in App namespace.` and `This is a user in App\Model namespace.` in separate lines.
+ - It prints `This is a user in the App namespace.` and `This is a user in the App\Model namespace.` in separate lines.
 
 
 /// type=SS, answer=[1]
@@ -1088,7 +1098,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Namespaces/UnspecifiedUserClassNamespaceTest.php], filename=[UserApp.php,UserModel.php,Main.php]
 
-Correct the code so that it outputs the string `This is a user in App namespace.`.
+Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
 ```php
 <?php
@@ -1098,7 +1108,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1112,7 +1122,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1140,7 +1150,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1154,7 +1164,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1204,7 +1214,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Namespaces/IncorrectUseStatementTest.php], filename=[UserApp.php,UserModel.php,Main.php]
 
-Correct the code so that it outputs the string `This is a user in App namespace.`.
+Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
 ```php
 <?php
@@ -1214,7 +1224,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1228,7 +1238,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1258,7 +1268,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1272,7 +1282,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1322,7 +1332,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Namespaces/MissingUseKeywordTest.php], filename=[UserApp.php,UserModel.php,Main.php]
 
-Correct the code so that it outputs the string `This is a user in App namespace.`.
+Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
 ```php
 <?php
@@ -1332,7 +1342,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1346,7 +1356,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1376,7 +1386,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1390,7 +1400,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1440,7 +1450,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Namespaces/UnusedUserAliasTest.php], filename=[UserApp.php,UserModel.php,Main.php]
 
-Correct the code so that it outputs the string `This is a user in App\Model namespace.`.
+Correct the code so that it outputs the string `This is a user in the App\Model namespace.`.
 
 ```php
 <?php
@@ -1450,7 +1460,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1464,7 +1474,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1494,7 +1504,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1508,7 +1518,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1558,7 +1568,7 @@ Which statements correctly describe the error?
 
 /// type=CR, answer=[tests/Namespaces/MissingAsKeywordTest.php], filename=[UserApp.php,UserModel.php,Main.php]
 
-Correct the code so that it outputs the string `This is a user in App\Model namespace.`.
+Correct the code so that it outputs the string `This is a user in the App\Model namespace.`.
 
 ```php
 <?php
@@ -1568,7 +1578,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App namespace.";
+        echo "This is a user in the App namespace.";
     }
 }
 ?>
@@ -1582,7 +1592,7 @@ class User
 {
     public function __construct()
     {
-        echo "This is a user in App\Model namespace.";
+        echo "This is a user in the App\Model namespace.";
     }
 }
 ?>
@@ -1614,6 +1624,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -1648,6 +1659,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -1690,7 +1702,7 @@ Remove the statement `use Math\Constants;` on line 4 of `Circle.php`. Execute th
 
  - Uncaught Error: Undefined constant `'Math\Geometry'` in `Main.php` on line number 5
 
- - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 20
+ - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 18
 
  - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 5
 
@@ -1711,6 +1723,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -1744,6 +1757,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -1771,7 +1785,7 @@ In the statement `$circle = new NewCircle(10);` on line 7 of `Main.php`, replace
 
  - Uncaught Error: Undefined constant `'Math\Geometry'` in `Main.php` on line number 5
 
- - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 20
+ - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 18
 
  - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 5
 
@@ -1792,6 +1806,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -1824,6 +1839,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }
@@ -1851,7 +1867,7 @@ Remove `as` from the statement `use Math\Geometry\Circle as NewCircle;` on line 
 
  - Uncaught Error: Undefined constant `'Math\Geometry'` in `Main.php` on line number 5
 
- - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 20
+ - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 18
 
  - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 5
 
@@ -1871,7 +1887,8 @@ class Geometry
     const PI = 3.14159;
 	
     static function getCircleArea($radius)
-    {
+    {  
+        //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
 }
@@ -1904,6 +1921,7 @@ class Circle
 	
     public function getCircumference()
     {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
         return 2 * Constants::PI * $this -> radius;
     }
 }

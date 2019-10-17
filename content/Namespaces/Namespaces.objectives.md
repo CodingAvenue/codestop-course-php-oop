@@ -4,7 +4,7 @@ After completing this lesson, the students should be able to:
 
  - Distinguish the importance of using namespace in organizing related classes, interfaces, and functions in a PHP project.
 
- - Declare namespaces and sub-namespaces using the `namespace` keyword.
+ - Declare namespaces and nested namespaces using the `namespace` keyword.
 
  - Import namespaces and classes using the `use` keyword.
 
