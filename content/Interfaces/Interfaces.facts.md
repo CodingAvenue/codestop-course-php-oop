@@ -47,8 +47,8 @@ class TestPerson implements TestInterface
     }
 }
 
-$personObj = new TestPerson("Anna");
-$personObj->sayHello();
+$personObject = new TestPerson("Anna");
+$personObject->sayHello();
 ?>
 ```
 
