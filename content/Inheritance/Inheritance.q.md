@@ -59,8 +59,8 @@ class Student extends Person
 
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -215,22 +215,22 @@ Which statements correctly describe `class Student extends Person { }`?
 
 /// type=MS, answer=[4,5]
 
-Which statements correctly describe `$studObject = new Student("John", 15);` on line 8 of `Student.php`?
+Which statements correctly describe `$studentObject = new Student("John", 15);` on line 8 of `Student.php`?
 
- - It sets the arguments `John` and `15` to the `$studObject` object.
+ - It sets the arguments `John` and `15` to the `$studentObject` object.
 
- - It returns the `$studObject` object of the `Student` class with the parameters `John` and `15`.
+ - It returns the `$studentObject` object of the `Student` class with the parameters `John` and `15`.
 
- - It declares the `$studObject` object of the `Student` class with the parameters `John` and `15`.
+ - It declares the `$studentObject` object of the `Student` class with the parameters `John` and `15`.
 
- - It initializes the `$name` and `$age` properties of the `$studObject` object inherited from the `Person` class.
+ - It initializes the `$name` and `$age` properties of the `$studentObject` object inherited from the `Person` class.
 
- - It creates the `$studObject` object as an instance of the `Student` class passing the arguments `John` and `15`.
+ - It creates the `$studentObject` object as an instance of the `Student` class passing the arguments `John` and `15`.
 
 
 /// type=SS, answer=[1]
 
-Which statement best describes `$studObject->display();` on line 9 of `Student.php`?
+Which statement best describes `$studentObject->display();` on line 9 of `Student.php`?
 
  - It calls the `display()` method of the `Student` class inherited from the `Person` class.
 
@@ -336,8 +336,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -367,7 +367,7 @@ Which of the following is a child class?
 
  - `Student`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=SS, answer=[2]
@@ -382,7 +382,7 @@ Which of the following is a parent class?
 
  - `Student`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=MS, answer=[1,2]
@@ -397,7 +397,7 @@ Which of the following are properties of the `Person` class?
 
  - `$newAge`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=MS, answer=[1,2,3]
@@ -412,7 +412,7 @@ Which of the following are properties of the `Student` class?
 
  - `$newAge`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=MS, answer=[1,2,3,4]
@@ -539,15 +539,15 @@ Which statements correctly describe the `display()` method of the `Student` clas
 
 Which statements correctly describe the code on line 24 of `Student.php`?
 
- - It sets the arguments `John`, `20`, and `BSCS` to the `$studObject` object.
+ - It sets the arguments `John`, `20`, and `BSCS` to the `$studentObject` object.
 
- - It initializes the `$name`, `$age`, and `$course` properties of the `$studObject` object.
+ - It initializes the `$name`, `$age`, and `$course` properties of the `$studentObject` object.
 
- - It returns the `$studObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
+ - It returns the `$studentObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
 
- - It declares the `$studObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
+ - It declares the `$studentObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
 
- - It creates the `$studObject` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
+ - It creates the `$studentObject` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
 
 
 /// type=MS, answer=[1,2]
@@ -643,8 +643,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -740,8 +740,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=MS, answer=[4,5]
@@ -761,7 +761,7 @@ What makes the `$name` property of the `Person` class accessible inside the `Stu
 
 /// type=SS, answer=[3]
 
-In the statement `$studObject->display();` on line 25 of `Student.php`, replace `display` with `getName`. Execute the program. What is its output?
+In the statement `$studentObject->display();` on line 25 of `Student.php`, replace `display` with `getName`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -852,13 +852,13 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->getName();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->getName();
 ?>
 ```
 /// type=SS, answer=[2]
 
-Add the `echo` construct at the beginning of the statement `$studObject->getName();` on line 25 of `Student.php`. Execute the program. What is its output?
+Add the `echo` construct at the beginning of the statement `$studentObject->getName();` on line 25 of `Student.php`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -949,13 +949,13 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-echo $studObject->getName();
+$studentObject = new Student("John", 20, "BSCS");
+echo $studentObject->getName();
 ?>
 ```
 /// type=SS, answer=[1]
 
-In the statement `echo $studObject->getName();` on line 25 of `Student.php`, replace `getName()` with `getAge()`. Execute the program. What is its output?
+In the statement `echo $studentObject->getName();` on line 25 of `Student.php`, replace `getName()` with `getAge()`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1046,13 +1046,13 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-echo $studObject->getAge();
+$studentObject = new Student("John", 20, "BSCS");
+echo $studentObject->getAge();
 ?>
 ```
 /// type=SS, answer=[3]
 
-In the statement `echo $studObject->getAge();` on line 25 of `Student.php`, replace `getAge()` with `checkAge()`. Execute the program. What is its output?
+In the statement `echo $studentObject->getAge();` on line 25 of `Student.php`, replace `getAge()` with `checkAge()`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1143,13 +1143,13 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-echo $studObject->checkAge();
+$studentObject = new Student("John", 20, "BSCS");
+echo $studentObject->checkAge();
 ?>
 ```
 /// type=SS, answer=[5]
 
-On line 25 of `Student.php`, replace the statement `echo $studObject->checkAge();` with `$studObject->display();`. Execute the program. What is its output?
+On line 25 of `Student.php`, replace the statement `echo $studentObject->checkAge();` with `$studentObject->display();`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1240,8 +1240,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -1409,8 +1409,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -1428,15 +1428,15 @@ Execute the program. What is its output?
  - It prints `John is taking up BSCS.`.
 
 
-/// type=SS, answer=[3]
+/// type=SS, answer=[2]
 
 What is the error message?
 
  - Undefined variable: `course` on line number 10
 
- - Uncaught Error: Call to private method `Person::checkAge()` on line 24
-
  - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
+
+ - Uncaught Error: Call to private method `Person::checkAge()` on line 24
 
  - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
 
@@ -1536,8 +1536,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
@@ -1618,8 +1618,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20);
-$studObject->display();
+$studentObject = new Student("John", 20);
+$studentObject->display();
 ?>
 ```
 /// type=MS, answer=[1,4]
@@ -1628,9 +1628,9 @@ Execute the program. What are the error messages?
 
  - Undefined variable: `course` on line number 10
 
- - Uncaught Error: Call to private method `Person::checkAge()` on line 24
-
  - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
+
+ - Uncaught Error: Call to private method `Person::checkAge()` on line 24
 
  - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
 
@@ -1645,7 +1645,7 @@ Which statements correctly describe the error?
 
  - There is no third argument specified in `Student("John", 20)` on line 24 of `Student.php`.
 
- - On line 24 of `Student.php`, the statement `$studObject = new Student("John", 20);` is invalid.
+ - On line 24 of `Student.php`, the statement `$studentObject = new Student("John", 20);` is invalid.
 
  - On line 24 of `Student.php`, the argument `John` in `Student("John", 20)` is enclosed in double quotes `""`.
 
@@ -1730,8 +1730,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20);
-$studObject->display();
+$studentObject = new Student("John", 20);
+$studentObject->display();
 ?>
 ```
 
@@ -1812,8 +1812,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1822,9 +1822,9 @@ Execute the program. What is the error message?
 
  - Undefined variable: `course` on line number 10
 
- - Uncaught Error: Call to private method `Person::checkAge()` on line 24
-
  - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
+
+ - Uncaught Error: Call to private method `Person::checkAge()` on line 24
 
  - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
 
@@ -1835,13 +1835,13 @@ Execute the program. What is the error message?
 
 Which statements correctly describe the error?
 
- - There are no parentheses `()` after `$studObject->display()` on line 18 of `Student.php`.
+ - There are no parentheses `()` after `$studentObject->display()` on line 18 of `Student.php`.
 
  - On line 18 of `Student.php`, the method definition `private function display()` is invalid.
 
  - On line 18 of `Student.php`, the `private` visibility keyword in the method definition is not allowed.
 
- - There is no semicolon `;` at the end of the statement `$studObject->display()` on line 18 of `Student.php`.
+ - There is no semicolon `;` at the end of the statement `$studentObject->display()` on line 18 of `Student.php`.
 
  - Overriding the `display()` method of the parent class `Person` using the `private` visibility keyword is not allowed.
 
@@ -1924,8 +1924,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
@@ -2006,8 +2006,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -2027,7 +2027,7 @@ Execute the program. What is its output?
 
 /// type=SS, answer=[2]
 
-In the statement `$studObject->display();` on line 25 of `Student.php`, remove the dollar sign `$` from `$studObject`. Execute the program. What is the error message?
+In the statement `$studentObject->display();` on line 25 of `Student.php`, remove the dollar sign `$` from `$studentObject`. Execute the program. What is the error message?
 
  - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 3
 
@@ -2118,13 +2118,13 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
 
-In the statement `$studObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`, remove the comma `,` between `John` and `20`. Execute the program. What is the error message?
+In the statement `$studentObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`, remove the comma `,` between `John` and `20`. Execute the program. What is the error message?
 
  - syntax error, unexpected `'extends'` (T_EXTENDS) on line number 3
 
@@ -2215,8 +2215,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John" 20, "BSCS");
-studObject->display();
+$studentObject = new Student("John" 20, "BSCS");
+studentObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -2312,8 +2312,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John" 20, "BSCS");
-studObject->display();
+$studentObject = new Student("John" 20, "BSCS");
+studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -2409,8 +2409,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John" 20, "BSCS");
-studObject->display();
+$studentObject = new Student("John" 20, "BSCS");
+studentObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -2506,8 +2506,8 @@ Student extends Person
     }
 }
 
-$studObject = new Student("John" 20, "BSCS");
-studObject->display();
+$studentObject = new Student("John" 20, "BSCS");
+studentObject->display();
 ?>
 ```
 
