@@ -19,8 +19,8 @@
             $this->name = $name;
         }
     }
-    $pObject = new Person("John");
-    echo $pObject->name;
+    $personObject = new Person("John");
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[2]
@@ -53,7 +53,7 @@ Which of the following is a visibility keyword?
  - `__construct()`
 
 
-/// type=SS, answer=[5]
+/// type=SS, answer=[4]
 
 Which of the following is a method?
 
@@ -61,11 +61,11 @@ Which of the following is a method?
 
  - `Person()`
 
- - `$pObject`
-
  - `function`
 
  - `__construct()`
+
+ - `$personObject`
 
 
 /// type=SS, answer=[1]
@@ -76,11 +76,11 @@ Which of the following is a property?
 
  - `Person()`
 
- - `$pObject`
-
  - `function`
 
  - `__construct()`
+
+ - `$personObject`
 
 
 /// type=SS, answer=[2]
@@ -95,7 +95,7 @@ Which of the following is a parameter?
 
  - `Person`
 
- - `$pObject`
+ - `$personObject`
 
 
 /// type=SS, answer=[1]
@@ -110,7 +110,7 @@ Which of the following is an argument?
 
  - `Person`
 
- - `$pObject`
+ - `$personObject`
 
 
 /// type=SS, answer=[4]
@@ -190,17 +190,17 @@ On lines 6, 7, 8, and 9, what does the `__construct()` method do?
 
 /// type=MS, answer=[1,5]
 
-Which statements correctly describe `$pObject = new Person("John");` on line 11?
+Which statements correctly describe `$personObject = new Person("John");` on line 11?
 
- - It initializes the `$name` property of the `$pObject` object.
+ - It initializes the `$name` property of the `$personObject` object.
 
- - It removes the argument `John` from the `$pObject` object.
+ - It removes the argument `John` from the `$personObject` object.
 
- - It returns the `$pObject` object of the `Person` class with the parameter `John`.
+ - It returns the `$personObject` object of the `Person` class with the parameter `John`.
 
- - It declares the `$pObject` object of the `Person` class with the parameter `John`.
+ - It declares the `$personObject` object of the `Person` class with the parameter `John`.
 
- - It creates the `$pObject` object as an instance of the `Person` class passing the argument `John`.
+ - It creates the `$personObject` object as an instance of the `Person` class passing the argument `John`.
 
 :::
 
@@ -249,8 +249,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -310,7 +310,7 @@ Which property is accessible only within the `Person` class?
 
  - `$newAge`
 
- - `$pObject`
+ - `$personObject`
 
 
 /// type=SS, answer=[5]
@@ -392,15 +392,15 @@ Which statements correctly describe the `__construct()` method of the `Person` c
 
 Which statements correctly describe the code on line 40?
 
- - It sets the arguments `James` and `15` to the `$pObject` object.
+ - It sets the arguments `James` and `15` to the `$personObject` object.
 
- - It initializes the `$name` and `$age` properties of the `$pObject` object.
+ - It initializes the `$name` and `$age` properties of the `$personObject` object.
 
- - It returns the `$pObject` object of the `Person` class with the parameters `James` and `15`.
+ - It returns the `$personObject` object of the `Person` class with the parameters `James` and `15`.
 
- - It declares the `$pObject` object of the `Person` class with the parameters `James` and `15`.
+ - It declares the `$personObject` object of the `Person` class with the parameters `James` and `15`.
 
- - It creates the `$pObject` object as an instance of the `Person` class passing the arguments `James` and `15`.
+ - It creates the `$personObject` object as an instance of the `Person` class passing the arguments `James` and `15`.
 
 :::
 
@@ -449,9 +449,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->setAge(45);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->setAge(45);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -471,7 +471,7 @@ Execute the program. What is its output?
 
 /// type=SS, answer=[5]
 
-In the statement `$pObject->setAge(45);` on line 40, replace the value `45` with `-45`. Execute the program. What is its output?
+In the statement `$personObject->setAge(45);` on line 40, replace the value `45` with `-45`. Execute the program. What is its output?
 
  - It prints `15`.
 
@@ -530,9 +530,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->setAge(-45);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->setAge(-45);
+$personObject->display();
 ?>
 ```
 /// type=MS, answer=[4,5]
@@ -547,12 +547,12 @@ Why is the value of the `$age` property not set to `-45`?
 
  - On line 41, the argument `-45` in the `setAge()` method is less than `0`.
 
- - The `setAge()` method only assigns values greater than `0` to the `$age` property of `$pObject`.
+ - The `setAge()` method only assigns values greater than `0` to the `$age` property of `$personObject`.
 
 
 /// type=SS, answer=[5]
 
-Remove the statement `$pObject->setAge(-45);` on line 40. Execute the program. What is its output?
+Remove the statement `$personObject->setAge(-45);` on line 40. Execute the program. What is its output?
 
  - It prints `15`.
 
@@ -611,14 +611,14 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
+$personObject = new Person("James", 15);
 
-$pObject->display();
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
 
-Add the statement `$pObject->name = "Diana";` on line 40. Execute the program. What is its output?
+Add the statement `$personObject->name = "Diana";` on line 40. Execute the program. What is its output?
 
  - It prints `15`.
 
@@ -677,9 +677,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->name = "Diana";
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->name = "Diana";
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -743,14 +743,14 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->name = "Diana";
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->name = "Diana";
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
 
-Remove the statement `$pObject->name = "Diana";` on line 40. Execute the program. What is its output?
+Remove the statement `$personObject->name = "Diana";` on line 40. Execute the program. What is its output?
 
  - It prints `Diana`.
 
@@ -809,13 +809,13 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
 
-In the statement `$pObject = new Person("James", 15);` on line 39, replace `Person("James", 15)` with `Person()`. Execute the program. What is its output?
+In the statement `$personObject = new Person("James", 15);` on line 39, replace `Person("James", 15)` with `Person()`. Execute the program. What is its output?
 
  - It prints `Diana`.
 
@@ -889,8 +889,8 @@ Which statement best describes the `__construct()` method?
             $this->name = $name;
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[4]
@@ -923,7 +923,7 @@ What are the error messages?
  - Missing argument `1` for `Person::__construct()`, called on line 11 and defined on line number 6
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, answer=[3,4]
 
 Which statements correctly describe the error?
 
@@ -931,11 +931,11 @@ Which statements correctly describe the error?
 
  - There is no semicolon `;` at the end of the statement on line 11.
 
- - On line 11, the statement `$pObject = new Person();` is invalid.
-
- - There is no assignment operator `=` between `&pObject` and `new` on line 11.
+ - On line 11, the statement `$personObject = new Person();` is invalid.
 
  - There is no argument specified in the `Person()` class constructor on line 11.
+
+ - There is no assignment operator `=` between `&personObject` and `new` on line 11.
 
 :::
 
@@ -955,8 +955,8 @@ Correct the code so that it outputs the string `John`.
             $this->name = $name;
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 
@@ -976,8 +976,8 @@ Correct the code so that it outputs the string `John`.
             $this->name = $name;
         }
     }
-    $pObject = new Person("John");
-    echo $pObject->name;
+    $personObject = new Person("John");
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1027,8 +1027,8 @@ Correct the code so that it outputs the string `John`.
             $this->name = $name;
         }
     }
-    $pObject = new Person("John");
-    echo $pObject->name;
+    $personObject = new Person("John");
+    echo $personObject->name;
 ?>
 ```
 
@@ -1077,8 +1077,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James" 15);
-$pObject->display();
+$personObject = new Person("James" 15);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1123,7 +1123,7 @@ Which statements correctly describe the error?
 
  - On line 40, the second argument `15` is not enclosed in double quotes `""`. 
 
- - On line 40, the statement `$pObject = new Person("James" 15);` is invalid.
+ - On line 40, the statement `$personObject = new Person("James" 15);` is invalid.
 
 :::
 
@@ -1172,8 +1172,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James" 15);
-$pObject->display();
+$personObject = new Person("James" 15);
+$personObject->display();
 ?>
 ```
 
@@ -1222,8 +1222,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -1302,8 +1302,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->display();
 ?>
 ```
 
@@ -1352,8 +1352,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James");
-$pObject->display();
+$personObject = new Person("James");
+$personObject->display();
 ?>
 ```
 /// type=MS, answer=[1,5]
@@ -1379,9 +1379,9 @@ Which statements correctly describe the error?
 
  - On line 40, the argument `James` is enclosed in double quotes `""`.
 
- - On line 40, the statement `$pObject = new Person("James");` is invalid.
+ - On line 40, the statement `$personObject = new Person("James");` is invalid.
 
- - There is no assignment operator `=` between `$pObject` and `new` on line 40.
+ - There is no assignment operator `=` between `$personObject` and `new` on line 40.
 
  - There is no second argument specified in the `Person()` class constructor on line 40.
 
@@ -1432,8 +1432,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James");
-$pObject->display();
+$personObject = new Person("James");
+$personObject->display();
 ?>
 ```
 
@@ -1482,8 +1482,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1562,13 +1562,13 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = new Person("James", 15);
-$pObject->display();
+$personObject = new Person("James", 15);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
 
-Remove the `new` keyword from the statement `$pObject = new Person("James", 15);` on line 40. Execute the program. What is the error message?
+Remove the `new` keyword from the statement `$personObject = new Person("James", 15);` on line 40. Execute the program. What is the error message?
 
  - Undefined variable: `age` on line number 29
 
@@ -1627,8 +1627,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = Person("James", 15);
-$pObject->display();
+$personObject = Person("James", 15);
+$personObject->display();
 ?>
 ```
 /// type=MS, answer=[1,3,4]
@@ -1692,8 +1692,8 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$pObject = Person("James", 15);
-$pObject->display();
+$personObject = Person("James", 15);
+$personObject->display();
 ?>
 ```
 
