@@ -38,9 +38,9 @@ class Person
         echo "This is an eat() method.";
     }
 }
-$pObject = new Person();
-$pObject->setAge(18);
-echo $pObject->name . " is " . $pObject->getAge() . " years old.";
+$personObject = new Person();
+$personObject->setAge(18);
+echo $personObject->name . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
 
@@ -59,4 +59,4 @@ In the above example, the code breaks down as follows:
 
  - `return $this->age;` is a statement that returns the value of the `$age` property after the `getAge()` method is called.
 
- - `$pObject->setAge(18)` and `$pObject->getAge()` are the call to the `setAge()` and `getAge()` methods of the `$pObject` object.
+ - `$personObject->setAge(18)` and `$personObject->getAge()` are the call to the `setAge()` and `getAge()` methods of the `$personObject` object.

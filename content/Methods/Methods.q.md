@@ -19,9 +19,9 @@
             $this->name = $newName;
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    echo $pObject->name;
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[3]
@@ -54,7 +54,7 @@ Which of the following are keywords?
  - `function`
 
 
-/// type=SS, answer=[4]
+/// type=SS, answer=[5]
 
 Which of the following is an object?
 
@@ -64,9 +64,9 @@ Which of the following is an object?
 
  - `$newName`
 
- - `$pObject`
-
  - `changeName()`
+
+ - `$personObject`
 
 
 /// type=SS, answer=[2]
@@ -79,9 +79,9 @@ Which of the following is a class?
 
  - `$newName`
 
- - `$pObject`
-
  - `changeName()`
+
+ - `$personObject`
 
 
 /// type=SS, answer=[1]
@@ -94,12 +94,12 @@ Which of the following is a property?
 
  - `$newName`
 
- - `$pObject`
-
  - `changeName()`
 
+ - `$personObject`
 
-/// type=SS, answer=[5]
+
+/// type=SS, answer=[4]
 
 Which of the following is a method?
 
@@ -109,9 +109,9 @@ Which of the following is a method?
 
  - `$newName`
 
- - `$pObject`
-
  - `changeName()`
+
+ - `$personObject`
 
 
 /// type=SS, answer=[4]
@@ -206,7 +206,7 @@ Which statement best describes the code on line 8?
 
 /// type=SS, answer=[4]
 
-In the statement `$pObject->changeName("Charles");` on line 12, what is `Charles`?
+In the statement `$personObject->changeName("Charles");` on line 12, what is `Charles`?
 
  - It is a keyword.
 
@@ -221,32 +221,32 @@ In the statement `$pObject->changeName("Charles");` on line 12, what is `Charles
 
 /// type=SS, answer=[2]
 
-On line 12, what does the statement `$pObject->changeName("Charles");` do?
+On line 12, what does the statement `$personObject->changeName("Charles");` do?
 
- - It returns the argument `Charles` in the `changeName()` method of `$pObject`.
+ - It returns the argument `Charles` in the `changeName()` method of `$personObject`.
 
- - It calls the `changeName()` method of `$pObject` passing the argument `Charles`.
+ - It calls the `changeName()` method of `$personObject` passing the argument `Charles`.
 
- - It creates the `changeName()` method of `$pObject` with the parameter `Charles`.
+ - It creates the `changeName()` method of `$personObject` with the parameter `Charles`.
 
- - It removes the argument `Charles` from the `changeName()` method of `$pObject`.
+ - It removes the argument `Charles` from the `changeName()` method of `$personObject`.
 
- - It accesses the argument `Charles` from the `changeName()` method of `$pObject`.
+ - It accesses the argument `Charles` from the `changeName()` method of `$personObject`.
 
 
 /// type=SS, answer=[5]
 
 Which statement best describes the code on line 13?
 
- - It sets the value `Charles` of the `name` property as `$pObject`.
+ - It sets the value `Charles` of the `name` property as `$personObject`.
 
- - It adds the value `Charles` of the `name` property to `$pObject`.
+ - It adds the value `Charles` of the `name` property to `$personObject`.
 
- - It returns the value `Charles` of the `name` property of `$pObject`.
+ - It returns the value `Charles` of the `name` property of `$personObject`.
 
- - It removes the value `Charles` of the `name` property of `$pObject`.
+ - It removes the value `Charles` of the `name` property of `$personObject`.
 
- - It displays the value `Charles` of the `name` property of `$pObject`.
+ - It displays the value `Charles` of the `name` property of `$personObject`.
 
 :::
 
@@ -271,9 +271,9 @@ Which statement best describes the code on line 13?
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -299,7 +299,7 @@ Which of the following are method definitions?
 
  - `$this->name = $newName;`
 
- - `$pObject->changeName("Charles");`
+ - `$personObject->changeName("Charles");`
 
  - `public function changeName($newName) { $this->name = $newName; }`
 
@@ -336,49 +336,49 @@ In the statement `echo "My name is " . $this->name . ".";` on line 13, what does
  - It accesses the `$name` property inside the `Person` class.
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, answer=[4,5]
 
 Which statements correctly describe the code on line 16?
 
- - It assigns `Person()` to `$pObject`.
+ - It assigns `Person()` to `$personObject`.
 
- - It sets the value of `$pObject` to `Person()`.
+ - It sets the value of `$personObject` to `Person()`.
 
- - It creates the `$pObject` instance of the `Person` class.
+ - It displays the `$personObject` object of the `Person` class.
 
- - It evaluates the `$pObject` object of the `Person` class.
+ - It creates `$personObject` as an instance of the `Person` class.
 
- - It instantiates the `$pObject` object of the `Person` class.
+ - It assigns the new instance of the `Person` class to `$personObject`.
 
 
 /// type=SS, answer=[2]
 
 Which statement best describes the code on line 17?
 
- - It returns the argument `Charles` in the `changeName()` method of `$pObject`.
+ - It returns the argument `Charles` in the `changeName()` method of `$personObject`.
 
- - It calls the `changeName()` method of `$pObject` passing the argument `Charles`.
+ - It calls the `changeName()` method of `$personObject` passing the argument `Charles`.
 
- - It creates the `changeName()` method of `$pObject` with the parameter `Charles`.
+ - It creates the `changeName()` method of `$personObject` with the parameter `Charles`.
 
- - It removes the argument `Charles` from the `changeName()` method of `$pObject`.
+ - It removes the argument `Charles` from the `changeName()` method of `$personObject`.
 
- - It accesses the argument `Charles` from the `changeName()` method of `$pObject`.
+ - It accesses the argument `Charles` from the `changeName()` method of `$personObject`.
 
 
 /// type=MS, answer=[1,2]
 
 Which statements correctly describe the code on line 18?
 
- - It calls the `display()` method of `$pObject`.
-
  - It displays the string `My name is Charles.`.
 
- - It creates the `display()` method of `$pObject`.
+ - It calls the `display()` method of `$personObject`.
 
- - It evaluates the `display()` method of `$pObject`.
+ - It creates the `display()` method of `$personObject`.
 
- - It removes the `display()` method from `$pObject`.
+ - It evaluates the `display()` method of `$personObject`.
+
+ - It removes the `display()` method from `$personObject`.
 
 
 :::
@@ -404,9 +404,9 @@ Which statements correctly describe the code on line 18?
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -446,14 +446,14 @@ On line 4, replace the property definition `public $name = "Diana";` with `publi
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
 
-In the statement `$pObject->changeName("Charles");` on line 17, replace the argument `Charles` with `Princess`. Execute the program. What is its output?
+In the statement `$personObject->changeName("Charles");` on line 17, replace the argument `Charles` with `Princess`. Execute the program. What is its output?
 
  - It prints `Diana`.
 
@@ -488,14 +488,14 @@ In the statement `$pObject->changeName("Charles");` on line 17, replace the argu
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Princess");
-    $pObject->display();
+    $personObject = new Person();
+    $personObject->changeName("Princess");
+    $personObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
 
-In the statement `$pObject->display();` on line 18, replace `display()` with `name`. Execute the program. What is its output?
+In the statement `$personObject->display();` on line 18, replace `display()` with `name`. Execute the program. What is its output?
 
  - It prints `Charles`.
 
@@ -530,14 +530,14 @@ In the statement `$pObject->display();` on line 18, replace `display()` with `na
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Princess");
-    $pObject->name;
+    $personObject = new Person();
+    $personObject->changeName("Princess");
+    $personObject->name;
 ?>
 ```
 /// type=SS, answer=[2]
 
-Add the `echo` construct before `$pObject->name` on line 18. Execute the program. What is its output?
+Add the `echo` construct before `$personObject->name` on line 18. Execute the program. What is its output?
 
  - It prints `Charles`.
 
@@ -572,14 +572,14 @@ Add the `echo` construct before `$pObject->name` on line 18. Execute the program
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Princess");
-    echo $pObject->name;
+    $personObject = new Person();
+    $personObject->changeName("Princess");
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[3]
 
-Remove the statement `$pObject->changeName("Princess");` on line 17. Execute the program. What is its output?
+Remove the statement `$personObject->changeName("Princess");` on line 17. Execute the program. What is its output?
 
  - It prints `Charles`.
 
@@ -614,8 +614,8 @@ Remove the statement `$pObject->changeName("Princess");` on line 17. Execute the
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 /// type=MS, answer=[1,5]
@@ -626,9 +626,9 @@ Why is there no output displayed?
 
  - On line 4, the property definition `public $name;` is invalid.
 
- - On line 17, the statement `echo $pObject->name;` is invalid.
-
  - There is no semicolon `;` at the end of the statement on line 4.
+
+ - On line 17, the statement `echo $personObject->name;` is invalid.
 
  - There is no default value assigned to the `$name` property on line 4.
 
@@ -708,9 +708,9 @@ Which statement best describes the `function` keyword?
             $this->name = $newName;
         }
     }
-    $pObject = new Person();
-    $pObject->changeName();
-    echo $pObject->name;
+    $personObject = new Person();
+    $personObject->changeName();
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[4]
@@ -734,9 +734,9 @@ What are the error messages?
 
  - Undefined variable: `newName` on line number 8
 
- - syntax error, unexpected `'$pObject'` (T_VARIABLE) on line number 12
-
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 12
+
+ - syntax error, unexpected `'$personObject'` (T_VARIABLE) on line number 12
 
  - Uncaught Error: Call to undefined function `changeName()` on line number 12
 
@@ -753,9 +753,9 @@ Which statement best describes the error?
 
  - There are no parentheses `()` after the `changeName` method call on line 12.
 
- - There is no object operator `->` between `$pObject` and `changeName()` on line 12.
+ - There is no object operator `->` between `$personObject` and `changeName()` on line 12.
 
- - There is no argument specified in the `changeName()` method call of `$pObject` on line 12.
+ - There is no argument specified in the `changeName()` method call of `$personObject` on line 12.
 
 :::
 
@@ -775,9 +775,9 @@ Correct the code so that it outputs the string `Charles`.
             $this->name = $newName;
         }
     }
-    $pObject = new Person();
-    $pObject->changeName();
-    echo $pObject->name;
+    $personObject = new Person();
+    $personObject->changeName();
+    echo $personObject->name;
 ?>
 ```
 
@@ -797,39 +797,39 @@ Correct the code so that it outputs the string `Charles`.
             $this->name = $newName;
         }
     }
-    $pObject = new Person();
-    pObject->changeName("Charles");
-    echo $pObject->name;
+    $personObject = new Person();
+    personObject->changeName("Charles");
+    echo $personObject->name;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, answer=[2]
 
 Execute the program. What is the error message?
 
  - Undefined variable: `newName` on line number 8
 
- - syntax error, unexpected `'$pObject'` (T_VARIABLE) on line number 12
-
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 12
+
+ - syntax error, unexpected `'$personObject'` (T_VARIABLE) on line number 12
 
  - Uncaught Error: Call to undefined function `changeName()` on line number 12
 
  - Missing argument `1` for `Person::changeName()` on line 12 and defined on line number 6
 
 
-/// type=MS, answer=[1,2]
+/// type=MS, answer=[1,3]
 
 Which statements correctly describe the error?
 
- - On line 12, the `pObject` object does not start with a dollar sign `$`.
-
- - On line 12, the statement `pObject->changeName("Charles");` is invalid.
+ - On line 12, the `personObject` object does not start with a dollar sign `$`.
 
  - There are no parentheses `()` after the `changeName` method call on line 12.
 
- - There is no object operator `->` between `$pObject` and `changeName()` on line 12.
+ - On line 12, the statement `personObject->changeName("Charles");` is invalid.
 
- - There is no argument specified in the `changeName()` method call of `$pObject` on line 12.
+ - There is no object operator `->` between `$personObject` and `changeName()` on line 12.
+
+ - There is no argument specified in the `changeName()` method call of `$personObject` on line 12.
 
 :::
 
@@ -849,9 +849,9 @@ Correct the code so that it outputs the string `Charles`.
             $this->name = $newName;
         }
     }
-    $pObject = new Person();
-    pObject->changeName("Charles");
-    echo $pObject->name;
+    $personObject = new Person();
+    personObject->changeName("Charles");
+    echo $personObject->name;
 ?>
 ```
 
@@ -871,9 +871,9 @@ Correct the code so that it outputs the string `Charles`.
             $this->name = $newName;
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    echo $pObject->name;
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[5]
@@ -923,9 +923,9 @@ Correct the code so that it outputs the string `Charles`.
             $this->name = $newName;
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    echo $pObject->name;
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    echo $personObject->name;
 ?>
 ```
 
@@ -950,9 +950,9 @@ Correct the code so that it outputs the string `Charles`.
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display;
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display;
 ?>
 ```
 /// type=SS, answer=[1]
@@ -963,9 +963,9 @@ Execute the program. What is the error message?
 
  - syntax error, unexpected `'new'` (T_NEW) on line number 16
 
- - Undefined variable: `pObjectchangeName` on line number 17
+ - Undefined variable: `personObjectchangeName` on line number 17
 
- - syntax error, unexpected `'$pObject'` (T_VARIABLE) on line number 18
+ - syntax error, unexpected `'$personObject'` (T_VARIABLE) on line number 18
 
  - syntax error, unexpected `'$this'` (T_VARIABLE), expecting `','` or `';'` on line number 13
 
@@ -974,15 +974,15 @@ Execute the program. What is the error message?
 
 Which statements correctly describe the error?
 
- - On line 18, the statement `$pObject->display;` is invalid.
+ - On line 18, the statement `$personObject->display;` is invalid.
 
- - On line 18, the `pObject` object does not start with a dollar sign `$`.
+ - On line 18, the `personObject` object does not start with a dollar sign `$`.
 
- - There are no parentheses `()` after `$pObject->display` on line 18.
+ - There are no parentheses `()` after `$personObject->display` on line 18.
 
- - There is no object operator `->` between `$pObject` and `display` on line 18.
+ - There is no object operator `->` between `$personObject` and `display` on line 18.
 
- - There is no argument specified in the `display()` method call of `$pObject` on line 18.
+ - There is no argument specified in the `display()` method call of `$personObject` on line 18.
 
 :::
 
@@ -1007,9 +1007,9 @@ Correct the code so that it outputs the string `My name is Charles.`.
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display;
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display;
 ?>
 ```
 
@@ -1034,9 +1034,9 @@ Correct the code so that it outputs the string `My name is Charles.`.
             echo "My name is " . $this name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1091,9 +1091,9 @@ Correct the code so that it outputs the string `My name is Charles.`.
             echo "My name is " . $this name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display();
 ?>
 ```
 
@@ -1118,9 +1118,9 @@ Correct the code so that it outputs the string `My name is Charles.`.
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObject->display();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1140,11 +1140,11 @@ Execute the program. What is its output?
 
 /// type=MS, answer=[2,3]
 
-Remove the object operator `->` from the statement `$pObject->display();` on line 18. Execute the program. What are the error messages?
+Remove the object operator `->` from the statement `$personObject->display();` on line 18. Execute the program. What are the error messages?
 
  - Undefined variable: `newName` on line number 8
 
- - Undefined variable: `pObjectdisplay` on line number 18
+ - Undefined variable: `personObjectdisplay` on line number 18
 
  - Uncaught Error: Function name must be a string on line number 18
 
@@ -1175,9 +1175,9 @@ Remove the object operator `->` from the statement `$pObject->display();` on lin
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObjectdisplay();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObjectdisplay();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -1217,9 +1217,9 @@ On line 11, remove the parentheses `()` from `display()`. Execute the program. W
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObjectdisplay();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObjectdisplay();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1259,9 +1259,9 @@ On line 8, remove the pseudo-variable `$this` from the statement `$this->name = 
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObjectdisplay();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObjectdisplay();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1301,9 +1301,9 @@ Correct the code so that it outputs the string `My name is Charles.`.
             echo "My name is " . $this->name . ".";
         }
     }
-    $pObject = new Person();
-    $pObject->changeName("Charles");
-    $pObjectdisplay();
+    $personObject = new Person();
+    $personObject->changeName("Charles");
+    $personObjectdisplay();
 ?>
 ```
 
