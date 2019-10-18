@@ -41,9 +41,9 @@ class Person
         return false;
     }
 }
-$pObject = new Person();
-$pObject->setAge(12);
-echo $pObject->name . " is " . $pObject->getAge() . " years old.";
+$personObject = new Person();
+$personObject->setAge(12);
+echo $personObject->name . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
 Output:
@@ -53,4 +53,4 @@ Anna is 12 years old.
 
 The `checkAge()` method and the `$age` property with `private` visibility are only accessible within the `Person` class.
 
-`$pObject` is not allowed to directly access the `checkAge()` method and the `$age` property of the `Person` class using the statements `$pObject->age;` and `$pObject->checkAge(12);`. 
+`$personObject` is not allowed to directly access the `checkAge()` method and the `$age` property of the `Person` class using the statements `$personObject->age;` and `$personObject->checkAge(12);`. 
