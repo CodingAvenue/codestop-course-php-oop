@@ -13,13 +13,13 @@ public static function myStaticMethod() { }
 To declare a static property, add the `static` keyword after the visibility keyword like `public` followed by the property name.
 
 ```php
-public static myStaticProps;
+public static myStaticProperty;
 ```
 
 A class name with the scope resolution operator `::` is used to access static methods and properties with `public` visibility outside a class.
 
 ```php
-MyClass::myStaticProps;
+MyClass::myStaticProperty;
 MyClass::myStaticMethod();
 ```
 
@@ -35,15 +35,15 @@ Code:
 <?php
 class MyClass 
 {
-    public static $myStaticProp;
+    public static $myStaticProperty;
 
     public static function myStaticMethod()
     {
-        echo "This is a static method." . self::$myStaticProp;
+        echo "This is a static method." . self::$myStaticProperty;
     }
 }
 
-MyClass::$myStaticProp = "This is a static property.";
+MyClass::$myStaticProperty = "This is a static property.";
 MyClass::myStaticMethod();
 ?>
 ```
@@ -56,13 +56,13 @@ This is a static method.This is a static property.
 
 In the above example, the code breaks down as follows:
 
- - `public static $myStaticProp;` defines the static property `$myStaticProp` of the `MyClass` class.
+ - `public static $myStaticProperty;` defines the static property `$myStaticProperty` of the `MyClass` class.
 
  - `public static function myStaticMethod() {...}` defines the static method `myStaticMethod()` of the `MyClass` class.
 
- - `self::$myStaticProp` accesses the static property `$myStaticProp` inside the `MyClass` class itself.
+ - `self::$myStaticProperty` accesses the static property `$myStaticProperty` inside the `MyClass` class itself.
 
- - `MyClass::$myStaticProp = "This is a static property.";` accesses and initializes the static property `$myStaticProp` outside the `MyClass` class.
+ - `MyClass::$myStaticProperty = "This is a static property.";` accesses and initializes the static property `$myStaticProperty` outside the `MyClass` class.
 
  - `MyClass::myStaticMethod();` accesses the static method `myStaticMethod()` outside the `MyClass` class.
  

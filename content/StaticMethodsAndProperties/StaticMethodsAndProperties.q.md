@@ -352,8 +352,8 @@ class Person
     }
 }
 
-$pObject = new Person("John", 12);
-$pObject->display();
+$personObject = new Person("John", 12);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -398,7 +398,7 @@ Which of the following is a static property?
 
  - `$newAge`
 
- - `$pObject`
+ - `$personObject`
 
 
 /// type=SS, answer=[1]
@@ -524,8 +524,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -558,7 +558,7 @@ Which of the following is a static method definition?
  - `public function __construct($name, $age) {...}`
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, answer=[3,5]
 
 Which of the following are static method calls?
 
@@ -566,9 +566,9 @@ Which of the following are static method calls?
 
  - `parent::$name`
 
- - `$studObject->display()`
-
  - `self::greeting("Hello")`
+
+ - `$studentObject->display()`
 
  - `parent::greeting("Good day")`
 
@@ -711,8 +711,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -808,8 +808,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -905,8 +905,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -1356,8 +1356,8 @@ class Person
     }
 }
 
-$pObject = new Person("John", 12);
-$pObject->display();
+$personObject = new Person("John", 12);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -1442,8 +1442,8 @@ class Person
     }
 }
 
-$pObject = new Person("John", 12);
-$pObject->display();
+$personObject = new Person("John", 12);
+$personObject->display();
 ?>
 ```
 
@@ -1498,8 +1498,8 @@ class Person
     }
 }
 
-$pObject = new Person("John", 12);
-$pObject::display();
+$personObject = new Person("John", 12);
+$personObject::display();
 ?>
 ```
 /// type=MS, answer=[3,4]
@@ -1523,13 +1523,13 @@ Which statements correctly describe the error?
 
  - There are no parentheses `()` after `display` on line 47.
 
- - The method call `$pObject::display()` on line 47 is invalid.
+ - The method call `$personObject::display()` on line 47 is invalid.
 
  - The scope resolution operator `::` is not allowed in accessing non-static methods.
 
- - There is no argument specified in the method call `$pObject::display()` on line 47.
+ - There is no argument specified in the method call `$personObject::display()` on line 47.
 
- - There is a scope resolution operator `::` between `$pObject` and `display()` on line 47.
+ - There is a scope resolution operator `::` between `$personObject` and `display()` on line 47.
 
 :::
 
@@ -1584,8 +1584,8 @@ class Person
     }
 }
 
-$pObject = new Person("John", 12);
-$pObject::display();
+$personObject = new Person("John", 12);
+$personObject::display();
 ?>
 ```
 
@@ -1640,8 +1640,8 @@ class Person
     }
 }
 
-$pObject = new Person("John", 12);
-$pObject->display();
+$personObject = new Person("John", 12);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -1726,8 +1726,8 @@ class Person
     }
 }
 
-$pObject = new Person("John", 12);
-$pObject->display();
+$personObject = new Person("John", 12);
+$personObject->display();
 ?>
 ```
 
@@ -1808,8 +1808,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1920,8 +1920,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=MS, answer=[1,3,4]
@@ -2017,8 +2017,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -2114,8 +2114,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
