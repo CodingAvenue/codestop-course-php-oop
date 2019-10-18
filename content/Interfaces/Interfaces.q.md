@@ -75,8 +75,8 @@ class Person implements LifeCycle
     }
 }
 
-$pObject = new Person("Anna", 12);
-$pObject->display();
+$personObject = new Person("Anna", 12);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -256,7 +256,7 @@ Which of the following are method calls?
 
  - `function display()`
 
- - `$pObject->display()`
+ - `$personObject->display()`
 
 
 /// type=MS, answer=[1,4,5]
@@ -372,8 +372,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -403,7 +403,7 @@ Which of the following is an abstract class?
 
  - `LifeCycle`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=MS, answer=[1,2,3]
@@ -433,7 +433,7 @@ Which of the following is an interface?
 
  - `LifeCycle`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=SS, answer=[3]
@@ -448,7 +448,7 @@ Which of the following is a child class?
 
  - `LifeCycle`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=SS, answer=[2]
@@ -463,7 +463,7 @@ Which of the following is a parent class?
 
  - `LifeCycle`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=SS, answer=[1]
@@ -493,7 +493,7 @@ Which class implements the `LifeCycle` interface?
 
  - `LifeCycle`
 
- - `$studObject`
+ - `$studentObject`
 
 
 /// type=SS, answer=[2]
@@ -703,8 +703,8 @@ class Person implements LifeCycle
     }
 }
 
-$pObject = new Person("Anna", 12);
-$pObject->display();
+$personObject = new Person("Anna", 12);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -825,8 +825,8 @@ class Person implements LifeCycle
     }
 }
 
-$pObject = new Person("Anna", 12);
-$pObject->display();
+$personObject = new Person("Anna", 12);
+$personObject->display();
 ?>
 ```
 
@@ -902,8 +902,8 @@ class Person implements LifeCycle
     }
 }
 
-$pObject = new Person("Anna", 12);
-$pObject->display();
+$personObject = new Person("Anna", 12);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -1009,8 +1009,8 @@ class Person implements LifeCycle
     }
 }
 
-$pObject = new Person("Anna", 12);
-$pObject->display();
+$personObject = new Person("Anna", 12);
+$personObject->display();
 ?>
 ```
 
@@ -1086,8 +1086,8 @@ class Person implements LifeCycle
     }
 }
 
-$pObject = new Person("Anna", 12);
-$pObject->display();
+$personObject = new Person("Anna", 12);
+$personObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1193,8 +1193,8 @@ class Person implements LifeCycle
     }
 }
 
-$pObject = new Person("Anna", 12);
-$pObject->display();
+$personObject = new Person("Anna", 12);
+$personObject->display();
 ?>
 ```
 
@@ -1280,8 +1280,8 @@ class Student extends Person implement LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -1397,8 +1397,8 @@ class Student extends Person implement LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 
@@ -1479,8 +1479,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1591,8 +1591,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 
@@ -1678,8 +1678,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -1795,8 +1795,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 
@@ -1882,8 +1882,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Student("John", 15);
-$studObject->display();
+$studentObject = new Student("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1903,7 +1903,7 @@ Execute the program. What is its output?
 
 /// type=SS, answer=[1]
 
-In the statement `$studObject = new Student("John", 15);` on line 22 of `Student.php`, replace `Student` with `Person`. Execute the program. What is the error message?
+In the statement `$studentObject = new Student("John", 15);` on line 22 of `Student.php`, replace `Student` with `Person`. Execute the program. What is the error message?
 
  - Uncaught Error: Cannot instantiate abstract class `Person` on line number 22
 
@@ -1999,8 +1999,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Person("John", 15);
-$studObject->display();
+$studentObject = new Person("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -2101,8 +2101,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Person("John", 15);
-$studObject->display();
+$studentObject = new Person("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -2203,8 +2203,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studObject = new Person("John", 15);
-$studObject->display();
+$studentObject = new Person("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -2305,8 +2305,8 @@ class Student extends Person LifeCycle
     }
 }
 
-$studObject = new Person("John", 15);
-$studObject->display();
+$studentObject = new Person("John", 15);
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -2407,8 +2407,8 @@ class Student Person LifeCycle
     }
 }
 
-$studObject = new Person("John", 15);
-$studObject->display();
+$studentObject = new Person("John", 15);
+$studentObject->display();
 ?>
 ```
 
