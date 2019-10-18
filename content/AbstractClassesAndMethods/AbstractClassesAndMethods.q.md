@@ -77,8 +77,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -203,22 +203,22 @@ Which statements correctly describe the `display()` method of the `Student` clas
 
 /// type=MS, answer=[2,5]
 
-Which statements correctly describe `$studObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`?
+Which statements correctly describe `$studentObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`?
 
- - It sets the arguments `John`, `20`, and `BSCS` to the `$studObject` object.
+ - It sets the arguments `John`, `20`, and `BSCS` to the `$studentObject` object.
 
- - It initializes the `$name`, `$age`, and `$course` properties of the `$studObject` object.
+ - It initializes the `$name`, `$age`, and `$course` properties of the `$studentObject` object.
 
- - It returns the `$studObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
+ - It returns the `$studentObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
 
- - It declares the `$studObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
+ - It declares the `$studentObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
 
- - It creates the `$studObject` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
+ - It creates the `$studentObject` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
 
 
 /// type=MS, answer=[1,2]
 
-Which statements correctly describe `$studObject->display();` on line 25 of `Student.php`?
+Which statements correctly describe `$studentObject->display();` on line 25 of `Student.php`?
 
  - It displays the string `John is taking up BSCS.`.
 
@@ -306,8 +306,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -400,8 +400,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -494,8 +494,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -588,8 +588,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -682,8 +682,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -830,8 +830,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -872,7 +872,7 @@ Which statement best describes the error?
 
  - There is no `abstract` keyword specified before `Person` on line 3 of `Student.php`.
 
- - On line 29 of `Student.php`, the method call `$studObject->display();` is invalid.
+ - On line 29 of `Student.php`, the method call `$studentObject->display();` is invalid.
 
  - On line 40 of `Person.php`, the method definition `abstract public function display();` is invalid.
 
@@ -949,8 +949,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
@@ -1028,8 +1028,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -1051,9 +1051,9 @@ Execute the program. What is the error message?
 
 Which statements correctly describe the error?
 
- - On line 25 of `Student.php`, the method call `$studObject->display()` is invalid.
+ - On line 25 of `Student.php`, the method call `$studentObject->display()` is invalid.
 
- - `$studObject` is not allowed to access the protected method `display()` of the `Student` class.
+ - `$studentObject` is not allowed to access the protected method `display()` of the `Student` class.
  
  - On line 18 of `Student.php`, the method definition `protected function display()` is invalid.
 
@@ -1137,8 +1137,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
@@ -1216,8 +1216,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -1325,8 +1325,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
@@ -1404,8 +1404,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -1513,8 +1513,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
@@ -1592,8 +1592,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -1686,8 +1686,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1780,8 +1780,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1874,8 +1874,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -1968,8 +1968,8 @@ class Student extends Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -2062,8 +2062,8 @@ class Student  Person
     }
 }
 
-$studObject = new Student("John", 20, "BSCS");
-$studObject->display();
+$studentObject = new Student("John", 20, "BSCS");
+$studentObject->display();
 ?>
 ```
 
