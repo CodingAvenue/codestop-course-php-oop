@@ -20,8 +20,8 @@
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    echo $pObject->address;
+    $personObject = new Person();
+    echo $personObject->address;
 ?>
 ```
 /// type=SS, answer=[4]
@@ -49,7 +49,7 @@ Why is there no output displayed?
  
  - On line 5, the property definition `public $address;` is invalid.
 
- - On line 13, the statement `echo $pObject->address;` is invalid.
+ - On line 13, the statement `echo $personObject->address;` is invalid.
 
  - There is no default value assigned to the `$address` property on line 5.
 
@@ -66,7 +66,7 @@ Which of the following are properties?
 
  - `$address`
 
- - `$pObject`
+ - `$personObject`
 
 
 /// type=SS, answer=[4]
@@ -109,9 +109,9 @@ Which of the following are property definitions?
 
  - `public $name = "Diana";`
 
- - `echo $pObject->address;`
+ - `echo $personObject->address;`
 
- - `$pObject = new Person();`
+ - `$personObject = new Person();`
 
 
 /// type=SS, answer=[5]
@@ -146,32 +146,32 @@ Which statement best describes the code on line 5?
 
 /// type=SS, answer=[5]
 
-On line 12, what does the statement `$pObject = new Person();` do?
+On line 12, what does the statement `$personObject = new Person();` do?
 
- - It sets the value of `$pObject` to `Person`.
+ - It sets the value of `$personObject` to `Person`.
 
- - It replaces the value of `$pObject` with `Person`.
+ - It replaces the value of `$personObject` with `Person`.
 
- - It accesses the value of `Person` through `$pObject`.
+ - It accesses the value of `Person` through `$personObject`.
 
- - It assigns the value of the `Person` class to `$pObject`.
+ - It assigns the value of the `Person` class to `$personObject`.
 
- - It creates the `$pObject` object as an instance of the `Person` class.
+ - It creates the `$personObject` object as an instance of the `Person` class.
 
 
 /// type=SS, answer=[5]
 
-In the statement `echo $pObject->address;` on line 13, what does `$pObject->address` do?
+In the statement `echo $personObject->address;` on line 13, what does `$personObject->address` do?
 
- - It sets the value of the `address` property of `$pObject`.
+ - It sets the value of the `address` property of `$personObject`.
 
- - It returns the value of the `address` property of `$pObject`.
+ - It returns the value of the `address` property of `$personObject`.
 
- - It removes the value of the `address` property of `$pObject`.
+ - It removes the value of the `address` property of `$personObject`.
 
- - It displays the value of the `address` property of `$pObject`.
+ - It displays the value of the `address` property of `$personObject`.
 
- - It accesses the value of the `address` property of `$pObject`.
+ - It accesses the value of the `address` property of `$personObject`.
 
 :::
 
@@ -192,9 +192,9 @@ In the statement `echo $pObject->address;` on line 13, what does `$pObject->addr
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    $personObject->address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 /// type=SS, answer=[2]
@@ -224,7 +224,7 @@ Which of the following is an object?
 
  - `$address`
 
- - `$pObject`
+ - `$personObject`
 
 
 /// type=SS, answer=[3]
@@ -239,7 +239,7 @@ Which of the following is a class?
 
  - `$address`
 
- - `$pObject`
+ - `$personObject`
 
 
 /// type=MS, answer=[1,3,4,5]
@@ -267,14 +267,14 @@ Which of the following is an object instantiation?
 
  - `public $name = "Diana";`
 
- - `echo $pObject->address;`
+ - `echo $personObject->address;`
 
- - `$pObject = new Person();`
+ - `$personObject = new Person();`
 
 
 /// type=SS, answer=[1]
 
-In the statement `$pObject->address = "Canada";` on line 13, what is `Canada`?
+In the statement `$personObject->address = "Canada";` on line 13, what is `Canada`?
 
  - It is a string.
 
@@ -289,32 +289,32 @@ In the statement `$pObject->address = "Canada";` on line 13, what is `Canada`?
 
 /// type=SS, answer=[5]
 
-In the statement `$pObject->address = "Canada";` on line 13, what does the object operator `->` do?
+In the statement `$personObject->address = "Canada";` on line 13, what does the object operator `->` do?
 
- - It sets the `address` property of `$pObject`.
+ - It sets the `address` property of `$personObject`.
 
- - It creates the `address` property of `$pObject`.
+ - It creates the `address` property of `$personObject`.
 
- - It defines the `address` property of `$pObject`.
+ - It defines the `address` property of `$personObject`.
 
- - It declares the `address` property of `$pObject`.
+ - It declares the `address` property of `$personObject`.
 
- - It accesses the `address` property of `$pObject`.
+ - It accesses the `address` property of `$personObject`.
 
 
 /// type=SS, answer=[1]
 
-On line 13, what does the statement `$pObject->address = "Canada";` do?
+On line 13, what does the statement `$personObject->address = "Canada";` do?
 
- - It assigns the string `Canada` to the `address` property of `$pObject`.
+ - It assigns the string `Canada` to the `address` property of `$personObject`.
 
- - It returns the string `Canada` of the `address` property of `$pObject`.
+ - It returns the string `Canada` of the `address` property of `$personObject`.
 
- - It creates the string `Canada` of the `address` property of `$pObject`.
+ - It creates the string `Canada` of the `address` property of `$personObject`.
 
- - It displays the string `Canada` of the `address` property of `$pObject`.
+ - It displays the string `Canada` of the `address` property of `$personObject`.
 
- - It replaces the string `Canada` of the `address` property with `$pObject`.
+ - It replaces the string `Canada` of the `address` property with `$personObject`.
 
 :::
 
@@ -335,9 +335,9 @@ On line 13, what does the statement `$pObject->address = "Canada";` do?
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    $personObject->address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 /// type=SS, answer=[2]
@@ -373,14 +373,14 @@ On line 5, replace the property definition `public $address;` with `public $addr
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    $personObject->address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 /// type=SS, answer=[3]
 
-Remove the statement `$pObject->address = "Canada";` on line 13. Execute the program. What is its output?
+Remove the statement `$personObject->address = "Canada";` on line 13. Execute the program. What is its output?
 
  - It prints `Diana`.
 
@@ -411,13 +411,13 @@ Remove the statement `$pObject->address = "Canada";` on line 13. Execute the pro
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    echo $pObject->address;
+    $personObject = new Person();
+    echo $personObject->address;
 ?>
 ```
 /// type=SS, answer=[1]
 
-In the statement `echo $pObject->address;` on line 13, replace `address` with `name`. Execute the program. What is its output?
+In the statement `echo $personObject->address;` on line 13, replace `address` with `name`. Execute the program. What is its output?
 
  - It prints `Diana`.
 
@@ -448,13 +448,13 @@ In the statement `echo $pObject->address;` on line 13, replace `address` with `n
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[5]
 
-On line 13, replace the statement `echo $pObject->name;` with `$pObject->eat();`. Execute the program. What is its output?
+On line 13, replace the statement `echo $personObject->name;` with `$personObject->eat();`. Execute the program. What is its output?
 
  - It prints `Diana`.
 
@@ -529,8 +529,8 @@ Which statements are true about a property definition and initialization?
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[3]
@@ -575,7 +575,7 @@ Which statement best describes the error?
 
  - There is no assignment operator `=` between `$name` and `Diana` on line 4.
 
- - There is no object operator `->` between `$pObject` and `name` on line 13.
+ - There is no object operator `->` between `$personObject` and `name` on line 13.
 
 :::
 
@@ -596,8 +596,8 @@ Correct the code so that it outputs the string `Diana`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 
@@ -618,8 +618,8 @@ Correct the code so that it outputs the string `Diana`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 /// type=SS, answer=[5]
@@ -649,7 +649,7 @@ Which statement best describes the error?
 
  - There is no assignment operator `=` between `$name` and `Diana` on line 4.
 
- - There is no object operator `->` between `$pObject` and `name` on line 13.
+ - There is no object operator `->` between `$personObject` and `name` on line 13.
 
 :::
 
@@ -670,8 +670,8 @@ Correct the code so that it outputs the string `Diana`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    echo $pObject->name;
+    $personObject = new Person();
+    echo $personObject->name;
 ?>
 ```
 
@@ -692,9 +692,9 @@ Correct the code so that it outputs the string `Diana`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->$address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    $personObject->$address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 /// type=MS, answer=[1,2]
@@ -720,9 +720,9 @@ Which statements correctly describe the error?
 
  - There is no semicolon `;` at the end of the statement on line 13
 
- - On line 13, the statement `$pObject->$address = "Canada";` is invalid.
+ - On line 13, the statement `$personObject->$address = "Canada";` is invalid.
 
- - There is no object operator `->` between `$pObject` and `$address` on line 13.
+ - There is no object operator `->` between `$personObject` and `$address` on line 13.
 
  - There is no assignment operator `=` between `$address` and `Canada` on line 13.
 
@@ -745,9 +745,9 @@ Correct the code so that it outputs the string `Canada`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->$address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    $personObject->$address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 
@@ -768,9 +768,9 @@ Correct the code so that it outputs the string `Canada`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    pObject->address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    personObject->address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 /// type=SS, answer=[4]
@@ -794,13 +794,13 @@ Which statements correctly describe the error?
 
  - There is a dollar sign `$` in the `address` property on line 13.
 
- - On line 13, the `pObject` object does not start with a dollar sign `$`.
+ - On line 13, the `personObject` object does not start with a dollar sign `$`.
 
- - On line 13, the statement `pObject->address = "Canada";` is invalid.
-
- - There is no object operator `->` between `$pObject` and `$address` on line 13.
+ - On line 13, the statement `personObject->address = "Canada";` is invalid.
 
  - There is no assignment operator `=` between `$address` and `Canada` on line 13.
+
+ - There is no object operator `->` between `$personObject` and `$address` on line 13.
 
 :::
 
@@ -821,9 +821,9 @@ Correct the code so that it outputs the string `Canada`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    pObject->address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    personObject->address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 
@@ -844,9 +844,9 @@ Correct the code so that it outputs the string `Canada`.
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->address = "Canada";
-    echo $pObject->address;
+    $personObject = new Person();
+    $personObject->address = "Canada";
+    echo $personObject->address;
 ?>
 ```
 /// type=SS, answer=[2]
@@ -866,13 +866,13 @@ Execute the program. What is its output?
 
 /// type=SS, answer=[3]
 
-Remove the object operator `->` between `$pObject` and `address` on line 14. Execute the program. What is the error message?
+Remove the object operator `->` between `$personObject` and `address` on line 14. Execute the program. What is the error message?
 
  - Uncaught Error: Cannot access empty property
 
  - Undefined variable: `address` on line number 14
 
- - Undefined variable: `pObjectaddress` on line number 14
+ - Undefined variable: `personObjectaddress` on line number 14
 
  - syntax error, unexpected `'echo'` (T_ECHO) on line number 14
 
@@ -897,14 +897,14 @@ Remove the object operator `->` between `$pObject` and `address` on line 14. Exe
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->address = "Canada";
-    echo $pObjectaddress;
+    $personObject = new Person();
+    $personObject->address = "Canada";
+    echo $personObjectaddress;
 ?>
 ```
 /// type=SS, answer=[5]
 
-On line 13, remove the assignment operator `=` between `$pObject->address` and `"Canada"`. Execute the program. What is the error message?
+On line 13, remove the assignment operator `=` between `$personObject->address` and `"Canada"`. Execute the program. What is the error message?
 
  - Undefined variable: `address` on line number 13
 
@@ -912,7 +912,7 @@ On line 13, remove the assignment operator `=` between `$pObject->address` and `
 
  - syntax error, unexpected `'='` on line number 13
 
- - syntax error, unexpected `'$pObject'` (T_VARIABLE) on line number 13
+ - syntax error, unexpected `'$personObject'` (T_VARIABLE) on line number 13
 
  - syntax error, unexpected `'"Canada"'` (T_CONSTANT_ENCAPSED_STRING) on line number 13
 
@@ -935,20 +935,20 @@ On line 13, remove the assignment operator `=` between `$pObject->address` and `
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    $pObject->address  "Canada";
-    echo $pObjectaddress;
+    $personObject = new Person();
+    $personObject->address  "Canada";
+    echo $personObjectaddress;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, answer=[2]
 
-Remove the dollar sign `$` from `$pObject` on line 13. Execute the program. What is the error message?
+Remove the dollar sign `$` from `$personObject` on line 13. Execute the program. What is the error message?
 
  - syntax error, unexpected `'echo'` (T_ECHO) on line number 14
 
- - syntax error, unexpected `'$pObject'` (T_VARIABLE) on line number 13
-
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 13
+
+ - syntax error, unexpected `'$personObject'` (T_VARIABLE) on line number 13
 
  - syntax error, unexpected `'"Canada"'` (T_CONSTANT_ENCAPSED_STRING) on line number 13
 
@@ -973,20 +973,20 @@ Remove the dollar sign `$` from `$pObject` on line 13. Execute the program. What
             echo "This is an eat() method.";
         }
     }
-    $pObject = new Person();
-    pObject->address  "Canada";
-    echo $pObjectaddress;
+    $personObject = new Person();
+    personObject->address  "Canada";
+    echo $personObjectaddress;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, answer=[2]
 
 Remove the `new` keyword before `Person()` on line 12. Execute the program. What is the error message?
 
  - syntax error, unexpected `'Person()'` (T_VARIABLE) on line number 12
 
- - syntax error, unexpected `'$pObject'` (T_VARIABLE) on line number 13
-
  - syntax error, unexpected `'->'` (T_OBJECT_OPERATOR) on line number 13
+
+ - syntax error, unexpected `'$personObject'` (T_VARIABLE) on line number 13
 
  - syntax error, unexpected `'"Canada"'` (T_CONSTANT_ENCAPSED_STRING) on line number 13
 
@@ -1011,9 +1011,9 @@ Remove the `new` keyword before `Person()` on line 12. Execute the program. What
             echo "This is an eat() method.";
         }
     }
-    $pObject =  Person();
-    pObject->address  "Canada";
-    echo $pObjectaddress;
+    $personObject =  Person();
+    personObject->address  "Canada";
+    echo $personObjectaddress;
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1049,9 +1049,9 @@ Correct the code so that it outputs the string `Canada`.
             echo "This is an eat() method.";
         }
     }
-    $pObject =  Person();
-    pObject->address  "Canada";
-    echo $pObjectaddress;
+    $personObject =  Person();
+    personObject->address  "Canada";
+    echo $personObjectaddress;
 ?>
 ```
 
