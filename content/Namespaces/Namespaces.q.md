@@ -936,6 +936,665 @@ In the statement `$circle = new NewCircle(10);` on line 7 of `Main.php`, replace
 :::
 
 
+:::
+
+/// type=REPL, readonly=true, filename=[Math.php,Constants.php,Circle.php,Main.php]
+
+```php
+<?php
+namespace Math;
+
+class Geometry
+{
+    const PI = 3.14159;
+	
+    static function getCircleArea($radius)
+    {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
+        //The formula to calculate the area of a circle is: (pi)(r^2)
+        return self::PI * $radius ** 2;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Math;
+
+class Constants
+{
+    const PI = 3.14159;
+}
+?>
+```
+
+```php
+<?php
+namespace Math\Geometry;
+
+use Math\Constants;
+
+class Circle
+{
+    public $radius;
+	
+    public function __construct($radius)
+    {
+        $this -> radius = $radius;
+    }
+	
+    public function getCircumference()
+    {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
+        return 2 * Constants::PI * $this -> radius;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Test;
+
+require_once('./Math.php');
+
+use Math\Geometry;
+
+try {
+    echo "The area of the circle is: " . Geometry::getCircleArea(10);
+} catch(\Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+
+?>
+```
+/// type=SS, answer=[4]
+
+Execute the program. What is its output?
+
+ - It prints `10`.
+
+ - It produces an error.
+
+ - No output is displayed.
+
+ - It prints `The area of the circle is: 314.159`.
+
+ - It prints `Caught exception: Invalid value assigned to radius.`.
+
+
+/// type=SS, answer=[4]
+
+In the statement `throw new \Exception("Invalid value assigned to radius.");` on line 11 of `Math.php`, what does `\Exception` do?
+
+ - It creates the `Exception` class in the global namespace from the `Test` namespace.
+
+ - It defines the `Exception` class in the global namespace from the `Test` namespace.
+
+ - It imports the `Exception` class in the global namespace from the `Test` namespace.
+
+ - It accesses the `Exception` class in the global namespace from the `Test` namespace.
+
+ - It creates an alias of the `Exception` class in the global namespace from the `Test` namespace.
+
+:::
+
+
+:::
+
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+
+```php
+<?php
+namespace Math;
+
+class Geometry
+{
+    const PI = 3.14159;
+	
+    static function getCircleArea($radius)
+    {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
+        //The formula to calculate the area of a circle is: (pi)(r^2)
+        return self::PI * $radius ** 2;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Math;
+
+class Constants
+{
+    const PI = 3.14159;
+}
+?>
+```
+
+```php
+<?php
+namespace Math\Geometry;
+
+use Math\Constants;
+
+class Circle
+{
+    public $radius;
+	
+    public function __construct($radius)
+    {
+        $this -> radius = $radius;
+    }
+	
+    public function getCircumference()
+    {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
+        return 2 * Constants::PI * $this -> radius;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Test;
+
+require_once('./Math.php');
+
+use Math\Geometry;
+
+try {
+    echo "The area of the circle is: " . Geometry::getCircleArea(10);
+} catch(\Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+
+?>
+```
+/// type=SS, answer=[5]
+
+In the statement `echo "The area of the circle is: " . Geometry::getCircleArea(10);` on line 9 of `Main.php`, replace the argument `10` with `-10`. Execute the program. What is its output?
+
+ - It prints `10`.
+
+ - It produces an error.
+
+ - No output is displayed.
+
+ - It prints `The area of the circle is: 314.159`.
+
+ - It prints `Caught exception: Invalid value assigned to radius.`.
+
+:::
+
+
+:::
+
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+
+```php
+<?php
+namespace Math;
+
+class Geometry
+{
+    const PI = 3.14159;
+	
+    static function getCircleArea($radius)
+    {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
+        //The formula to calculate the area of a circle is: (pi)(r^2)
+        return self::PI * $radius ** 2;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Math;
+
+class Constants
+{
+    const PI = 3.14159;
+}
+?>
+```
+
+```php
+<?php
+namespace Math\Geometry;
+
+use Math\Constants;
+
+class Circle
+{
+    public $radius;
+	
+    public function __construct($radius)
+    {
+        $this -> radius = $radius;
+    }
+	
+    public function getCircumference()
+    {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
+        return 2 * Constants::PI * $this -> radius;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Test;
+
+require_once('./Math.php');
+
+use Math\Geometry;
+
+try {
+    echo "The area of the circle is: " . Geometry::getCircleArea(-10);
+} catch(\Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+
+?>
+```
+/// type=SS, answer=[2]
+
+Remove the backslash `\` from `catch(\Exception $e)` on line 10 of `Main.php`. Execute the program. What is its output?
+
+ - It prints `10`.
+
+ - It produces an error.
+
+ - No output is displayed.
+
+ - It prints `The area of the circle is: 314.159`.
+
+ - It prints `Caught exception: Invalid value assigned to radius.`.
+
+:::
+
+
+:::
+
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+
+```php
+<?php
+namespace Math;
+
+class Geometry
+{
+    const PI = 3.14159;
+	
+    static function getCircleArea($radius)
+    {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
+        //The formula to calculate the area of a circle is: (pi)(r^2)
+        return self::PI * $radius ** 2;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Math;
+
+class Constants
+{
+    const PI = 3.14159;
+}
+?>
+```
+
+```php
+<?php
+namespace Math\Geometry;
+
+use Math\Constants;
+
+class Circle
+{
+    public $radius;
+	
+    public function __construct($radius)
+    {
+        $this -> radius = $radius;
+    }
+	
+    public function getCircumference()
+    {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
+        return 2 * Constants::PI * $this -> radius;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Test;
+
+require_once('./Math.php');
+
+use Math\Geometry;
+
+try {
+    echo "The area of the circle is: " . Geometry::getCircleArea(-10);
+} catch(Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+
+?>
+```
+/// type=SS, answer=[5]
+
+Add the statement `use Exception;` on line 5 of `Main.php`. Execute the program. What is its output?
+
+ - It prints `10`.
+
+ - It produces an error.
+
+ - No output is displayed.
+
+ - It prints `The area of the circle is: 314.159`.
+
+ - It prints `Caught exception: Invalid value assigned to radius.`.
+
+:::
+
+
+:::
+
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+
+```php
+<?php
+namespace Math;
+
+class Geometry
+{
+    const PI = 3.14159;
+	
+    static function getCircleArea($radius)
+    {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
+        //The formula to calculate the area of a circle is: (pi)(r^2)
+        return self::PI * $radius ** 2;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Math;
+
+class Constants
+{
+    const PI = 3.14159;
+}
+?>
+```
+
+```php
+<?php
+namespace Math\Geometry;
+
+use Math\Constants;
+
+class Circle
+{
+    public $radius;
+	
+    public function __construct($radius)
+    {
+        $this -> radius = $radius;
+    }
+	
+    public function getCircumference()
+    {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
+        return 2 * Constants::PI * $this -> radius;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Test;
+
+require_once('./Math.php');
+use Exception;
+use Math\Geometry;
+
+try {
+    echo "The area of the circle is: " . Geometry::getCircleArea(-10);
+} catch(Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+
+?>
+```
+/// type=SS, answer=[2]
+
+Remove the statement `use Math\Geometry;` on line 6 of `Main.php`. Execute the program. What is its output?
+
+ - It prints `10`.
+
+ - It produces an error.
+
+ - No output is displayed.
+
+ - It prints `The area of the circle is: 314.159`.
+
+ - It prints `Caught exception: Invalid value assigned to radius.`.
+
+:::
+
+
+:::
+
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+
+```php
+<?php
+namespace Math;
+
+class Geometry
+{
+    const PI = 3.14159;
+	
+    static function getCircleArea($radius)
+    {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
+        //The formula to calculate the area of a circle is: (pi)(r^2)
+        return self::PI * $radius ** 2;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Math;
+
+class Constants
+{
+    const PI = 3.14159;
+}
+?>
+```
+
+```php
+<?php
+namespace Math\Geometry;
+
+use Math\Constants;
+
+class Circle
+{
+    public $radius;
+	
+    public function __construct($radius)
+    {
+        $this -> radius = $radius;
+    }
+	
+    public function getCircumference()
+    {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
+        return 2 * Constants::PI * $this -> radius;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Test;
+
+require_once('./Math.php');
+
+use Exception;
+
+try {
+    echo "The area of the circle is: " . Geometry::getCircleArea(-10);
+} catch(Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+
+?>
+```
+type=SS, answer=[5]
+
+In the `echo` statement on line 9 of `Main.php`, replace `Geometry::getCircleArea(-10)` with `\Math\Geometry::getCircleArea(-10)`. Execute the program. What is its output?
+
+ - It prints `10`.
+
+ - It produces an error.
+
+ - No output is displayed.
+
+ - It prints `The area of the circle is: 314.159`.
+
+ - It prints `Caught exception: Invalid value assigned to radius.`.
+
+:::
+
+
+:::
+
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+
+```php
+<?php
+namespace Math;
+
+class Geometry
+{
+    const PI = 3.14159;
+	
+    static function getCircleArea($radius)
+    {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
+        //The formula to calculate the area of a circle is: (pi)(r^2)
+        return self::PI * $radius ** 2;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Math;
+
+class Constants
+{
+    const PI = 3.14159;
+}
+?>
+```
+
+```php
+<?php
+namespace Math\Geometry;
+
+use Math\Constants;
+
+class Circle
+{
+    public $radius;
+	
+    public function __construct($radius)
+    {
+        $this -> radius = $radius;
+    }
+	
+    public function getCircumference()
+    {
+        // The formula to calculate the circumference of a circle is: 2(pi)(r)
+        return 2 * Constants::PI * $this -> radius;
+    }
+}
+?>
+```
+
+```php
+<?php
+namespace Test;
+
+require_once('./Math.php');
+
+use Exception;
+
+try {
+    echo "The area of the circle is: " . \Math\Geometry::getCircleArea(-10);
+} catch(Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
+
+?>
+```
+type=SS, answer=[2]
+
+Remove the backlash `\` before `Math` from `\Math\Geometry::getCircleArea(-10)` on line 9 of `Main.php`. Execute the program. What is its output?
+
+ - It prints `10`.
+
+ - It produces an error.
+
+ - No output is displayed.
+
+ - It prints `The area of the circle is: 314.159`.
+
+ - It prints `Caught exception: Invalid value assigned to radius.`.
+
+:::
+
+
 +++
 
 

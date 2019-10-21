@@ -16,6 +16,8 @@ The `use` keyword imports namespaces and classes into the current namespace.
 
 The `as` keyword is used to create an alias of the imported class.
 
+A class in a namespace can be accessed globally without using the `use` keyword by adding a backslash `\` at the beginning of the statement like `\App\Models`.
+
 Code:
 
 ```php
@@ -24,10 +26,13 @@ namespace Math;
 
 class Geometry
 {
-    const PI = 3.14;
+    const PI = 3.14159;
 	
     static function getCircleArea($radius)
     {
+        if ($radius<=0) {
+            throw new \Exception("Invalid value assigned to radius.");
+        }
         //The formula to calculate the area of a circle is: (pi)(r^2)
         return self::PI * $radius ** 2;
     }
@@ -58,10 +63,15 @@ class Circle
     }
 }
 
-use Math\Geometry;
+namespace Main;
+
 use Math\Geometry\Circle as Circ;
 
-echo "The area of the circle is: " . Geometry::getCircleArea(10);
+try {
+    echo "The area of the circle is: " . \Math\Geometry::getCircleArea(10);
+} catch(\Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+}
 echo "\n";
 $circle = new Circ(10);
 echo "The circumference of the circle is: " . $circle->getCircumference();
@@ -70,7 +80,7 @@ echo "The circumference of the circle is: " . $circle->getCircumference();
 
 Output:
 ```
-The area of the circle is: 314
+The area of the circle is: 314.159
 The circumference of the circle is: 62.8318
 ```
 
@@ -80,8 +90,14 @@ In the above example, the code breaks down as follows:
 
  - `namespace Math\Geometry;` defines the `Math\Geometry` namespace that contains the `Circle` class.
 
+ - `namespace Main;` defines the `Main` namespace that contains statements that acceses different classes from several namespaces.
+
  - `use Math\Constants;` imports the `Constants` class in the `Math` namespace for the `Circle` class to access the `PI` constant.
 
- - `use Math\Geometry;` imports the `Geometry` class in the `Math` namespace.
-
  - `use Math\Geometry\Circle as Circ;` imports the `Circle` class in the `Math\Geometry` namespace with the alias `Circ`. 
+
+ - `if($radius<=0) { throw new \Exception("Invalid value assigned to radius."); }` throws an exception message `Invalid value assigned to radius.` if the value of `$radius` is less than or equal to `0`.
+
+ - `\Exception()` accesses the `Exception` class in the global space inside the `Math` namespace.
+
+ - `\Math\Geometry::getCircleArea(10)` accesses the static method `getCircleArea()` of the `Geometry` class in the `Math` namespace from the `Main` namespace without using the `use` keyword.
