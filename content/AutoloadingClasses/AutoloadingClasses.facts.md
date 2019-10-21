@@ -1,6 +1,6 @@
 ### Facts for Autoloading Classes lesson:
 
-`Autoloading` is a process of automatically loading classes and interfaces that are currently not defined without using any file inclusion functions such as `include()`, `require()`, and `require_once()`.
+`Autoloading` is a way of automatically loading classes and interfaces that are currently not defined without using any file inclusion functions such as `include()`, `require()`, and `require_once()`.
 
 An autoloader is a function that automatically loads the specified class files.
 

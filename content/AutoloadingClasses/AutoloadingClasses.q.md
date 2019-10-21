@@ -27,8 +27,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./Autoload.php");
 
-$stud = new Student("May", 25);
-$stud->display();
+$sudentObject = new Student("May", 25);
+$sudentObject->display();
 ?>
 ```
 
@@ -309,8 +309,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 ?>
 ```
 
@@ -541,8 +541,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -771,7 +771,7 @@ Which statement best describes autoloading?
 
  - It specifies the path that starts from the directory where the autoloader is located.
 
- - It is a process of automatically loading classes and interfaces that are currently not defined.
+ - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
 /// type=SS, answer=[1]
@@ -786,7 +786,7 @@ Which statement best describes the `spl_autoload_register()` function?
 
  - It specifies the path that starts from the directory where the autoloader is located.
 
- - It is a process of automatically loading classes and interfaces that are currently not defined.
+ - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
 /// type=SS, answer=[3]
@@ -801,7 +801,7 @@ Which statement is true about an autoloader?
 
  - It specifies the path that starts from the directory where the autoloader is located.
 
- - It is a process of automatically loading classes and interfaces that are currently not defined.
+ - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
 /// type=SS, answer=[4]
@@ -816,7 +816,7 @@ Which statement is true about the `__DIR__` magic constant?
 
  - It specifies the path that starts from the directory where the autoloader is located.
 
- - It is a process of automatically loading classes and interfaces that are currently not defined.
+ - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
 /// type=SS, answer=[2]
@@ -831,7 +831,7 @@ Which statement is true about the `dirname()` function?
 
  - It specifies the path that starts from the directory where the autoloader is located.
 
- - It is a process of automatically loading classes and interfaces that are currently not defined.
+ - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 +++
 
@@ -863,8 +863,8 @@ spl_autoload_register("myAutoloader()");
 <?php
 require_once("./Autoload.php");
 
-$stud = new Student("May", 25);
-$stud->display();
+$sudentObject = new Student("May", 25);
+$sudentObject->display();
 ?>
 ```
 
@@ -1010,8 +1010,8 @@ spl_autoload_register("myAutoloader()");
 <?php
 require_once("./Autoload.php");
 
-$stud = new Student("May", 25);
-$stud->display();
+$sudentObject = new Student("May", 25);
+$sudentObject->display();
 ?>
 ```
 
@@ -1112,8 +1112,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./Autoload.php");
 
-$stud = new Student("May", 25);
-$stud->display();
+$sudentObject = new Student("May", 25);
+$sudentObject->display();
 ?>
 ```
 
@@ -1244,8 +1244,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./Autoload.php");
 
-$stud = new Student("May", 25);
-$stud->display();
+$sudentObject = new Student("May", 25);
+$sudentObject->display();
 ?>
 ```
 
@@ -1346,8 +1346,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 ?>
 ```
 
@@ -1478,8 +1478,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 ?>
 ```
 
@@ -1580,8 +1580,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 ?>
 ```
 
@@ -1712,8 +1712,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 ?>
 ```
 
@@ -1814,8 +1814,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 ?>
 ```
 
@@ -1946,8 +1946,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 ?>
 ```
 
@@ -2058,8 +2058,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -2257,8 +2257,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -2441,8 +2441,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -2625,8 +2625,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once("./autoloader/Autoload.php");
 
-$stud = new Student("Charles", 15);
-$stud->display();
+$sudentObject = new Student("Charles", 15);
+$sudentObject->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
