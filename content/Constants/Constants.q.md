@@ -193,8 +193,8 @@ class Circle
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -224,7 +224,7 @@ Which of the following is a constant?
 
  - `$radius`
 
- - `$circObject`
+ - `$circleObject`
 
 
 /// type=MS, answer=[1,4]
@@ -239,7 +239,7 @@ Which of the following are methods?
 
  - `display()`
 
- - `$circObject`
+ - `$circleObject`
 
 
 /// type=SS, answer=[5]
@@ -254,7 +254,7 @@ Which of the following is an object?
 
  - `display()`
 
- - `$circObject`
+ - `$circleObject`
 
 
 /// type=SS, answer=[3]
@@ -269,7 +269,7 @@ Which of the following is a constant definition?
 
  - `class Circle {...}`
 
- - `$circObject->display();`
+ - `$circleObject->display();`
 
 
 /// type=SS, answer=[5]
@@ -361,8 +361,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -405,7 +405,7 @@ Which of the following is a parent class?
 
  - `diameter()`
 
- - `$circObject`
+ - `$circleObject`
 
  - `CircularShape`
 
@@ -420,7 +420,7 @@ Which of the following is a child class?
 
  - `diameter()`
 
- - `$circObject`
+ - `$circleObject`
 
  - `CircularShape`
 
@@ -722,8 +722,8 @@ class Circle
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -790,8 +790,8 @@ class Circle
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 
@@ -828,8 +828,8 @@ class Circle
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -896,8 +896,8 @@ class Circle
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 
@@ -959,8 +959,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[5]
@@ -1052,8 +1052,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 
@@ -1115,8 +1115,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[1]
@@ -1193,8 +1193,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[3]
@@ -1271,8 +1271,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[4]
@@ -1349,8 +1349,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 /// type=SS, answer=[2]
@@ -1427,8 +1427,8 @@ class Circle extends CircularShape
     }
 }
 
-$circObject = new Circle(3.5);
-$circObject->display();
+$circleObject = new Circle(3.5);
+$circleObject->display();
 ?>
 ```
 
