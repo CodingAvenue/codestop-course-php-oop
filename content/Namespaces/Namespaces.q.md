@@ -1302,6 +1302,21 @@ try {
 
 ?>
 ```
+/// type=MS, answer=[2,4,5]
+
+Why does removing the backslash `\` before `Exception` produce an error?
+
+ - The class name `\Exception` is misspelled as `Exception`.
+
+ - The `Exception` class does not exist in the `Test` namespace.
+
+ - The `Exception` class does not exist in the global namespace. 
+
+ - There is no `use` statement specified in the code that imports the `Exception` class in the global namespace into the `Test` namespace.
+
+ - The backslash `\` is required to access the `Exception` class in the global namespace from the `Test` namespace without the `use` keyword.
+
+
 /// type=SS, answer=[5]
 
 Add the statement `use Exception;` on line 5 of `Main.php`. Execute the program. What is its output?
@@ -1486,7 +1501,22 @@ try {
 
 ?>
 ```
-type=SS, answer=[5]
+/// type=MS, answer=[3,4,5]
+
+Why does removing the statement `use Math\Geometry;` from the code produce an error?
+
+ - There is no `Geometry` class found in the `Math` namespace.
+
+ - There is no `getCircleArea()` method found in the `Geometry` class.
+
+ - On line 9 of `Main.php`, `Geometry::getCircleArea(-10)` requires the statement `use Math\Geometry;`. 
+
+ - The `Geometry` class in the `Math` namespace is not accessible from the `Test` namespace without the statement `use Math\Geometry;`.
+
+ - Accessing the `getCircleArea()` method of the `Geometry` class in the `Math` namespace from the `Test` namespace requires the statement `use Math\Geometry;`.
+
+
+/// type=SS, answer=[5]
 
 In the `echo` statement on line 9 of `Main.php`, replace `Geometry::getCircleArea(-10)` with `\Math\Geometry::getCircleArea(-10)`. Execute the program. What is its output?
 
@@ -1578,7 +1608,7 @@ try {
 
 ?>
 ```
-type=SS, answer=[2]
+/// type=SS, answer=[2]
 
 Remove the backlash `\` before `Math` from `\Math\Geometry::getCircleArea(-10)` on line 9 of `Main.php`. Execute the program. What is its output?
 
