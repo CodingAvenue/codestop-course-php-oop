@@ -6,6 +6,9 @@
 * [Objects](content/Objects/Objects.q.md) ** -  minutes**
     > Objects are the actual representation of a class. Discover how you can create objects from a class using the `new` keyword.
 
+* [Objects and References](content/ObjectsAndReferences/ObjectsAndReferences.q.md) ** -  minutes**
+    > Discover how a variable and an object are managed in the memory during program execution.
+
 * [Properties](content/Properties/Properties.q.md) ** -  minutes**
     > Properties are the variables defined inside a class. In this lesson, you will learn how to add properties to a class. 
 
