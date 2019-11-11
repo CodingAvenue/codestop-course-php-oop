@@ -229,7 +229,7 @@ Which statement best describes `$objectVarA->display();` on line 21?
 
 /// type=SS, answer=[4]
 
-What values is returned by the method call `$objectVarA->display();` on line 21?
+What value is returned by the method call `$objectVarA->display();` on line 21?
 
  - `Person`
 
