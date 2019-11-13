@@ -1,8 +1,8 @@
 ### Facts for Constructor lesson:
 
-A constructor is a method that initializes an object of a certain class.
+A constructor is a method that initializes an object.
 
-The `__construct()` method defines a constructor of a certain class. 
+The `__construct()` method defines a constructor of a class. It executed when the `new` keyword is invoked to instantiate an object.
 
 To define a constructor, use the `public` visibility keyword followed by the `function` keyword; the `__construct()` method which may contain the parameters; and a method body enclosed in curly braces `{}`.
 
