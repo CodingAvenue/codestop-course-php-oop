@@ -2,7 +2,7 @@
 
 Visibility defines the accessibility of a property and a method of a certain class. 
 
-The visibility keywords are used to set the accessibility of a class property and method. These are as follows:
+Visibility keywords are defined as the following:
 
  - `public` sets the accessibility of a property and a method of a class everywhere.
 
