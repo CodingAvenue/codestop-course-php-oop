@@ -8,13 +8,13 @@ To declare a property, use a visibility keyword like `public` followed by the pr
 public $name;
 ```
 
+The `public` keyword indicates the accessibility of a property in a class. Learn more about visibility keywords in the `visibility` lesson.
+
 A property definition can be initialized. This initialization should be a constant value that can be evaluated at compile time. 
 
 ```php
 public $name = "Anna";
 ```
-
-The `public` keyword indicates the visibility of a property in a class. 
 
 The name of the property is case-sensitive. `$name` and `$Name` are treated as two distinct properties.
 
@@ -38,4 +38,6 @@ The code breaks down as follows:
 
  - `public $name = "Anna";` is the definition of the `$name` property with the default value `Anna`.
 
- - `public $age;` is the definition of the `$age` property without a default value.
+ - `public $age;` is the definition of the `$age` property without a default value. 
+
+ Properties like `$name` and `$age` are commonly known as attributes or members of a class.

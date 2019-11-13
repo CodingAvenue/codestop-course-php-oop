@@ -476,9 +476,9 @@ On line 13, replace the statement `echo $personObject->name;` with `$personObjec
 
 ### Part 2: Knowledge Assessment
 
-/// type=SS, answer=[3]
+/// type=MS, answer=[3,5]
 
-Which statement best describes a property?
+Which statements correctly describe a property?
 
  - It is the value of a class.
 
@@ -486,9 +486,9 @@ Which statement best describes a property?
 
  - It is a variable defined inside a class.
 
- - It is an actual representation of a class.
-
  - It is a function inside a class that performs a specific action. 
+
+ - It is commonly referred to as an attribute or member of a class.
 
 
 /// type=MS, answer=[1,3,5]
@@ -1065,7 +1065,23 @@ Correct the code so that it outputs the string `Canada`.
 
 /// type=CR, answer=[tests/Properties/ManipulateObjectPropertiesTest.php]
 
-Write a program that manipulates the properties of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add a property definition of a class property `$type` with the value `Dog`. Add another property definition of a class property named `$breed`. Next, add a method definition for `move()` method. Inside the `move()` method body, add an `echo` statement to display the string `Animals move from one place to another.`. After the class declaration, add a statement that creates the `$pet` object an instance of an `Animal` class. Add another statement that assigns the value `Chihuahua` to the `$breed` property of the `$pet` object. Then, add an `echo` statement to display the value of the `$breed` property of `$pet`. Run the program to view the output.
+Write a program that manipulates the properties of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
+ 
+ 1. A property definition of a class property `$type` with the value `Dog`. 
+ 
+ 2. Another property definition of a class property named `$breed`. 
+ 
+ 3. A method definition for `move()` method. Inside the `move()` method body, add an `echo` statement to display the string `Animals move from one place to another.`.
+ 
+After the class declaration, add the following:
+ 
+ 1. A statement that creates the `$pet` object an instance of an `Animal` class. 
+ 
+ 2. Another statement that assigns the value `Chihuahua` to the `$breed` property of the `$pet` object. 
+ 
+ 3. An `echo` statement to display the value of the `$breed` property of `$pet`. 
+ 
+Run the program to view the output.
 
 ```php
 <?php
