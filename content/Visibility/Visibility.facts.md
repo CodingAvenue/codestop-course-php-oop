@@ -10,7 +10,7 @@ Visibility keywords are defined as the following:
 
  - `protected` sets the accessibility of a property or method only within a class itself and its child or parent classes.
 
-Class properties and methods can be declared as `public`, `private`, and `protected`. Declaring a method without a visibility keyword is defined as `public`.
+Class properties and methods can be declared as `public`, `private`, and `protected`. Declaring a method without a visibility keyword is implicitly defined as `public`.
 
 Code:
 
