@@ -1,6 +1,6 @@
 ### Facts for Properties lesson:
 
-A property is a variable that is defined inside of a class. 
+A property is a variable that is defined inside of a class. These variables are typically used to represent attributes of an object and/or its state.
 
 To declare a property, use a visibility keyword like `public` followed by the property name.
 
