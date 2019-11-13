@@ -380,6 +380,137 @@ Which statements correctly describe the code on line 18?
 
  - It removes the `display()` method from `$personObject`.
 
+:::
+
+
+:::
+
+/// type=REPL, readonly=true
+
+```php
+<?php
+    class Person 
+    {
+        public $name = "Diana";
+
+        public function changeName($newName)
+        {
+            $this->name = $newName;
+            return $this;
+        }
+
+        public function display()
+        {
+            echo "My name is " . $this->name . ".";
+        }
+    }
+    $personObject = new Person();
+    $personObject->changeName("Charles")->display();
+?>
+```
+/// type=SS, answer=[5]
+
+Execute the program. What is its output?
+
+ - It prints `Diana`.
+
+ - It prints `Charles`.
+
+ - No output is displayed.
+
+ - It prints `My name is Diana.`.
+
+ - It prints `My name is Charles.`.
+
+
+/// type=SS, answer=[1]
+
+Which of the following is a property?
+
+ - `$name`
+
+ - `$this`
+
+ - `display()`
+
+ - `changeName()`
+
+ - `$personObject`
+
+
+/// type=MS, answer=[3,4]
+
+Which of the following are methods?
+
+ - `$name`
+
+ - `$this`
+
+ - `display()`
+
+ - `changeName()`
+
+ - `$personObject`
+
+
+/// type=SS, answer=[2]
+
+Which of the following is a pseudo-variable?
+
+ - `$name`
+
+ - `$this`
+
+ - `return`
+
+ - `changeName()`
+
+ - `$personObject`
+
+
+/// type=SS, answer=[4]
+
+On line 9, what does `return $this;` do?
+
+ - It accesses the value of the `changeName()` method.
+
+ - It sets the value of the `$name` property in the `Person` class.
+
+ - It removes the value of the `$name` property in the `Person` class.
+
+ - It returns the current object that calls the `changeName()` method.
+
+ - It displays the current object that calls the `changeName()` method.
+
+
+/// type=SS, answer=[5]
+
+On line 18, what is `$personObject->changeName("Charles")->display();`?
+
+ - It is a method.
+
+ - It is an object.
+
+ - It is a property.
+
+ - It is an instantiation.
+
+ - It is a chained method calls.
+
+
+/// type=SS, answer=[1]
+
+Which statement best describes `$personObject->changeName("Charles")->display();` on line 18?
+
+ - It is the chained method calls that sets the value of `$name` to `Charles` and displays the string `My name is Charles.`.
+
+ - It is the nested method calls that returns the value of the `$name` property in the `display()` method of the `Person` class.
+
+ - It is the nested method calls that accesses the value of the `$name` property in the `display()` method of the `Person` class.
+
+ - It is the chained method calls that displays the value of the `changeName()` method and the string `My name is Charles.`.
+
+ - It is the chained method calls that removes the value `Charles` from `$name` and displays the string `My name is Charles.`.
 
 :::
 
@@ -657,11 +788,9 @@ Which statement best describes a method?
  - It is a function inside a class that performs a specific action.
 
 
-/// type=SS, answer=[5]
+/// type=MS, answer=[4,5]
 
-Which statement is true about the `$this` pseudo-variable?
-
- - It closes a method of a class.
+Which statements are true about the `$this` pseudo-variable?
 
  - It creates a method in a class.
 
@@ -669,7 +798,9 @@ Which statement is true about the `$this` pseudo-variable?
 
  - It sets the value of a method in a class.
 
- - It accesses the properties and methods within a class. 
+ - It represents the current instance of a class.
+
+ - It accesses the properties or methods within a class. 
 
 
 /// type=SS, answer=[3]
@@ -1100,6 +1231,88 @@ Correct the code so that it outputs the string `My name is Charles.`.
 
 :::
 
+/// type=REPL, readonly=true
+
+```php
+<?php
+    class Person 
+    {
+        public $name = "Diana";
+
+        public function changeName($newName)
+        {
+            $this->name = $newName;
+        }
+
+        public function display()
+        {
+            echo "My name is " . $this->name . ".";
+        }
+    }
+    $personObject = new Person();
+    $personObject->changeName("Charles")->display();
+?>
+```
+/// type=SS, answer=[3]
+
+Execute the program. What is the error message?
+
+ - Undefined variable: `personObject` on line number 17
+
+ - Uncaught Error: Function name must be a string on line number 17
+
+ - Uncaught Error: Call to a member function `display()` on null on line number 17.
+
+ - Missing argument `1` for `Person::changeName()` on line 17 and defined on line number 6 
+
+ - syntax error, unexpected `'"Charles"'` (T_CONSTANT_ENCAPSED_STRING) on line number 17
+
+
+/// type=MS, answer=[2,3,4,5]
+
+Which statements correctly describe the error?
+
+ - There is no semicolon `;` at the end of the statement on line 16.
+
+ - Method chaining requires a method to have the `return $this;` statement.
+
+ - There is no `return $this;` statement in the `changeName()` method on line 6.
+
+ - On line 17, the chained method calls `$personObject->changeName("Charles")->display();` is invalid.
+
+ - The `changeName()` method does not allow method chaining because it does not return the current object. 
+
+:::
+
+
+/// type=CR, answer=[tests/Methods/MissingReturnThisOnMethodTest.php]
+
+Correct the code so that it outputs the string `My name is Charles.`.
+
+```php
+<?php
+    class Person 
+    {
+        public $name = "Diana";
+
+        public function changeName($newName)
+        {
+            $this->name = $newName;
+        }
+
+        public function display()
+        {
+            echo "My name is " . $this->name . ".";
+        }
+    }
+    $personObject = new Person();
+    $personObject->changeName("Charles")->display();
+?>
+```
+
+
+:::
+
 /// type=REPL
 
 ```php
@@ -1316,7 +1529,23 @@ Correct the code so that it outputs the string `My name is Charles.`.
 
 /// type=CR, answer=[tests/Methods/ManipulateObjectMethodsTest.php]
 
-Write a program that adds and manipulates the methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add a property definition of a class property `$type` with the value `Dog`. Next, add a method definition for `changeType()` method with a parameter named `$newType`. Inside the `changeType()` method body, add a statement that assigns the value of `$newType` to the `$type` property of the `Animal` class. Add another method definition for a method named `display()`. Inside the `display()` method body, add an `echo` statement to display the string `"The animal type is " . $this->type . "."`. After the class declaration, add a statement that creates the `$pet` object an instance of the `Animal` class. Add a statement that calls the `changeType()` method of the `$pet` object passing the argument `Cat`. Then, add another statement that calls the `display()` method of the `$pet` object. Run the program to view the output.
+Write a program that adds and manipulates the methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
+ 
+ 1. A property definition of a class property `$type` with the value `Dog`. 
+ 
+ 2. A method definition for `changeType()` method with a parameter named `$newType`. Inside the `changeType()` method body, add a statement that assigns the value of `$newType` to the `$type` property of the `Animal` class. 
+ 
+ 3. Add another method definition for a method named `display()`. Inside the `display()` method body, add an `echo` statement to display the string `"The animal type is " . $this->type . "."`.
+ 
+After the class declaration, add the following:
+
+ 1. A statement that creates the `$pet` object an instance of the `Animal` class. 
+ 
+ 2. A statement that calls the `changeType()` method of the `$pet` object passing the argument `Cat`. 
+ 
+ 3. Add another statement that calls the `display()` method of the `$pet` object.
+ 
+Run the program to view the output.
 
 ```php
 <?php
