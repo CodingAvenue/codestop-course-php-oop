@@ -1004,7 +1004,31 @@ Correct the code so that it outputs the string `Charles`.
 
 /// type=CR, answer=[tests/Objects/CreateNewObjectTest.php]
 
-Write a program that uses a `new` keyword to create an instance of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add a property definition of a class property `$type` with the value `Dog`. Next, add a method definition for `move()` method. Inside the `move()` method body, add an `echo` statement to display the string `Animals move from one place to another.`. After the class declaration, add a statement that creates the `$pet` object an instance of an `Animal` class. Then, add another statement that calls the `move()` method of the `$pet` object. Run the program to view the output.
+Write a program that uses a `new` keyword to create an instance of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
+
+ 1. A property definition of a class property `$type` with the value `Dog`. 
+
+ 2. A method definition for the `move()` method. Inside the `move()` method body, add an `echo` statement to display the string `Animals move from one place to another.`. 
+
+After the class declaration, add a statement that creates the `$pet` object an instance of an `Animal` class. Then, add another statement that calls the `move()` method of the `$pet` object. Run the program to view the output.
+
+```php
+<?php
+
+
+?>
+```
+
+
+/// type=CR, answer=[tests/Objects/CreatePlantObjectTest.php]
+
+Write a program that uses a `new` keyword to create an instance of a certain class. First, use a `class` keyword to declare a class named `Plant`. Within the curly braces `{}`, add the following statements:
+
+ 1. A property definition of a class property `$type` with the value `Tree`.
+
+ 2. A method definition for the `grow()` method. Inside the `grow()` method body, add an `echo` statement to display the string `Plants grow everywhere.`.
+
+After the class declaration, add a statement that creates the `$plantObject` object an instance of a `Plant` class. Then, add another statement that calls the `grow()` method of the `$plantObject` object. Run the program to view the output.
 
 ```php
 <?php
