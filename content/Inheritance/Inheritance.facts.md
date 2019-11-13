@@ -1,14 +1,14 @@
 ### Facts for Inheritance lesson:
 
-An `inheritance` is a relationship between classes that enables a child class to inherit the properties and methods of its parent class.
+`inheritance` is a relationship between classes that enables a child class to inherit the properties and methods of a parent class.
 
-The `extends` keyword is used to define a relationship between a child class and its parent class.
+The `extends` keyword is used to define this relationship between a child class and its parent class.
 
-A child class can only inherit all the `public` and `protected` properties and methods of a parent class.
+A child class can only inherit the `public` and `protected` properties and methods of a parent class. `private` methods and members are not directly accessible to a child.
 
 The `protected` visibility keyword allows a child class to access the properties and methods of a parent class.
 
-A child class can override the methods of its parent class.
+A child class can override the methods of its parent class to extend or modify behavior.
 
 Defining a method in a child class with the same name and parameter of a parent class method is called `overriding`.
 
