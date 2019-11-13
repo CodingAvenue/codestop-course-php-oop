@@ -12,7 +12,7 @@ The parentheses `()` after the method name may contain its parameters. Empty par
 
 Method names should begin with a letter or an underscore and then followed by any combination of letters, numbers, or underscores.
 
-The `$this` pseudo-variable is used to access the class properties and methods within the class. 
+The `$this` pseudo-variable represents the current instance of a class and is used to access class properties or methods. 
 
 Code:
 
