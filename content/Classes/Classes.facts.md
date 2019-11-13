@@ -16,6 +16,6 @@ class MyClass {
 }
 ```
 
-A class name should start with a letter or an underscore `_`, followed by any combination of alphanumeric characters and underscores (`A-Z`, `a-z`, `0-9`, `_`). 
+A class name may start with a letter or an underscore `_`, followed by any combination of alphanumeric characters and underscores (`A-Z`, `a-z`, `0-9`, `_`). 
 
-It is a good practice to capitalize the first letter of a class name to easily identify them from other variables. The examples of good class names are `MyClass`, `SuperHeroes`, and `Cars`.
+It is good practice to capitalize the first letter of a class name to easily identify them from other variables. Some examples of good class names are `MyClass`, `SuperHero`, and `Car`.
