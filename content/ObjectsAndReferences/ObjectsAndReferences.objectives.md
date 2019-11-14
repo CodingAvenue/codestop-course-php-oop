@@ -6,6 +6,6 @@ After completing this lesson, the students should be able to:
 
  - Identify how object and variable references are controlled in memory.
 
- - Create a variable that references to another variable in a program.
+ - Create a variable that references another variable in a program.
 
  - Identify and correct errors in passing a certain object by reference.
