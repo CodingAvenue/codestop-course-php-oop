@@ -1441,7 +1441,25 @@ $circleObject->display();
 
 /// type=CR, answer=[tests/Constants/AddConstantDefinitionInClassTest.php]
 
-Write a program that uses a `const` keyword to define a class constant. First, use a `class` keyword to declare a class named `Cylinder`. Within the curly braces `{}`, add a constant definition of a class constant `PI` with the fixed value `3.1416`. Use the `private` visibility keyword to define class properties named `$radius` and `$height`. Next, add a `__construct()` method with the parameters `$radius` and `$height`. Inside the `__construct()` method body, add a statement that assigns the values of `$radius` and `$height` to the `$radius` and `$height` properties of the `Cylinder` class respectively. After the `__constuct()` method definition, Add `public` methods `getRadius()`, `getHeight()`, `area()`, `volume()`, and `display()`. Inside the `getRadius()` method, add a statement that returns the value of the `$radius` property. Inside the `getHeight()` method, add a statement that returns the value of the `$height` property. Inside the `area()` method, add a statement that returns the area of a cylinder using the formula `2 * PI * radius * (radius + height)`. Inside the `volume()` method, add a statement that returns the volume of a cylinder using the formula `PI * radius * radius * height`. Inside the `display()` method, add an `echo` statement to display the string `"Area: " . $this->area() . "\nVolume: " . $this->volume()`. After the class declaration, add a statement that creates the `$cyObject` object an instance of the `Cylinder` class passing the arguments `1.5` and `3`. Then, add another statement that calls the `display()` method of the `$cyObject` object. Run the program to view the output.
+Write a program that uses a `const` keyword to define a class constant. First, use a `class` keyword to declare a class named `Cylinder`. Within the curly braces `{}`, add the following statements:
+ 
+ 1. A constant definition of a class constant `PI` with the fixed value `3.1416`. 
+ 
+ 2. Use the `private` visibility keyword to define class properties named `$radius` and `$height`. 
+ 
+ 3. A `__construct()` method with the parameters `$radius` and `$height`. Inside the `__construct()` method body, add a statement that assigns the values of `$radius` and `$height` to the `$radius` and `$height` properties of the `Cylinder` class respectively. 
+ 
+ 4. After the `__constuct()` method definition, Add a `public` method named `getRadius()`. Inside the `getRadius()` method, add a statement that returns the value of the `$radius` property.
+
+ 5. A `public` method named `getHeight()`. Inside the `getHeight()` method, add a statement that returns the value of the `$height` property.
+
+ 6. A `public` method named `area()`. Inside the `area()` method, add a statement that returns the area of a cylinder using the formula `2 * PI * radius * (radius + height)`.
+
+ 7. A `public` method named `volume()`. Inside the `volume()` method, add a statement that returns the volume of a cylinder using the formula `PI * radius * radius * height`.
+
+ 8. A `public` method named `display()`. Inside the `display()` method, add an `echo` statement to display the string `"Area: " . $this->area() . "\nVolume: " . $this->volume()`.
+ 
+After the class declaration, add a statement that creates the `$cyObject` object an instance of the `Cylinder` class passing the arguments `1.5` and `3`. Then, add another statement that calls the `display()` method of the `$cyObject` object. Run the program to view the output.
 
 ```php
 <?php
