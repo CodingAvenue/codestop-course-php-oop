@@ -1429,7 +1429,35 @@ echo $personObject->getName() . " is " . $personObject->age . " years old.";
 
 /// type=CR, answer=[tests/Encapsulation/CreateClassWithEncapsulatedPropertiesAndMethodTest.php]
 
-Write a program that uses the `private` visibility keyword to encapsulate the properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add a property definition of a class property `$type` with the value `Dog` using the `private` visibility keyword. Use the `private` visibility keyword to define another class property named `$age`. Next, add a `public` method named `changeType()` with a parameter `$newType`. Inside the `changeType()` method body, add a statement that assigns the value of `$newType` to the `$type` property of the `Animal` class. Add a `private` method named `isValid()` with a parameter `$value`. Inside the `isValid()` method body, add an `if` statement that returns `true` if `$value` is greater than `0` and `false` otherwise. Add another `public` methods `display()`, `getType()`, `getAge()`, and `setAge()` with a parameter `$newAge`. Inside the `getType()` method body, add a statement that returns the value of the `$type` property. Inside the `getAge()` method body, add a statement that returns the value of the `$age` property. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " is " . $this->getAge() . " years old."`. Inside the `setAge()` method body, add an `if` statement that evaluates `$newAge` using the `isValid()` method. Inside the `if` block, add a statement that assigns `$newAge` to the `$age` property of the `Animal` class. After the class declaration, add a statement that creates the `$pet` object an instance of the `Animal` class. Add a statement that calls the `changeType()` method of the `$pet` object passing the argument `Rabbit`. Add a statement that calls the `setAge()` method of the `$pet` object passing the argument `3`. Then, add another statement that calls the `display()` method of the `$pet` object. Run the program to view the output.  
+Write a program that uses the `private` visibility keyword to encapsulate the properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
+
+ 1. A property definition of a class property `$type` with the value `Dog` using the `private` visibility keyword. 
+ 
+ 2. Use the `private` visibility keyword to define another class property named `$age`. 
+ 
+ 3. A `public` method named `changeType()` with a parameter `$newType`. Inside the `changeType()` method body, add a statement that assigns the value of `$newType` to the `$type` property of the `Animal` class. 
+ 
+ 4. A `private` method named `isValid()` with a parameter `$value`. Inside the `isValid()` method body, add an `if` statement that returns `true` if `$value` is greater than `0` and `false` otherwise. 
+ 
+ 5. A `public` method named `display()`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " is " . $this->getAge() . " years old."`.
+
+ 6. A `public` method named `getType()`. Inside the `getType()` method body, add a statement that returns the value of the `$type` property.
+
+ 7. A `public` method named `getAge()`. Inside the `getAge()` method body, add a statement that returns the value of the `$age` property.
+
+ 8. A `public` method named `setAge()` with a parameter `$newAge`. Inside the `setAge()` method body, add an `if` statement that evaluates `$newAge` using the `isValid()` method. Inside the `if` block, add a statement that assigns `$newAge` to the `$age` property of the `Animal` class.
+ 
+After the class declaration, add the following: 
+ 
+ 1. A statement that creates the `$pet` object an instance of the `Animal` class. 
+ 
+ 2. A statement that calls the `changeType()` method of the `$pet` object passing the argument `Rabbit`. 
+ 
+ 3. A statement that calls the `setAge()` method of the `$pet` object passing the argument `3`. 
+ 
+ 4. A statement that calls the `display()` method of the `$pet` object.
+ 
+Run the program to view the output.  
 
 ```
 <?php
