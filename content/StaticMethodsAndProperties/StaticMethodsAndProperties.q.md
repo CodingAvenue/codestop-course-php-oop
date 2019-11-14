@@ -2128,7 +2128,19 @@ $studentObject->display();
 
 /// type=CR, answer=[tests/StaticMethodsAndProperties/CreateNewClassWithStaticMethodAndPropertyTest.php]
 
-Write a program that uses `static` and `self` keywords to define and access a static method and property of a class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, use a `static` keyword to add a property definition of a class property `$type` with the value `Dog` using the `public` visibility keyword. Then, add another static property named `$age` with `public` visibility. Next, add a `__construct()` method with the parameters `$type` and `$age`. Inside the `__construct()` method body, add a statement that assigns the value of `$type` to the static property `$type` of the `Animal` class. Then, add an `if` statement that evaluates `$age` using the `isValid()` method. Inside the `if` block, add a statement that assigns `$age` to the static property `$age` of the `Animal` class. After the `__constuct()` method definition, add a `private` method named `isValid()` with a parameter `$value`. Inside the `isValid()` method body, add an `if` statement that returns `true` if `$value` is greater than `0` and `false` otherwise. Next, use the `static` keyword to add a static method named `display()` with `public` visibility. Inside the `display()` method body, add an `echo` statement to display the string `"The " . self::$type . " is " . self::$age . " years old."`. After the class declaration, add a statement that creates the `$pet` object an instance of the `Animal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$pet` object. Run the program to view the output.
+Write a program that uses `static` and `self` keywords to define and access a static method and property of a class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
+
+ 1. Use a `static` keyword to add a property definition of a class property `$type` with the value `Dog` using the `public` visibility keyword. 
+ 
+ 2. Add another static property named `$age` with `public` visibility. 
+ 
+ 3. A `__construct()` method with the parameters `$type` and `$age`. Inside the `__construct()` method body, add a statement that assigns the value of `$type` to the static property `$type` of the `Animal` class. Then, add an `if` statement that evaluates `$age` using the `isValid()` method. Inside the `if` block, add a statement that assigns `$age` to the static property `$age` of the `Animal` class. 
+ 
+ 4. After the `__constuct()` method definition, add a `private` method named `isValid()` with a parameter `$value`. Inside the `isValid()` method body, add an `if` statement that returns `true` if `$value` is greater than `0` and `false` otherwise. 
+ 
+ 5. Use the `static` keyword to add a static method named `display()` with `public` visibility. Inside the `display()` method body, add an `echo` statement to display the string `"The " . self::$type . " is " . self::$age . " years old."`.
+ 
+After the class declaration, add a statement that creates the `$pet` object an instance of the `Animal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$pet` object. Run the program to view the output.
 
 ```php
 <?php
