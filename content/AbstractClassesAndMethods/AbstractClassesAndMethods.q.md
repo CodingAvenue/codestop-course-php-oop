@@ -2076,7 +2076,7 @@ $studentObject->display();
 
 /// type=CR, answer=[tests/AbstractClassesAndMethods/CreateAbstractClassAndMethodTest.php], filename=[Animal.php,Mammal.php]
 
-Write a program that uses an `abstract` keyword to define an abstract class and method. In the `Animal.php` tab, add the following:
+Write a program that uses an `abstract` keyword to define an abstract class and method. In the `Animal.php` tab, perform the following:
 
  1. Use the `abstract` keyword to add an abstract method named `display()` with `public` visibility. 
  
@@ -2086,7 +2086,7 @@ In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal`
  
  1. A property definition of a class property `$name` using the `private` visibility keyword. 
  
- 2. `__construct()` method with the parameters `$type`, `$age`, and `$name`. Inside the `__construct()` method body, add a statement that calls the parent class constructor `__construct()` passing the arguments `$type` and `$age`. Then, add another statement that assigns the value of `$name` to the `$name` property of the `Mammal` class. 
+ 2. A `__construct()` method with the parameters `$type`, `$age`, and `$name`. Inside the `__construct()` method body, add a statement that calls the parent class constructor `__construct()` passing the arguments `$type` and `$age`. Then, add another statement that assigns the value of `$name` to the `$name` property of the `Mammal` class. 
  
  3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the abstract `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " named " . $this->getName() . " is a " . parent::getAge() . "-year old mammal."`. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. 
  
