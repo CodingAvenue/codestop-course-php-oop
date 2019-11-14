@@ -90,6 +90,36 @@ Which of the following are methods?
  - `checkAge()`
 
 
+/// type=SS, answer=[2]
+
+Which of the following is an accessor method?
+
+ - `Person()`
+
+ - `getAge()`
+
+ - `setAge()`
+
+ - `display()`
+
+ - `checkAge()`
+
+
+/// type=SS, answer=[3]
+
+Which of the following is a mutator method?
+
+ - `Person()`
+
+ - `getAge()`
+
+ - `setAge()`
+
+ - `display()`
+
+ - `checkAge()`
+
+
 /// type=SS, answer=[3]
 
 Which of the following is a pseudo-variable?
@@ -631,41 +661,41 @@ In the method call `$personObject->setAge(45);` on line 33, replace `setAge` wit
 
 Which statement is true about visibility?
 
- - It adds a property and a method to a class.
+ - It adds a property or method to a class.
 
- - It declares a property and a method to a class.
+ - It declares a property or method to a class.
 
  - It creates a new object as an instance of a class.
 
  - It accesses the properties and methods within a class. 
 
- - It defines the accessibility of a property and a method of a certain class.
+ - It defines the accessibility of a property or method of a certain class.
 
 
-/// type=SS, answer=[1]
+/// type=MS, answer=[2,3]
 
-What does the `public` visibility keyword do?
-
- - It sets the accessibility of the class properties and methods everywhere.
+What statements are true about the `public` visibility keyword?
 
  - It sets the accessibility of the properties and methods only within a class itself.
 
- - It sets the accessibility of the properties and methods only within the object of a class.
+ - Public properties and methods can be accessed by code outside or inside of a class.
+
+ - It sets the accessibility of the class properties and methods outside and inside of a class.
 
  - It sets the accessibility of the properties and methods only within a class itself and its child or parent classes.
 
  - It sets the accessibility of the properties and methods only to the instance of a class and its child or parent classes.
 
 
-/// type=SS, answer=[2]
+/// type=MS, answer=[2,3]
 
-Which statement best describes the `private` visibility keyword?
+Which statements correctly describe the `private` visibility keyword?
 
  - It sets the accessibility of the class properties and methods everywhere.
 
  - It sets the accessibility of the properties and methods only within a class itself.
 
- - It sets the accessibility of the properties and methods only within the object of a class.
+ - Private properties and methods can only be accessed by code defined within the class itself.
 
  - It sets the accessibility of the properties and methods only within a class itself and its child or parent classes.
 
@@ -674,7 +704,7 @@ Which statement best describes the `private` visibility keyword?
 
 /// type=SS, answer=[4]
 
-Which statement is true about the `protected` keyword?
+Which statement is true about the `protected` visibility keyword?
 
  - It sets the accessibility of the class properties and methods everywhere.
 
@@ -1472,7 +1502,35 @@ $personObject->display();
 
 /// type=CR, answer=[tests/Visibility/CreateClassWithPrivatePropertyAndMethodTest.php]
 
-Write a program that adds and manipulates the private properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add a property definition of a class property `$type` with the value `Dog` using the `private` visibility keyword. Use the `private` visibility keyword to define another class property named `$age`. Next, add a `public` method named `changeType()` with a parameter `$newType`. Inside the `changeType()` method body, add a statement that assigns the value of `$newType` to the `$type` property of the `Animal` class. Add a `private` method named `isValid()` with a parameter `$value`. Inside the `isValid()` method body, add an `if` statement that returns `true` if `$value` is greater than `0` and `false` otherwise. Add another `public` methods `display()`, `getType()`, `getAge()`, and `setAge()` with a parameter `$newAge`. Inside the `getType()` method body, add a statement that returns the value of the `$type` property. Inside the `getAge()` method body, add a statement that returns the value of the `$age` property. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " is " . $this->getAge() . " years old."`. Inside the `setAge()` method body, add an `if` statement that evaluates `$newAge` using the `isValid()` method. Inside the `if` block, add a statement that assigns `$newAge` to the `$age` property of the `Animal` class. After the class declaration, add a statement that creates the `$pet` object an instance of the `Animal` class. Add a statement that calls the `changeType()` method of the `$pet` object passing the argument `Cat`. Add a statement that calls the `setAge()` method of the `$pet` object passing the argument `1.5`. Then, add another statement that calls the `display()` method of the `$pet` object. Run the program to view the output.  
+Write a program that adds and manipulates the private properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
+
+ 1. A property definition of a class property `$type` with the value `Dog` using the `private` visibility keyword. 
+ 
+ 2. Use the `private` visibility keyword to define another class property named `$age`. 
+ 
+ 3. Create a `public` method named `changeType()` with a parameter `$newType`. Inside the `changeType()` method body, add a statement that assigns the value of `$newType` to the `$type` property of the `Animal` class. 
+  
+ 4. A `private` method named `isValid()` with a parameter `$value`. Inside the `isValid()` method body, add an `if` statement that returns `true` if `$value` is greater than `0` and `false` otherwise. 
+ 
+ 5. A `public` method named `display()`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " is " . $this->getAge() . " years old."`.
+ 
+ 6. A `public` method named  `getType()`. Inside the `getType()` method body, add a statement that returns the value of the `$type` property. 
+ 
+ 7. A `public` method named `getAge()`. Inside the `getAge()` method body, add a statement that returns the value of the `$age` property. 
+ 
+ 8. A `public` method named `setAge()` with a parameter `$newAge`. Inside the `setAge()` method body, add an `if` statement that evaluates `$newAge` using the `isValid()` method. Inside the `if` block, add a statement that assigns `$newAge` to the `$age` property of the `Animal` class. 
+ 
+After the class declaration, add the following:
+
+ 1. A statement that creates the `$pet` object an instance of the `Animal` class. 
+ 
+ 2. A statement that calls the `changeType()` method of the `$pet` object passing the argument `Cat`. 
+ 
+ 3. A statement that calls the `setAge()` method of the `$pet` object passing the argument `1.5`.
+ 
+ 4. A statement that calls the `display()` method of the `$pet` object. 
+ 
+Run the program to view the output.  
 
 ```
 <?php
