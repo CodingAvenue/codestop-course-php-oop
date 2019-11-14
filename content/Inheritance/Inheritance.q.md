@@ -2520,7 +2520,17 @@ studentObject->display();
 
 /// type=CR, answer=[tests/Inheritance/CreateChildClassTest.php], filename=[Animal.php,Mammal.php]
 
-Given the parent class `Animal` implementation, write a program that uses the `extends` keyword to establish `parent-child` relationships to classes. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the parent class `Animal`. Within the curly braces `{}`, add a property definition of a class property `$name` using the `private` visibility keyword. Next, add a `__construct()` method with the parameters `$type`, `$age`, and `$name`. Inside the `__construct()` method body, add a statement that calls the parent class constructor `__construct()` passing the arguments `$type` and `$age`. Then, add another statement that assigns the value of `$name` to the `$name` property of the `Mammal` class. After the `__constuct()` method definition, add a `public` method `display()` that overrides the existing `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " named " . $this->getName() . " is a " . parent::getAge() . "-year old mammal."`. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat`, `3`, and `Catsie`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
+Given the parent class `Animal` implementation, write a program that uses the `extends` keyword to establish `parent-child` relationships to classes. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the parent class `Animal`. Within the curly braces `{}`, add the following statements:
+
+ 1. A property definition of a class property `$name` using the `private` visibility keyword. 
+ 
+ 2. A `__construct()` method with the parameters `$type`, `$age`, and `$name`. Inside the `__construct()` method body, add a statement that calls the parent class constructor `__construct()` passing the arguments `$type` and `$age`. Then, add another statement that assigns the value of `$name` to the `$name` property of the `Mammal` class. 
+ 
+ 3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the existing `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " named " . $this->getName() . " is a " . parent::getAge() . "-year old mammal."`. 
+ 
+ 4. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. 
+ 
+After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat`, `3`, and `Catsie`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
 ```php
 <?php

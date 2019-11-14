@@ -4,7 +4,7 @@
 
 The `extends` keyword is used to define this relationship between a child class and its parent class.
 
-A child class can only inherit the `public` and `protected` properties and methods of a parent class. `private` methods and members are not directly accessible to a child.
+A child class can only inherit the `public` and `protected` properties and methods of a parent class. `private` methods and properties are not directly accessible to a child class.
 
 The `protected` visibility keyword allows a child class to access the properties and methods of a parent class.
 
