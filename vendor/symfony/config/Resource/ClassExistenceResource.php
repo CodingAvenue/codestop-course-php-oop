@@ -18,10 +18,8 @@ namespace Symfony\Component\Config\Resource;
  * The resource must be a fully-qualified class name.
  *
  * @author Fabien Potencier <fabien@symfony.com>
- *
- * @final since Symfony 4.3
  */
-class ClassExistenceResource implements SelfCheckingResourceInterface
+class ClassExistenceResource implements SelfCheckingResourceInterface, \Serializable
 {
     private $resource;
     private $exists;
@@ -34,10 +32,12 @@ class ClassExistenceResource implements SelfCheckingResourceInterface
      * @param string    $resource The fully-qualified class name
      * @param bool|null $exists   Boolean when the existency check has already been done
      */
-    public function __construct(string $resource, bool $exists = null)
+    public function __construct($resource, $exists = null)
     {
         $this->resource = $resource;
-        $this->exists = $exists;
+        if (null !== $exists) {
+            $this->exists = (bool) $exists;
+        }
     }
 
     /**
@@ -103,13 +103,21 @@ class ClassExistenceResource implements SelfCheckingResourceInterface
     /**
      * @internal
      */
-    public function __sleep(): array
+    public function serialize()
     {
         if (null === $this->exists) {
             $this->isFresh(0);
         }
 
-        return ['resource', 'exists'];
+        return serialize([$this->resource, $this->exists]);
+    }
+
+    /**
+     * @internal
+     */
+    public function unserialize($serialized)
+    {
+        list($this->resource, $this->exists) = unserialize($serialized);
     }
 
     /**
