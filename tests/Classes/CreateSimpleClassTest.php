@@ -23,12 +23,12 @@ class CreateSimpleClassTest extends Proof
 		
 		$this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
 	}
-	
+
 	public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 	
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment operation that assigns a value to the variable 'pObject'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'pObject'.");
 	}
 	
 	public function testpObjectVariable()

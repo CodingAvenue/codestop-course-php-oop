@@ -28,7 +28,7 @@ class MissingDollarSignOnPropertyTest extends Proof
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 	
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment operation that assigns a value to the variable 'myObject'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'myObject'.");
 	}
 	
 	public function testMyObjectVariable()
