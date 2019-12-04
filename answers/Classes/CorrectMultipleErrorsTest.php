@@ -10,5 +10,5 @@
     }
 
     $myObject = new MyClass();
-    echo $myObject->myMethod();
+    $myObject->myMethod();
 ?>

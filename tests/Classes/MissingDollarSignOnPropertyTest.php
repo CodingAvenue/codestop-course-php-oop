@@ -1,7 +1,7 @@
 <?php
 use CodingAvenue\Proof\Code;
 use Proofs\Proof;
-class MissingAssignmentOperatorTest extends Proof
+class MissingDollarSignOnPropertyTest extends Proof
 {
 	public function testPhpStartTag()
 	{

@@ -1,7 +1,7 @@
 <?php
 use CodingAvenue\Proof\Code;
 use Proofs\Proof;
-class MissingAssignmentOperatorTest extends Proof
+class CorrectMultipleErrorsTest extends Proof
 {
 	public function testPhpStartTag()
 	{
@@ -13,7 +13,7 @@ class MissingAssignmentOperatorTest extends Proof
 	{
 		$evaluator = self::$code->evaluator();
 		$evaled    = $evaluator->evaluate();
-		$expected  = "This is a class property.";
+		$expected  = "This is a class method.";
 		$this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
     
@@ -21,7 +21,7 @@ class MissingAssignmentOperatorTest extends Proof
 	{
 		$nodes=self::$code->find('construct[name="echo"]');
 		
-		$this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+		$this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
 	}
 
 	public function testAssignment()
@@ -66,10 +66,10 @@ class MissingAssignmentOperatorTest extends Proof
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `MyClass` class.");
 	}  
 	
-	public function testMyPropCall()
+	public function testMyMethodCall()
     {
-        $myProp = self::$code->find('property-call[name="myProp", variable="myObject"]');
+        $myProp = self::$code->find('method-call[name="myMethod", variable="myObject"]');
         
-        $this->assertEquals(1, $myProp->count(), "Expecting a 'myProp' property call of 'myObject'.");
+        $this->assertEquals(1, $myProp->count(), "Expecting a 'myMethod()' method call of 'myObject'.");
 	}
 }

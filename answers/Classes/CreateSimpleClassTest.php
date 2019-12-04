@@ -10,5 +10,5 @@
     }
 
     $pObject = new Person();
-    echo $pObject->eat();
+    $pObject->eat();
 ?>
