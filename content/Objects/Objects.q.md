@@ -401,7 +401,7 @@ Which statement best describes the code on line 13?
 
 /// type=SS, answer=[3]
 
-On lines 12, 13, and 14, replace the `$personObject` object with `$john`. Execute the program. What is its output?
+On lines 12, 13, and 14, replace the `$personObject` object with `$person`. Execute the program. What is its output?
 
  - It prints `name`.
 
@@ -432,14 +432,14 @@ On lines 12, 13, and 14, replace the `$personObject` object with `$john`. Execut
         }
     }
 
-    $john = new Person();
-    $john->name = "Charles";
-    echo $john->name;
+    $person = new Person();
+    $person->name = "Charles";
+    echo $person->name;
 ?>
 ```
 /// type=SS, answer=[2]
 
-Remove the statement `$john->name = "Charles";` on line 13. Execute the program. What is its output?
+Remove the statement `$person->name = "Charles";` on line 13. Execute the program. What is its output?
 
  - It prints `name`.
 
@@ -470,13 +470,13 @@ Remove the statement `$john->name = "Charles";` on line 13. Execute the program.
         }
     }
 
-    $john = new Person();
-    echo $john->name;
+    $person = new Person();
+    echo $person->name;
 ?>
 ```
 /// type=SS, answer=[5]
 
-On line 13, replace the statement `echo $john->name;` with `$john->eat();`. Execute the program. What is its output?
+On line 13, replace the statement `echo $person->name;` with `$person->eat();`. Execute the program. What is its output?
 
  - It prints `name`.
 
@@ -875,20 +875,20 @@ Correct the code so that it outputs the string `This is an eat() method.`.
         }
     }
 
-    $john = new Person();
-    $john->name = "Charles";
-    echo $john->name;
+    $person = new Person();
+    $person->name = "Charles";
+    echo $person->name;
 ?>
 ```
 /// type=SS, answer=[3]
 
-On line 14, remove the object operator `->` between `$john` and `name`. Execute the program. What is the error message?
+On line 14, remove the object operator `->` between `$person` and `name`. Execute the program. What is the error message?
 
  - Undefined variable: `name` on line number 13
 
  - syntax error, unexpected `'"'` on line number 13
 
- - Undefined variable: `johnname` on line number 14
+ - Undefined variable: `personname` on line number 14
 
  - syntax error, unexpected `'echo'` (T_ECHO) on line number 14
 
@@ -913,16 +913,16 @@ On line 14, remove the object operator `->` between `$john` and `name`. Execute 
         }
     }
 
-    $john = new Person();
-    $john->name = "Charles";
-    echo $johnname;
+    $person = new Person();
+    $person->name = "Charles";
+    echo $personname;
 ?>
 ```
 /// type=MS, answer=[1,3]
 
-In the statement `$john->name = "Charles";` on line 13, replace `$john` with `$charles`. Execute the program. What are the error messages?
+In the statement `$person->name = "Charles";` on line 13, replace `$person` with `$charles`. Execute the program. What are the error messages?
 
- - Undefined variable: `johnname` on line number 14
+ - Undefined variable: `personname` on line number 14
 
  - syntax error, unexpected `'echo'` (T_ECHO) on line number 14
 
@@ -951,14 +951,14 @@ In the statement `$john->name = "Charles";` on line 13, replace `$john` with `$c
         }
     }
 
-    $john = new Person();
+    $person = new Person();
     $charles->name = "Charles";
-    echo $johnname;
+    echo $personname;
 ?>
 ```
 /// type=SS, answer=[2]
 
-On line 12, remove the assignment operator `=` after `$john`. Execute the program. What is the error message?
+On line 12, remove the assignment operator `=` after `$person`. Execute the program. What is the error message?
 
  - syntax error, unexpected `'='` on line number 12
 
@@ -989,9 +989,9 @@ Correct the code so that it outputs the string `Charles`.
         }
     }
 
-    $john  new Person();
+    $person  new Person();
     $charles->name = "Charles";
-    echo $johnname;
+    echo $personname;
 ?>
 ```
 
