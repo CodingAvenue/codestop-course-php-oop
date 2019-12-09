@@ -49,7 +49,7 @@ class MissingReturnThisOnMethodTest extends Proof
     {
         $changeName=self::$code->find('method[name="changeName"]');
         
-        $this->assertEquals(1, $changeName->count(), "Expecting a changeMe() method.");
+        $this->assertEquals(1, $changeName->count(), "Expecting a changeName() method.");
 	}
 	    
 	public function testDisplay()
