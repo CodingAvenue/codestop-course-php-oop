@@ -3,42 +3,44 @@ use CodingAvenue\Proof\Code;
 use Proofs\Proof;
 class CreateChildClassTest extends Proof
 {
-	public function testPhpStartTag()
-	{
-		$checkStart = self::$code->codeStartCheck();
-		$this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
+    public function testPhpStartTag()
+    {
+        $checkStart = self::$code->codeStartCheck();
+        
+        $this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
     }
     
-	public function testActualCode()
-	{
-		$evaluator = self::$code->evaluator();
-		$evaled    = $evaluator->evaluate();
-		$expected  = "The Cat named Catsie is a 3-year old mammal.";
-		$this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
+    public function testActualCode()
+    {
+        $evaluator = self::$code->evaluator();
+        $evaled    = $evaluator->evaluate();
+        $expected  = "The Cat named Catsie is a 3-year old mammal.";
+        
+        $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
     
     public function testEcho()
-	{
-		$nodes = self::$code->find('construct[name="echo"]');
+    {
+        $nodes = self::$code->find('construct[name="echo"]');
 		
-		$this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
     }
     
-	public function testAssignment()
+    public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 	
         $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
-	}
+    }
 	
-	public function testPetMammalVariable()
+    public function testPetMammalVariable()
     {
         $petMammal = self::$code->find('variable[name="petMammal"]');
         
         $this->assertEquals(2, $petMammal->count(), "Expecting two occurrences of the variable named 'petMammal'.");
     }
     
-	public function testInstantiation()
+    public function testInstantiation()
     {
         $nodes = self::$code->find('instantiate[class="Mammal"]');
 		
@@ -52,7 +54,7 @@ class CreateChildClassTest extends Proof
         $this->assertEquals(1, $getName->count(), "Expecting a public method named 'getName()'.");
     }
 
-	public function testDisplay()
+    public function testDisplay()
     {
         $display = self::$code->find('method[name="display", type="public"]');
         
@@ -73,7 +75,7 @@ class CreateChildClassTest extends Proof
         $this->assertEquals(1, $name->count(), "Expecting a private class property named 'name'.");
     }
     
-	public function testClass()
+    public function testClass()
     {
         $nodes = self::$code->find('class[name="Mammal", extends="Animal"]');
 		
@@ -90,9 +92,10 @@ class CreateChildClassTest extends Proof
     public function testReturn()
     {
         $nodes = self::$code->find('construct[name="return"]');
+    
         $this->assertEquals(1, $nodes->count(), "Expecting one return statement.");
     }
-/*    
+    /*    
     public function testFunctionCall()
     {
         $nodes = self::$code->find('call[name="require_once"]');
