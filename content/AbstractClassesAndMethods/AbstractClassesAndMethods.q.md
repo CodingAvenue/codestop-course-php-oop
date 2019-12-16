@@ -81,7 +81,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=8780e109-fcad-4829-b5eb-30abbff40912, answer=[5]
 
 Execute the program. What is its output?
 
@@ -96,7 +96,7 @@ Execute the program. What is its output?
  - It prints `John is taking up BSCS.`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=12fa0fcc-ec0a-4d2d-bf5c-97b68e503722, answer=[2]
 
 In the declaration `abstract class Person` on line 2 of `Person.php`, what is `abstract`?
 
@@ -111,7 +111,7 @@ In the declaration `abstract class Person` on line 2 of `Person.php`, what is `a
  - It is an operator.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=8d8ac6eb-7b77-4a97-a248-01d0450e6dba, answer=[4]
 
 In the declaration `abstract class Person` on line 2 of `Person.php`, what does the `abstract` keyword do?
 
@@ -126,7 +126,7 @@ In the declaration `abstract class Person` on line 2 of `Person.php`, what does 
  - It sets the value of the `Person` class to abstract.
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=97de3890-0ac5-4af6-b26a-7f8a14ff0cfe, answer=[3,4]
 
 In the definition `abstract public function display();` on line 40 of `Person.php`, what does the `abstract` keyword do?
 
@@ -141,7 +141,7 @@ In the definition `abstract public function display();` on line 40 of `Person.ph
  - It sets the value of the `display()` method to abstract.
 
 
-/// type=MS, answer=[2,4]
+/// type=MS, id=c8cb0687-d80b-4d96-a8d1-c8b63585fc69, answer=[2,4]
 
 Which statements correctly describe `class Student extends Person { }` on line 3 of `Student.php`?
 
@@ -156,7 +156,7 @@ Which statements correctly describe `class Student extends Person { }` on line 3
  - It creates the `Person` class that inherits all the `public` and `protected` properties and methods of the `Student` class. 
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=2a5910b8-e55a-4b33-bf51-83a24e87a530, answer=[2]
 
 Which statement best describes `parent::__construct($name, $age);` on line 9 of `Student.php`?
 
@@ -171,7 +171,7 @@ Which statement best describes `parent::__construct($name, $age);` on line 9 of 
  - It removes the arguments `$name` and `$age` from the `__construct()` method of the parent class `Person` inside the child class `Student`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=75619d4e-0c88-4197-90af-2cd11a3948bb, answer=[1]
 
 In the `echo` statement on line 20 of `Student.php`, what does `parent::getName()` do?
 
@@ -186,7 +186,7 @@ In the `echo` statement on line 20 of `Student.php`, what does `parent::getName(
  - It defines the `getName()` method of the parent class `Person` inside the child class `Student`.
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=8b6cf284-8b97-45c4-8469-bb4428093cf9, answer=[3,4]
 
 Which statements correctly describe the `display()` method of the `Student` class?
 
@@ -201,7 +201,7 @@ Which statements correctly describe the `display()` method of the `Student` clas
  - It is a method definition that duplicates the abstract `display()` method in the parent class `Person`.
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=de4e26cc-be03-4265-9cb7-5a7e43f9e9c5, answer=[2,5]
 
 Which statements correctly describe `$studentObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`?
 
@@ -216,7 +216,7 @@ Which statements correctly describe `$studentObject = new Student("John", 20, "B
  - It creates the `$studentObject` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
 
 
-/// type=MS, answer=[1,2]
+/// type=MS, id=1216f8f7-639f-4be6-bec8-b10a64f36153, answer=[1,2]
 
 Which statements correctly describe `$studentObject->display();` on line 25 of `Student.php`?
 
@@ -310,7 +310,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=3f49fc2f-b8b8-4f97-a5b4-58de16ba0a3a, answer=[5]
 
 In the abstract method definition `abstract public function display();` on line 40 of `Person.php`, replace `public` with `protected`. Execute the program. What is its output?
 
@@ -404,7 +404,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=f5ebe944-1b68-4cde-86c3-63ad4600ef98, answer=[2]
 
 In the method definition `public function display()` on line 18 of `Student.php`, replace `public` with `protected`. Execute the program. What is its output?
 
@@ -498,7 +498,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=d82f8d76-a617-4227-b8d8-aca949b68d48, answer=[5]
 
 In `Student.php`, remove the `protected` keyword from the method definition `protected function display()` on line 18. Execute the program. What is its output?
 
@@ -592,7 +592,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=9096d734-8fdf-431b-ad36-0c2d43406479, answer=[2]
 
 In `Person.php`, remove the `abstract` keyword from `abstract class Person` on line 2. Execute the program. What is its output?
 
@@ -686,7 +686,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=ecdd62d2-e05f-4b85-85fc-ac8c7cf88047, answer=[2]
 
 In `Person.php`, remove the `abstract` keyword from `abstract protected function display();` on line 40. Execute the program. What is its output?
 
@@ -710,7 +710,7 @@ In `Person.php`, remove the `abstract` keyword from `abstract protected function
 
 ### Part 2: Knowledge Assessment
 
-/// type=SS, answer=[1]
+/// type=SS, id=62185bfc-dbd6-4939-b3f3-6ba6cb05e73c, answer=[1]
 
 Which statement best describes the `abstract` keyword?
 
@@ -725,7 +725,7 @@ Which statement best describes the `abstract` keyword?
  - It evaluates abstract classes and methods.
 
 
-/// type=MS, answer=[1,4,5]
+/// type=MS, id=5e2edadd-2bc0-428c-8174-b5f453cab030, answer=[1,4,5]
 
 Which statements are true about an abstract class?
 
@@ -740,7 +740,7 @@ Which statements are true about an abstract class?
  - It has an abstract method.
 
 
-/// type=MS, answer=[1,2,4,5]
+/// type=MS, id=a615ca79-f3cd-4650-ac51-4ab3420999b5, answer=[1,2,4,5]
 
 Which statements are true about an abstract method?
 
@@ -834,7 +834,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=a565fe91-eec6-46ee-92a1-7af6ab6b9b77, answer=[2]
 
 Execute the program. What is its output?
 
@@ -849,7 +849,7 @@ Execute the program. What is its output?
  - It prints `John is taking up BSCS.`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=5cab33c6-6f17-4919-9591-fb5b129405bf, answer=[5]
 
 What is the error message?
 
@@ -864,7 +864,7 @@ What is the error message?
  - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=d5fea1f6-8149-4d35-925a-7c23ac78b324, answer=[5]
 
 Which statement best describes the error?
 
@@ -881,7 +881,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, answer=[tests/AbstractClassesAndMethods/UnimplementedAbstractMethodTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=15ac5a33-4d12-47a1-89d0-43f4c41c0618, answer=[tests/AbstractClassesAndMethods/UnimplementedAbstractMethodTest.php], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1032,7 +1032,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=11c966eb-2695-4808-a937-215572d8ee80, answer=[2]
 
 Execute the program. What is the error message?
 
@@ -1047,7 +1047,7 @@ Execute the program. What is the error message?
  - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
-/// type=MS, answer=[1,2]
+/// type=MS, id=fd50373e-2753-47c2-ba8b-9dff64c5dc28, answer=[1,2]
 
 Which statements correctly describe the error?
 
@@ -1064,7 +1064,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AbstractClassesAndMethods/ProtectedMethodCallOnObjectTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=0b8d656f-d71c-4787-9ba2-a16eaeeec79e, answer=[tests/AbstractClassesAndMethods/ProtectedMethodCallOnObjectTest.php], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1220,7 +1220,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=5229c4ae-9ebf-4112-a8ca-b36e126dd91b, answer=[4]
 
 Execute the program. What is the error message?
 
@@ -1235,7 +1235,7 @@ Execute the program. What is the error message?
  - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
-/// type=MS, answer=[1,2,3]
+/// type=MS, id=673b97ce-ee94-4c61-a9e7-0fe801952c4b, answer=[1,2,3]
 
 Which statements correctly describe the error?
 
@@ -1252,7 +1252,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInPersonTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=a60a2677-fd0d-44d2-b7be-88b927102df8, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInPersonTest.php], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1408,7 +1408,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=7fadc6d6-dfaa-4eca-a132-71811b1573aa, answer=[1]
 
 Execute the program. What is the error message?
 
@@ -1423,7 +1423,7 @@ Execute the program. What is the error message?
  - Class `Student` contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (Person::display) on line number 18
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=5ff84414-290f-4654-b3b3-831671db13e5, answer=[2,5]
 
 Which statements correctly describe the error?
 
@@ -1440,7 +1440,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInDisplayMethodTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=b0142146-8669-4b24-8d49-1f6892288837, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInDisplayMethodTest.php], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1596,7 +1596,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=ad0c0497-a9b5-4f72-a395-fc9cfe0a04c4, answer=[4]
 
 In the method definition `public function display()` on line 18 of `Student.php`, replace `public` with `protected`. Execute the program. What is the error message?
 
@@ -1690,7 +1690,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=d3abcba9-fc83-4f34-b3eb-bdaf62c908c7, answer=[3]
 
 In the method definition `abstract public function display();` on line 40 of `Person.php`, replace `public` with `private`. Execute the program. What is the error message?
 
@@ -1784,7 +1784,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=3e916f40-69d4-4ab9-b29e-1126f119e78d, answer=[3]
 
 In `Person.php`, remove the `abstract` keyword from `abstract class Person` on line 2. Execute the program. What is the error message?
 
@@ -1878,7 +1878,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=608e898f-acb9-4295-8418-83c17a625659, answer=[2]
 
 In `Person.php`, remove the `abstract` keyword from `abstract public function display();` on line 40. Execute the program. What is the error message?
 
@@ -1972,7 +1972,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=46bda098-75cc-48b6-852d-8236eab517c6, answer=[1]
 
 In `Student.php`, remove the `extends` keyword from `class Student extends Person` on line 3. Execute the program. What is the error message?
 
@@ -1989,7 +1989,7 @@ In `Student.php`, remove the `extends` keyword from `class Student extends Perso
 :::
 
 
-/// type=CR, answer=[tests/AbstractClassesAndMethods/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=4039bd83-6317-4a92-95f2-554be487fc47, answer=[tests/AbstractClassesAndMethods/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -2074,7 +2074,7 @@ $studentObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/AbstractClassesAndMethods/CreateAbstractClassAndMethodTest.php], filename=[Animal.php,Mammal.php]
+/// type=CR, id=8d32d57a-0fc1-4b3c-a85c-04a49a05b866, answer=[tests/AbstractClassesAndMethods/CreateAbstractClassAndMethodTest.php], filename=[Animal.php,Mammal.php]
 
 Write a program that uses an `abstract` keyword to define an abstract class and method. In the `Animal.php` tab, perform the following:
 
