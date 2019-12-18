@@ -125,6 +125,13 @@ class ProtectedMethodCallOnObjectTest extends Proof
         $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent class.");
     }   
 
+    public function testParentGetNameCall()
+    {
+        $parent = self::$code->find('static-call[class="parent", method="getName"]');
+        
+        $this->assertEquals(1, $parent->count(), "Expecting a 'getName()' method call of the parent class.");
+    }  
+
     public function testParentCallNameArgs()
     {
         $parent = self::$code->find('static-call[class="parent", method="__construct"]');

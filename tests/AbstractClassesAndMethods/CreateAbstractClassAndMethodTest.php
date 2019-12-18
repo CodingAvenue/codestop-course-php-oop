@@ -96,7 +96,6 @@ class CreateAbstractClassAndMethodTest extends Proof
         $this->assertEquals(1, $nodes->count(), "Expecting one return statement.");
     }
 
-    
     public function testNameParam()
     {
         $nameParam=self::$code->find('param[name="name"]');
@@ -124,6 +123,20 @@ class CreateAbstractClassAndMethodTest extends Proof
         
         $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent class.");
     }   
+
+    public function testParentGetTypeCall()
+    {
+        $parent = self::$code->find('static-call[class="parent", method="getType"]');
+        
+        $this->assertEquals(1, $parent->count(), "Expecting a 'getType()' method call of the parent class.");
+    }  
+
+    public function testParentGetAgeCall()
+    {
+        $parent = self::$code->find('static-call[class="parent", method="getAge"]');
+        
+        $this->assertEquals(1, $parent->count(), "Expecting a 'getAge()' method call of the parent class.");
+    }  
 
     public function testParentCallTypeArgs()
     {
