@@ -137,5 +137,40 @@ class AddConstructorToClassTest extends Proof
 
         $this->assertEquals(3, $nodes->count(), "Expecting three if constructs.");
     }
-    //still need to test the arguments and parameters of the methods.
+
+    public function testAgeParam()
+    {
+        $ageParam=self::$code->find('param[name="age"]');
+    
+        $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age' in the `__construct()` method.");
+    }
+
+    public function testTypeParam()
+    {
+        $typeParam=self::$code->find('param[name="type"]');
+    
+        $this->assertEquals(1, $typeParam->count(), "Expecting a parameter named 'type' in the `__construct()` method.");
+    }
+
+    public function testNewAgeParam()
+    {
+        $newAgeParam=self::$code->find('param[name="newAge"]');
+    
+        $this->assertEquals(1, $newAgeParam->count(), "Expecting a parameter named 'newAge' in the `setAge()` method.");
+    }
+
+    public function testNewTypeParam()
+    {
+        $newTypeParam=self::$code->find('param[name="newType"]');
+    
+        $this->assertEquals(1, $newTypeParam->count(), "Expecting a parameter named 'newType' in the `changeType()` method.");
+    }
+
+    public function testValueParam()
+    {
+        $valueParam=self::$code->find('param[name="value"]');
+    
+        $this->assertEquals(1, $valueParam->count(), "Expecting a parameter named 'value' in the `isValid()` method.");
+    }
+    //still need to test the arguments in the method calls.
 }

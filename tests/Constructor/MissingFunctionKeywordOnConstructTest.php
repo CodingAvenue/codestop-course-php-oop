@@ -74,6 +74,13 @@ class MissingFunctionKeywordOnConstructTest extends Proof
         
         $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'personObject'.");
     }
+
+    public function testNameParam()
+    {
+        $nameParam=self::$code->find('param[name="name"]');
     
-    //still need to test the arguments and parameters of the methods.
+        $this->assertEquals(1, $nameParam->count(), "Expecting a parameter named 'name' in the `__construct()` method.");
+    }
+
+    //still need to test the arguments in the method calls.
 }

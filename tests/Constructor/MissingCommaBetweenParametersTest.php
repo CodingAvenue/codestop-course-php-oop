@@ -124,5 +124,25 @@ class MissingCommaBetweenParametersTest extends Proof
         $this->assertEquals(3, $nodes->count(), "Expecting three if constructs.");
     }
 
-    //still need to test the arguments and parameters of the methods.
+    public function testAgeParam()
+    {
+        $ageParam=self::$code->find('param[name="age"]');
+    
+        $this->assertEquals(2, $ageParam->count(), "Expecting two parameters named 'age' in the `__construct()` and 'checkAge()' methods.");
+    }
+
+    public function testNameParam()
+    {
+        $nameParam=self::$code->find('param[name="name"]');
+    
+        $this->assertEquals(1, $nameParam->count(), "Expecting a parameter named 'name' in the `__construct()` method.");
+    }
+
+    public function testNewAgeParam()
+    {
+        $newAgeParam=self::$code->find('param[name="newAge"]');
+    
+        $this->assertEquals(1, $newAgeParam->count(), "Expecting a parameter named 'newAge' in the `setAge()` method.");
+    }
+    //still need to test the arguments in the method calls.
 }
