@@ -144,4 +144,24 @@ class CreateClassWithPrivatePropertyAndMethodTest extends Proof
 
         $this->assertEquals(2, $nodes->count(), "Expecting two if constructs.");
     }
+
+    public function testValueParam()
+    {
+        $valueParam=self::$code->find('param[name="value"]');
+    
+        $this->assertEquals(1, $valueParam->count(), "Expecting a parameter named 'value'.");
+    }
+    public function testNewAgeParam()
+    {
+        $ageParam=self::$code->find('param[name="newAge"]');
+    
+        $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'newAge'.");
+    }
+    public function testNewTypeParam()
+    {
+        $typeParam=self::$code->find('param[name="newType"]');
+    
+        $this->assertEquals(1, $typeParam->count(), "Expecting a parameter named 'newType'.");
+    }
+
 }

@@ -123,4 +123,19 @@ class CorrectMultipleErrorsTest extends Proof
 
         $this->assertEquals(2, $nodes->count(), "Expecting two if constructs.");
     }
+
+    public function testAgeParam()
+    {
+        $ageParam=self::$code->find('param[name="age"]');
+    
+        $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age' in the 'checkAge()' method.");
+    }
+
+    public function testNewAgeParam()
+    {
+        $newAgeParam=self::$code->find('param[name="newAge"]');
+    
+        $this->assertEquals(1, $newAgeParam->count(), "Expecting a parameter named 'newAge' in the `setAge()` method.");
+    }
+    //still need to test the arguments in the method calls.
 }
