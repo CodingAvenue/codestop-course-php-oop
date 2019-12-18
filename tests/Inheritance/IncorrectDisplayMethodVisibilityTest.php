@@ -95,6 +95,64 @@ class CorrectMultipleErrorsTest extends Proof
         
         $this->assertEquals(1, $nodes->count(), "Expecting one return statement.");
     }
+    
+    public function testNameParam()
+    {
+        $nameParam=self::$code->find('param[name="name"]');
+    
+        $this->assertEquals(1, $nameParam->count(), "Expecting a parameter named 'name'.");
+    }
+
+    public function testAgeParam()
+    {
+        $ageParam=self::$code->find('param[name="age"]');
+    
+        $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age'.");
+    }
+
+    public function testCourseParam()
+    {
+        $courseParam=self::$code->find('param[name="course"]');
+    
+        $this->assertEquals(1, $courseParam->count(), "Expecting a parameter named 'course'.");
+    }
+
+    public function testParentCall()
+    {
+        $parent = self::$code->find('static-call[class="parent", method="__construct"]');
+        
+        $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent class.");
+    }   
+
+    public function testParentGetNameCall()
+    {
+        $parent = self::$code->find('static-call[class="parent", method="getName"]');
+        
+        $this->assertEquals(1, $parent->count(), "Expecting a 'getName()' method call of the parent class.");
+    }  
+
+    public function testParentCallNameArgs()
+    {
+        $parent = self::$code->find('static-call[class="parent", method="__construct"]');
+        $parentArgs = $parent->find('args');
+        $nameArgs = $parentArgs->getSubnodeByIndex(0);
+        $node0 = $nameArgs->getSubnode();
+        $nameVar = $node0->find('variable[name="name"]');
+ 
+        $this->assertEquals(1, $nameVar->count(), "Expecting a 'name' argument in the '__construct()' method call of the parent class.");
+    }  
+
+    public function testParentCallAgeArgs()
+    {
+        $parent = self::$code->find('static-call[class="parent", method="__construct"]');
+        $parentArgs = $parent->find('args');
+        $ageArgs = $parentArgs->getSubnodeByIndex(1);
+        $node1 = $ageArgs->getSubnode();
+        $ageVar = $node1->find('variable[name="age"]');
+ 
+        $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
+    }  
+
     /*    
     public function testFunctionCall()
     {
