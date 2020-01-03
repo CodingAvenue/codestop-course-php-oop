@@ -89,4 +89,11 @@ class ManipulateObjectMethodsTest extends Proof
 
         $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'pet'.");
     }
+
+    public function testNewTypeParam()
+    {
+        $newTypeParam=self::$code->find('param[name="newType"]');
+    
+        $this->assertEquals(1, $newTypeParam->count(), "Expecting a parameter named 'newType' in the `changeType()` method.");
+    }
 } 

@@ -90,4 +90,11 @@ class MissingReturnThisOnMethodTest extends Proof
 
         $this->assertEquals(1, $nodes->count(), "Expecting a return statement.");
     }
+    
+    public function testNewNameParam()
+    {
+        $newNameParam=self::$code->find('param[name="newName"]');
+    
+        $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
+    }
 } 

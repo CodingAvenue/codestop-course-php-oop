@@ -88,4 +88,11 @@ class MissingObjectOperatorTest extends Proof
 
         $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'personObject'.");
     }
+    
+    public function testNewNameParam()
+    {
+        $newNameParam=self::$code->find('param[name="newName"]');
+    
+        $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
+    }
 } 
