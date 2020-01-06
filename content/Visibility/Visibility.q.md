@@ -45,7 +45,7 @@ $personObject->setAge(15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=a597fbec-e128-4d34-8058-d46c5bb14434, answer=[5]
 
 Execute the program. What is its output?
 
@@ -60,7 +60,7 @@ Execute the program. What is its output?
  - It prints `Anna is 15 years old.`.
 
 
-/// type=MS, answer=[1,2]
+/// type=MS, id=50eabd46-aa1d-431c-a118-96390cfba23f, answer=[1,2]
 
 Which of the following are properties?
 
@@ -75,7 +75,7 @@ Which of the following are properties?
  - `$personObject`
 
 
-/// type=MS, answer=[2,3,4,5]
+/// type=MS, id=836b5830-1489-440e-9218-2fc7162bf248, answer=[2,3,4,5]
 
 Which of the following are methods?
 
@@ -90,7 +90,7 @@ Which of the following are methods?
  - `checkAge()`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=0d59ca29-0652-42cc-bc00-fd6972821408, answer=[2]
 
 Which of the following is an accessor method?
 
@@ -105,7 +105,7 @@ Which of the following is an accessor method?
  - `checkAge()`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=36f05975-62d3-4af5-b837-82209bf5ffaf, answer=[3]
 
 Which of the following is a mutator method?
 
@@ -120,7 +120,7 @@ Which of the following is a mutator method?
  - `checkAge()`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=0476fe74-92b4-48f7-8143-2ae2effc6411, answer=[3]
 
 Which of the following is a pseudo-variable?
 
@@ -135,7 +135,7 @@ Which of the following is a pseudo-variable?
  - `$personObject`
 
 
-/// type=MS, answer=[2,4]
+/// type=MS, id=4156e0cf-92dd-4f14-a2d0-479ba59f0494, answer=[2,4]
 
 Which of the following are visibility keywords?
 
@@ -150,7 +150,7 @@ Which of the following are visibility keywords?
  - `$personObject`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=eb8bee64-d186-4d29-90dd-a9ba1ca58c92, answer=[4]
 
 In the property definition `private $age;` on line 5, what does `private` do?
 
@@ -165,7 +165,7 @@ In the property definition `private $age;` on line 5, what does `private` do?
  - It sets the accessibility of the `$age` property only within the `Person` class and its child or parent classes.
 
 
-/// type=MS, answer=[2,4]
+/// type=MS, id=a1b01be7-f27e-40ee-8642-60c5c614a761, answer=[2,4]
 
 Which statements correctly describe the code on line 5?
 
@@ -180,7 +180,7 @@ Which statements correctly describe the code on line 5?
  - It sets the accessibility of the `$age` property only within the `Person` class and its child or parent classes.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=3c6ffd0a-e5f9-4c65-a644-a7defe5530e3, answer=[4]
 
 In the statement `if ($this->checkAge($newAge))` on line 9, what is `$newAge`?
 
@@ -195,7 +195,7 @@ In the statement `if ($this->checkAge($newAge))` on line 9, what is `$newAge`?
  - It is a pseudo-variable.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=27dc9384-8d67-46bf-a759-a54bc63534e0, answer=[1]
 
 In the statement `if ($this->checkAge($newAge))` on line 9, what is `checkAge()`?
 
@@ -210,7 +210,7 @@ In the statement `if ($this->checkAge($newAge))` on line 9, what is `checkAge()`
  - It is a pseudo-variable.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=54ecbfd6-d59e-4cdc-a45f-50c872bf94a8, answer=[2]
 
 Which statement best describes `$this->checkAge($newAge)` on line 9?
 
@@ -225,7 +225,7 @@ Which statement best describes `$this->checkAge($newAge)` on line 9?
  - It accesses the argument `$newAge` from the `checkAge()` method of the `Person` class.
 
 
-/// type=MS, answer=[1,2,5]
+/// type=MS, id=25a19119-3b9f-4240-a9fe-ce01a2817507, answer=[1,2,5]
 
 On lines 9, 10, and 11, what does the `if` statement do?
 
@@ -240,7 +240,7 @@ On lines 9, 10, and 11, what does the `if` statement do?
  - It does not execute the statement `$this->age = $newAge;` if the method call inside the parentheses `()` evaluates to `false`. 
 
 
-/// type=MS, answer=[1,2,3,4]
+/// type=MS, id=d1ffbd33-3c10-4ac0-a799-ee36495c3f9a, answer=[1,2,3,4]
 
 Which statements correctly describe the `checkAge()` method of the `Person` class?
 
@@ -298,7 +298,7 @@ $personObject->setAge(15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=73e4efca-445c-4ab4-ba09-d784507ec590, answer=[4]
 
 In the method call `$personObject->setAge(15);` on line 33, replace the argument `15` with `-15`. Execute the program. What is its output?
 
@@ -356,7 +356,7 @@ $personObject->setAge(-15);
 $personObject->display();
 ?>
 ```
-/// type=MS, answer=[1,4,5]
+/// type=MS, id=49c29bba-420b-4a1a-95e0-cc4bccadc787, answer=[1,4,5]
 
 Why is there no value of the `$age` property displayed?
 
@@ -371,7 +371,7 @@ Why is there no value of the `$age` property displayed?
  - The `setAge()` method only assigns values greater than `0` to the `$age` property of `$personObject`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=18de9f00-2e5a-44ad-8c57-b9c1f1ac9a75, answer=[1]
 
 Which property is accessible only within the `Person` class?
 
@@ -386,7 +386,7 @@ Which property is accessible only within the `Person` class?
  - `$personObject`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=500ed813-e9bb-4cf6-9dbc-ddf71bd0c8fb, answer=[5]
 
 Which method is accessible only within the `Person` class?
 
@@ -401,7 +401,7 @@ Which method is accessible only within the `Person` class?
  - `checkAge()`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=65d55d70-873d-45fe-8b8d-b10ddc49f7e5, answer=[4]
 
 In the method call `$personObject->setAge(-15);` on line 33, replace the argument `-15` with `45`. Execute the program. What is its output?
 
@@ -459,7 +459,7 @@ $personObject->setAge(45);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=7a06eb9f-cd8b-41c8-84c0-fc767ca8787e, answer=[1]
 
 On line 34, replace the method call `$personObject->display();` with `echo $personObject->getAge();`. Execute the program. What is its output?
 
@@ -517,7 +517,7 @@ $personObject->setAge(45);
 echo $personObject->getAge();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=e9a625ae-d49b-43d7-9401-66669113bc47, answer=[2]
 
 In the statement `echo $personObject->getAge();` on line 34, replace `getAge()` with `name`. Execute the program. What is its output?
 
@@ -575,7 +575,7 @@ $personObject->setAge(45);
 echo $personObject->name;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=98743d80-39d7-49d9-b0b5-9fb18597cd36, answer=[3]
 
 In the statement `echo $personObject->name;` on line 34, replace `name` with `age`. Execute the program. What is its output?
 
@@ -633,7 +633,7 @@ $personObject->setAge(45);
 echo $personObject->age;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=b30cd497-f7d7-43a3-b967-f4a3817b10b0, answer=[3]
 
 In the method call `$personObject->setAge(45);` on line 33, replace `setAge` with `checkAge`. Execute the program. What is its output?
 
@@ -657,7 +657,7 @@ In the method call `$personObject->setAge(45);` on line 33, replace `setAge` wit
 
 ### Part 2: Knowledge Assessment
 
-/// type=SS, answer=[5]
+/// type=SS, id=bec11725-3212-47d2-96f5-127f3195fd41, answer=[5]
 
 Which statement is true about visibility?
 
@@ -672,7 +672,7 @@ Which statement is true about visibility?
  - It defines the accessibility of a property or method of a certain class.
 
 
-/// type=MS, answer=[2,3]
+/// type=MS, id=2024f978-e48c-40fa-9381-c22d80ec090b, answer=[2,3]
 
 What statements are true about the `public` visibility keyword?
 
@@ -687,7 +687,7 @@ What statements are true about the `public` visibility keyword?
  - It sets the accessibility of the properties and methods only to the instance of a class and its child or parent classes.
 
 
-/// type=MS, answer=[2,3]
+/// type=MS, id=485ed68f-9fb6-4f78-a884-ddce7b1f3b98, answer=[2,3]
 
 Which statements correctly describe the `private` visibility keyword?
 
@@ -702,7 +702,7 @@ Which statements correctly describe the `private` visibility keyword?
  - It sets the accessibility of the properties and methods only to the instance of a class and its child or parent classes.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=49d312fd-1313-49e5-947b-5ad45f580deb, answer=[4]
 
 Which statement is true about the `protected` visibility keyword?
 
@@ -765,7 +765,7 @@ $personObject->age = 12;
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=836837b9-e0ee-4d33-b43e-35c8a740448d, answer=[3]
 
 Execute the program. What is its output?
 
@@ -780,7 +780,7 @@ Execute the program. What is its output?
  - It prints `Anna is 12 years old.`.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=7dace2a8-e96b-4753-9460-f821d271c940, answer=[4]
 
 What is the error message?
 
@@ -795,7 +795,7 @@ What is the error message?
  - syntax error, unexpected `'$age'` (T_VARIABLE), expecting function (T_FUNCTION) on line number 33
 
 
-/// type=MS, answer=[1,3,5]
+/// type=MS, id=3055bafa-d5a5-423b-86bf-84b22fd2a371, answer=[1,3,5]
 
 Which statements correctly describe the error?
 
@@ -812,7 +812,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Visibility/IncorrectAccessToPrivatePropertyTest.php]
+/// type=CR, id=6e24e44a-276f-435a-9792-103ba1dd9ae2, answer=[tests/Visibility/IncorrectAccessToPrivatePropertyTest.php]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -896,7 +896,7 @@ $personObject->setAge(12);
 $personObject->age;
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=2569ae58-52ba-44d3-aa35-56fe6c913cef, answer=[4]
 
 Execute the program. What is the error message?
 
@@ -911,7 +911,7 @@ Execute the program. What is the error message?
  - Missing argument `1` for `Person::setAge()`, called on line 33 and defined on line number 7
 
 
-/// type=MS, answer=[1,2,5]
+/// type=MS, id=63756910-2934-4865-a81a-b67214fdab32, answer=[1,2,5]
 
 Which statements correctly describe the error?
 
@@ -928,7 +928,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Visibility/IncorrectAccessToAgePropertyTest.php]
+/// type=CR, id=929d22d2-8998-4fe5-ab99-d0cb42c5ef05, answer=[tests/Visibility/IncorrectAccessToAgePropertyTest.php]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -1012,7 +1012,7 @@ $personObject->checkAge(12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=0e13a046-cbf8-4a34-909c-4cafb1858008, answer=[3]
 
 Execute the program. What is the error message?
 
@@ -1027,7 +1027,7 @@ Execute the program. What is the error message?
  - Missing argument `1` for `Person::setAge()`, called on line 33 and defined on line number 7
 
 
-/// type=MS, answer=[2,3,5]
+/// type=MS, id=dd7aedb8-f578-41f4-a2b2-1216f2ea082d, answer=[2,3,5]
 
 Which statements correctly describe the error?
 
@@ -1044,7 +1044,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Visibility/IncorrectAccessToCheckAgePrivateMethodTest.php]
+/// type=CR, id=f1ecfba2-c407-44e4-9c00-9089d60b98ab, answer=[tests/Visibility/IncorrectAccessToCheckAgePrivateMethodTest.php]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -1128,7 +1128,7 @@ $personObject->setAge();
 $personObject->display();
 ?>
 ```
-/// type=MS, answer=[1,5]
+/// type=MS, id=d6c547e4-020f-437d-93e9-274273ccfc11, answer=[1,5]
 
 Execute the program. What are the error messages?
 
@@ -1143,7 +1143,7 @@ Execute the program. What are the error messages?
  - Missing argument `1` for `Person::setAge()`, called on line 33 and defined on line number 7
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=ba4c60eb-3e0d-408c-8681-b0a7b615c6d6, answer=[2,5]
 
 Which statements correctly describe the error?
 
@@ -1160,7 +1160,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Visibility/MissingArgumentOnSetAgeMethodTest.php]
+/// type=CR, id=6b7f92f6-673d-40e7-a4c2-b575fe27b38f, answer=[tests/Visibility/MissingArgumentOnSetAgeMethodTest.php]
 
 Correct the code so that it outputs the string `Anna is 45 years old.`.
 
@@ -1244,7 +1244,7 @@ $personObject->setAge(45);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=0d16dd7e-2a98-4f85-937a-fbe199eecae4, answer=[5]
 
 Execute the program. What is its output?
 
@@ -1259,7 +1259,7 @@ Execute the program. What is its output?
  - It prints `Anna is 45 years old.`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=e99cf65e-0e7e-43eb-832d-2ecd507ebd74, answer=[2]
 
 Remove the `new` keyword from the statement `$personObject = new Person();` on line 32. Execute the program. What is the error message?
 
@@ -1317,7 +1317,7 @@ $personObject->setAge(45);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=4c97382a-a385-4287-97b6-888928ac628c, answer=[1]
 
 Remove the `if` construct on line 21, Execute the program. What is the error message?
 
@@ -1375,7 +1375,7 @@ $personObject->setAge(45);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=aa45987f-8a3b-4e93-96ab-4dd01cefe9e1, answer=[4]
 
 Remove the `$this` pseudo-variable from the statement `return $this->age;` on line 16. Execute the program. What is the error message?
 
@@ -1433,7 +1433,7 @@ $personObject->setAge(45);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=cbd3d06c-8873-4e99-a5cf-516c4233cc90, answer=[5]
 
 Remove the `private` keyword from the property definition `private $age;` on line 5. Execute the program. What is the error message?
 
@@ -1450,7 +1450,7 @@ Remove the `private` keyword from the property definition `private $age;` on lin
 :::
 
 
-/// type=CR, answer=[tests/Visibility/CorrectMultipleErrorsTest.php]
+/// type=CR, id=4ac396f3-37cc-4a0b-9730-fd31829941ba, answer=[tests/Visibility/CorrectMultipleErrorsTest.php]
 
 Correct the code so that it outputs the string `Anna is 45 years old.`.
 
@@ -1500,7 +1500,7 @@ $personObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/Visibility/CreateClassWithPrivatePropertyAndMethodTest.php]
+/// type=CR, id=9fd0ca61-97d0-4fd9-887e-bd12c3d524c5, answer=[tests/Visibility/CreateClassWithPrivatePropertyAndMethodTest.php]
 
 Write a program that adds and manipulates the private properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
