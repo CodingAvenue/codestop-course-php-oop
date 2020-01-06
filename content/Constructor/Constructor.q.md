@@ -23,7 +23,7 @@
     echo $personObject->name;
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=9e938768-fa4f-46d9-a99d-6afd9aee6a00, answer=[2]
 
 Execute the program. What is its output?
 
@@ -38,7 +38,7 @@ Execute the program. What is its output?
  - No output is displayed.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=77e16dff-2768-4153-810d-3b019d1403f1, answer=[3]
 
 Which of the following is a visibility keyword?
 
@@ -53,7 +53,7 @@ Which of the following is a visibility keyword?
  - `__construct()`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=1451828f-bf07-4514-9937-cfcfe83fd96f, answer=[4]
 
 Which of the following is a method?
 
@@ -68,7 +68,7 @@ Which of the following is a method?
  - `$personObject`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=b7f79c89-4dd9-425f-9418-39ac33f4e761, answer=[1]
 
 Which of the following is a property?
 
@@ -83,7 +83,7 @@ Which of the following is a property?
  - `$personObject`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=e3b21a7b-53a4-493a-9b8a-3aee7db163a4, answer=[2]
 
 Which of the following is a parameter?
 
@@ -98,7 +98,7 @@ Which of the following is a parameter?
  - `$personObject`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=e26f068d-7563-4162-bdcd-fe930c2a2ff7, answer=[1]
 
 Which of the following is an argument?
 
@@ -113,7 +113,7 @@ Which of the following is an argument?
  - `$personObject`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=af48baa9-f865-4b95-a163-a88795490b78, answer=[4]
 
 In the method definition `public function __construct($name)` on line 6, what is `$name`?
 
@@ -128,7 +128,7 @@ In the method definition `public function __construct($name)` on line 6, what is
  - It is an argument.
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=fbdf61ef-0c51-4c32-89ad-7e5bcf02c763, answer=[1,5]
 
 In the method definition `public function __construct($name)` on line 6, what is `__construct()`?
 
@@ -143,7 +143,7 @@ In the method definition `public function __construct($name)` on line 6, what is
  - It is a constructor.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=3fc450c2-a9b4-492b-94a2-70ae17b62968, answer=[2]
 
 In the method definition `public function __construct($name)` on line 6, what does `public` do?
 
@@ -158,7 +158,7 @@ In the method definition `public function __construct($name)` on line 6, what do
  - It sets the accessibility of the `__construct()` method only within the `Person` class and its child or parent classes.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=4bbe0863-62ab-4e58-978f-9c1751adc57c, answer=[1]
 
 On line 8, what does the statement `$this->name = $name;` do?
 
@@ -173,7 +173,7 @@ On line 8, what does the statement `$this->name = $name;` do?
  - It removes the value of `$name` from the `$name` property of the `Person` class.
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=d8565c3c-b6f2-4f87-8996-a16e28291ab7, answer=[1,5]
 
 On lines 6, 7, 8, and 9, what does the `__construct()` method do?
 
@@ -188,7 +188,7 @@ On lines 6, 7, 8, and 9, what does the `__construct()` method do?
  - It defines the constructor of the `Person` class with the parameter `$name`.
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=c04325f4-c3f0-48bb-ad14-a172ee1ee1e9, answer=[1,5]
 
 Which statements correctly describe `$personObject = new Person("John");` on line 11?
 
@@ -253,7 +253,7 @@ $personObject = new Person("James", 15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=0604c16a-dc45-4d85-b461-53029fda5db4, answer=[5]
 
 Execute the program. What is its output?
 
@@ -268,7 +268,7 @@ Execute the program. What is its output?
  - It prints `James is 15 years old.`.
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=9eeaf370-e349-4194-9216-fb86c3f1d01c, answer=[3,4]
 
 Which of the following are visibility keywords?
 
@@ -283,7 +283,7 @@ Which of the following are visibility keywords?
  - `function`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=b058bffb-dd5d-4987-aa3b-20f52751cb27, answer=[4]
 
 Which method is accessible only within the `Person` class?
 
@@ -298,7 +298,7 @@ Which method is accessible only within the `Person` class?
  - `__construct()`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=b90ce4ec-24bf-494f-8fd8-731dd3856ea4, answer=[1]
 
 Which property is accessible only within the `Person` class?
 
@@ -313,7 +313,7 @@ Which property is accessible only within the `Person` class?
  - `$personObject`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=48c79b3c-53a2-4a37-85ef-8622b4b14a5d, answer=[5]
 
 Which of the following is a method definition of the `Person` class constructor?
 
@@ -328,7 +328,7 @@ Which of the following is a method definition of the `Person` class constructor?
  - `public function __construct($name, $age) { }`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=5f85ba8b-3e1d-41c2-8e9f-6f411247fcf5, answer=[2]
 
 Which statement best describes `$this->checkAge($age)` on line 10?
 
@@ -343,7 +343,7 @@ Which statement best describes `$this->checkAge($age)` on line 10?
  - It accesses the argument `$age` from the `checkAge()` method of the `Person` class.
 
 
-/// type=MS, answer=[1,2,5]
+/// type=MS, id=071fe2f4-2d6f-4ddb-9c81-a09b4efb8075, answer=[1,2,5]
 
 On lines 10, 11, and 12, what does the `if` statement do?
 
@@ -358,7 +358,7 @@ On lines 10, 11, and 12, what does the `if` statement do?
  - It does not execute the statement `$this->age = $age;` if the method call inside the parentheses `()` evaluates to `false`. 
 
 
-/// type=MS, answer=[1,2,3,4]
+/// type=MS, id=07e7c9bb-c48e-456e-8694-8344e519c9a7, answer=[1,2,3,4]
 
 Which statements correctly describe the `checkAge()` method of the `Person` class?
 
@@ -373,7 +373,7 @@ Which statements correctly describe the `checkAge()` method of the `Person` clas
  - It is accessible everywhere from inside and outside of the `Person` class.
 
 
-/// type=MS, answer=[1,2]
+/// type=MS, id=488ab342-f97f-487c-9588-e568885c1382, answer=[1,2]
 
 Which statements correctly describe the `__construct()` method of the `Person` class?
 
@@ -388,7 +388,7 @@ Which statements correctly describe the `__construct()` method of the `Person` c
  - It accesses the values of the `Person` class properties `$name` and `$age`.
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=1c9e7914-b6e5-4ec3-9aa8-05e811f0df09, answer=[2,5]
 
 Which statements correctly describe the code on line 40?
 
@@ -454,7 +454,7 @@ $personObject->setAge(45);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=ce4cf2d9-9cb0-48d2-85c8-f0c7a47b60d3, answer=[4]
 
 Execute the program. What is its output?
 
@@ -469,7 +469,7 @@ Execute the program. What is its output?
  - It prints `James is 15 years old.`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=5d801a6d-d1d8-4b78-9e09-bbc18e078a04, answer=[5]
 
 In the statement `$personObject->setAge(45);` on line 40, replace the value `45` with `-45`. Execute the program. What is its output?
 
@@ -535,7 +535,7 @@ $personObject->setAge(-45);
 $personObject->display();
 ?>
 ```
-/// type=MS, answer=[4,5]
+/// type=MS, id=23bb93b6-e79b-4210-a725-5cf43f906d7e, answer=[4,5]
 
 Why is the value of the `$age` property not set to `-45`?
 
@@ -550,7 +550,7 @@ Why is the value of the `$age` property not set to `-45`?
  - The `setAge()` method only assigns values greater than `0` to the `$age` property of `$personObject`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=1d8eafab-eb9c-4dab-a692-05727b5cb073, answer=[5]
 
 Remove the statement `$personObject->setAge(-45);` on line 40. Execute the program. What is its output?
 
@@ -616,7 +616,7 @@ $personObject = new Person("James", 15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=7b857252-5516-4a6c-895e-90d0a0439111, answer=[4]
 
 Add the statement `$personObject->name = "Diana";` on line 40. Execute the program. What is its output?
 
@@ -682,7 +682,7 @@ $personObject->name = "Diana";
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=71c89445-96b4-40c7-902f-327354727f49, answer=[2]
 
 In the statement `public $name;` on line 4, replace the `public` keyword with `private`. Execute the program. What is its output?
 
@@ -748,7 +748,7 @@ $personObject->name = "Diana";
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=7c0befd0-f56a-49dc-8f09-1b9f836433bd, answer=[5]
 
 Remove the statement `$personObject->name = "Diana";` on line 40. Execute the program. What is its output?
 
@@ -813,7 +813,7 @@ $personObject = new Person("James", 15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=3c61aa94-3035-4ed9-80ec-4f0ed2dab694, answer=[2]
 
 In the statement `$personObject = new Person("James", 15);` on line 39, replace `Person("James", 15)` with `Person()`. Execute the program. What is its output?
 
@@ -837,7 +837,7 @@ In the statement `$personObject = new Person("James", 15);` on line 39, replace 
 
 ### Part 2: Knowledge Assessment
 
-/// type=SS, answer=[4]
+/// type=SS, id=756735b0-4810-45ce-bbd8-1758f404d2f2, answer=[4]
 
 Which statement is true about a class constructor?
 
@@ -852,7 +852,7 @@ Which statement is true about a class constructor?
  - It is a blueprint that defines the characteristics and behaviors of all objects of a specific kind.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=a86c1250-1688-441d-9075-6769e5b44367, answer=[1]
 
 Which statement best describes the `__construct()` method?
 
@@ -893,7 +893,7 @@ Which statement best describes the `__construct()` method?
     echo $personObject->name;
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=5599d867-d418-4a5a-918a-bab867c15bfe, answer=[4]
 
 Execute the program. What is its output?
 
@@ -908,7 +908,7 @@ Execute the program. What is its output?
  - No output is displayed.
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=2618df4c-84e2-4d46-9dd9-ddc2a52fd714, answer=[1,5]
 
 What are the error messages?
 
@@ -923,7 +923,7 @@ What are the error messages?
  - Missing argument `1` for `Person::__construct()`, called on line 11 and defined on line number 6
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=1f5d4d63-43ba-4a66-a26b-5608291967f2, answer=[3,4]
 
 Which statements correctly describe the error?
 
@@ -940,7 +940,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constructor/MissingArgumentOnPersonConstructorTest.php]
+/// type=CR, id=c9155a5e-7f86-4299-af7f-b85c639f1a30, answer=[tests/Constructor/MissingArgumentOnPersonConstructorTest.php]
 
 Correct the code so that it outputs the string `John`.
 
@@ -980,7 +980,7 @@ Correct the code so that it outputs the string `John`.
     echo $personObject->name;
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=f9b98012-0b72-439c-8cf2-9ef5ed2fb502, answer=[5]
 
 Execute the program. What is the error message?
 
@@ -995,7 +995,7 @@ Execute the program. What is the error message?
  - syntax error, unexpected `'__construct'` (T_STRING), expecting variable (T_VARIABLE) on line number 6
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=b3877b19-6cd4-4d8f-b7da-511a19aeda4b, answer=[3,5]
 
 Which statements correctly describe the error?
 
@@ -1012,7 +1012,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constructor/MissingFunctionKeywordOnConstructTest.php]
+/// type=CR, id=98a55312-4b58-47b9-9670-4ca02f77cf07, answer=[tests/Constructor/MissingFunctionKeywordOnConstructTest.php]
 
 Correct the code so that it outputs the string `John`.
 
@@ -1081,7 +1081,7 @@ $personObject = new Person("James" 15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=39d6b910-5fe5-42c9-bfc1-fe4a14f4d807, answer=[3]
 
 Execute the program. What is its output?
 
@@ -1096,7 +1096,7 @@ Execute the program. What is its output?
  - It prints `James is 15 years old.`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=ecf02a84-550e-48d3-8126-08b5ec106255, answer=[5]
 
 What is the error message?
 
@@ -1111,7 +1111,7 @@ What is the error message?
  - syntax error, unexpected `'15'` (T_LNUMBER), expecting `','` or `')'` on line number 40
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=48e0d834-c911-41aa-9244-c1d2606e51d6, answer=[3,5]
 
 Which statements correctly describe the error?
 
@@ -1128,7 +1128,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constructor/MissingCommaBetweenArgumentsTest.php]
+/// type=CR, id=18d21394-3978-4fba-824a-a308c9c3cbea, answer=[tests/Constructor/MissingCommaBetweenArgumentsTest.php]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1226,7 +1226,7 @@ $personObject = new Person("James", 15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=7ae6fed3-b6c3-4a68-9ddc-ebe44825735c, answer=[2]
 
 Execute the program. What is the error message?
 
@@ -1241,7 +1241,7 @@ Execute the program. What is the error message?
  - syntax error, unexpected `'$name'` (T_VARIABLE), expecting `'('` on line number 7
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=c59873ce-f53d-4203-90e7-4aa635799f84, answer=[4,5]
 
 Which statements correctly describe the error?
 
@@ -1258,7 +1258,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constructor/MissingCommaBetweenParametersTest.php]
+/// type=CR, id=803cb6e6-3751-4916-98ff-70515ff7d644, answer=[tests/Constructor/MissingCommaBetweenParametersTest.php]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1356,7 +1356,7 @@ $personObject = new Person("James");
 $personObject->display();
 ?>
 ```
-/// type=MS, answer=[1,5]
+/// type=MS, id=ce6d21cb-f6fe-40b2-960b-74d8b75976bc, answer=[1,5]
 
 Execute the program. What are the error messages?
 
@@ -1371,7 +1371,7 @@ Execute the program. What are the error messages?
  - Missing argument `2` for `Person::__construct()`, called on line 40 and defined on line number 7
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=da7e04bc-a20d-4eaf-9c85-8fb0e403dc54, answer=[3,5]
 
 Which statements correctly describe the error?
 
@@ -1388,7 +1388,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constructor/MissingOneArgumentTest.php]
+/// type=CR, id=171aaaf7-d26b-4fcd-8880-b972f862238e, answer=[tests/Constructor/MissingOneArgumentTest.php]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1486,7 +1486,7 @@ $personObject = new Person("James", 15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=88ee762e-08b6-4207-bb1d-52c9b905c10d, answer=[5]
 
 Execute the program. What is its output?
 
@@ -1501,7 +1501,7 @@ Execute the program. What is its output?
  - It prints `James is 15 years old.`.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=ed50c666-8a1c-453b-a406-b9e73cc4a6b3, answer=[3]
 
 In the method definition `public function display()` on line 35, replace the `public` keyword with `private`. Execute the program. What is the error message?
 
@@ -1566,7 +1566,7 @@ $personObject = new Person("James", 15);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=13c10e8a-0b85-410d-9f01-675715c9d7dc, answer=[2]
 
 Remove the `new` keyword from the statement `$personObject = new Person("James", 15);` on line 40. Execute the program. What is the error message?
 
@@ -1631,7 +1631,7 @@ $personObject = Person("James", 15);
 $personObject->display();
 ?>
 ```
-/// type=MS, answer=[1,3,4]
+/// type=MS, id=3a43d24c-4656-4c09-b04c-48925a6d5458, answer=[1,3,4]
 
 Remove the argument `$age` from `if ($this->checkAge($age))` on line 10. Execute the program. What are the error messages?
 
@@ -1648,7 +1648,7 @@ Remove the argument `$age` from `if ($this->checkAge($age))` on line 10. Execute
 :::
 
 
-/// type=CR, answer=[tests/Constructor/CorrectMultipleErrorsTest.php]
+/// type=CR, id=71242cb0-e2e1-48f1-9dc3-1711f655a72d, answer=[tests/Constructor/CorrectMultipleErrorsTest.php]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1705,7 +1705,7 @@ $personObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/Constructor/AddConstructorToClassTest.php]
+/// type=CR, id=38e843a8-6af8-42dc-9466-43537aa59b12, answer=[tests/Constructor/AddConstructorToClassTest.php]
 
 Write a program that uses a `__construct()` method to add a constructor to a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
