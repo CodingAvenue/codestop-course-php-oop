@@ -79,7 +79,7 @@ $personObject = new Person("Anna", 12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=fd3a2079-add4-4c68-8523-9fdf6460d290, answer=[5]
 
 Execute the program. What is its output?
 
@@ -94,7 +94,7 @@ Execute the program. What is its output?
  - It prints `Anna is an adolescent human being.`.
 
 
-/// type=MS, answer=[2,3]
+/// type=MS, id=93cecc09-8f11-4dfc-af2a-47a595d48134, answer=[2,3]
 
 Which of the following are abstract method definitions?
 
@@ -109,7 +109,7 @@ Which of the following are abstract method definitions?
  - `public function getAge() { return $this->age; }`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=9ca888ba-4a9c-48d0-b25a-dee81e55111d, answer=[3]
 
 In the declaration `interface LifeCycle` on line 2 of `LifeCycle.php`, what is `interface`?
 
@@ -124,7 +124,7 @@ In the declaration `interface LifeCycle` on line 2 of `LifeCycle.php`, what is `
  - It is a constructor.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=545b361b-e27e-44ec-be9f-0eb0688d00b1, answer=[5]
 
 In the declaration `interface LifeCycle` on line 2 of `LifeCycle.php`, what is `LifeCycle`?
 
@@ -139,7 +139,7 @@ In the declaration `interface LifeCycle` on line 2 of `LifeCycle.php`, what is `
  - It is an interface name.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=080e2e9c-3b37-4d8d-b9f1-a95943e4560d, answer=[2]
 
 Which statement best describes `interface LifeCycle` on line 2 of `LifeCycle.php`?
 
@@ -154,7 +154,7 @@ Which statement best describes `interface LifeCycle` on line 2 of `LifeCycle.php
  - It implements the `LifeCycle` interface.
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=f6a43a97-cedf-425b-b468-becc0a2b538d, answer=[3,4]
 
 Which statements correctly describe `public function species();` on line 4 of `LifeCycle.php`?
 
@@ -169,7 +169,7 @@ Which statements correctly describe `public function species();` on line 4 of `L
  - It sets the value of the `species()` method to abstract.
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=502de715-c591-483e-8988-632e7084afe6, answer=[3,4]
 
 Which statements correctly describe `public function stage();` on line 5 of `LifeCycle.php`?
 
@@ -184,7 +184,7 @@ Which statements correctly describe `public function stage();` on line 5 of `Lif
  - It sets the value of the `stage()` method to abstract.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=d3e81488-880a-4472-9341-3f2c08b8706a, answer=[2]
 
 In the declaration `class Person implements LifeCycle` on line 3 of `Person.php`, what is `implements`?
 
@@ -199,7 +199,7 @@ In the declaration `class Person implements LifeCycle` on line 3 of `Person.php`
  - It is an interface name.
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=d20eb73f-1fa5-4209-af06-c90bbf806e4f, answer=[1,5]
 
 In the declaration `class Person implements LifeCycle` on line 3 of `Person.php`, what does the `implements` keyword do?
 
@@ -214,7 +214,7 @@ In the declaration `class Person implements LifeCycle` on line 3 of `Person.php`
  - It specifies the `Person` class to implement all the methods of the `LifeCycle` interface.
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=ea1aceb5-228c-4d70-ace9-57f99276969c, answer=[3,4]
 
 Which statements correctly describe `class Person implements LifeCycle` on line 3 of `Person.php`?
 
@@ -229,7 +229,7 @@ Which statements correctly describe `class Person implements LifeCycle` on line 
  - It creates the `LifeCycle` interface to implement all the abstract methods of the `Person` class.
 
 
-/// type=MS, answer=[1,3]
+/// type=MS, id=7a2988e0-d539-4467-8fbe-3e12c4b79235, answer=[1,3]
 
 Which methods of the `Person` class are inherited from the `LifeCyle` interface?
 
@@ -244,7 +244,7 @@ Which methods of the `Person` class are inherited from the `LifeCyle` interface?
  - `checkAge()`
 
 
-/// type=MS, answer=[2,3,5]
+/// type=MS, id=0bcaa238-a3f9-44e6-a57d-e968f83be671, answer=[2,3,5]
 
 Which of the following are method calls?
 
@@ -259,7 +259,7 @@ Which of the following are method calls?
  - `$personObject->display()`
 
 
-/// type=MS, answer=[1,4,5]
+/// type=MS, id=fa0be19b-233c-42b7-ba29-9aeaa8e8355f, answer=[1,4,5]
 
 Which statements correctly describe the `stage()` method of the `Person` class?
 
@@ -274,7 +274,7 @@ Which statements correctly describe the `stage()` method of the `Person` class?
  - It provides the implementation of the abstract `stage()` method in the `LifeCycle` interface.
 
 
-/// type=MS, answer=[1,4,5]
+/// type=MS, id=04010fa7-76c4-418c-91b3-87af729dfb2f, answer=[1,4,5]
 
 Which statements correctly describe the `species()` method of the `Person` class?
 
@@ -376,7 +376,7 @@ $studentObject = new Student("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=a8f568f3-839e-4393-877d-2c3f15184bad, answer=[5]
 
 Execute the program. What is its output?
 
@@ -391,7 +391,7 @@ Execute the program. What is its output?
  - It prints `John is an adolescent human being.`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=8fc78beb-056a-4fb8-a952-b5dda0330b0b, answer=[2]
 
 Which of the following is an abstract class?
 
@@ -406,7 +406,7 @@ Which of the following is an abstract class?
  - `$studentObject`
 
 
-/// type=MS, answer=[1,2,3]
+/// type=MS, id=70eca6be-eec5-4eeb-9195-f5ee10be78e6, answer=[1,2,3]
 
 Which of the following are abstract methods?
 
@@ -421,7 +421,7 @@ Which of the following are abstract methods?
  - `public function getAge() { return $this->age; }`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=bcde6925-c823-43fd-be80-3b41da800900, answer=[4]
 
 Which of the following is an interface?
 
@@ -436,7 +436,7 @@ Which of the following is an interface?
  - `$studentObject`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=c8e0d9d9-cf81-41ae-83bd-73a5986d7955, answer=[3]
 
 Which of the following is a child class?
 
@@ -451,7 +451,7 @@ Which of the following is a child class?
  - `$studentObject`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=4b27f81d-a58e-43d5-836e-797075ae2ffe, answer=[2]
 
 Which of the following is a parent class?
 
@@ -466,7 +466,7 @@ Which of the following is a parent class?
  - `$studentObject`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=9dad320f-3a4c-4240-8a06-b7dc79257bdd, answer=[1]
 
 Which of the following is an interface declaration?
 
@@ -481,7 +481,7 @@ Which of the following is an interface declaration?
  - `class Student extends Person implements LifeCycle {...}`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=69510c26-6c0b-46d4-9781-a0bdf3e027be, answer=[3]
 
 Which class implements the `LifeCycle` interface?
 
@@ -496,7 +496,7 @@ Which class implements the `LifeCycle` interface?
  - `$studentObject`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=79478e5a-4391-4b42-a4a6-f11001d11106, answer=[2]
 
 In the declaration `interface LifeCycle` on line 2 of `LifeCycle.php`, what does the `interface` keyword do?
 
@@ -511,7 +511,7 @@ In the declaration `interface LifeCycle` on line 2 of `LifeCycle.php`, what does
  - It implements the `LifeCycle` interface.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=33a535e6-360b-4e48-8765-3225640ad471, answer=[4]
 
 In the declaration `abstract class Person` on line 2 of `Person.php`, what does the `abstract` keyword do?
 
@@ -526,7 +526,7 @@ In the declaration `abstract class Person` on line 2 of `Person.php`, what does 
  - It sets the value of the `Person` class to abstract.
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=945a3a94-81f5-4ae1-8156-18ebddc44611, answer=[4,5]
 
 In the declaration `class Student extends Person implements LifeCycle` on line 4 of `Student.php`, what does the `extends` keyword do?
 
@@ -541,7 +541,7 @@ In the declaration `class Student extends Person implements LifeCycle` on line 4
  - It defines the `parent-child` relationships between `Person` and `Student` classes.
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=280827d1-b5a7-4f8d-bc05-0fba1a961cd3, answer=[1,5]
 
 In the declaration `class Student extends Person implements LifeCycle` on line 4 of `Student.php`, what does the `implements` keyword do?
 
@@ -556,7 +556,7 @@ In the declaration `class Student extends Person implements LifeCycle` on line 4
  - It specifies the `Student` class to implement all the methods of the `LifeCycle` interface.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=974db045-0646-41df-80f8-b0774e80a23d, answer=[3]
 
 Which statement best describes `class Student extends Person implements LifeCycle`?
 
@@ -580,7 +580,7 @@ Which statement best describes `class Student extends Person implements LifeCycl
 
 ### Part 2: Knowledge Assessment
 
-/// type=MS, answer=[1,2,4,5]
+/// type=MS, id=c770ac07-4367-4941-9082-24889438af5e, answer=[1,2,4,5]
 
 Which statements are true about an interface?
 
@@ -595,7 +595,7 @@ Which statements are true about an interface?
  - It requires the implementing class to provide a method body or implementation to all its abstract methods.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=4f08410b-aec7-4e4a-bec8-b6e4a90119d6, answer=[2]
 
 Which statement best describes the `interface` keyword?
 
@@ -610,7 +610,7 @@ Which statement best describes the `interface` keyword?
  - It implements an interface.
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=d1f24c04-aba6-4e67-994a-c26af91a6fab, answer=[2,5]
 
 Which statements correctly describe the `implements` keyword?
 
@@ -707,7 +707,7 @@ $personObject = new Person("Anna", 12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=a90155a6-655e-4cde-a7f4-9cb38fe281c7, answer=[3]
 
 Execute the program. What is its output?
 
@@ -722,7 +722,7 @@ Execute the program. What is its output?
  - It prints `Anna is an adolescent human being.`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=806eb544-5124-4ec7-9113-c96b2f42e8d8, answer=[2]
 
 What is the error message?
 
@@ -737,7 +737,7 @@ What is the error message?
  - Class Person contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
-/// type=MS, answer=[1,2,4]
+/// type=MS, id=70f14d14-a410-4530-a764-ab26f75218bb, answer=[1,2,4]
 
 Which statements correctly describe the error?
 
@@ -754,7 +754,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Interfaces/IncorrectInterfaceMethodDefinitionTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=800c09ed-7b06-4976-9b88-97859aa64b49, answer=[tests/Interfaces/IncorrectInterfaceMethodDefinitionTest.php], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -906,7 +906,7 @@ $personObject = new Person("Anna", 12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=effce7e6-d55b-48d0-b46f-d9691e038d21, answer=[1]
 
 Execute the program. What is the error message?
 
@@ -921,7 +921,7 @@ Execute the program. What is the error message?
  - Class Person contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
-/// type=MS, answer=[1,3]
+/// type=MS, id=1f8a0485-bb20-47cf-953e-7f39e57f0241, answer=[1,3]
 
 Which statements correctly describe the error?
 
@@ -938,7 +938,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Interfaces/MisspelledInterfaceKeywordTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=44cfdb2a-8270-46b5-84fb-7e435fd7ad57, answer=[tests/Interfaces/MisspelledInterfaceKeywordTest.php], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -1090,7 +1090,7 @@ $personObject = new Person("Anna", 12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=4ebc1c62-66b7-43df-83a1-3a68302a4213, answer=[3]
 
 Execute the program. What is the error message?
 
@@ -1105,7 +1105,7 @@ Execute the program. What is the error message?
  - Class Person contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 2
 
 
-/// type=MS, answer=[1,4,5]
+/// type=MS, id=70bf2861-a5d7-4072-9f2e-c2db6210bbdc, answer=[1,4,5]
 
 Which statements correctly describe the error?
 
@@ -1122,7 +1122,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Interfaces/RemoveUnwantedSemicolonOnMethodTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=07a05435-b0c0-40f8-b108-95eed4ae71b2, answer=[tests/Interfaces/RemoveUnwantedSemicolonOnMethodTest.php], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -1284,7 +1284,7 @@ $studentObject = new Student("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=3a1b4505-cbbd-41cf-a148-ee9aedb89e5f, answer=[4]
 
 Execute the program. What is the error message?
 
@@ -1299,7 +1299,7 @@ Execute the program. What is the error message?
  - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 4
 
 
-/// type=MS, answer=[2,3]
+/// type=MS, id=9e6f547c-797d-4a5b-83d4-ef5fd2b206da, answer=[2,3]
 
 Which statements correctly describe the error?
 
@@ -1316,7 +1316,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Interfaces/MisspelledImplementsKeywordTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=98d362bb-a1be-4dcd-84d1-4ccb3c321591, answer=[tests/Interfaces/MisspelledImplementsKeywordTest.php], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1483,7 +1483,7 @@ $studentObject = new Student("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=83123b75-5da1-4968-ae0d-5292c6b1b171, answer=[5]
 
 Execute the program. What is the error message?
 
@@ -1498,7 +1498,7 @@ Execute the program. What is the error message?
  - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 4
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=1d163164-40f6-449c-bab8-fddcb7b93753, answer=[1]
 
 Which statement best describes the error?
 
@@ -1515,7 +1515,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, answer=[tests/Interfaces/MissingStageMethodImplementationTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d558d4c1-3fb9-4f31-ae30-a54219bd4b27, answer=[tests/Interfaces/MissingStageMethodImplementationTest.php], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1682,7 +1682,7 @@ $studentObject = new Student("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=33d2a39b-2b58-48a3-af7a-041666825dfb, answer=[4]
 
 Execute the program. What is the error message?
 
@@ -1697,7 +1697,7 @@ Execute the program. What is the error message?
  - Class Student contains `1` abstract method and must therefore be declared abstract or implement the remaining methods (LifeCycle::stage) on line number 4
 
 
-/// type=MS, answer=[1,3]
+/// type=MS, id=0618de0c-51a7-4492-af60-c2b3b5b89c84, answer=[1,3]
 
 Which statements correctly describe the error?
 
@@ -1714,7 +1714,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Interfaces/IncorrectVisibilityKeywordOnDisplayMethodTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=271294cd-1afd-46b4-9835-de4d6c1f9648, answer=[tests/Interfaces/IncorrectVisibilityKeywordOnDisplayMethodTest.php], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1886,7 +1886,7 @@ $studentObject = new Student("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=501e39d3-d998-4914-b77d-2cdcf21bda14, answer=[5]
 
 Execute the program. What is its output?
 
@@ -1901,7 +1901,7 @@ Execute the program. What is its output?
  - It prints `John is an adolescent human being.`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=e192c019-9859-4810-9f43-9286ff3aba24, answer=[1]
 
 In the statement `$studentObject = new Student("John", 15);` on line 22 of `Student.php`, replace `Student` with `Person`. Execute the program. What is the error message?
 
@@ -2003,7 +2003,7 @@ $studentObject = new Person("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=45162372-6c9f-4b9a-ad52-aea97f2cba71, answer=[4]
 
 In the statement `abstract public function display();` on line 40 of `Person.php`, replace `public` with `private`. Execute the program. What is the error message?
 
@@ -2105,7 +2105,7 @@ $studentObject = new Person("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=e0cf514d-e1b4-408e-8c31-3967d1b3e474, answer=[5]
 
 In the statement `public function species();` on line 4 of `LifeCycle.php`, replace `public` with `protected`. Execute the program. What is the error message?
 
@@ -2207,7 +2207,7 @@ $studentObject = new Person("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=4a2ab5d1-cfcf-4bec-9462-538e21cf6811, answer=[3]
 
 In `Student.php`, remove the `implements` keyword from `class Student extends Person implements LifeCycle` on line 4. Execute the program. What is the error message?
 
@@ -2309,7 +2309,7 @@ $studentObject = new Person("John", 15);
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=6bbd8c50-e982-4626-a663-373429dcc706, answer=[2]
 
 In `Student.php`, remove the `extends` keyword from `class Student extends Person LifeCycle` on line 4. Execute the program. What is the error message?
 
@@ -2326,7 +2326,7 @@ In `Student.php`, remove the `extends` keyword from `class Student extends Perso
 :::
 
 
-/// type=CR, answer=[tests/Interfaces/CorrectMultipleErrorsTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=f67e7b3c-803d-4215-a8ac-f1a10138731a, answer=[tests/Interfaces/CorrectMultipleErrorsTest.php], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -2419,7 +2419,7 @@ $studentObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/Interfaces/CreateClassThatImplementsAnInterfaceTest.php], filename=[LifeCycle.php,Animal.php,Mammal.php]
+/// type=CR, id=b447ca5d-c0f2-4664-8e83-ca91f39a71be, answer=[tests/Interfaces/CreateClassThatImplementsAnInterfaceTest.php], filename=[LifeCycle.php,Animal.php,Mammal.php]
 
 Given the `Animal` class and `LifeCycle` interface, write a program that uses an `implements` keyword to implement an interface. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the `Animal` class and `implements` the `LifeCycle` interface. Within the curly braces `{}`, add an implementation or method body to all abstract methods of the `LifeCycle` interface. Inside the `stage()` method body, add the statement `return "adult";`. Inside the `species()` method body, add a statement that returns the string `animal`. Then, add another `public` method `display()` that overrides the abstract `display()` method of the `Animal` class. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " is an " . $this->stage() . " " . $this->species() . "."`. After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
