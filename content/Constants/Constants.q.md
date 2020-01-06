@@ -23,7 +23,7 @@ class Circle
 echo "The PI value is: " . Circle::PI;
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=f96ac714-ddaf-42c1-974e-f33b906b2b53, answer=[5]
 
 Execute the program. What is its output?
 
@@ -38,7 +38,7 @@ Execute the program. What is its output?
  - It prints `The PI value is: 3.1416`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=14686bf9-2bfd-4709-a3db-11fda14a9b30, answer=[2]
 
 Which of the following is a class?
 
@@ -53,7 +53,7 @@ Which of the following is a class?
  - `const PI = 3.1416;`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=464383b0-cd4e-4359-b630-e2e3d1f9efa8, answer=[2]
 
 Which of the following is a static method?
 
@@ -68,7 +68,7 @@ Which of the following is a static method?
  - `Circle::PI`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=818dd3b0-4115-4538-9242-cc620efcb480, answer=[3]
 
 In the statement `const PI = 3.1416;` on line 4, what is `const`?
 
@@ -83,7 +83,7 @@ In the statement `const PI = 3.1416;` on line 4, what is `const`?
  - It is a property.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=8d0aac61-d768-41fb-954c-b53c962d706c, answer=[5]
 
 In the statement `const PI = 3.1416;` on line 4, what is `PI`?
 
@@ -98,7 +98,7 @@ In the statement `const PI = 3.1416;` on line 4, what is `PI`?
  - It is a constant name.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=5a196297-1e0a-4161-b7e7-a22bcf122be0, answer=[2]
 
 In the statement `const PI = 3.1416;` on line 4, what does the `const` keyword do?
 
@@ -113,7 +113,7 @@ In the statement `const PI = 3.1416;` on line 4, what does the `const` keyword d
  - It accesses the `PI` class constant.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=5690e9fb-1640-4571-a468-4e03ef111d0b, answer=[4]
 
 Which statement best describes the code on line 4?
 
@@ -128,7 +128,7 @@ Which statement best describes the code on line 4?
  - It defines the `PI` property of the `Circle` class with the default value `3.1416`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=073608a9-1db3-4527-81b0-93764d9e4216, answer=[5]
 
 On line 8, what does `self::PI` do?
 
@@ -143,7 +143,7 @@ On line 8, what does `self::PI` do?
  - It accesses the `PI` constant in the `area()` method of the `Circle` class.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=d11185bc-704f-48ef-a949-d7a7ce20e584, answer=[5]
 
 On line 12, what does `Circle::PI` do?
 
@@ -197,7 +197,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=8ed42ff0-d506-4064-9339-e4c6ba71a8af, answer=[4]
 
 Execute the program. What is its output?
 
@@ -212,7 +212,7 @@ Execute the program. What is its output?
  - It prints `The area of the circle with 3.5 radius is: 38.4646`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=2f0c84ad-6361-4628-8bc5-6cfe7e8e541e, answer=[1]
 
 Which of the following is a constant?
 
@@ -227,7 +227,7 @@ Which of the following is a constant?
  - `$circleObject`
 
 
-/// type=MS, answer=[1,4]
+/// type=MS, id=0de00d1a-d1cf-40a5-9aa1-17bf4b1708ef, answer=[1,4]
 
 Which of the following are methods?
 
@@ -242,7 +242,7 @@ Which of the following are methods?
  - `$circleObject`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=1a04d97f-f05b-49bf-8c17-a237fbabc6ec, answer=[5]
 
 Which of the following is an object?
 
@@ -257,7 +257,7 @@ Which of the following is an object?
  - `$circleObject`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=642b98ed-4448-4380-9536-e93e5183a1f2, answer=[3]
 
 Which of the following is a constant definition?
 
@@ -272,7 +272,7 @@ Which of the following is a constant definition?
  - `$circleObject->display();`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=9060dbab-2548-459e-8b1e-054052aa182b, answer=[5]
 
 Which statement best describes `self::PI` on line 19?
 
@@ -287,7 +287,7 @@ Which statement best describes `self::PI` on line 19?
  - It accesses the `PI` constant in the `area()` method of the `Circle` class.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=0380f08e-6c1d-468c-8675-e83fd54dedbe, answer=[4]
 
 Which statement best describes `const PI = 3.1416;` on line 4?
 
@@ -365,7 +365,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=5972fd23-5812-4782-b8b4-5708b3bbe9c9, answer=[4]
 
 Execute the program. What is printed on line 2?
 
@@ -380,7 +380,7 @@ Execute the program. What is printed on line 2?
  - `Circumference: 21.9912`
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=ebaf0b04-6a00-4745-b09b-366aa2a6d2c1, answer=[3,5]
 
 Which of the following are keywords?
 
@@ -395,7 +395,7 @@ Which of the following are keywords?
  - `const`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=3d5be5ce-b5a0-445f-9c0a-ec6a6e45a209, answer=[5]
 
 Which of the following is a parent class?
 
@@ -410,7 +410,7 @@ Which of the following is a parent class?
  - `CircularShape`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=6a5ccd8f-c34c-42d3-a039-9089e988380a, answer=[1]
 
 Which of the following is a child class?
 
@@ -425,7 +425,7 @@ Which of the following is a child class?
  - `CircularShape`
 
 
-/// type=MS, answer=[2,4,5]
+/// type=MS, id=3e24caf5-970d-496c-ab67-417118ec88ae, answer=[2,4,5]
 
 Which of the following are abstract method definitions?
 
@@ -440,7 +440,7 @@ Which of the following are abstract method definitions?
  - `abstract public function circumference();`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=bfb72b00-f024-4abf-aab2-525864fd8934, answer=[4]
 
 Which statement best describes `const PI = 3.1416;` on line 4 of `CircularShape.php`?
 
@@ -455,7 +455,7 @@ Which statement best describes `const PI = 3.1416;` on line 4 of `CircularShape.
  - It defines the `PI` property of the `CircularShape` class with the default value `3.1416`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=02aaef84-e848-425c-8b65-1bed415f31f7, answer=[5]
 
 Which statement best describes `self::PI` on line 7 of `Circle.php`?
 
@@ -479,7 +479,7 @@ Which statement best describes `self::PI` on line 7 of `Circle.php`?
 
 ### Part 2: Knowledge Assessment
 
-/// type=SS, answer=[2]
+/// type=SS, id=282fab88-2b4e-4180-a271-2a6b44b91d0b, answer=[2]
 
 Which statement best describes a constant?
 
@@ -494,7 +494,7 @@ Which statement best describes a constant?
  - It is a way of hiding the details of implementation to reduce complexity and increase the efficiency of a program.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=90e1d20f-857b-4c6a-9fad-223e59aba1b8, answer=[3]
 
 Which statement is true about the `const` keyword?
 
@@ -509,7 +509,7 @@ Which statement is true about the `const` keyword?
  - It defines the visibility of a method.
 
 
-/// type=MS, answer=[2,3,4,5]
+/// type=MS, id=eafc534e-6916-446e-b33a-c91f639d3da0, answer=[2,3,4,5]
 
 Which statements are true about a class constant?
 
@@ -550,7 +550,7 @@ class Circle
 echo "The PI value is: " . Circle::PI;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=e846afa4-8fad-4f2e-9e8c-f0f546d7cec8, answer=[3]
 
 Execute the program. What is its output?
 
@@ -565,7 +565,7 @@ Execute the program. What is its output?
  - It prints `The PI value is: 3.1416`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=3d864be1-72d6-4f70-81a5-51b4fdb663ee, answer=[5]
 
 What is the error message?
 
@@ -580,7 +580,7 @@ What is the error message?
  - syntax error, unexpected `'const'` (T_CONST), expecting variable (T_VARIABLE) on line number 4
 
 
-/// type=MS, answer=[2,4,5]
+/// type=MS, id=54ddf838-c0f6-46f4-94e5-cae11d6ff8bb, answer=[2,4,5]
 
 Which statements correctly describe the error?
 
@@ -597,7 +597,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constants/IncorrectConstantDefinitionTest.php]
+/// type=CR, id=59e1a824-3583-4f47-bb67-a56cf2318b31, answer=[tests/Constants/IncorrectConstantDefinitionTest.php]
 
 Correct the code so that it outputs the string `The PI value is: 3.1416`.
 
@@ -637,7 +637,7 @@ class Circle
 echo "The PI value is: " . Circle::PI;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=83037694-9b2c-4114-8652-b5cfc6965cf9, answer=[3]
 
 Execute the program. What is the error message?
 
@@ -652,7 +652,7 @@ Execute the program. What is the error message?
  - syntax error, unexpected `'const'` (T_CONST), expecting variable (T_VARIABLE) on line number 4
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=72803a82-fd16-4906-a87b-787203a09abb, answer=[1,5]
 
 Which statements correctly describe the error?
 
@@ -669,7 +669,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constants/UninitializeContantPiTest.php]
+/// type=CR, id=ec85edf5-0bca-4875-8497-12e0f83c64ec, answer=[tests/Constants/UninitializeContantPiTest.php]
 
 Correct the code so that it outputs the string `The PI value is: 3.1416`.
 
@@ -726,7 +726,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=25c1a788-0001-439b-8768-ca68d18aa499, answer=[2]
 
 Execute the program. What is the error message?
 
@@ -741,7 +741,7 @@ Execute the program. What is the error message?
  - syntax error, unexpected `'const'` (T_CONST), expecting variable (T_VARIABLE) on line number 4
 
 
-/// type=MS, answer=[3,4,5]
+/// type=MS, id=5c258612-5b34-4264-b02b-9a42780bbfe0, answer=[3,4,5]
 
 Which statements correctly describe the error?
 
@@ -758,7 +758,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constants/IncorrectConstantAccessInsideMethodTest.php]
+/// type=CR, id=d7322e50-6b7d-4dcb-bd37-1f4649acacb7, answer=[tests/Constants/IncorrectConstantAccessInsideMethodTest.php]
 
 Correct the code so that it outputs the string `The area of the circle with 3.5 radius is: 38.4846`.
 
@@ -832,7 +832,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=8ed96127-abea-4324-bf63-ee787604697e, answer=[1]
 
 Execute the program. What is the error message?
 
@@ -847,7 +847,7 @@ Execute the program. What is the error message?
  - syntax error, unexpected `'const'` (T_CONST), expecting variable (T_VARIABLE) on line number 4
 
 
-/// type=MS, answer=[1,3,5]
+/// type=MS, id=f2f6c961-a9c5-4e9e-b621-de9105bd075c, answer=[1,3,5]
 
 Which statements correctly describe the error?
 
@@ -864,7 +864,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constants/RemoveDollarSignOnConstantDeclarationTest.php]
+/// type=CR, id=f2f05df3-4eac-42fc-83e8-f6ea08946875, answer=[tests/Constants/RemoveDollarSignOnConstantDeclarationTest.php]
 
 Correct the code so that it outputs the string `The area of the circle with 3.5 radius is: 38.4846`.
 
@@ -963,7 +963,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=4bd02ba7-bb9b-4d43-8b26-0db2507f1b87, answer=[5]
 
 Execute the program. What is the error message?
 
@@ -978,7 +978,7 @@ Execute the program. What is the error message?
  - syntax error, unexpected `'const'` (T_CONST), expecting variable (T_VARIABLE) on line number 4
 
 
-/// type=MS, answer=[1,4,5]
+/// type=MS, id=5f514ff8-21cc-484b-a473-ec7a71f48e9c, answer=[1,4,5]
 
 Which statements correctly describe the error?
 
@@ -995,7 +995,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Constants/RemoveVisibilityKeywordOnConstantDeclarationTest.php], filename=[CircularShape.php,Circle.php]
+/// type=CR, id=a5ec0b5a-f620-4b62-9717-dc753d250737, answer=[tests/Constants/RemoveVisibilityKeywordOnConstantDeclarationTest.php], filename=[CircularShape.php,Circle.php]
 
 Correct the code so that it outputs the strings `Radius: 3.5`, `Diameter: 12.25`, `Area: 38.4846`, and `Circumference: 21.9912` in separate lines.
 
@@ -1119,7 +1119,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=d0dc8896-7ab8-4d1d-aae5-085345d3d6ae, answer=[1]
 
 In the statement `return 2 * self::PI * $this->getRadius();` on line 17 of `Circle.php`, replace `self::PI` with `$this->PI`. Execute the program. What is the error message?
 
@@ -1197,7 +1197,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=0fa896db-09f1-4b7a-bfd7-93f7a598034e, answer=[3]
 
 In the declaration `public function area()` on line 5 of `Circle.php`, replace `public` with `private`. Execute the program. What is the error message?
 
@@ -1275,7 +1275,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=22ea162b-ef97-414b-a0de-6a55c5de3d2a, answer=[4]
 
 In the declaration `abstract public function diameter();` on line 17 of `CircularShape.php`, replace `public` with `private`. Execute the program. What is the error message?
 
@@ -1353,7 +1353,7 @@ $circleObject = new Circle(3.5);
 $circleObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=2387e091-fb86-4bae-a860-d79ea006445d, answer=[2]
 
 On line 4 of `CircularShape.php`, replace the declaration `const PI = 3.1416;` with `const PI`. Execute the program. What is the error message?
 
@@ -1370,7 +1370,7 @@ On line 4 of `CircularShape.php`, replace the declaration `const PI = 3.1416;` w
 :::
 
 
-/// type=CR, answer=[tests/Constants/CorrectMultipleErrorsTest.php], filename=[CircularShape.php,Circle.php]
+/// type=CR, id=dc498fdc-1408-4274-99df-2fd16a341caf, answer=[tests/Constants/CorrectMultipleErrorsTest.php], filename=[CircularShape.php,Circle.php]
 
 Correct the code so that it outputs the strings `Radius: 3.5`, `Diameter: 12.25`, `Area: 38.4846`, and `Circumference: 21.9912` in separate lines.
 
@@ -1439,7 +1439,7 @@ $circleObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/Constants/AddConstantDefinitionInClassTest.php]
+/// type=CR, id=316e9667-5913-442b-a51a-de213ae066fc, answer=[tests/Constants/AddConstantDefinitionInClassTest.php]
 
 Write a program that uses a `const` keyword to define a class constant. First, use a `class` keyword to declare a class named `Cylinder`. Within the curly braces `{}`, add the following statements:
  
