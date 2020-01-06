@@ -95,6 +95,6 @@ class MissingReturnThisOnMethodTest extends Proof
         $subNode = $display->getSubNode();
         $changeName = $subNode->find('method-call[name="changeName", variable="personObject"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a chain method calls for `changeName()` and `display()` methods of 'personObject'.");
+        $this->assertEquals(1, $changeName->count(), "Expecting chain method calls for `changeName()` and `display()` methods of 'personObject'.");
     }  
 }
