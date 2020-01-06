@@ -23,7 +23,7 @@ class Person
 echo Person::greeting("Hello");
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=37068512-e32a-4b60-a3c4-9b208c0a8a84, answer=[5]
 
 Execute the program. What is its output?
 
@@ -38,7 +38,7 @@ Execute the program. What is its output?
  - It prints `Hello, Anna!`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=ca890178-f179-4e19-a8f0-1d0850b9f940, answer=[2]
 
 In the statement `public static $name = "Anna";` on line 4, what is `static`?
 
@@ -53,7 +53,7 @@ In the statement `public static $name = "Anna";` on line 4, what is `static`?
  - it is a pseudo-variable.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=2f9c68a2-402f-43c8-a865-4d9cd511c13a, answer=[5]
 
 Which statement best describes `public static $name = "Anna";` on line 4?
 
@@ -68,7 +68,7 @@ Which statement best describes `public static $name = "Anna";` on line 4?
  - It defines the static property `$name` with the default value `Anna`.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=68aeab9e-e529-459e-836f-5f5cf614aa0d, answer=[4]
 
 In the declaration `public static function greeting($greet)` on line 6, what is `$greet`?
 
@@ -83,7 +83,7 @@ In the declaration `public static function greeting($greet)` on line 6, what is 
  - It is an argument.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=05651723-8679-4454-944c-fecc95ae34d9, answer=[2]
 
 In the declaration `public static function greeting($greet)` on line 6, what is `greeting()`?
 
@@ -98,7 +98,7 @@ In the declaration `public static function greeting($greet)` on line 6, what is 
  - It is an argument.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=e6bd4acb-2141-4516-81e4-df6163a06cdd, answer=[4]
 
 In the declaration `public static function greeting($greet)` on line 6, what does the `static` keyword do?
 
@@ -113,7 +113,7 @@ In the declaration `public static function greeting($greet)` on line 6, what doe
  - It sets the visibility of the `greeting()` method.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=a520f961-d5cc-44f0-97ef-277dac880875, answer=[1]
 
 Which statement best describes `public static function greeting($greet)` on line 6?
 
@@ -128,7 +128,7 @@ Which statement best describes `public static function greeting($greet)` on line
  - It removes the value of the parameter `$greet` from the static method `greeting()`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=bf563f21-aed9-4b0c-9814-4d0f2377e685, answer=[2]
 
 In the statement `return $greet . ", " . self::$name . "!";` on line 8, what is `self`?
 
@@ -143,7 +143,7 @@ In the statement `return $greet . ", " . self::$name . "!";` on line 8, what is 
  - It is a parameter.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=e1d7b257-2ed2-4766-b087-1718e3697213, answer=[5]
 
 In the statement `return $greet . ", " . self::$name . "!";` on line 8, what is `::`?
 
@@ -158,7 +158,7 @@ In the statement `return $greet . ", " . self::$name . "!";` on line 8, what is 
  - It is a scope resolution operator.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=e4df5717-dc2f-4714-a903-2dc37e67ae91, answer=[4]
 
 In the statement `return $greet . ", " . self::$name . "!";` on line 8, what does `self::$name` do?
 
@@ -173,7 +173,7 @@ In the statement `return $greet . ", " . self::$name . "!";` on line 8, what doe
  - It evaluates the value of the static property `$name`.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=dd3b47bf-8e05-4290-aa90-bf930be27438, answer=[3]
 
 Which statement best describes `Person::greeting("Hello")` on line 12?
 
@@ -210,7 +210,7 @@ Person::$name = "James";
 echo Person::greeting("Hello");
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=bc114da2-6c44-4052-a8ca-f4b0fc98d6b1, answer=[5]
 
 Execute the program. What is its output?
 
@@ -225,7 +225,7 @@ Execute the program. What is its output?
  - It prints `Hello, James!`.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=2ba655e5-2139-4b1d-97d7-3a494a1c5659, answer=[3]
 
 Which of the following is a static property?
 
@@ -240,7 +240,7 @@ Which of the following is a static property?
  - `greeting()`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=692549a3-1ef3-4056-b101-8145222ddde1, answer=[5]
 
 Which of the following is a static method?
 
@@ -255,7 +255,7 @@ Which of the following is a static method?
  - `greeting()`
 
 
-/// type=MS, answer=[1,3,5]
+/// type=MS, id=32ab4f95-3c95-45ac-bf25-9509c9fba4a8, answer=[1,3,5]
 
 Which statements correctly describe the `greeting()` method?
  
@@ -270,7 +270,7 @@ Which statements correctly describe the `greeting()` method?
  - It can be accessed outside the `Person` class using the class name with the scope resolution operator `::`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=c4d6060f-9d33-4d25-a8ab-8fae8d185cd7, answer=[1]
 
 Which statement best describes `Person::$name = "James";` on line 12?
 
@@ -285,7 +285,7 @@ Which statement best describes `Person::$name = "James";` on line 12?
  - It removes the value `James` from the static property `$name` outside the `Person` class.
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=89379105-2eba-4e25-9340-bba7ea294f8c, answer=[1,5]
 
 Which statements correctly describe the code on line 13?
 
@@ -356,7 +356,7 @@ $personObject = new Person("John", 12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=6a7106ed-fba5-45c2-9bf7-f736f1228e6c, answer=[5]
 
 Execute the program. What is its output?
 
@@ -371,7 +371,7 @@ Execute the program. What is its output?
  - It prints `Hello, John! You are 12 years old.`.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=a2486f0d-2a9e-4f66-b9cb-f66dab69266c, answer=[3]
 
 Which of the following is a static method?
 
@@ -386,7 +386,7 @@ Which of the following is a static method?
  - `__construct()`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=fec47025-5c82-4293-9760-2ec8f390dee5, answer=[2]
 
 Which of the following is a static property?
 
@@ -401,7 +401,7 @@ Which of the following is a static property?
  - `$personObject`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=6e3b4ed9-7de6-4b65-8b0a-e0f23b1d21a2, answer=[1]
 
 Which statement best describes `self::$name = $name;` on line 9?
 
@@ -416,7 +416,7 @@ Which statement best describes `self::$name = $name;` on line 9?
  - It accesses the value of `$name` from the static property `$name` of the `Person` class.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=d073b5a1-ac73-48b2-9e92-4f2ea52f4d30, answer=[3]
 
 Which statement best describes `self::$name` on line 37?
 
@@ -431,7 +431,7 @@ Which statement best describes `self::$name` on line 37?
  - It evaluates the static property `$name` of the `Person` class.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=582563ec-a46a-4cf6-90e8-812bf789f622, answer=[3]
 
 Which statement best describes `self::greeting("Hello")` on line 42?
 
@@ -528,7 +528,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=f2e0873c-cdb8-4e16-9105-14a18bf1c3e2, answer=[4]
 
 Execute the program. What is its output?
 
@@ -543,7 +543,7 @@ Execute the program. What is its output?
  - It prints `Good day, John! John is taking up BSCS.`.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=2801d358-3e10-4bf8-a98c-d336385ac659, answer=[4]
 
 Which of the following is a static method definition?
 
@@ -558,7 +558,7 @@ Which of the following is a static method definition?
  - `public function __construct($name, $age) {...}`
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=9e0475a4-20bc-446a-b258-8b1c8dabbe3b, answer=[3,5]
 
 Which of the following are static method calls?
 
@@ -573,7 +573,7 @@ Which of the following are static method calls?
  - `parent::greeting("Good day")`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=241ca5e2-e7a5-40a7-af8e-0d25b9776912, answer=[5]
 
 Which of the following is a static property definition?
 
@@ -588,7 +588,7 @@ Which of the following is a static property definition?
  - `public static $name = "Anna";`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=1714971c-91c1-4639-8f10-9a5cf72778ba, answer=[3]
 
 Which statement best describes `parent::$name` on line 20 of the `Student` class?
 
@@ -603,7 +603,7 @@ Which statement best describes `parent::$name` on line 20 of the `Student` class
  - It evaluates the static property `$name` of the parent class `Person` in the child class `Student`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=7ded7fd3-04e0-4e25-83df-ef2f0597092b, answer=[1]
 
 Which statement best describes `parent::greeting("Good day")` on line 20 of the `Student` class?
 
@@ -618,7 +618,7 @@ Which statement best describes `parent::greeting("Good day")` on line 20 of the 
  - It evaluates the static method `greeting()` of the parent class `Person` in the child class `Student`.
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=796007cd-35ad-4df8-8e8b-92ad511a0166, answer=[3,5]
 
 Which statements correctly describe the `display()` method of the `Student` class?
 
@@ -715,7 +715,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=19d948cb-daf5-4866-9b55-b427db40def6, answer=[4]
 
 In the `echo` statement on line 20 of `Student.php`, replace all the `parent` keywords with `self`. Execute the program. What is its output?
 
@@ -812,7 +812,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=b56bf8e5-343f-4857-a25b-66b3925afefc, answer=[5]
 
 In the method call `self::greeting("Hello")` on line 42 of `Person.php`, replace `self::` with `$this->`. Execute the program. What is its output?
 
@@ -909,7 +909,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=f2107647-50aa-4d7a-9847-28209e148fc7, answer=[1]
 
 In the statement `return $greet . ", " . self::$name . "!";` on line 37 of `Person.php`, replace `self::$name` with `$this->name`. Execute the program. What is its output?
 
@@ -932,7 +932,7 @@ In the statement `return $greet . ", " . self::$name . "!";` on line 37 of `Pers
 
 ### Part 2: Knowledge Assessment
 
-/// type=MS, answer=[2,3,4]
+/// type=MS, id=c0ddc5d6-6596-45ac-ae6f-4162068c61b0, answer=[2,3,4]
 
 Which statements correctly describe a static method?
 
@@ -947,7 +947,7 @@ Which statements correctly describe a static method?
  - All static methods with `protected` visibility can be accessed outside a class using the class name with the scope operator `::`. 
 
 
-/// type=MS, answer=[2,3,4]
+/// type=MS, id=6bfb9503-3114-42e8-88a4-3194e3df2281, answer=[2,3,4]
 
 Which statements are true about a static property?
 
@@ -962,7 +962,7 @@ Which statements are true about a static property?
  - All static properties with `protected` visibility can be accessed outside a class using the class name with the scope operator `::`. 
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=0b0f94a5-db98-412d-95e0-f52d0065c29e, answer=[1]
 
 Which statement best describes the `static` keyword?
 
@@ -977,7 +977,7 @@ Which statement best describes the `static` keyword?
  - It evaluates a static method and property.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=47bbfa11-e79e-465f-b352-feb4805af481, answer=[5]
 
 Which statement is true about the `self` keyword?
 
@@ -1018,7 +1018,7 @@ class Person
 echo Person::greeting("Hello");
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=eefc9946-efa8-428a-816a-ee94fad93d61, answer=[3]
 
 Execute the program. What is its output?
 
@@ -1033,7 +1033,7 @@ Execute the program. What is its output?
  - It prints `Hello, Anna!`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=5ddad075-1765-4a06-bc30-42f01e459109, answer=[5]
 
 What is the error message?
 
@@ -1048,7 +1048,7 @@ What is the error message?
  - Uncaught Error: Using `$this` when not in object context in `Person::greeting('Hello')` thrown on line number 8
 
 
-/// type=MS, answer=[2,3,4,5]
+/// type=MS, id=4302340f-4032-4337-8192-091cec8a2405, answer=[2,3,4,5]
 
 Which statements correctly describe the error?
 
@@ -1065,7 +1065,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/IncorrectThisKeywordTest.php]
+/// type=CR, id=37f3e1d7-2535-4d05-9868-2d9cec8e9ba3, answer=[tests/StaticMethodsAndProperties/IncorrectThisKeywordTest.php]
 
 Correct the code so that it outputs the string `Hello, Anna!`.
 
@@ -1105,7 +1105,7 @@ class Person
 echo Person::greeting("Hello");
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=19fd215d-0474-4f00-8cfb-6053591ba582, answer=[4]
 
 Execute the program. What is the error message?
 
@@ -1120,7 +1120,7 @@ Execute the program. What is the error message?
  - Uncaught Error: Using `$this` when not in object context in `Person::greeting('Hello')` thrown on line number 8
 
 
-/// type=MS, answer=[1,4]
+/// type=MS, id=a18513f1-5b53-4e3a-84fa-28ee598d36bb, answer=[1,4]
 
 Which statements correctly describe the error?
 
@@ -1137,7 +1137,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/IncorrectCallToProtectedMethodTest.php]
+/// type=CR, id=150808ea-de53-426b-920d-15d04406dcfd, answer=[tests/StaticMethodsAndProperties/IncorrectCallToProtectedMethodTest.php]
 
 Correct the code so that it outputs the string `Hello, Anna!`.
 
@@ -1178,7 +1178,7 @@ Person::$name = "James";
 echo Person->greeting("Hello");
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=9c5423af-747e-472f-ae98-0bd1e4432d39, answer=[3]
 
 Execute the program. What is the error message?
 
@@ -1193,7 +1193,7 @@ Execute the program. What is the error message?
  - Uncaught Error: Using `$this` when not in object context in `Person::greeting('Hello')` thrown on line number 8
 
 
-/// type=MS, answer=[2,3,5]
+/// type=MS, id=6e696feb-c062-4751-8f0d-de8a11a37638, answer=[2,3,5]
 
 Which statements correctly describe the error?
 
@@ -1210,7 +1210,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/IncorrectOperatorUsedInMethodCallTest.php]
+/// type=CR, id=a191ecbc-609e-4cdf-9cdc-01e170c241ba, answer=[tests/StaticMethodsAndProperties/IncorrectOperatorUsedInMethodCallTest.php]
 
 Correct the code so that it outputs the string `Hello, James!`.
 
@@ -1252,7 +1252,7 @@ Person::$name = "James";
 echo Person::greeting("Hello");
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=4a6bb508-c61b-4875-92f4-e11002edae9f, answer=[2]
 
 Execute the program. What is the error message?
 
@@ -1267,7 +1267,7 @@ Execute the program. What is the error message?
  - Uncaught Error: Using `$this` when not in object context in `Person::greeting('Hello')` thrown on line number 8
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=d1e2cbf3-f9d7-4049-981e-0208d7f5a61f, answer=[2,5]
 
 Which statements correctly describe the error?
 
@@ -1284,7 +1284,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/IncorrectAccessToPrivatePropertyTest.php]
+/// type=CR, id=dc7bacce-fa18-45b6-bb77-f760ab1b186d, answer=[tests/StaticMethodsAndProperties/IncorrectAccessToPrivatePropertyTest.php]
 
 Correct the code so that it outputs the string `Hello, James!`.
 
@@ -1360,7 +1360,7 @@ $personObject = new Person("John", 12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=c7cf6020-5dcd-4ab8-81ef-060ce49d1601, answer=[1]
 
 Execute the program. What is the error message?
 
@@ -1375,7 +1375,7 @@ Execute the program. What is the error message?
  - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 42
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=36c6e44f-ce1e-4112-a0a2-44ca28d1af8b, answer=[1,5]
 
 Which statements correctly describe the error?
 
@@ -1392,7 +1392,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/MissingSelfKeywordTest.php]
+/// type=CR, id=739ddd29-eba7-4e88-a781-93117f3ef8a9, answer=[tests/StaticMethodsAndProperties/MissingSelfKeywordTest.php]
 
 Correct the code so that it outputs the string `Hello, John! You are 12 years old.`.
 
@@ -1502,7 +1502,7 @@ $personObject = new Person("John", 12);
 $personObject::display();
 ?>
 ```
-/// type=MS, answer=[3,4]
+/// type=MS, id=8a51d2ee-048d-4d2d-a970-a60dfdbe8fe2, answer=[3,4]
 
 Execute the program. What are the error messages?
 
@@ -1517,7 +1517,7 @@ Execute the program. What are the error messages?
  - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 42
 
 
-/// type=MS, answer=[2,3,5]
+/// type=MS, id=ac259054-73fc-4b7d-8c43-47da47e1c755, answer=[2,3,5]
 
 Which statements correctly describe the error?
 
@@ -1534,7 +1534,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/IncorrectScopeResolutionOperatorTest.php]
+/// type=CR, id=d075d16e-f076-475b-a768-c05e4038017c, answer=[tests/StaticMethodsAndProperties/IncorrectScopeResolutionOperatorTest.php]
 
 Correct the code so that it outputs the string `Hello, John! You are 12 years old.`.
 
@@ -1644,7 +1644,7 @@ $personObject = new Person("John", 12);
 $personObject->display();
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=619d836c-51dc-40e1-a31f-efab7850fafb, answer=[2]
 
 Execute the program. What is the error message?
 
@@ -1659,7 +1659,7 @@ Execute the program. What is the error message?
  - Uncaught Error: Call to `private` method `Person::greeting()` from context `'Student'` on line number 42
 
 
-/// type=MS, answer=[2,3,4,5]
+/// type=MS, id=9bca00e6-cec9-4640-9d6a-e8aab1e95bfd, answer=[2,3,4,5]
 
 Which statements correctly describe the error?
 
@@ -1676,7 +1676,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/NotAllowedThisInStaticMethodTest.php]
+/// type=CR, id=1e2213b9-a96c-4314-8e43-793bcb3c4106, answer=[tests/StaticMethodsAndProperties/NotAllowedThisInStaticMethodTest.php]
 
 Correct the code so that it outputs the string `Hello, John! You are 12 years old.`.
 
@@ -1812,7 +1812,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=bb052a21-d1f6-4c16-beba-488900ee2dd6, answer=[5]
 
 Execute the program. What is its output?
 
@@ -1827,7 +1827,7 @@ Execute the program. What is its output?
  - It prints `John is taking up BSCS. Good day, John!`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=6bba0787-8ad3-43c7-b1be-d9fe2026a229, answer=[2]
 
 In the statement `return $greet . ", " . self::$name . "!";` on line 37 of `Person.php`, replace `self::$name` with `$this->name`. Execute the program. What is the error message?
 
@@ -1924,7 +1924,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=MS, answer=[1,3,4]
+/// type=MS, id=07ffe5d0-7d09-4ee0-80cc-f27c52f72e61, answer=[1,3,4]
 
 Remove the string `"Good day"` from the method call `parent::greeting("Good day")` on line 20 of `Student.php`. Execute the program. What are the error messages?
 
@@ -2021,7 +2021,7 @@ $studentObject = new Student("John", 20, "BSCS");
 $studentObject->display();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=40b996ca-815e-42ed-8fa7-1d72720a38be, answer=[5]
 
 In the declaration `public static function greeting($greet)` on line 35 of `Person.php`, replace `public` with `private`. Execute the program. What is the error message?
 
@@ -2038,7 +2038,7 @@ In the declaration `public static function greeting($greet)` on line 35 of `Pers
 :::
 
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=dd205f65-682c-49bc-87ff-8bfafa4c8cc6, answer=[tests/StaticMethodsAndProperties/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS. Good day, John!`.
 
@@ -2126,7 +2126,7 @@ $studentObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/StaticMethodsAndProperties/CreateNewClassWithStaticMethodAndPropertyTest.php]
+/// type=CR, id=93fc08d1-94e6-42ec-b00b-e067d20179f8, answer=[tests/StaticMethodsAndProperties/CreateNewClassWithStaticMethodAndPropertyTest.php]
 
 Write a program that uses `static` and `self` keywords to define and access a static method and property of a class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
