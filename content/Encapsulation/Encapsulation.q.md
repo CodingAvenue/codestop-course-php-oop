@@ -51,7 +51,7 @@ $personObject->setAge(12);
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=a59f5f40-d624-40ed-b24a-d14c916cf189, answer=[5]
 
 Execute the program. What is its output?
 
@@ -66,7 +66,7 @@ Execute the program. What is its output?
  - It prints `Anna is 12 years old.`.
 
 
-/// type=MS, answer=[1,2]
+/// type=MS, id=f7ae3a83-08e4-496e-bb5d-0ee32c7028f5, answer=[1,2]
 
 Which of the following are properties?
 
@@ -81,7 +81,7 @@ Which of the following are properties?
  - `$personObject`
 
 
-/// type=MS, answer=[2,3,4]
+/// type=MS, id=4895378f-27f3-4aa3-987f-6da746a8862e, answer=[2,3,4]
 
 Which of the following are methods?
 
@@ -96,7 +96,7 @@ Which of the following are methods?
  - `$personObject`
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=5d2004da-af63-4578-8847-076ff7901b3d, answer=[4]
 
 Which of the following is a private method?
 
@@ -111,7 +111,7 @@ Which of the following is a private method?
  - `$personObject`
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=c40bd1a5-10d4-4ff3-ada2-27f4847a0433, answer=[3,4]
 
 Which of the following are visibility keywords?
 
@@ -126,7 +126,7 @@ Which of the following are visibility keywords?
  - `function`
 
 
-/// type=MS, answer=[1,4]
+/// type=MS, id=5f5631b3-5797-417c-98f4-22f9bc55d232, answer=[1,4]
 
 In the statement `private $name = "Anna";` on line 4, what does `private` do?
 
@@ -141,7 +141,7 @@ In the statement `private $name = "Anna";` on line 4, what does `private` do?
  - It sets the accessibility of the `$name` property only within the `Person` class and its child or parent classes.
 
 
-/// type=MS, answer=[2,4]
+/// type=MS, id=fbb0b476-839c-4317-8321-66857512f3c8, answer=[2,4]
 
 Which statements correctly describe `private $age;` on line 5?
 
@@ -156,7 +156,7 @@ Which statements correctly describe `private $age;` on line 5?
  - It sets the accessibility of the `$age` property only within the `Person` class and its child or parent classes.
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=3c1ca7e9-33a4-457b-a037-1d10f9f61fd1, answer=[4,5]
 
 Which statements correctly describe the `setName()` and `setAge()` methods?
 
@@ -171,7 +171,7 @@ Which statements correctly describe the `setName()` and `setAge()` methods?
  - These are the `public` methods specified for objects to use when changing the values of the `private` properties `$name` and `$age` outside of the `Person` class.
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=0f61bbbb-0cd7-4c6f-abd7-728f35862f62, answer=[4,5]
 
 Which statements correctly describe the `getName()` and `getAge()` methods?
 
@@ -186,7 +186,7 @@ Which statements correctly describe the `getName()` and `getAge()` methods?
  - These are the `public` methods specified for objects to use when accessing the values of the `private` properties `$name` and `$age` outside of the `Person` class.
 
 
-/// type=MS, answer=[1,2,3,4]
+/// type=MS, id=6a742092-d6fb-47a1-9fc9-ba7f8e605b89, answer=[1,2,3,4]
 
 Which statements correctly describe the `checkAge()` method?
 
@@ -201,7 +201,7 @@ Which statements correctly describe the `checkAge()` method?
  - It is accessible everywhere from inside and outside of the `Person` class.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=ad3969da-26f7-4754-ab0a-adb3cbd6009d, answer=[2]
 
 What does the statement `$personObject->setAge(12);` do?
 
@@ -216,7 +216,7 @@ What does the statement `$personObject->setAge(12);` do?
  - It accesses the argument `12` from the `setAge()` method of `$personObject`.
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=b9c8ef00-58ef-4c65-9d83-522c049823e5, answer=[4,5]
 
 In the `echo` statement on line 40, what does `$personObject->getName()` do?
 
@@ -280,7 +280,7 @@ $personObject->setAge(12);
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=cf1233fb-f531-4434-9c1f-cc1cd9ff0f96, answer=[3]
 
 Replace the statement `$personObject->setAge(12);` on line 39 with `$personObject->age = 12;`. Execute the program. What is its output?
 
@@ -344,7 +344,7 @@ $personObject->age = 12;
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=MS, answer=[3,4,5]
+/// type=MS, id=231a88c8-a0c2-41cd-8032-4c1a4905ad26, answer=[3,4,5]
 
 Why does setting the value of the `$age` property of `$personObject` using the statement `$personObject->age = 12;` produce an error?
 
@@ -359,7 +359,7 @@ Why does setting the value of the `$age` property of `$personObject` using the s
  - `$personObject` is not allowed to directly access the `$age` property of the `Person` class.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=cc71e87f-048f-458b-be6f-693496681009, answer=[4]
 
 In the statement `$personObject->age = 12;` on line 39, replace `age = 12` with `setAge(15)`. Execute the program. What is its output?
 
@@ -423,7 +423,7 @@ $personObject->setAge(15);
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=c4660106-6bf7-423b-8c12-b021dc4d97b9, answer=[5]
 
 Add the statement `$personObject->setName("John");` before the `echo` statement on line 40. Execute the program. What is its output? 
 
@@ -488,7 +488,7 @@ $personObject->setName("John");
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=91909009-182d-4fcf-9c6a-bd39790e4ac1, answer=[3]
 
 In the `echo` statement on line 41, replace `$personObject->getName()` with `$personObject->name`. Execute the program. What is its output?
 
@@ -553,7 +553,7 @@ $personObject->setName("John");
 echo $personObject->name . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=MS, answer=[3,4,5]
+/// type=MS, id=acc2cdb9-e555-4a58-8b23-9ea6893c003a, answer=[3,4,5]
 
 Why does accessing the `$name` property of `$personObject` using `$personObject->name` produce an error?
 
@@ -577,7 +577,7 @@ Why does accessing the `$name` property of `$personObject` using `$personObject-
 
 ### Part 2: Knowledge Assessment
 
-/// type=MS, answer=[2,4,5]
+/// type=MS, id=2f2ccb77-5f86-41a7-ba8f-6ac89835689e, answer=[2,4,5]
 
 Which statements are true about encapsulation?
 
@@ -592,7 +592,7 @@ Which statements are true about encapsulation?
  - It hides the internal implementation of an object from other objects for protection purposes.
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=77231f1f-5b27-4eb5-a6ba-4fa30e695eec, answer=[3,5]
 
 Which statements are the main purpose of encapsulation?
 
@@ -607,7 +607,7 @@ Which statements are the main purpose of encapsulation?
  - It reduces software development complexity.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=dc0e186a-15dc-4745-9fa9-99c86e07c6c2, answer=[2]
 
 Which visibility keyword is used to encapsulate properties and methods in a class?
 
@@ -676,7 +676,7 @@ $personObject->setAge(12);
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=d33f029c-8a28-48b6-964c-df9caa7c04a4, answer=[3]
 
 Execute the program. What is its output?
 
@@ -691,7 +691,7 @@ Execute the program. What is its output?
  - It prints `Anna is 12 years old.`.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=7b2e85c6-ff3e-43a4-ab2f-644edbcaeb51, answer=[4]
 
 What is the error message?
 
@@ -706,7 +706,7 @@ What is the error message?
  - Missing argument `1` for `Person::setName()`, called on line number 40 and defined on line number 7
 
 
-/// type=MS, answer=[3,4]
+/// type=MS, id=1eeff70d-00af-4a50-bd61-f4c981ac1ebb, answer=[3,4]
 
 Which statements correctly describe the error?
 
@@ -723,7 +723,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Encapsulation/MissingPrivateKeywordTest.php]
+/// type=CR, id=cf8c7a66-a421-4e4c-9160-aa07068fab51, answer=[tests/Encapsulation/MissingPrivateKeywordTest.php]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -819,7 +819,7 @@ $personObject->age = 12;
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=a6b9551f-6b2f-4d2a-9b3c-f5587b0cef16, answer=[2]
 
 Execute the program. What is the error message?
 
@@ -834,7 +834,7 @@ Execute the program. What is the error message?
  - Missing argument `1` for `Person::setName()`, called on line number 40 and defined on line number 7
 
 
-/// type=MS, answer=[2,3,4,5]
+/// type=MS, id=93f91773-4968-460d-afbb-3ff518a06e3e, answer=[2,3,4,5]
 
 Which statements correctly describe the error?
 
@@ -851,7 +851,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Encapsulation/IncorrectAssignmentStatementTest.php]
+/// type=CR, id=dd039b33-e6c2-4644-aa55-75072b238d38, answer=[tests/Encapsulation/IncorrectAssignmentStatementTest.php]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -948,7 +948,7 @@ $personObject->setName("John");
 echo $personObject->name . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=16dfffb3-3949-4b04-83c2-f77557d19319, answer=[3]
 
 Execute the program. What is the error message?
 
@@ -963,7 +963,7 @@ Execute the program. What is the error message?
  - Missing argument `1` for `Person::setName()`, called on line number 40 and defined on line number 7
 
 
-/// type=MS, answer=[1,2,3,4]
+/// type=MS, id=b78609ab-55d7-41fe-bccb-282556fb0c4e, answer=[1,2,3,4]
 
 Which statements correctly describe the error?
 
@@ -980,7 +980,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Encapsulation/IncorrectNamePropertyAccessTest.php]
+/// type=CR, id=f93be282-ab07-4c13-a801-5cd3352a27a0, answer=[tests/Encapsulation/IncorrectNamePropertyAccessTest.php]
 
 Correct the code so that it outputs the string `John is 15 years old.`.
 
@@ -1078,7 +1078,7 @@ $personObject->setName();
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=MS, answer=[1,5]
+/// type=MS, id=143b3acd-b33c-4295-91c1-c0673ef8009a, answer=[1,5]
 
 Execute the program. What are the error messages?
 
@@ -1093,7 +1093,7 @@ Execute the program. What are the error messages?
  - Missing argument `1` for `Person::setName()`, called on line number 40 and defined on line number 7
 
 
-/// type=MS, answer=[2,3,4]
+/// type=MS, id=9d332516-88b5-4576-a8c2-0c4e561c76be, answer=[2,3,4]
 
 Which statements correctly describe the error?
 
@@ -1110,7 +1110,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Encapsulation/MissingArgumentOnSetNameTest.php]
+/// type=CR, id=89c2ab69-9a55-4ac1-b068-4937e0cb74e0, answer=[tests/Encapsulation/MissingArgumentOnSetNameTest.php]
 
 Correct the code so that it outputs the string `John is 15 years old.`.
 
@@ -1208,7 +1208,7 @@ $personObject->setName("John");
 echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=d75d8bf7-17bc-4d97-aec1-f28710d723fc, answer=[5]
 
 Execute the program. What is its output?
 
@@ -1223,7 +1223,7 @@ Execute the program. What is its output?
  - It prints `John is 15 years old.`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=4155ba08-48e7-48bc-8a7d-453c5f70b334, answer=[2]
 
 In the `echo` statement on line 41, replace `$personObject->getAge()` with `$personObject->age`. Execute the program. What is the error message?
 
@@ -1288,7 +1288,7 @@ $personObject->setName("John");
 echo $personObject->getName() . " is " . $personObject->age . " years old.";
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=9f0d58fd-a378-49fb-9bf1-b96ebb97a5d7, answer=[3]
 
 In the statement `$personObject->setName("John");` on line 40, replace `setName("John")` with `name = "John"`. Execute the program. What is the error message?
 
@@ -1353,7 +1353,7 @@ $personObject->name = "John";
 echo $personObject->getName() . " is " . $personObject->age . " years old.";
 ?>
 ```
-/// type=MS, answer=[1,3,5]
+/// type=MS, id=cf388b75-0beb-401b-aac5-2dac18dca54c, answer=[1,3,5]
 
 In the statement `$personObject->setAge(15);` on line 39, remove the argument `15` from `setAge()`. Execute the program. What are the error messages?
 
@@ -1370,7 +1370,7 @@ In the statement `$personObject->setAge(15);` on line 39, remove the argument `1
 :::
 
 
-/// type=CR, answer=[tests/Encapsulation/CorrectMultipleErrorsTest.php]
+/// type=CR, id=fdc5106d-74b4-4f66-aaea-290fb4b14880, answer=[tests/Encapsulation/CorrectMultipleErrorsTest.php]
 
 Correct the code so that it outputs the string `John is 15 years old.`.
 
@@ -1427,7 +1427,7 @@ echo $personObject->getName() . " is " . $personObject->age . " years old.";
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/Encapsulation/CreateClassWithEncapsulatedPropertiesAndMethodTest.php]
+/// type=CR, id=000d51a9-1ffa-45c7-8ed8-c64a42b5797d, answer=[tests/Encapsulation/CreateClassWithEncapsulatedPropertiesAndMethodTest.php]
 
 Write a program that uses the `private` visibility keyword to encapsulate the properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
