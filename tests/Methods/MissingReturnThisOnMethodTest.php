@@ -75,15 +75,6 @@ class MissingReturnThisOnMethodTest extends Proof
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
     }  
 
-    public function testChangeNameCall()
-    {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
-
-        $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'personObject'.");
-    }  
-
-    // How to test chain methods?... Need to consult the devs...
-
     public function testReturn()
     {
         $nodes = self::$code->find('construct[name="return"]');
@@ -97,4 +88,13 @@ class MissingReturnThisOnMethodTest extends Proof
     
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
     }
-} 
+
+    public function testChainMethodCalls()
+    {
+        $display = self::$code->find('method-call[name="display"]');
+        $subNode = $display->getSubNode();
+        $changeName = $subNode->find('method-call[name="changeName", variable="personObject"]');
+
+        $this->assertEquals(1, $changeName->count(), "Expecting a chain method calls for `changeName()` and `display()` methods of 'personObject'.");
+    }  
+}
