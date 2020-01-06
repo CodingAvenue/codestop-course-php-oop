@@ -24,7 +24,7 @@
     echo $personObject->name;
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=871c4e38-65ea-4aa0-a7c3-7e74bf83c756, answer=[2]
 
 Execute the program. What is its output?
 
@@ -39,7 +39,7 @@ Execute the program. What is its output?
  - It prints `This is an eat() method.`.
 
 
-/// type=MS, answer=[1,2,4,5]
+/// type=MS, id=9443f363-cfb4-47e5-81db-ecb8addfb39f, answer=[1,2,4,5]
 
 Which of the following are keywords?
 
@@ -54,7 +54,7 @@ Which of the following are keywords?
  - `function`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=71d2891a-773f-4c56-856b-f24769b16bc9, answer=[1]
 
 On line 2, what does the `class` keyword do?
 
@@ -69,7 +69,7 @@ On line 2, what does the `class` keyword do?
  - It creates the `Person` property.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=2891d015-81fc-4f0e-a20e-7e68f2a43909, answer=[4]
 
 Which statement best describes the code on line 4?
 
@@ -84,7 +84,7 @@ Which statement best describes the code on line 4?
  - It replaces the value of the `$name` property with the string `Diana`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=7c3f0404-e43e-4ef6-83c1-42d9b783b929, answer=[1]
 
 Which of the following is a class declaration?
 
@@ -99,7 +99,7 @@ Which of the following is a class declaration?
  - `public function eat() { echo "This is an eat() method."; }`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=fd0287de-bb5c-4a42-9ac1-141e122cc19b, answer=[2]
 
 Which of the following is a property definition?
 
@@ -114,7 +114,7 @@ Which of the following is a property definition?
  - `public function eat() { echo "This is an eat() method."; }`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=2a4c3910-0c15-4ccf-8935-818937f77d9d, answer=[5]
 
 Which of the following is a method definition?
 
@@ -129,7 +129,7 @@ Which of the following is a method definition?
  - `public function eat() { echo "This is an eat() method."; }`
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=f001c235-1869-42b5-a6b6-487beefcf91c, answer=[1,5]
 
 In the statement `$personObject = new Person();` on line 12, what is `$personObject`?
 
@@ -144,7 +144,7 @@ In the statement `$personObject = new Person();` on line 12, what is `$personObj
  - It is an instance of the `Person` class.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=9a9be46c-4d0f-4846-bbd4-d0db49489f21, answer=[5]
 
 In the statement `$personObject = new Person();` on line 12, what does the `new` keyword do?
 
@@ -159,7 +159,7 @@ In the statement `$personObject = new Person();` on line 12, what does the `new`
  - It creates the `$personObject` object as an instance of the `Person` class.
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=87d5e0a5-ccd7-4f9a-8e32-d09348de5a47, answer=[2,5]
 
 Which statements correctly describe the code on line 12?
 
@@ -174,7 +174,7 @@ Which statements correctly describe the code on line 12?
  - It assigns the new instance of the `Person` class to `$personObject`.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=4bb092b5-33af-45a2-84f1-cabac0cd2e54, answer=[1]
 
 In the statement `echo $personObject->name;` on line 13, what is `->`?
 
@@ -189,7 +189,7 @@ In the statement `echo $personObject->name;` on line 13, what is `->`?
  - It is a greater than operator.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=ef743a7b-9e42-4e82-8db7-06771072a1c2, answer=[4]
 
 In the statement `echo $personObject->name;` on line 13, what is `name`?
 
@@ -204,7 +204,7 @@ In the statement `echo $personObject->name;` on line 13, what is `name`?
  - It is a class name.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=91e39709-6b3f-4ccc-85ba-e8143118cc05, answer=[5]
 
 In the statement `echo $personObject->name;` on line 13, what does `$personObject->name` do?
 
@@ -219,7 +219,7 @@ In the statement `echo $personObject->name;` on line 13, what does `$personObjec
  - It accesses the value of the `name` property of `$personObject`.
  
 
-/// type=SS, answer=[4]
+/// type=SS, id=f9f3ffed-4f37-421a-8015-c01fc35cae57, answer=[4]
 
 Which statement best describes the code on line 13?
 
@@ -256,7 +256,7 @@ Which statement best describes the code on line 13?
     $personObject->eat();
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=d36bc0bf-b948-4ad9-a5df-db88dc8345bc, answer=[5]
 
 Execute the program. What is its output?
 
@@ -271,7 +271,7 @@ Execute the program. What is its output?
  - It prints `This is an eat() method.`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=f4b85e60-b3d4-47fe-aa08-fa26dda75f13, answer=[5]
 
 Which of the following is an object?
 
@@ -286,7 +286,7 @@ Which of the following is an object?
  - `$personObject`
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=9b7a55d3-3f4b-46e1-a73b-928ff9bc56c4, answer=[3]
 
 Which of the following is a property?
 
@@ -301,7 +301,7 @@ Which of the following is a property?
  - `$personObject`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=1e194ceb-6755-4a2b-ab6d-d2c2a97e2b41, answer=[2]
 
 Which of the following is a method?
 
@@ -316,7 +316,7 @@ Which of the following is a method?
  - `$personObject`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=fe674cd7-72ad-4e49-a04d-50428b3f0b20, answer=[1]
 
 On line 13, what does `$personObject->eat()` do?
 
@@ -331,7 +331,7 @@ On line 13, what does `$personObject->eat()` do?
  - It displays the `eat()` method of `$personObject`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=7d4c7933-4b0f-4595-82b9-2dd430faf738, answer=[5]
 
 In the statement `$personObject->eat();` on line 13, what does the object operator `->` do?
 
@@ -369,7 +369,7 @@ In the statement `$personObject->eat();` on line 13, what does the object operat
     echo $personObject->name;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=dbbfe47c-6e0a-4ec0-9a0f-1566c358bdc1, answer=[3]
 
 Execute the program. What is its output?
 
@@ -384,7 +384,7 @@ Execute the program. What is its output?
  - It prints `This is an eat() method.`.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=8f038eb9-8ee2-452f-8502-e32542f87e92, answer=[2]
 
 Which statement best describes the code on line 13?
 
@@ -399,7 +399,7 @@ Which statement best describes the code on line 13?
  - It removes the value `Charles` of the `name` property of `$personObject`.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=6d96bd41-2721-45c0-b0b8-29a97a60dc55, answer=[3]
 
 On lines 12, 13, and 14, replace the `$personObject` object with `$person`. Execute the program. What is its output?
 
@@ -437,7 +437,7 @@ On lines 12, 13, and 14, replace the `$personObject` object with `$person`. Exec
     echo $person->name;
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=3dfdaf10-e152-4bc3-868f-acbece86d76a, answer=[2]
 
 Remove the statement `$person->name = "Charles";` on line 13. Execute the program. What is its output?
 
@@ -474,7 +474,7 @@ Remove the statement `$person->name = "Charles";` on line 13. Execute the progra
     echo $person->name;
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=1a3ce1b3-15da-46c2-ae84-f0a8b48df918, answer=[5]
 
 On line 13, replace the statement `echo $person->name;` with `$person->eat();`. Execute the program. What is its output?
 
@@ -497,7 +497,7 @@ On line 13, replace the statement `echo $person->name;` with `$person->eat();`. 
 
 ### Part 2: Knowledge Assessment
 
-/// type=SS, answer=[1]
+/// type=SS, id=f1a16faf-39a0-46cc-8627-f21b56711599, answer=[1]
 
 Which statement best describes an object?
 
@@ -512,7 +512,7 @@ Which statement best describes an object?
  - It is a blueprint that defines the characteristics and behaviors of all objects of a specific kind.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=ee73c605-5e85-4c97-8fc5-a24b58a48b3b, answer=[4]
 
 Which statement is true about the `new` keyword?
 
@@ -527,7 +527,7 @@ Which statement is true about the `new` keyword?
  - It accesses the methods and properties of an object.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=3254137a-7821-47a4-b4a4-d069683eb8f2, answer=[5]
 
 What does the object operator `->` do?
 
@@ -568,7 +568,7 @@ What does the object operator `->` do?
     echo $personObject->$name;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=95eac32e-218e-468f-a128-5e1358fcc2bf, answer=[3]
 
 Execute the program. What is its output?
 
@@ -583,7 +583,7 @@ Execute the program. What is its output?
  - It prints `This is an eat() method.`.
 
 
-/// type=MS, answer=[1,2]
+/// type=MS, id=8c8d1cd6-8aed-4ea0-8fdf-4814e48da3ba, answer=[1,2]
 
 What are the error messages?
 
@@ -598,7 +598,7 @@ What are the error messages?
  - Object of class `Person` could not be converted to string on line number 13
 
 
-/// type=MS, answer=[1,3]
+/// type=MS, id=555d7ea9-c47f-4d75-a960-769462fdc25e, answer=[1,3]
 
 Which statements correctly describe the error?
 
@@ -615,7 +615,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Objects/UnexpectedDollarSignOnNamePropertyTest.php]
+/// type=CR, id=8de62e70-dac4-44b8-88a6-eef890804869, answer=[tests/Objects/UnexpectedDollarSignOnNamePropertyTest.php]
 
 Correct the code so that it outputs the string `Diana`.
 
@@ -657,7 +657,7 @@ Correct the code so that it outputs the string `Diana`.
     echo $personObject.name;
 ?>
 ```
-/// type=MS, answer=[4,5]
+/// type=MS, id=73702179-d7de-4c18-af8f-9a543dcff038, answer=[4,5]
 
 Execute the program. What are the error messages?
 
@@ -672,7 +672,7 @@ Execute the program. What are the error messages?
  - Object of class `Person` could not be converted to string on line number 13
 
 
-/// type=MS, answer=[1,4,5]
+/// type=MS, id=4127ee50-90ac-44c4-848c-4f730545f540, answer=[1,4,5]
 
 Which statements correctly describe the error?
 
@@ -689,7 +689,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Objects/MissingObjectOperatorTest.php]
+/// type=CR, id=f04d7209-ac3b-4858-b8fa-f572ec87d408, answer=[tests/Objects/MissingObjectOperatorTest.php]
 
 Correct the code so that it outputs the string `Diana`.
 
@@ -731,7 +731,7 @@ Correct the code so that it outputs the string `Diana`.
     $personObject->eat;
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=fa93fa16-20f6-4206-abc5-2399f8230204, answer=[4]
 
 Execute the program. What is the error message?
 
@@ -746,7 +746,7 @@ Execute the program. What is the error message?
  - Use of undefined constant eat - assumed `'eat'` on line number 13
 
 
-/// type=MS, answer=[1,5]
+/// type=MS, id=d8532de2-43d8-4f0e-8c82-32cd1ce11f9d, answer=[1,5]
 
 Which statements correctly describe the error?
 
@@ -763,7 +763,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/Objects/MissingParenthesesOnMethodTest.php]
+/// type=CR, id=25e8b187-15f1-427b-b55e-ede867bc6dca, answer=[tests/Objects/MissingParenthesesOnMethodTest.php]
 
 Correct the code so that it outputs the string `This is an eat() method.`.
 
@@ -805,7 +805,7 @@ Correct the code so that it outputs the string `This is an eat() method.`.
     $personObject->eat();
 ?>
 ```
-/// type=SS, answer=[4]
+/// type=SS, id=ac8918c6-a83f-4dac-9626-fe9c56868f56, answer=[4]
 
 Execute the program. What is the error message?
 
@@ -820,7 +820,7 @@ Execute the program. What is the error message?
  - Use of undefined constant Person - assumed `'Person'` on line number 12
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=d2353545-b7d0-4d45-b144-5c71ff5c1101, answer=[3]
 
 Which statement best describes the error?
 
@@ -837,7 +837,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, answer=[tests/Objects/MissingNewKeywordTest.php]
+/// type=CR, id=6137a825-b1ac-435a-bd44-77d911ab18ed, answer=[tests/Objects/MissingNewKeywordTest.php]
 
 Correct the code so that it outputs the string `This is an eat() method.`.
 
@@ -880,7 +880,7 @@ Correct the code so that it outputs the string `This is an eat() method.`.
     echo $person->name;
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=f6ec5af5-3ac1-4056-9e82-b3b2c9e0e5fa, answer=[3]
 
 On line 14, remove the object operator `->` between `$person` and `name`. Execute the program. What is the error message?
 
@@ -918,7 +918,7 @@ On line 14, remove the object operator `->` between `$person` and `name`. Execut
     echo $personname;
 ?>
 ```
-/// type=MS, answer=[1,3]
+/// type=MS, id=3bd5af02-2f5b-4a45-8fc2-3964ea04da02, answer=[1,3]
 
 In the statement `$person->name = "Charles";` on line 13, replace `$person` with `$charles`. Execute the program. What are the error messages?
 
@@ -956,7 +956,7 @@ In the statement `$person->name = "Charles";` on line 13, replace `$person` with
     echo $personname;
 ?>
 ```
-/// type=SS, answer=[2]
+/// type=SS, id=5ec9ddec-246b-4e4b-9df2-00ad0ebf5cf8, answer=[2]
 
 On line 12, remove the assignment operator `=` after `$person`. Execute the program. What is the error message?
 
@@ -973,7 +973,7 @@ On line 12, remove the assignment operator `=` after `$person`. Execute the prog
 :::
 
 
-/// type=CR, answer=[tests/Objects/CorrectMultipleErrorTest.php]
+/// type=CR, id=2bd1d89c-0c6f-4d2c-8f7b-2f68de90ee54, answer=[tests/Objects/CorrectMultipleErrorTest.php]
 
 Correct the code so that it outputs the string `Charles`.
 
@@ -1002,7 +1002,7 @@ Correct the code so that it outputs the string `Charles`.
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/Objects/CreateNewObjectTest.php]
+/// type=CR, id=a0f225fc-b7e2-45a2-9a3a-febaa82ef6b8, answer=[tests/Objects/CreateNewObjectTest.php]
 
 Write a program that uses a `new` keyword to create an instance of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
@@ -1020,7 +1020,7 @@ After the class declaration, add a statement that creates the `$pet` object an i
 ```
 
 
-/// type=CR, answer=[tests/Objects/CreatePlantObjectTest.php]
+/// type=CR, id=289ed4c4-f00b-424a-b605-b9246d94b575, answer=[tests/Objects/CreatePlantObjectTest.php]
 
 Write a program that uses a `new` keyword to create an instance of a certain class. First, use a `class` keyword to declare a class named `Plant`. Within the curly braces `{}`, add the following statements:
 
