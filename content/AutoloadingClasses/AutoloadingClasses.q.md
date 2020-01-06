@@ -104,7 +104,7 @@ class Student extends Person implements LifeCycle
 }
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=299f7091-97aa-4066-bf7b-d1bf0f3219fe, answer=[5]
 
 Execute the program. What is its output?
 
@@ -119,7 +119,7 @@ Execute the program. What is its output?
  - It prints `May is an adolescent human being.`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=aa97c5fb-e6de-4480-8541-c1997764f9f4, answer=[5]
 
 In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `Autoload.php`, what is `__DIR__`?
 
@@ -134,7 +134,7 @@ In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `A
  - It is a magic constant.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=10337975-ce01-47a9-b295-f70ecac28282, answer=[4]
 
 In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `Autoload.php`, what is `.php`?
 
@@ -149,7 +149,7 @@ In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `A
  - It the name of the directory where the class is located.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=16f70051-92a0-45a7-8a7e-df9b813c8648, answer=[5]
 
 Which statement best describes `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `Autoload.php`?
 
@@ -164,7 +164,7 @@ Which statement best describes `$file = __DIR__ . '\\' . $className . '.php';` o
  - It assigns all the class files in `__DIR__` with the specified `$className` and `.php` extensions to `$file`.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=1a18f1ea-32e1-404a-9211-00277d087cfe, answer=[4]
 
 In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on line 5 of `Autoload.php`, what is `str_replace()`?
 
@@ -179,7 +179,7 @@ In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on lin
  - It is a predefined constant.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=8abae603-d481-4d17-9c99-d1fc7ed6a579, answer=[5]
 
 In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on line 5 of `Autoload.php`, what is `DIRECTORY_SEPARATOR`?
 
@@ -194,7 +194,7 @@ In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on lin
  - It is a predefined constant.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=9c6b25c9-ce3d-40c2-a728-6a3e70732e43, answer=[3]
 
 Which statement best describes `str_replace('\\', DIRECTORY_SEPARATOR, $file)` on line 5 of `Autoload.php`?
 
@@ -209,7 +209,7 @@ Which statement best describes `str_replace('\\', DIRECTORY_SEPARATOR, $file)` o
  - It removes the predefined constant `DIRECTORY_SEPARATOR` and `\` from `$file`.
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=b9983e6a-10fe-4435-b68b-0db503768c1b, answer=[4,5]
 
 Which statements correctly describe the `myAutoloader()` function of `Autoload.php`?
 
@@ -224,7 +224,7 @@ Which statements correctly describe the `myAutoloader()` function of `Autoload.p
  - It is an autoloader function that accepts an argument.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=461df50b-2011-4336-8dee-acf5840d40a4, answer=[1]
 
 In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoload.php`, what is `myAutoloader`?
 
@@ -239,7 +239,7 @@ In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoloa
  - It is the command that automatically sets the value of the autoloader class files.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=04f51655-80fc-4437-99dd-2d92dd51e840, answer=[5]
 
 In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoload.php`, what does `spl_autoload_register()` do?
 
@@ -254,7 +254,7 @@ In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoloa
  - It registers the `myAutoloader()` autoload function.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=e48cddc7-550b-430a-a96b-ee5123b4a4c6, answer=[5]
 
 Which statement best describes `spl_autoload_register("myAutoloader");` on line 11 of `Autoload.php`?
 
@@ -269,7 +269,7 @@ Which statement best describes `spl_autoload_register("myAutoloader");` on line 
  - It registers the `myAutoloader()` autoload function.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=27ecfaea-6237-46bb-814c-35343ee0cfac, answer=[3]
 
 Which statement best describes `require_once("./Autoload.php");` on line 2 of `Main.php`?
 
@@ -386,7 +386,7 @@ class Student extends Person implements LifeCycle
 }
 ?>
 ```
-/// type=SS, answer=[5]
+/// type=SS, id=5653da8d-101f-488b-868e-f4c5e16ee988, answer=[5]
 
 Execute the program. What is its output?
 
@@ -401,7 +401,7 @@ Execute the program. What is its output?
  - It prints `Charles is an adolescent human being.`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=dee34cae-9590-4eb1-bfe9-2203bfb915b4, answer=[5]
 
 Which of the following is an autoloader?
 
@@ -416,7 +416,7 @@ Which of the following is an autoloader?
  - `myAutoloader()`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=08b819c2-3846-4fbd-9d39-097d09130591, answer=[2]
 
 Which of the following is a magic constant?
 
@@ -431,7 +431,7 @@ Which of the following is a magic constant?
  - `DIRECTORY_SEPARATOR`
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=0efb0a00-e5d5-4f43-bbf2-ed9dde04b5dd, answer=[5]
 
 Which of the following is a predefined constant?
 
@@ -446,7 +446,7 @@ Which of the following is a predefined constant?
  - `DIRECTORY_SEPARATOR`
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=35f4b530-9fb6-4862-b0f1-9f59fd39a8ac, answer=[1]
 
 In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` on line 4 of `Autoload.php`, what does `dirname(__DIR__)` do?
 
@@ -461,7 +461,7 @@ In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` o
  - It evaluates the path of the parent directory `__DIR__`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=032544f8-89d9-4941-b008-695528107095, answer=[5]
 
 In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` on line 4 of `Autoload.php`, what does `\\src\\` indicate?
 
@@ -476,7 +476,7 @@ In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` o
  - The specific directory name where the class file is located.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=a8d1523e-05d8-4410-b3b4-51a41ef6de31, answer=[5]
 
 Which statement best describes the code on line 4 of `Autoload.php`?
 
@@ -491,7 +491,7 @@ Which statement best describes the code on line 4 of `Autoload.php`?
  - It assigns all the class files in `__DIR__` with the specified directory name `src`, `$className` and `.php` extensions to `$file`.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=cf46bc3f-0fbf-408d-827c-6a4a4386941b, answer=[3]
 
 Which statement best describes `require_once("./autoloader/Autoload.php");` on line 2 of `Main.php`?
 
@@ -675,7 +675,7 @@ class Circle extends CircularShape
 }
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=c307b1b1-cacd-4897-a056-1e7e62f4a096, answer=[1]
 
 Execute the program. What is printed on line 2?
 
@@ -690,7 +690,7 @@ Execute the program. What is printed on line 2?
  - `Charles is an adolescent human being.`
 
 
-/// type=MS, answer=[3,5]
+/// type=MS, id=cc0f9644-cbb9-4544-a20d-bff785304b3e, answer=[3,5]
 
 Which of the following are autoloaders?
 
@@ -705,7 +705,7 @@ Which of the following are autoloaders?
  - `myShapesAutoloader()`
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=228c1db3-c755-4a50-8c97-af7fc220aee9, answer=[4,5]
 
 Which statements correctly describe the `myShapesLoader()` function of `Autoload.php`?
 
@@ -720,7 +720,7 @@ Which statements correctly describe the `myShapesLoader()` function of `Autoload
  - It automatically loads the specified class files in `Shapes` directory.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=5aa56660-76b8-4d2d-b75f-f209eebd9d09, answer=[5]
 
 Which statement best describes the code on line 20 of `Autoload.php`?
 
@@ -735,7 +735,7 @@ Which statement best describes the code on line 20 of `Autoload.php`?
  - It registers the `myAutoloader()` autoload function.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=a4defa7c-d24b-4c61-8ee0-f6d0f60d12c8, answer=[3]
 
 Which statement best describes `spl_autoload_register("myShapesLoader");` on line 21 of `Autoload.php`?
 
@@ -759,7 +759,7 @@ Which statement best describes `spl_autoload_register("myShapesLoader");` on lin
 
 ### Part 2: Knowledge Assessment
 
-/// type=SS, answer=[5]
+/// type=SS, id=ec1592bf-3652-48de-997e-5e15d950eb4d, answer=[5]
 
 Which statement best describes autoloading?
 
@@ -774,7 +774,7 @@ Which statement best describes autoloading?
  - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
-/// type=SS, answer=[1]
+/// type=SS, id=27d12a7b-3a30-4459-bb79-88c7a740ce89, answer=[1]
 
 Which statement best describes the `spl_autoload_register()` function?
 
@@ -789,7 +789,7 @@ Which statement best describes the `spl_autoload_register()` function?
  - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
-/// type=SS, answer=[3]
+/// type=SS, id=004ae2cb-0bdf-4b80-97ce-d050e77df48c, answer=[3]
 
 Which statement is true about an autoloader?
 
@@ -804,7 +804,7 @@ Which statement is true about an autoloader?
  - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
-/// type=SS, answer=[4]
+/// type=SS, id=2240ffe1-8441-425f-b284-1fc5edce70f5, answer=[4]
 
 Which statement is true about the `__DIR__` magic constant?
 
@@ -819,7 +819,7 @@ Which statement is true about the `__DIR__` magic constant?
  - It is a way of automatically loading classes and interfaces that are currently not defined.
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=75afece7-04e8-4dfc-b864-36998188c969, answer=[2]
 
 Which statement is true about the `dirname()` function?
 
@@ -940,7 +940,7 @@ class Student extends Person implements LifeCycle
 }
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=cfc0bcc5-4bb4-4949-adfc-c97d7adc52ff, answer=[3]
 
 Execute the program. What is its output?
 
@@ -955,7 +955,7 @@ Execute the program. What is its output?
  - It prints `May is an adolescent human being.`.
 
 
-/// type=SS, answer=[5]
+/// type=SS, id=bf6acdcb-9b20-44a2-8d9e-dab7cce54550, answer=[5]
 
 What is the error message?
 
@@ -970,7 +970,7 @@ What is the error message?
  - Uncaught LogicException: Function `'myAutoloader()'` not found (function 'myAutoloader()' not found or invalid function name) in `Autoload.php` on line number 11
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=32805955-48f1-45c1-881c-129545a8adcf, answer=[4,5]
 
 Which statements correctly describe the error?
 
@@ -987,7 +987,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AutoloadingClasses/IncorrectSplRegisterArgumentTest.php], filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d1a82401-b0f9-4112-8347-1e86fa77f727, answer=[tests/AutoloadingClasses/IncorrectSplRegisterArgumentTest.php], filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `May is an adolescent human being.`.
 
@@ -1189,7 +1189,7 @@ class Student extends Person implements LifeCycle
 }
 ?>
 ```
-/// type=SS, answer=[1]
+/// type=SS, id=53ece4cf-cf8c-4d91-b74e-56f4ab7b6443, answer=[1]
 
 Execute the program. What is the error message?
 
@@ -1204,7 +1204,7 @@ Execute the program. What is the error message?
  - Uncaught LogicException: Function `'myAutoloader()'` not found (function 'myAutoloader()' not found or invalid function name) in `Autoload.php` on line number 11
 
 
-/// type=MS, answer=[2,5]
+/// type=MS, id=21a79fa9-a319-49f5-a7b6-7bfb31933277, answer=[2,5]
 
 Which statements correctly describe the error?
 
@@ -1221,7 +1221,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AutoloadingClasses/IncorrectFileExtensionTest.php], filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d15d78b4-0a2f-4fec-a766-d82304f8496f, answer=[tests/AutoloadingClasses/IncorrectFileExtensionTest.php], filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `May is an adolescent human being.`.
 
@@ -1423,7 +1423,7 @@ class Student extends Person implements LifeCycle
 }
 ?>
 ```
-/// type=MS, answer=[1,2]
+/// type=MS, id=35888b3a-c585-4e19-a63a-52f71c6d9eb3, answer=[1,2]
 
 Execute the program. What are the error messages?
 
@@ -1438,7 +1438,7 @@ Execute the program. What are the error messages?
  - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
 
-/// type=MS, answer=[4,5]
+/// type=MS, id=f49a2d77-f3f7-4742-a9e4-dc9d23185303, answer=[4,5]
 
 Which statements correctly describe the error?
 
@@ -1455,7 +1455,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AutoloadingClasses/IncorrectVariableNameAsParameterTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=CR, id=976c6c75-c3ec-42fd-b67a-b20025db12a6, answer=[tests/AutoloadingClasses/IncorrectVariableNameAsParameterTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -1657,7 +1657,7 @@ class Student extends Person implements LifeCycle
 }
 ?>
 ```
-/// type=MS, answer=[4,5]
+/// type=MS, id=291c332e-3e19-411f-8b3f-c909a76d7492, answer=[4,5]
 
 Execute the program. What are the error messages?
 
@@ -1672,7 +1672,7 @@ Execute the program. What are the error messages?
  - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
 
-/// type=MS, answer=[2,4,5]
+/// type=MS, id=5e95a810-7f1a-4018-b006-16727f3a05c8, answer=[2,4,5]
 
 Which statements correctly describe the error?
 
@@ -1689,7 +1689,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AutoloadingClasses/IncorrectDirectorySpecifiedInRequireTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=CR, id=dc50b2e4-32be-45e3-948f-0a0e9192afea, answer=[tests/AutoloadingClasses/IncorrectDirectorySpecifiedInRequireTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -1891,7 +1891,7 @@ class Student extends Person implements LifeCycle
 }
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=a3ed0fc6-bb4e-4ce4-9c38-306987bec62a, answer=[3]
 
 Execute the program. What is the error message?
 
@@ -1906,7 +1906,7 @@ Execute the program. What is the error message?
  - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
 
-/// type=MS, answer=[1,2,5]
+/// type=MS, id=0fb25381-6548-44c8-9015-71108f0858d6, answer=[1,2,5]
 
 Which statements correctly describe the error?
 
@@ -1923,7 +1923,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, answer=[tests/AutoloadingClasses/MisspelledDirConstantTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=CR, id=29ff363f-13a9-491f-a54c-89338baeecd1, answer=[tests/AutoloadingClasses/MisspelledDirConstantTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -2192,7 +2192,7 @@ class Circle extends CircularShape
 }
 ?>
 ```
-/// type=SS, answer=[3]
+/// type=SS, id=32c415cc-cab8-47bd-a4e4-2ff98c58dca7, answer=[3]
 
 Execute the program. What is printed on line 3?
 
@@ -2207,7 +2207,7 @@ Execute the program. What is printed on line 3?
  - `Charles is an adolescent human being.`
 
 
-/// type=SS, answer=[2]
+/// type=SS, id=34e542fc-5af4-43a7-b195-7fbec376e503, answer=[2]
 
 In the statement `$file = dirname(__DIR__) . '\\Shapes\\' . $shapeClass . '.php';` on line 13 of `Autoload.php`, replace `Shapes` with `Circle`. Execute the program. What is the error message?
 
@@ -2391,7 +2391,7 @@ class Circle extends CircularShape
 }
 ?>
 ```
-/// type=MS, answer=[1,3]
+/// type=MS, id=cf3dd233-996e-4567-9f30-0738a3a44686, answer=[1,3]
 
 On line 2 of `Autoload.php`, remove the parameter `$className` from `function myAutoloader($className)`. Execute the program. What are the error messages?
 
@@ -2575,7 +2575,7 @@ class Circle extends CircularShape
 }
 ?>
 ```
-/// type=MS, answer=[1,3,4]
+/// type=MS, id=ada6dccc-50ff-494e-a96b-d8ed8541d589, answer=[1,3,4]
 
 Remove the double quotes `""` from the statement `spl_autoload_register("myAutoloader");` on line 20 of `Autoload.php`. Execute the program. What are the error messages?
 
@@ -2592,7 +2592,7 @@ Remove the double quotes `""` from the statement `spl_autoload_register("myAutol
 :::
 
 
-/// type=CR, answer=[tests/AutoloadingClasses/CorrectMultipleErrorsTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
+/// type=CR, id=736883b2-7abb-4f89-a14b-65d377aa0484, answer=[tests/AutoloadingClasses/CorrectMultipleErrorsTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
 
 Correct the code so that it outputs the strings `Charles is an adolescent human being.`, `Radius: 2.5`, `Diameter: 6.25`, `Area: 19.635`, and `Circumference: 15.708` in separate lines.
 
@@ -2767,7 +2767,7 @@ class Circle extends CircularShape
 
 ### Part 4: Practice
 
-/// type=CR, answer=[tests/AutoloadingClasses/CreateAutoloaderFunctionTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Animal.php,src/Mammal.php]
+/// type=CR, id=18b1416a-678c-4568-a7df-60d12ac41a87, answer=[tests/AutoloadingClasses/CreateAutoloaderFunctionTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Animal.php,src/Mammal.php]
 
 Given the classes and interface implementations, write a program that uses the `spl_autoload_register()` function to register a certain autoloader. In the `Autoload.php` tab, create an autoloader function named `myAnimalAutoloader` with the parameter `$animal`. Inside the `myAnimalAutoloader()` function body, add a statement the assigns `$file = dirname(__DIR__) . '\\src\\' . $animal . '.php';` to the variable `$file`. Then, add another statement that assigns `str_replace('\\', DIRECTORY_SEPARATOR, $file)` to `$file`. Next, add an `if` statement that checks if `$file` exists. Inside the `if` block, add the statement `require_once($file);`. After the `myAnimalAutoloader()` function, add a statement that registers the autoloader function `myAnimalAutoloader` using the `spl_autoload_register()` function. In the `Main.php` tab, add the statement `require_once("./autoloader/Autoload.php");`. Then, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
