@@ -648,7 +648,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -770,7 +770,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -847,7 +847,7 @@ interfaces LifeCycle
 
 ```php
 <?php
-require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -954,7 +954,7 @@ interfaces LifeCycle
 
 ```php
 <?php
-require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1031,7 +1031,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1138,7 +1138,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./Person.php');
+require_once('./LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
