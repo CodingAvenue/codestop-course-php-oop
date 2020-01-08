@@ -130,6 +130,15 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends Proof
 
         $this->assertEquals(1, $valueParam->count(), "Expecting a parameter named 'value' in the `isValid()` method.");
     }
+
+    /*
+    public function testAgePropertyCall()
+    {
+        $age = self::$code->find('property-call[name="age", variable="self"]');
+
+        $this->assertEquals(3, $age->count(), "Expecting three `age` property calls inside the `Animal` class itself.");
+    }  
+
     /*
     public function testSelfTypeCall()
     {

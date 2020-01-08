@@ -158,5 +158,19 @@ class IncorrectScopeResolutionOperatorTest extends Proof
         
         $this->assertEquals(1, $selfCall->count(), "Expecting a static call of the 'greeting()' method.");
     }  
+    
+    public function testAgePropertyCall()
+    {
+        $age = self::$code->find('property-call[name="age", variable="this"]');
+
+        $this->assertEquals(3, $age->count(), "Expecting three `age` property calls inside the `Person` class itself.");
+    }  
+
+    public function testCheckAgeCall()
+    {
+        $checkAge = self::$code->find('method-call[name="checkAge", variable="this"]');
+
+        $this->assertEquals(2, $checkAge->count(), "Expecting two 'checkAge()' method calls inside the class itself.");
+    }  
     //still need to test the arguments in the method calls.
 } 

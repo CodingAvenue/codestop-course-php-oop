@@ -152,6 +152,13 @@ class CorrectMultipleErrorsTest extends Proof
 
         $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
     }  
+
+    public function testCoursePropertyCall()
+    {
+        $course = self::$code->find('property-call[name="course", variable="this"]');
+
+        $this->assertEquals(3, $course->count(), "Expecting three `course` property calls inside the `Student` class itself.");
+    }  
     /*    
     public function testFunctionCall()
     {
