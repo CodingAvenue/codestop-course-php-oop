@@ -53,6 +53,13 @@ class IncorrectConstantAccessInsideMethodTest extends Proof
         
         $this->assertEquals(1, $display->count(), "Expecting a display() method.");
     }
+        
+    public function testConstruct()
+    {
+        $construct = self::$code->find('method[name="__construct", type="public"]');
+
+        $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
+    }
 
     public function testArea()
     {
@@ -101,6 +108,13 @@ class IncorrectConstantAccessInsideMethodTest extends Proof
         $area = self::$code->find('method-call[name="area", variable="this"]');
         
         $this->assertEquals(1, $area->count(), "Expecting an 'area()' method call inside the class itself.");
+    }
+
+    public function testRadiusParam()
+    {
+        $radiusParam = self::$code->find('param[name="radius"]');
+
+        $this->assertEquals(1, $radiusParam->count(), "Expecting a parameter named 'radius' in the `__construct()` method.");
     }
 
     public function testConstPi()
