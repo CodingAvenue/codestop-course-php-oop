@@ -170,7 +170,7 @@ class IncorrectNamePropertyAccessTest extends Proof
     {
         $checkAge = self::$code->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting an 'checkAge()' method call inside the class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting a 'checkAge()' method call inside the class itself.");
     }
     
     //still need to test the arguments in the method calls.
