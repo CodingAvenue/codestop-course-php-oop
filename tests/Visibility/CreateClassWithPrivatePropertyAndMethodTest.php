@@ -189,13 +189,13 @@ class CreateClassWithPrivatePropertyAndMethodTest extends Proof
     {
         $getType = self::$code->find('method-call[name="getType", variable="this"]');
         
-        $this->assertEquals(1, $getType->count(), "Expecting an 'getType()' method call inside the class itself.");
+        $this->assertEquals(1, $getType->count(), "Expecting a 'getType()' method call inside the class itself.");
     }
 
     public function testGetAgeCall()
     {
         $getAge = self::$code->find('method-call[name="getAge", variable="this"]');
         
-        $this->assertEquals(1, $getAge->count(), "Expecting an 'getAge()' method call inside the class itself.");
+        $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the class itself.");
     }
 }

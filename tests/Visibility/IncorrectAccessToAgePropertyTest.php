@@ -163,7 +163,7 @@ class IncorrectAccessToAgePropertyTest extends Proof
     {
         $getAge = self::$code->find('method-call[name="getAge", variable="this"]');
         
-        $this->assertEquals(1, $getAge->count(), "Expecting an 'getAge()' method call inside the class itself.");
+        $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the class itself.");
     }
     //still need to test the arguments in the method calls.
 }
