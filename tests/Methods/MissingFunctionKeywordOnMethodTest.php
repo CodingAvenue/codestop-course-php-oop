@@ -77,8 +77,15 @@ class MissingFunctionKeywordOnMethodTest extends Proof
     
     public function testNewNameParam()
     {
-        $newNameParam=self::$code->find('param[name="newName"]');
+        $newNameParam = self::$code->find('param[name="newName"]');
     
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
+    }
+
+    public function testNamePropertyCall()
+    {
+        $name = self::$code->find('property-call[name="name", variable="this"]');
+
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `Person` class itself.");
     }
 } 

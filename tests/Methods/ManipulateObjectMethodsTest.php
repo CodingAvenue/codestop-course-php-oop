@@ -92,8 +92,15 @@ class ManipulateObjectMethodsTest extends Proof
 
     public function testNewTypeParam()
     {
-        $newTypeParam=self::$code->find('param[name="newType"]');
+        $newTypeParam = self::$code->find('param[name="newType"]');
     
         $this->assertEquals(1, $newTypeParam->count(), "Expecting a parameter named 'newType' in the `changeType()` method.");
+    }
+    
+    public function testTypePropertyCall()
+    {
+        $type = self::$code->find('property-call[name="type", variable="this"]');
+
+        $this->assertEquals(2, $type->count(), "Expecting two `type` property calls inside the `Animal` class itself.");
     }
 } 

@@ -84,7 +84,7 @@ class MissingReturnThisOnMethodTest extends Proof
     
     public function testNewNameParam()
     {
-        $newNameParam=self::$code->find('param[name="newName"]');
+        $newNameParam = self::$code->find('param[name="newName"]');
     
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
     }
@@ -97,4 +97,11 @@ class MissingReturnThisOnMethodTest extends Proof
 
         $this->assertEquals(1, $changeName->count(), "Expecting chain method calls for `changeName()` and `display()` methods of 'personObject'.");
     }  
+    
+    public function testNamePropertyCall()
+    {
+        $name = self::$code->find('property-call[name="name", variable="this"]');
+
+        $this->assertEquals(2, $name->count(), "Expecting two `name` property calls inside the `Person` class itself.");
+    }
 }
