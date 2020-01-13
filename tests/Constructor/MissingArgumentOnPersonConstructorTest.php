@@ -77,10 +77,16 @@ class MissingArgumentOnPersonConstructorTest extends Proof
 
     public function testNameParam()
     {
-        $nameParam=self::$code->find('param[name="name"]');
+        $nameParam = self::$code->find('param[name="name"]');
     
         $this->assertEquals(1, $nameParam->count(), "Expecting a parameter named 'name' in the `__construct()` method.");
     }
 
+    public function testNamePropertyCall()
+    {
+        $name = self::$code->find('property-call[name="name", variable="this"]');
+        
+        $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `Person` class itself.");
+    }
     //still need to test the arguments in the method calls.
 }

@@ -140,37 +140,72 @@ class AddConstructorToClassTest extends Proof
 
     public function testAgeParam()
     {
-        $ageParam=self::$code->find('param[name="age"]');
+        $ageParam = self::$code->find('param[name="age"]');
     
         $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age' in the `__construct()` method.");
     }
 
     public function testTypeParam()
     {
-        $typeParam=self::$code->find('param[name="type"]');
+        $typeParam = self::$code->find('param[name="type"]');
     
         $this->assertEquals(1, $typeParam->count(), "Expecting a parameter named 'type' in the `__construct()` method.");
     }
 
     public function testNewAgeParam()
     {
-        $newAgeParam=self::$code->find('param[name="newAge"]');
+        $newAgeParam = self::$code->find('param[name="newAge"]');
     
         $this->assertEquals(1, $newAgeParam->count(), "Expecting a parameter named 'newAge' in the `setAge()` method.");
     }
 
     public function testNewTypeParam()
     {
-        $newTypeParam=self::$code->find('param[name="newType"]');
+        $newTypeParam = self::$code->find('param[name="newType"]');
     
         $this->assertEquals(1, $newTypeParam->count(), "Expecting a parameter named 'newType' in the `changeType()` method.");
     }
 
     public function testValueParam()
     {
-        $valueParam=self::$code->find('param[name="value"]');
+        $valueParam = self::$code->find('param[name="value"]');
     
         $this->assertEquals(1, $valueParam->count(), "Expecting a parameter named 'value' in the `isValid()` method.");
+    }
+
+    public function testTypePropertyCall()
+    {
+        $type = self::$code->find('property-call[name="type", variable="this"]');
+        
+        $this->assertEquals(3, $type->count(), "Expecting three `type` property calls inside the `Animal` class itself.");
+    }
+    
+    public function testAgePropertyCall()
+    {
+        $age = self::$code->find('property-call[name="age", variable="this"]');
+        
+        $this->assertEquals(3, $age->count(), "Expecting three `age` property calls inside the `Animal` class itself.");
+    }
+    
+    public function testIsValidCall()
+    {
+        $isValid = self::$code->find('method-call[name="isValid", variable="this"]');
+        
+        $this->assertEquals(2, $isValid->count(), "Expecting two 'isValid()' method calls inside the class itself.");
+    }
+    
+    public function testGetTypeCall()
+    {
+        $getType = self::$code->find('method-call[name="getType", variable="this"]');
+        
+        $this->assertEquals(1, $getType->count(), "Expecting an 'getType()' method call inside the class itself.");
+    }
+    
+    public function testGetAgeCall()
+    {
+        $getAge = self::$code->find('method-call[name="getAge", variable="this"]');
+        
+        $this->assertEquals(1, $getAge->count(), "Expecting an 'getAge()' method call inside the class itself.");
     }
     //still need to test the arguments in the method calls.
 }
