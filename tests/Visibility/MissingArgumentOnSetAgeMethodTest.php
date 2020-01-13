@@ -126,16 +126,44 @@ class MissingArgumentOnSetAgeMethodTest extends Proof
     
     public function testAgeParam()
     {
-        $ageParam=self::$code->find('param[name="age"]');
+        $ageParam = self::$code->find('param[name="age"]');
     
         $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age' in the 'checkAge()' method.");
     }
 
     public function testNewAgeParam()
     {
-        $newAgeParam=self::$code->find('param[name="newAge"]');
+        $newAgeParam = self::$code->find('param[name="newAge"]');
     
         $this->assertEquals(1, $newAgeParam->count(), "Expecting a parameter named 'newAge' in the `setAge()` method.");
+    }
+    
+    public function testNamePropertyCall()
+    {
+        $name = self::$code->find('property-call[name="name", variable="this"]');
+        
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `Person` class itself.");
+    }
+
+    public function testAgePropertyCall()
+    {
+        $age = self::$code->find('property-call[name="age", variable="this"]');
+        
+        $this->assertEquals(2, $age->count(), "Expecting two `age` property calls inside the `Person` class itself.");
+    }
+
+    public function testCheckAgeCall()
+    {
+        $checkAge = self::$code->find('method-call[name="checkAge", variable="this"]');
+        
+        $this->assertEquals(1, $checkAge->count(), "Expecting an 'checkAge()' method call inside the class itself.");
+    }
+
+    public function testGetAgeCall()
+    {
+        $getAge = self::$code->find('method-call[name="getAge", variable="this"]');
+        
+        $this->assertEquals(1, $getAge->count(), "Expecting an 'getAge()' method call inside the class itself.");
     }
     //still need to test the arguments in the method calls.
 }
