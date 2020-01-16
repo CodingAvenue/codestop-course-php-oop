@@ -60,5 +60,5 @@ class IncorrectAccessToPrivatePropertyTest extends Proof
         
         $this->assertEquals(1, $personCall->count(), "Expecting a static method call named 'greeting()' of the `Person` class.");
     }  
-    //still need to test the arguments in the method calls.
+    //still need to test the arguments in the method calls and static property call.
 } 
