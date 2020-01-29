@@ -1,6 +1,6 @@
 <?php
 require_once("./autoloader/Autoload.php");
 
-$sudentObject = new Student("Charles", 15);
-$sudentObject->display();
+$studentObject = new Student("Charles", 15);
+$studentObject->display();
 ?>
