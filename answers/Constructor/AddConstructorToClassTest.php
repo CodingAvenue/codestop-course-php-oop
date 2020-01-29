@@ -29,11 +29,6 @@ class Animal
         return $this->type;
     }
 
-    public function changeType($newType)
-    {
-        $this->type = $newType;
-    }
-
     private function isValid($value)
     {
         if ($value > 0) {

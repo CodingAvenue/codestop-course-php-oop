@@ -30,7 +30,7 @@ class AddConstructorToClassTest extends Proof
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 	
-        $this->assertEquals(5, $nodes->count(), "Expecting five assignment statements.");
+        $this->assertEquals(4, $nodes->count(), "Expecting four assignment statements.");
     }
 	
     public function testPetVariable()
@@ -75,13 +75,6 @@ class AddConstructorToClassTest extends Proof
         $this->assertEquals(1, $getType->count(), "Expecting a public method named 'getType()'.");
     }
 
-    public function testChangeType()
-    {
-        $changeType = self::$code->find('method[name="changeType", type="public"]');
-        
-        $this->assertEquals(1, $changeType->count(), "Expecting a public method named 'changeType()'.");
-    }
-    
     public function testDisplay()
     {
         $display = self::$code->find('method[name="display", type="public"]');
@@ -159,13 +152,6 @@ class AddConstructorToClassTest extends Proof
         $this->assertEquals(1, $newAgeParam->count(), "Expecting a parameter named 'newAge' in the `setAge()` method.");
     }
 
-    public function testNewTypeParam()
-    {
-        $newTypeParam = self::$code->find('param[name="newType"]');
-    
-        $this->assertEquals(1, $newTypeParam->count(), "Expecting a parameter named 'newType' in the `changeType()` method.");
-    }
-
     public function testValueParam()
     {
         $valueParam = self::$code->find('param[name="value"]');
@@ -177,7 +163,7 @@ class AddConstructorToClassTest extends Proof
     {
         $type = self::$code->find('property-call[name="type", variable="this"]');
         
-        $this->assertEquals(3, $type->count(), "Expecting three `type` property calls inside the `Animal` class itself.");
+        $this->assertEquals(2, $type->count(), "Expecting two `type` property calls inside the `Animal` class itself.");
     }
     
     public function testAgePropertyCall()
