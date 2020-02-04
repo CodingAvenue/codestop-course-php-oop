@@ -65,6 +65,17 @@ class CreatePlantObjectTest extends Proof
         $this->assertEquals(1, $type->count(), "Expecting a public class property named 'type'.");
     }
 
+    public function testTypeValue()
+    {
+        $obj = self::$code->find('class[name="Plant"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="public"]');
+        $value = $type->getSubNode()->getSubNode();
+        $treeValue = $value->find('string[value="Tree"]');
+        
+        $this->assertEquals(1, $treeValue->count(), "Expecting the value 'Tree' assigned to the 'type' property.");
+    }
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Plant"]');
