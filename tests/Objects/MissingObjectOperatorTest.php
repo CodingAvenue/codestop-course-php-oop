@@ -50,8 +50,8 @@ class MissingObjectOperatorTest extends Proof
     public function testEat()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
-		$eat = $subNodes->find('method[name="eat"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
 
         $this->assertEquals(1, $eat->count(), "Expecting an eat() method.");
     }
@@ -59,8 +59,8 @@ class MissingObjectOperatorTest extends Proof
     public function testNameProperty()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
-		$name = $subNodes->find('property[name="name", type="public"]');
+        $subNodes = $obj->getSubnode();
+        $name = $subNodes->find('property[name="name", type="public"]');
 
         $this->assertEquals(1, $name->count(), "Expecting a public class property named 'name'.");
     }

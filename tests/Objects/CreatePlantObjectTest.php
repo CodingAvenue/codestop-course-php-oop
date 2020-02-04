@@ -50,17 +50,17 @@ class CreatePlantObjectTest extends Proof
     public function testGrow()
     {
         $obj = self::$code->find('class[name="Plant"]');
-		$subNodes = $obj->getSubnode();
-		$grow = $subNodes->find('method[name="grow"]');
-        
+        $subNodes = $obj->getSubnode();
+        $grow = $subNodes->find('method[name="grow"]');
+
         $this->assertEquals(1, $grow->count(), "Expecting a grow() method.");
     }
 
     public function testTypeProperty()
     {
         $obj = self::$code->find('class[name="Plant"]');
-		$subNodes = $obj->getSubnode();
-		$type = $subNodes->find('property[name="type", type="public"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="public"]');
       
         $this->assertEquals(1, $type->count(), "Expecting a public class property named 'type'.");
     }
