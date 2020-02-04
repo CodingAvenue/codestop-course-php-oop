@@ -49,6 +49,7 @@ class ComposerStaticInit7802ae54e47ee8d22e8393363acd14db
         ),
         'C' => 
         array (
+            'Composer\\XdebugHandler\\' => 23,
             'CodingAvenue\\Proof\\' => 19,
         ),
     );
@@ -131,6 +132,10 @@ class ComposerStaticInit7802ae54e47ee8d22e8393363acd14db
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'Composer\\XdebugHandler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
         ),
         'CodingAvenue\\Proof\\' => 
         array (
