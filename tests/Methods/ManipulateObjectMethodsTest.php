@@ -69,6 +69,17 @@ class ManipulateObjectMethodsTest extends Proof
         $this->assertEquals(1, $type->count(), "Expecting a public class property named 'type'.");
     }
 
+    public function testTypeValue()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="public"]');
+        $value = $type->getSubNode()->getSubNode();
+        $dogValue = $value->find('string[value="Dog"]');
+
+        $this->assertEquals(1, $dogValue->count(), "Expecting the value 'Dog' assigned to the 'type' property.");
+    }
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Animal"]');
@@ -96,7 +107,16 @@ class ManipulateObjectMethodsTest extends Proof
     
         $this->assertEquals(1, $newTypeParam->count(), "Expecting a parameter named 'newType' in the `changeType()` method.");
     }
+             
+    public function testChangeTypeCallArgs()
+    {
+        $changeType = self::$code->find('method-call[name="changeType", variable="pet"]');
+        $args = $changeType->getSubNode()->getSubnode();
+        $value = $args->find('string[value="Cat"]');
     
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Cat` in the 'changeType()' method call of 'pet'.");
+    } 
+
     public function testTypePropertyCall()
     {
         $type = self::$code->find('property-call[name="type", variable="this"]');

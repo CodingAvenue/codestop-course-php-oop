@@ -68,6 +68,26 @@ class MissingObjectOperatorTest extends Proof
         $this->assertEquals(1, $name->count(), "Expecting a public class property named 'name'.");
     }
 
+    public function testNameValue()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $name = $subNodes->find('property[name="name", type="public"]');
+        $value = $name->getSubNode()->getSubNode();
+        $dianaValue = $value->find('string[value="Diana"]');
+
+        $this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
+    }
+        
+    public function testChangeNameCallArgs()
+    {
+        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $args = $changeName->getSubNode()->getSubnode();
+        $value = $args->find('string[value="Charles"]');
+   
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
+    } 
+    
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Person"]');
