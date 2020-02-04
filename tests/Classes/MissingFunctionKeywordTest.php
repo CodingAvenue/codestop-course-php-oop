@@ -49,15 +49,19 @@ class MissingFunctionKeywordTest extends Proof
 
 	public function testMyMethod()
 	{
-		$myMethod = self::$code->find('method[name="myMethod"]');
-
+		$obj = self::$code->find('class[name="MyClass"]');
+		$subNodes = $obj->getSubnode();
+		$myMethod = $subNodes->find('method[name="myMethod"]');
+		
 		$this->assertEquals(1, $myMethod->count(), "Expecting a myMethod() method.");
 	}
 
 	public function testMyPropVariable()
 	{
-		$myProp = self::$code->find('property[name="myProp", type="public"]');
-
+		$obj = self::$code->find('class[name="MyClass"]');
+		$subNodes = $obj->getSubnode();
+		$myProp = $subNodes->find('property[name="myProp", type="public"]');
+		
 		$this->assertEquals(1, $myProp->count(), "Expecting a public class property named 'myProp'.");
 	}
 
