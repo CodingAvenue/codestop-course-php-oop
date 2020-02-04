@@ -61,7 +61,7 @@ class MissingParenthesesAfterMethodTest extends Proof
 		$obj = self::$code->find('class[name="MyClass"]');
 		$subNodes = $obj->getSubnode();
 		$myProp = $subNodes->find('property[name="myProp", type="public"]');
-		
+
 		$this->assertEquals(1, $myProp->count(), "Expecting a public class property named 'myProp'.");
 	}
 

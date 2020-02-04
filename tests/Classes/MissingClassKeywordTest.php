@@ -52,7 +52,7 @@ class MissingClassKeywordTest extends Proof
 		$obj = self::$code->find('class[name="MyClass"]');
 		$subNodes = $obj->getSubnode();
 		$myMethod = $subNodes->find('method[name="myMethod"]');
-		
+
 		$this->assertEquals(1, $myMethod->count(), "Expecting a myMethod() method.");
 	}
 
