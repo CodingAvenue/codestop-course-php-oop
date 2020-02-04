@@ -50,24 +50,30 @@ class MissingPublicKeywordTest extends Proof
 
     public function testEat()
     {
-        $eat = self::$code->find('method[name="eat"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
 
         $this->assertEquals(1, $eat->count(), "Expecting an eat() method.");
     }
 
     public function testNameProperty()
     {
-        $name = self::$code->find('property[name="name", type="public"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $name = $subNodes->find('property[name="name", type="public"]');
 
         $this->assertEquals(1, $name->count(), "Expecting a public class property named 'name'.");
     }
 
     public function testAddressProperty()
-    {
-        $address = self::$code->find('property[name="address", type="public"]');
+    {        
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $address = $subNodes->find('property[name="address", type="public"]');
 
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
-    }    
+    }     
 
     public function testClass()
     {
