@@ -75,6 +75,17 @@ class ManipulateObjectPropertiesTest extends Proof
         $this->assertEquals(1, $breed->count(), "Expecting a public class property named 'breed'.");
     }    
 
+    public function testNameValue()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="public"]');
+        $value = $type->getSubNode()->getSubNode();
+        $dogValue = $value->find('string[value="Dog"]');
+
+        $this->assertEquals(1, $dogValue->count(), "Expecting the value 'Dog' assigned to the 'type' property.");
+    }
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Animal"]');

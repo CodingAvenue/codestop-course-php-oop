@@ -75,6 +75,17 @@ class CorrectMultipleErrorsTest extends Proof
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
     } 
 
+    public function testNameValue()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $name = $subNodes->find('property[name="name", type="public"]');
+        $value = $name->getSubNode()->getSubNode();
+        $dianaValue = $value->find('string[value="Diana"]');
+
+        $this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
+    }
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Person"]');
