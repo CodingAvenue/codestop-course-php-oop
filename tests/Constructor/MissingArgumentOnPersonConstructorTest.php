@@ -49,14 +49,18 @@ class MissingArgumentOnPersonConstructorTest extends Proof
          
     public function testConstruct()
     {
-        $construct = self::$code->find('method[name="__construct", type="public"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
         
         $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
     }
     
     public function testNameProperty()
     {
-        $name = self::$code->find('property[name="name", type="public"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $name = $subNodes->find('property[name="name", type="public"]');
         
         $this->assertEquals(1, $name->count(), "Expecting a public class property named 'name'.");
     }
