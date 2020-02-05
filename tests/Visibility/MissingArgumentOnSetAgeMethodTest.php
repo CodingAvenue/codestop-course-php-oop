@@ -49,45 +49,78 @@ class MissingArgumentOnSetAgeMethodTest extends Proof
 
     public function testCheckAge()
     {
-        $checkAge = self::$code->find('method[name="checkAge", type="private"]');
-
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
+        
         $this->assertEquals(1, $checkAge->count(), "Expecting a private method named 'checkAge()'.");
     }
-
+           
     public function testSetAge()
     {
-        $setAge = self::$code->find('method[name="setAge", type="public"]');
-
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $setAge = $subNodes->find('method[name="setAge", type="public"]');
+        
         $this->assertEquals(1, $setAge->count(), "Expecting a public method named 'setAge()'.");
     }
 
     public function testGetAge()
     {
-        $getAge = self::$code->find('method[name="getAge", type="public"]');
-
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $getAge = $subNodes->find('method[name="getAge", type="public"]');
+        
         $this->assertEquals(1, $getAge->count(), "Expecting a public method named 'getAge()'.");
     }
-
+    
     public function testDisplay()
     {
-        $display = self::$code->find('method[name="display", type="public"]');
-
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        
         $this->assertEquals(1, $display->count(), "Expecting a display() method.");
     }
-
+    
     public function testNameProperty()
     {
-        $name = self::$code->find('property[name="name", type="public"]');
-
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $name = $subNodes->find('property[name="name", type="public"]');
+        
         $this->assertEquals(1, $name->count(), "Expecting a public class property named 'name'.");
     }
 
     public function testAgeProperty()
     {
-        $age = self::$code->find('property[name="age", type="private"]');
-
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $age = $subNodes->find('property[name="age", type="private"]');
+        
         $this->assertEquals(1, $age->count(), "Expecting a private class property named 'age'.");
     }
+    
+    public function testNameValue()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $name = $subNodes->find('property[name="name", type="public"]');
+        $value = $name->getSubNode()->getSubNode();
+        $annaValue = $value->find('string[value="Anna"]');
+
+        $this->assertEquals(1, $annaValue->count(), "Expecting the value 'Anna' assigned to the 'name' property.");
+    }
+/*
+    public function testSetAgeCallArgs()
+    {
+        $setAge = self::$code->find('method-call[name="setAge", variable="personObject"]');
+        $args = $setAge->getSubNode()->getSubnode();
+      
+        $value = $args->find('number[value="45"]');
+        print_r($value);
+        $this->assertEquals(1, $value->count(), "Expecting the argument `45` in the 'setAge()' method call of 'personObject'.");
+    } */
 
     public function testClass()
     {

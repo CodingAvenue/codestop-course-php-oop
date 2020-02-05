@@ -49,60 +49,87 @@ class CreateClassWithPrivatePropertyAndMethodTest extends Proof
     
     public function testIsValid()
     {
-        $isValid = self::$code->find('method[name="isValid", type="private"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
         
         $this->assertEquals(1, $isValid->count(), "Expecting a private method named 'isValid()'.");
     }
            
     public function testSetAge()
     {
-        $setAge = self::$code->find('method[name="setAge", type="public"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $setAge = $subNodes->find('method[name="setAge", type="public"]');
         
         $this->assertEquals(1, $setAge->count(), "Expecting a public method named 'setAge()'.");
     }
 
     public function testGetAge()
     {
-        $getAge = self::$code->find('method[name="getAge", type="public"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getAge = $subNodes->find('method[name="getAge", type="public"]');
         
         $this->assertEquals(1, $getAge->count(), "Expecting a public method named 'getAge()'.");
     }
 
     public function testGetType()
     {
-        $getType = self::$code->find('method[name="getType", type="public"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getType = $subNodes->find('method[name="getType", type="public"]');
         
         $this->assertEquals(1, $getType->count(), "Expecting a public method named 'getType()'.");
     }
 
     public function testChangeType()
     {
-        $changeType = self::$code->find('method[name="changeType", type="public"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $changeType = $subNodes->find('method[name="changeType", type="public"]');
         
         $this->assertEquals(1, $changeType->count(), "Expecting a public method named 'changeType()'.");
     }
     
     public function testDisplay()
     {
-        $display = self::$code->find('method[name="display", type="public"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
         
         $this->assertEquals(1, $display->count(), "Expecting a display() method.");
     }
     
     public function testTypeProperty()
     {
-        $type = self::$code->find('property[name="type", type="private"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="private"]');
         
         $this->assertEquals(1, $type->count(), "Expecting a private class property named 'type'.");
     }
 
     public function testAgeProperty()
     {
-        $age = self::$code->find('property[name="age", type="private"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $age = $subNodes->find('property[name="age", type="private"]');
         
         $this->assertEquals(1, $age->count(), "Expecting a private class property named 'age'.");
     }
-    
+  
+    public function testTypeValue()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="private"]');
+        $value = $type->getSubNode()->getSubNode();
+        $dogValue = $value->find('string[value="Dog"]');
+
+        $this->assertEquals(1, $dogValue->count(), "Expecting the value 'Dog' assigned to the 'type' property.");
+    }
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Animal"]');
@@ -131,6 +158,25 @@ class CreateClassWithPrivatePropertyAndMethodTest extends Proof
         $this->assertEquals(1, $changeType->count(), "Expecting a 'changeType()' method call of 'pet'.");
     }   
 
+    public function testChangeTypeCallArgs()
+    {
+        $changeType = self::$code->find('method-call[name="changeType", variable="pet"]');
+        $args = $changeType->getSubNode()->getSubnode();
+        $value = $args->find('string[value="Cat"]');
+
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Cat` in the 'changeType()' method call of 'pet'.");
+    } 
+    /*
+    public function testSetAgeCallArgs()
+    {
+        $setAge = self::$code->find('method-call[name="setAge", variable="pet"]');
+        $args = $setAge->getSubNode()->getSubnode();
+      
+        $value = $args->find('number[value="1.5"]');
+        print_r($value);
+        $this->assertEquals(1, $value->count(), "Expecting the argument `45` in the 'setAge()' method call of 'pet'.");
+    } */
+
     public function testReturn()
     {
         $nodes = self::$code->find('construct[name="return"]');
@@ -147,16 +193,18 @@ class CreateClassWithPrivatePropertyAndMethodTest extends Proof
 
     public function testValueParam()
     {
-        $valueParam=self::$code->find('param[name="value"]');
+        $valueParam = self::$code->find('param[name="value"]');
     
         $this->assertEquals(1, $valueParam->count(), "Expecting a parameter named 'value'.");
     }
+
     public function testNewAgeParam()
     {
         $ageParam = self::$code->find('param[name="newAge"]');
     
         $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'newAge'.");
     }
+
     public function testNewTypeParam()
     {
         $typeParam = self::$code->find('param[name="newType"]');
