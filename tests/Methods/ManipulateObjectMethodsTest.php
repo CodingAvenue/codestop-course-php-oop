@@ -50,21 +50,27 @@ class ManipulateObjectMethodsTest extends Proof
 
     public function testChangeType()
     {
-        $changeType = self::$code->find('method[name="changeType"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $changeType = $subNodes->find('method[name="changeType"]');
 
         $this->assertEquals(1, $changeType->count(), "Expecting a changeType() method.");
     }
 
     public function testDisplay()
     {
-        $display = self::$code->find('method[name="display"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display"]');
 
         $this->assertEquals(1, $display->count(), "Expecting a display() method.");
     }
 
     public function testTypeProperty()
     {
-        $type = self::$code->find('property[name="type", type="public"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="public"]');
 
         $this->assertEquals(1, $type->count(), "Expecting a public class property named 'type'.");
     }
