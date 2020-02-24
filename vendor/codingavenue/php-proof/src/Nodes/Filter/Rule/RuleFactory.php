@@ -83,6 +83,8 @@ class RuleFactory
             'param'         => "\CodingAvenue\Proof\Nodes\Filter\Rule\Function_\Param_",
             'args'          => "\CodingAvenue\Proof\Nodes\Filter\Rule\Function_\Args_",                      
             'string'        => "\CodingAvenue\Proof\Nodes\Filter\Rule\DataType\String_",
+            'integer'       => "\CodingAvenue\Proof\Nodes\Filter\Rule\DataType\Integer_",
+            'float'         => "\CodingAvenue\Proof\Nodes\Filter\Rule\DataType\Float_",
             'arrayfetch'    => "\CodingAvenue\Proof\Nodes\Filter\Rule\DataType\Arrayfetch",
             'array'         => "\CodingAvenue\Proof\Nodes\Filter\Rule\DataType\Array_",
             'echo'          => "\CodingAvenue\Proof\Nodes\Filter\Rule\Construct\Echo_",
@@ -100,6 +102,7 @@ class RuleFactory
             'for'           => "\CodingAvenue\Proof\Nodes\Filter\Rule\Construct\For_",
             'foreach'       => "\CodingAvenue\Proof\Nodes\Filter\Rule\Construct\Foreach_",
             'new'           => "\CodingAvenue\Proof\Nodes\Filter\Rule\Construct\New_",
+            'include'       => "CodingAvenue\Proof\Nodes\Filter\Rule\Construct\Include_",
             'class'         => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\Class_",
             'use'           => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\Use_",
             'namespace'     => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\Namespace_",
@@ -110,7 +113,8 @@ class RuleFactory
             'instantiate'   => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\Instantiate_",
             'method-call'   => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\MethodCall",
             'const'         => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\Const_",
-            'const-fetch'   => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\ConstFetch",             
+            'const-fetch'   => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\ConstFetch",
+            'static-prop-fetch' => "\CodingAvenue\Proof\Nodes\Filter\Rule\Class_\StaticPropFetch",          
             'method'        => "\CodingAvenue\Proof\Nodes\Filter\Rule\Function_\Method_"                    
         );
     }
