@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 /**
  * This file is part of PDepend.
@@ -39,23 +38,18 @@
  *
  * @copyright 2008-2017 Manuel Pichler. All rights reserved.
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
-  */
+ * @since 2.3
+ */
 
-// Map this phar archive
-Phar::mapPhar('${archive.alias}');
+namespace PDepend\Source\Language\PHP;
 
-// Configure include path to use this phar
-set_include_path('phar://${archive.alias}/' . PATH_SEPARATOR . get_include_path());
-
-// Run command line interface if this is the called file
-if (isset($argv[0]) && realpath($argv[0]) === __FILE__) {
-
-    // Set memory limit to max allowed
-    ini_set('memory_limit', -1);
-
-    // Load command line utility
-    include_once 'phar://${archive.alias}/vendor/autoload.php';
-
-    exit(\PDepend\TextUI\Command::main($argv));
+/**
+ * Concrete parser implementation that supports features up to PHP version 7.3.
+ *
+ * @copyright 2008-2017 Manuel Pichler. All rights reserved.
+ * @license http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @since 2.4
+ */
+abstract class PHPParserVersion73 extends PHPParserVersion72
+{
 }
-__HALT_COMPILER();
