@@ -13,7 +13,7 @@
 	"require": {
 		"nikic/php-parser": "^3.0.5",
 		"phpunit/phpunit": "^5.6",
-		"codingavenue/php-proof": "^0.1"
+		"codingavenue/php-proof": "^2.0"
 	},
 	"config": {
 		"bin-compat": "full"
