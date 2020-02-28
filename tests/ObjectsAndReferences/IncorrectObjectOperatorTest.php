@@ -1,7 +1,6 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class IncorrectObjectOperatorTest extends Proof
+class IncorrectObjectOperatorTest extends PHPUnit
 {
     public function testPhpStartTag()
     {
@@ -89,11 +88,10 @@ class IncorrectObjectOperatorTest extends Proof
         $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'objectVarA'.");
     }   
 
-    // lacking validation for class object referencing
+    public function testObjectReference()
+    {
+        $nodes = self::$code->find('assign-ref[variable="objectVarC", variable-ref="objectVarA"]');
 
-    // public function testParamByReference()
-    // {
-    //     $nodes = self::$code->find('function[name="displayPrimes", paramsByRefs="number"]');
-    //     $this->assertEquals(1, $nodes->count(), "Expecting a passed by reference parameter named 'number' for the 'displayPrimes()' function.");
-    // }  
+        $this->assertEquals(1, $nodes->count(), "Expecting the `objectVarA` variable as a reference of the `objectVarC` variable.");
+    }
 }  

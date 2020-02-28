@@ -1,7 +1,6 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class CreateNewObjectTest extends Proof
+class CreateAnObjectReferenceTest extends PHPUnit
 {
     public function testPhpStartTag()
     {
@@ -94,20 +93,19 @@ class CreateNewObjectTest extends Proof
         $display = self::$code->find('method-call[name="display", variable="animalB"]');
         
         $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'animalB'.");
-    }   
+    }
 
     public function testDisplayCallC()
     {
         $display = self::$code->find('method-call[name="display", variable="animalC"]');
         
         $this->assertEquals(2, $display->count(), "Expecting two 'display()' method calls of 'animalC'.");
-    }   
+    }
 
-    // lacking validation for class object referencing
-    
-    // public function testParamByReference()
-    // {
-    //     $nodes = self::$code->find('function[name="displayPrimes", paramsByRefs="number"]');
-    //     $this->assertEquals(1, $nodes->count(), "Expecting a passed by reference parameter named 'number' for the 'displayPrimes()' function.");
-    // }  
-}  
+    public function testObjectReference()
+    {
+        $nodes = self::$code->find('assign-ref[variable="animalC", variable-ref="animalA"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting the `animalA` variable as a reference of the `animalC` variable.");
+    }
+}
