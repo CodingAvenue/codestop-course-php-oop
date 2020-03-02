@@ -1,7 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-class MissingDollarSignTest extends PHPUnit
+use PHPUnit\Framework\TestCase;
+
+class MissingDollarSignTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();

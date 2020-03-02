@@ -1,7 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-class IncorrectObjectOperatorTest extends PHPUnit
+use PHPUnit\Framework\TestCase;
+
+class IncorrectObjectOperatorTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
