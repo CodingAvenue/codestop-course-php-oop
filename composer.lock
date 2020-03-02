@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "codingavenue/php-proof",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodingAvenue/ca-school-proof-library",
-                "reference": "3953090b3106f1f40e394679240ab16cfdc9b792"
+                "reference": "15de6c148ab026e0d45870039c0d0055153bdd06"
             },
             "require": {
                 "nikic/php-parser": "^3.0.5",
@@ -46,7 +46,7 @@
                 }
             ],
             "description": "Reusable functions",
-            "time": "2020-03-02T07:44:52+00:00"
+            "time": "2020-03-02T08:23:33+00:00"
         },
         {
             "name": "composer/xdebug-handler",
