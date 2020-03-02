@@ -1,17 +1,19 @@
 <?php
 use CodingAvenue\Proof\Code;
-class CreateAnObjectReferenceTest extends PHPUnit
+use PHPUnit\Framework\TestCase;
+class CreateAnObjectReferenceTest extends TestCase
 {
     protected static $code;
 
     public static function setupBeforeClass() {
+        
         self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+        
     }
 
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
-
         $this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
     }
 
