@@ -1,8 +1,15 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingDollarSignOnObjectTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingAssignmentOperatorTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
 
     public function testPhpStartTag()
     {
@@ -15,7 +22,7 @@ class MissingDollarSignOnObjectTest extends Proof
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
-        $expected  = "Canada";
+        $expected  = "Diana";
 
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
@@ -31,14 +38,14 @@ class MissingDollarSignOnObjectTest extends Proof
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement.");
     }
 
     public function testPersonObjectVariable()
     {
         $personObject = self::$code->find('variable[name="personObject"]');
 
-        $this->assertEquals(3, $personObject->count(), "Expecting three occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
     }
 
     public function testInstantiation()
@@ -73,7 +80,7 @@ class MissingDollarSignOnObjectTest extends Proof
         $address = $subNodes->find('property[name="address", type="public"]');
 
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
-    }   
+    }    
 
     public function testNameValue()
     {
@@ -93,10 +100,10 @@ class MissingDollarSignOnObjectTest extends Proof
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
     }  
 
-    public function testAddressCall()
+    public function testNameCall()
     {
-        $address = self::$code->find('property-call[name="address", variable="personObject"]');
+        $name = self::$code->find('property-call[name="name", variable="personObject"]');
 
-        $this->assertEquals(2, $address->count(), "Expecting two 'address' property calls of 'personObject'.");
+        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'personObject'.");
     }
 }  

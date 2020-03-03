@@ -1,8 +1,15 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingAssignmentOperatorTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingPublicKeywordTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
 
     public function testPhpStartTag()
     {
@@ -73,7 +80,7 @@ class MissingAssignmentOperatorTest extends Proof
         $address = $subNodes->find('property[name="address", type="public"]');
 
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
-    }    
+    }     
 
     public function testNameValue()
     {
