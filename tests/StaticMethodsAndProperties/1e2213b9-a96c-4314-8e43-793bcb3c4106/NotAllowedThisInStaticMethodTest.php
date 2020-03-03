@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class IncorrectScopeResolutionOperatorTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class NotAllowedThisInStaticMethodTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -158,7 +166,7 @@ class IncorrectScopeResolutionOperatorTest extends Proof
         
         $this->assertEquals(1, $selfCall->count(), "Expecting a static call of the 'greeting()' method.");
     }  
-    
+
     public function testAgePropertyCall()
     {
         $age = self::$code->find('property-call[name="age", variable="this"]');
@@ -172,5 +180,11 @@ class IncorrectScopeResolutionOperatorTest extends Proof
 
         $this->assertEquals(2, $checkAge->count(), "Expecting two 'checkAge()' method calls inside the class itself.");
     }  
-    //still need to test the arguments in the method calls.
+
+    public function testStaticPropertySelfCall()
+    {
+        $selfCall = self::$code->find('static-prop-fetch[class="self"]');
+
+        $this->assertEquals(2, $selfCall->count(), "Expecting two static property calls inside the `Person` class itself.");
+    }
 } 

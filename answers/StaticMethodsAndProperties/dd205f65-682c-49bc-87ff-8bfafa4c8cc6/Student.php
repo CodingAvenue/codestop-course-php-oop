@@ -1,5 +1,5 @@
 <?php
-require_once('./Person.php');
+require_once(__DIR__.'/Person.php');
 class Student extends Person
 {
     private $course;

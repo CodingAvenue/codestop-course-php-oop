@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class IncorrectCallToProtectedMethodTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class IncorrectThisKeywordTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -53,5 +61,11 @@ class IncorrectCallToProtectedMethodTest extends Proof
         
         $this->assertEquals(1, $personCall->count(), "Expecting a static method call named 'greeting()' of the `Person` class.");
     }  
-    //still need to test the arguments in the method calls and static property call.
+
+    public function testStaticPropertySelfCall()
+    {
+        $selfCall = self::$code->find('static-prop-fetch[class="self"]');
+
+        $this->assertEquals(1, $selfCall->count(), "Expecting one static property call inside the `Person` class itself.");
+    }
 } 

@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class CreateNewClassWithStaticMethodAndPropertyTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -130,28 +138,18 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends Proof
 
         $this->assertEquals(1, $valueParam->count(), "Expecting a parameter named 'value' in the `isValid()` method.");
     }
-       
+
     public function testIsValidCall()
     {
         $isValid = self::$code->find('method-call[name="isValid", variable="this"]');
         
         $this->assertEquals(1, $isValid->count(), "Expecting one 'isValid()' method call inside the `Animal` class itself.");
     }
-    /*
-    public function testAgePropertyCall()
-    {
-        $age = self::$code->find('property-call[name="age", variable="self"]');
 
-        $this->assertEquals(3, $age->count(), "Expecting three `age` property calls inside the `Animal` class itself.");
-    }  
-
-    /*
-    public function testSelfTypeCall()
+    public function testStaticPropertySelfCall()
     {
-        $selfCall = self::$code->find('static-call[class="self"]');
-        print_r($selfCall);
-        $this->assertEquals(1, $parent->count(), "Expecting a 'getName()' method call of the parent class.");
-    }  
-    */
-    //still need to test the arguments in the method calls.
+        $selfCall = self::$code->find('static-prop-fetch[class="self"]');
+
+        $this->assertEquals(4, $selfCall->count(), "Expecting four static property calls inside the `Animal` class itself.");
+    }
 } 
