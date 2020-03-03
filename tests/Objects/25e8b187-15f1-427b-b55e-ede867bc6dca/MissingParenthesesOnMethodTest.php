@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingObjectOperatorTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingParenthesesOnMethodTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -14,7 +22,7 @@ class MissingObjectOperatorTest extends Proof
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
-        $expected  = "Diana";
+        $expected  = "This is an eat() method.";
 
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
@@ -23,7 +31,7 @@ class MissingObjectOperatorTest extends Proof
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
     }
 
     public function testAssignment()
@@ -83,10 +91,10 @@ class MissingObjectOperatorTest extends Proof
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
     }  
 
-    public function testNameCall()
+    public function testEatCall()
     {
-        $name = self::$code->find('property-call[name="name", variable="personObject"]');
+        $eat = self::$code->find('method-call[name="eat", variable="personObject"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'personObject'.");
+        $this->assertEquals(1, $eat->count(), "Expecting an 'eat()' method call of 'personObject'.");
     }
 } 
