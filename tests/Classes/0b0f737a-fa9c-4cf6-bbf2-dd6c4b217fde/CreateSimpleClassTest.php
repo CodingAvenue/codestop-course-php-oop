@@ -38,14 +38,14 @@ class CreateSimpleClassTest extends TestCase
 	{
 		$nodes = self::$code->find('operator[name="assignment"]');
 
-		$this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'pObject'.");
+		$this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'personObject'.");
 	}
 
-	public function testpObjectVariable()
+	public function testPersonObjectVariable()
 	{
-		$pObject = self::$code->find('variable[name="pObject"]');
+		$personObject = self::$code->find('variable[name="personObject"]');
 
-		$this->assertEquals(2, $pObject->count(), "Expecting two occurrences of the variable named 'pObject'.");
+		$this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
 	}
 
 	public function testInstantiation()
@@ -82,8 +82,8 @@ class CreateSimpleClassTest extends TestCase
 
 	public function testEatCall()
 	{
-		$eat = self::$code->find('method-call[name="eat", variable="pObject"]');
+		$eat = self::$code->find('method-call[name="eat", variable="personObject"]');
 
-		$this->assertEquals(1, $eat->count(), "Expecting an 'eat()' method call of 'pObject'.");
+		$this->assertEquals(1, $eat->count(), "Expecting an 'eat()' method call of 'personObject'.");
 	}
 }
