@@ -38,7 +38,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
 $user = new App\User();
 
@@ -136,7 +136,7 @@ What does the statement `namespace App\Model;` do?
 
 /// type=SS, id=8f60fe15-a416-4ce3-b9e1-d9affe3052b2, answer=[3]
 
-Which statement best describes `require_once("./UserApp.php");` on line 2 of `Main.php`?
+Which statement best describes `require_once(__DIR__ . "/UserApp.php");` on line 2 of `Main.php`?
 
 - It updates the file `UserApp.php`.
 
@@ -200,7 +200,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
 use App\User;
 
@@ -235,7 +235,7 @@ Which of the following are namespace definitions?
 
  - `namespace App\Model;`
 
- - `require_once("./UserApp.php");`
+ - `require_once(__DIR__ . "/UserApp.php");`
 
 
 /// type=SS, id=191f75a7-f13c-4d9a-95a0-7b31941ef4f2, answer=[4]
@@ -304,7 +304,7 @@ class User
 
 ```php
 <?php
-require_once("./UserModel.php");
+require_once(__DIR__ . "/UserModel.php");
 
 use App\Model\User as NewUser;
 
@@ -447,7 +447,7 @@ class Circle
 
 ```php
 <?php
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Math\Geometry;
 
@@ -649,7 +649,7 @@ class Circle
 
 ```php
 <?php
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Math\Geometry;
 
@@ -731,7 +731,7 @@ class Circle
 
 ```php
 <?php
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 echo "The area of the circle is: " . Geometry::getCircleArea(10);
 ?>
@@ -811,8 +811,8 @@ class Circle
 
 ```php
 <?php
-require_once('./Constants.php');
-require_once('./Circle.php');
+require_once(__DIR__ . '/Constants.php');
+require_once(__DIR__ . '/Circle.php');
 
 use Math\Geometry\Circle as NewCircle;
 
@@ -910,8 +910,8 @@ class Circle
 
 ```php
 <?php
-require_once('./Constants.php');
-require_once('./Circle.php');
+require_once(__DIR__ . '/Constants.php');
+require_once(__DIR__ . '/Circle.php');
 
 use Math\Geometry\Circle;
 
@@ -999,7 +999,7 @@ class Circle
 <?php
 namespace Test;
 
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Math\Geometry;
 
@@ -1106,7 +1106,7 @@ class Circle
 <?php
 namespace Test;
 
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Math\Geometry;
 
@@ -1198,7 +1198,7 @@ class Circle
 <?php
 namespace Test;
 
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Math\Geometry;
 
@@ -1290,7 +1290,7 @@ class Circle
 <?php
 namespace Test;
 
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Math\Geometry;
 
@@ -1397,7 +1397,7 @@ class Circle
 <?php
 namespace Test;
 
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 use Exception;
 use Math\Geometry;
 
@@ -1489,7 +1489,7 @@ class Circle
 <?php
 namespace Test;
 
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Exception;
 
@@ -1596,7 +1596,7 @@ class Circle
 <?php
 namespace Test;
 
-require_once('./Math.php');
+require_once(__DIR__ . '/Math.php');
 
 use Exception;
 
@@ -1732,7 +1732,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
 $user = new User();
 
@@ -1819,7 +1819,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
 $user = new User();
 
@@ -1861,7 +1861,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
 use App;
 
@@ -1935,7 +1935,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
 use App;
 
@@ -1979,7 +1979,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
  App\User;
 
@@ -2053,7 +2053,7 @@ class User
 
 ```php
 <?php
-require_once("./UserApp.php");
+require_once(__DIR__ . "/UserApp.php");
 
  App\User;
 
@@ -2097,7 +2097,7 @@ class User
 
 ```php
 <?php
-require_once("./UserModel.php");
+require_once(__DIR__ . "/UserModel.php");
 
 use App\Model\User as NewModel;
 
@@ -2171,7 +2171,7 @@ class User
 
 ```php
 <?php
-require_once("./UserModel.php");
+require_once(__DIR__ . "/UserModel.php");
 
 use App\Model\User as NewModel;
 
@@ -2215,7 +2215,7 @@ class User
 
 ```php
 <?php
-require_once("./UserModel.php");
+require_once(__DIR__ . "/UserModel.php");
 
 use App\Model\User  NewModel;
 
@@ -2289,7 +2289,7 @@ class User
 
 ```php
 <?php
-require_once("./UserModel.php");
+require_once(__DIR__ . "/UserModel.php");
 
 use App\Model\User  NewModel;
 
@@ -2357,8 +2357,8 @@ class Circle
 
 ```php
 <?php
-require_once('./Constants.php');
-require_once('./Circle.php');
+require_once(__DIR__ . '/Constants.php');
+require_once(__DIR__ . '/Circle.php');
 
 use Math\Geometry\Circle as NewCircle;
 
@@ -2455,8 +2455,8 @@ class Circle
 
 ```php
 <?php
-require_once('./Constants.php');
-require_once('./Circle.php');
+require_once(__DIR__ . '/Constants.php');
+require_once(__DIR__ . '/Circle.php');
 
 use Math\Geometry\Circle as NewCircle;
 
@@ -2537,8 +2537,8 @@ class Circle
 
 ```php
 <?php
-require_once('./Constants.php');
-require_once('./Circle.php');
+require_once(__DIR__ . '/Constants.php');
+require_once(__DIR__ . '/Circle.php');
 
 use Math\Geometry\Circle as NewCircle;
 
@@ -2619,8 +2619,8 @@ class Circle
 
 ```php
 <?php
-require_once('./Constants.php');
-require_once('./Circle.php');
+require_once(__DIR__ . '/Constants.php');
+require_once(__DIR__ . '/Circle.php');
 
 use Math\Geometry\Circle  NewCircle;
 
@@ -2679,7 +2679,7 @@ abstract class CircularShape
 <?php
 // add the required classes and namespaces here..
 
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 
 class Circle extends CircularShape
 {	
@@ -2705,8 +2705,8 @@ class Circle extends CircularShape
 <?php
 // add the required classes and namespaces here...
 
-require_once('./Constants.php');
-require_once('./Circle.php');
+require_once(__DIR__ . '/Constants.php');
+require_once(__DIR__ . '/Circle.php');
 
 $circle = new MyCircle(5.5);
 echo "The area of the circle is: " . $circle->area();
