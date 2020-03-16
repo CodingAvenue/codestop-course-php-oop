@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingFunctionKeywordOnMethodTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingReturnThisOnMethodTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -14,7 +22,7 @@ class MissingFunctionKeywordOnMethodTest extends Proof
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
-        $expected  = "Charles";
+        $expected  = "My name is Charles.";
 
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
@@ -37,7 +45,7 @@ class MissingFunctionKeywordOnMethodTest extends Proof
     {
         $personObject = self::$code->find('variable[name="personObject"]');
 
-        $this->assertEquals(3, $personObject->count(), "Expecting three occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
     }
 
     public function testInstantiation()
@@ -54,6 +62,15 @@ class MissingFunctionKeywordOnMethodTest extends Proof
         $changeName = $subNodes->find('method[name="changeName"]');
 
         $this->assertEquals(1, $changeName->count(), "Expecting a changeName() method.");
+    }
+
+    public function testDisplay()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display"]');
+
+        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
     }
 
     public function testNameProperty()
@@ -75,15 +92,6 @@ class MissingFunctionKeywordOnMethodTest extends Proof
 
         $this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
     }
-    
-    public function testChangeNameCallArgs()
-    {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
-        $args = $changeName->getSubNode()->getSubnode();
-        $value = $args->find('string[value="Charles"]');
-   
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
-    } 
 
     public function testClass()
     {
@@ -92,11 +100,11 @@ class MissingFunctionKeywordOnMethodTest extends Proof
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
     }  
 
-    public function testChangeNameCall()
+    public function testReturn()
     {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $nodes = self::$code->find('construct[name="return"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'personObject'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting a return statement.");
     }
     
     public function testNewNameParam()
@@ -106,10 +114,28 @@ class MissingFunctionKeywordOnMethodTest extends Proof
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
     }
 
+    public function testChainMethodCalls()
+    {
+        $display = self::$code->find('method-call[name="display"]');
+        $subNode = $display->getSubNode();
+        $changeName = $subNode->find('method-call[name="changeName", variable="personObject"]');
+
+        $this->assertEquals(1, $changeName->count(), "Expecting chain method calls for `changeName()` and `display()` methods of 'personObject'.");
+    }  
+         
+    public function testChangeNameCallArgs()
+    {
+        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $args = $changeName->getSubNode()->getSubnode();
+        $value = $args->find('string[value="Charles"]');
+    
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
+    } 
+  
     public function testNamePropertyCall()
     {
         $name = self::$code->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `Person` class itself.");
+        $this->assertEquals(2, $name->count(), "Expecting two `name` property calls inside the `Person` class itself.");
     }
-} 
+}

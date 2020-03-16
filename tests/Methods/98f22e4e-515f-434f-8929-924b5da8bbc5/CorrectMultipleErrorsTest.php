@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingObjectOperatorTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class CorrectMultipleErrorsTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -84,16 +92,7 @@ class MissingObjectOperatorTest extends Proof
 
         $this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
     }
-        
-    public function testChangeNameCallArgs()
-    {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
-        $args = $changeName->getSubNode()->getSubnode();
-        $value = $args->find('string[value="Charles"]');
-   
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
-    } 
-    
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Person"]');
@@ -108,20 +107,29 @@ class MissingObjectOperatorTest extends Proof
         $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'personObject'.");
     }  
 
+    public function testChangeNameCallArgs()
+    {
+        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $args = $changeName->getSubNode()->getSubnode();
+        $value = $args->find('string[value="Charles"]');
+   
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
+    } 
+
     public function testDisplayCall()
     {
         $display = self::$code->find('method-call[name="display", variable="personObject"]');
 
         $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'personObject'.");
     }
-    
+
     public function testNewNameParam()
     {
         $newNameParam = self::$code->find('param[name="newName"]');
     
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
     }
-    
+
     public function testNamePropertyCall()
     {
         $name = self::$code->find('property-call[name="name", variable="this"]');

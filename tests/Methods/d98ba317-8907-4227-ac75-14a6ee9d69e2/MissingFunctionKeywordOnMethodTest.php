@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class CorrectMultipleErrorsTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingFunctionKeywordOnMethodTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -14,7 +22,7 @@ class CorrectMultipleErrorsTest extends Proof
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
-        $expected  = "My name is Charles.";
+        $expected  = "Charles";
 
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
@@ -56,15 +64,6 @@ class CorrectMultipleErrorsTest extends Proof
         $this->assertEquals(1, $changeName->count(), "Expecting a changeName() method.");
     }
 
-    public function testDisplay()
-    {
-        $obj = self::$code->find('class[name="Person"]');
-        $subNodes = $obj->getSubnode();
-        $display = $subNodes->find('method[name="display"]');
-
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
-    }
-
     public function testNameProperty()
     {
         $obj = self::$code->find('class[name="Person"]');
@@ -84,6 +83,15 @@ class CorrectMultipleErrorsTest extends Proof
 
         $this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
     }
+    
+    public function testChangeNameCallArgs()
+    {
+        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $args = $changeName->getSubNode()->getSubnode();
+        $value = $args->find('string[value="Charles"]');
+   
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
+    } 
 
     public function testClass()
     {
@@ -97,24 +105,8 @@ class CorrectMultipleErrorsTest extends Proof
         $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
 
         $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'personObject'.");
-    }  
-
-    public function testChangeNameCallArgs()
-    {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
-        $args = $changeName->getSubNode()->getSubnode();
-        $value = $args->find('string[value="Charles"]');
-   
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
-    } 
-
-    public function testDisplayCall()
-    {
-        $display = self::$code->find('method-call[name="display", variable="personObject"]');
-
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'personObject'.");
     }
-
+    
     public function testNewNameParam()
     {
         $newNameParam = self::$code->find('param[name="newName"]');
@@ -126,6 +118,6 @@ class CorrectMultipleErrorsTest extends Proof
     {
         $name = self::$code->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(2, $name->count(), "Expecting two `name` property calls inside the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `Person` class itself.");
     }
 } 

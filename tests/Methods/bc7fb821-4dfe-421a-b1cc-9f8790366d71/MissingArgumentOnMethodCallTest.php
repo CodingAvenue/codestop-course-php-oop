@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingDollarSignOnObjectTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingArgumentOnMethodCallTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -61,7 +69,7 @@ class MissingDollarSignOnObjectTest extends Proof
         $obj = self::$code->find('class[name="Person"]');
         $subNodes = $obj->getSubnode();
         $name = $subNodes->find('property[name="name", type="public"]');
-
+       
         $this->assertEquals(1, $name->count(), "Expecting a public class property named 'name'.");
     }
 
@@ -84,7 +92,7 @@ class MissingDollarSignOnObjectTest extends Proof
    
         $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
     } 
-    
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Person"]');
@@ -98,14 +106,14 @@ class MissingDollarSignOnObjectTest extends Proof
 
         $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'personObject'.");
     }
-    
+
     public function testNewNameParam()
     {
         $newNameParam = self::$code->find('param[name="newName"]');
     
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
     }
-    
+
     public function testNamePropertyCall()
     {
         $name = self::$code->find('property-call[name="name", variable="this"]');
