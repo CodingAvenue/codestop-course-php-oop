@@ -20,7 +20,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -352,8 +352,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -648,7 +648,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -770,7 +770,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -847,7 +847,7 @@ interfaces LifeCycle
 
 ```php
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -954,7 +954,7 @@ interfaces LifeCycle
 
 ```php
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1031,7 +1031,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1138,7 +1138,7 @@ interface LifeCycle
 
 ```php
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -1260,8 +1260,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implement LifeCycle
 {
     public function species()
@@ -1377,8 +1377,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implement LifeCycle
 {
     public function species()
@@ -1464,8 +1464,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1576,8 +1576,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php'); 
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php'); 
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1658,8 +1658,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php'); 
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php'); 
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1775,8 +1775,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1862,8 +1862,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -1979,8 +1979,8 @@ abstract class Person
 
 ```php
 <?php 
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -2081,8 +2081,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -2183,8 +2183,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -2285,8 +2285,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person LifeCycle
 {
     public function species()
@@ -2387,8 +2387,8 @@ abstract class Person
 
 ```php
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student Person LifeCycle
 {
     public function species()
@@ -2473,8 +2473,8 @@ abstract class Animal
 
 ```php
 <?php
-require_once('./Animal.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Animal.php');
+require_once(__DIR__ . '/LifeCycle.php');
 
 
 
