@@ -6,7 +6,7 @@
 
 :::
 
-/// type=REPL, readonly=true, filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=REPL, readonly=true, filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 ```php
 <?php
@@ -25,7 +25,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./Autoload.php");
+require_once(__DIR__ . "/autoload.php");
 
 $studentObject = new Student("May", 25);
 $studentObject->display();
@@ -63,14 +63,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -78,6 +81,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -121,7 +125,7 @@ Execute the program. What is its output?
 
 /// type=SS, id=aa97c5fb-e6de-4480-8541-c1997764f9f4, answer=[5]
 
-In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `Autoload.php`, what is `__DIR__`?
+In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `autoload.php`, what is `__DIR__`?
 
  - It is a value.
 
@@ -136,7 +140,7 @@ In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `A
 
 /// type=SS, id=10337975-ce01-47a9-b295-f70ecac28282, answer=[4]
 
-In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `Autoload.php`, what is `.php`?
+In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `autoload.php`, what is `.php`?
 
  - It is the file path separator.
 
@@ -151,7 +155,7 @@ In the statement `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `A
 
 /// type=SS, id=16f70051-92a0-45a7-8a7e-df9b813c8648, answer=[5]
 
-Which statement best describes `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `Autoload.php`?
+Which statement best describes `$file = __DIR__ . '\\' . $className . '.php';` on line 4 of `autoload.php`?
 
  - It returns all the class files in `__DIR__` with the specified `$className` and `.php` extensions.
 
@@ -166,7 +170,7 @@ Which statement best describes `$file = __DIR__ . '\\' . $className . '.php';` o
 
 /// type=SS, id=1a18f1ea-32e1-404a-9211-00277d087cfe, answer=[4]
 
-In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on line 5 of `Autoload.php`, what is `str_replace()`?
+In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on line 5 of `autoload.php`, what is `str_replace()`?
 
  - It is a value.
 
@@ -181,7 +185,7 @@ In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on lin
 
 /// type=SS, id=8abae603-d481-4d17-9c99-d1fc7ed6a579, answer=[5]
 
-In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on line 5 of `Autoload.php`, what is `DIRECTORY_SEPARATOR`?
+In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on line 5 of `autoload.php`, what is `DIRECTORY_SEPARATOR`?
 
  - It is a value.
 
@@ -196,7 +200,7 @@ In the statement `$file = str_replace('\\', DIRECTORY_SEPARATOR, $file);` on lin
 
 /// type=SS, id=9c6b25c9-ce3d-40c2-a728-6a3e70732e43, answer=[3]
 
-Which statement best describes `str_replace('\\', DIRECTORY_SEPARATOR, $file)` on line 5 of `Autoload.php`?
+Which statement best describes `str_replace('\\', DIRECTORY_SEPARATOR, $file)` on line 5 of `autoload.php`?
 
  - It accesses `\` of the predefined constant `DIRECTORY_SEPARATOR` in `$file`.
 
@@ -211,9 +215,9 @@ Which statement best describes `str_replace('\\', DIRECTORY_SEPARATOR, $file)` o
 
 /// type=MS, id=b9983e6a-10fe-4435-b68b-0db503768c1b, answer=[4,5]
 
-Which statements correctly describe the `myAutoloader()` function of `Autoload.php`?
+Which statements correctly describe the `myAutoloader()` function of `autoload.php`?
 
- - It defines the `Autoload` class.
+ - It defines the `autoload` class.
 
  - It accesses several autoload functions.
 
@@ -226,7 +230,7 @@ Which statements correctly describe the `myAutoloader()` function of `Autoload.p
 
 /// type=SS, id=461df50b-2011-4336-8dee-acf5840d40a4, answer=[1]
 
-In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoload.php`, what is `myAutoloader`?
+In the statement `spl_autoload_register("myAutoloader");` on line 11 of `autoload.php`, what is `myAutoloader`?
 
  - It is the function that automatically loads the specified class files.
 
@@ -241,7 +245,7 @@ In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoloa
 
 /// type=SS, id=04f51655-80fc-4437-99dd-2d92dd51e840, answer=[5]
 
-In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoload.php`, what does `spl_autoload_register()` do?
+In the statement `spl_autoload_register("myAutoloader");` on line 11 of `autoload.php`, what does `spl_autoload_register()` do?
 
  - It removes the `myAutoloader()` autoload function.
 
@@ -256,7 +260,7 @@ In the statement `spl_autoload_register("myAutoloader");` on line 11 of `Autoloa
 
 /// type=SS, id=e48cddc7-550b-430a-a96b-ee5123b4a4c6, answer=[5]
 
-Which statement best describes `spl_autoload_register("myAutoloader");` on line 11 of `Autoload.php`?
+Which statement best describes `spl_autoload_register("myAutoloader");` on line 11 of `autoload.php`?
 
  - It removes the `myAutoloader()` autoload function.
 
@@ -271,24 +275,24 @@ Which statement best describes `spl_autoload_register("myAutoloader");` on line 
 
 /// type=SS, id=27ecfaea-6237-46bb-814c-35343ee0cfac, answer=[3]
 
-Which statement best describes `require_once("./Autoload.php");` on line 2 of `Main.php`?
+Which statement best describes `require_once(__DIR__ . "/autoload.php");` on line 2 of `Main.php`?
 
-- It updates the file `Autoload.php`.
+- It updates the file `autoload.php`.
 
 - It establishes a relationship between classes.
 
-- It includes the file `Autoload.php` in the file `Main.php`.
+- It includes the file `autoload.php` in the file `Main.php`.
 
-- It removes the file `Autoload.php` in the file `Main.php`.
+- It removes the file `autoload.php` in the file `Main.php`.
 
-- It excludes the file `Autoload.php` in the file `Main.php`.
-
-:::
-
+- It excludes the file `autoload.php` in the file `Main.php`.
 
 :::
 
-/// type=REPL, readonly=true, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+
+:::
+
+/// type=REPL, readonly=true, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 ```php
 <?php
@@ -307,7 +311,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/Autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -345,14 +349,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -360,6 +367,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -448,7 +456,7 @@ Which of the following is a predefined constant?
 
 /// type=SS, id=35f4b530-9fb6-4862-b0f1-9f59fd39a8ac, answer=[1]
 
-In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` on line 4 of `Autoload.php`, what does `dirname(__DIR__)` do?
+In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` on line 4 of `autoload.php`, what does `dirname(__DIR__)` do?
 
  - It returns the path of the parent directory `__DIR__`.
 
@@ -463,7 +471,7 @@ In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` o
 
 /// type=SS, id=032544f8-89d9-4941-b008-695528107095, answer=[5]
 
-In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` on line 4 of `Autoload.php`, what does `\\src\\` indicate?
+In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` on line 4 of `autoload.php`, what does `\\src\\` indicate?
 
  - The name of the class file in the directory.
 
@@ -478,7 +486,7 @@ In the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` o
 
 /// type=SS, id=a8d1523e-05d8-4410-b3b4-51a41ef6de31, answer=[5]
 
-Which statement best describes the code on line 4 of `Autoload.php`?
+Which statement best describes the code on line 4 of `autoload.php`?
 
  - It returns all the class files in `__DIR__` with the specified directory name `src`, `$className` and `.php` extensions.
 
@@ -493,24 +501,24 @@ Which statement best describes the code on line 4 of `Autoload.php`?
 
 /// type=SS, id=cf46bc3f-0fbf-408d-827c-6a4a4386941b, answer=[3]
 
-Which statement best describes `require_once("./autoloader/Autoload.php");` on line 2 of `Main.php`?
+Which statement best describes `require_once(__DIR__ . "/includes/autoload.php");` on line 2 of `Main.php`?
 
-- It updates the file `Autoload.php`.
+- It updates the file `autoload.php`.
 
 - It establishes a relationship between classes.
 
-- It includes the file `Autoload.php` in the file `Main.php`.
+- It includes the file `autoload.php` in the file `Main.php`.
 
-- It removes the file `Autoload.php` in the file `Main.php`.
+- It removes the file `autoload.php` in the file `Main.php`.
 
-- It excludes the file `Autoload.php` in the file `Main.php`.
-
-:::
-
+- It excludes the file `autoload.php` in the file `Main.php`.
 
 :::
 
-/// type=REPL, readonly=true, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
+
+:::
+
+/// type=REPL, readonly=true, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
 
 ```php
 <?php
@@ -539,7 +547,7 @@ spl_autoload_register("myShapesLoader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -580,6 +588,7 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
@@ -588,6 +597,7 @@ abstract class Person
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -595,6 +605,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -707,9 +718,9 @@ Which of the following are autoloaders?
 
 /// type=MS, id=228c1db3-c755-4a50-8c97-af7fc220aee9, answer=[4,5]
 
-Which statements correctly describe the `myShapesLoader()` function of `Autoload.php`?
+Which statements correctly describe the `myShapesLoader()` function of `autoload.php`?
 
- - It defines the `Autoload` class.
+ - It defines the `autoload` class.
 
  - It accesses several autoload functions.
 
@@ -722,7 +733,7 @@ Which statements correctly describe the `myShapesLoader()` function of `Autoload
 
 /// type=SS, id=5aa56660-76b8-4d2d-b75f-f209eebd9d09, answer=[5]
 
-Which statement best describes the code on line 20 of `Autoload.php`?
+Which statement best describes the code on line 20 of `autoload.php`?
 
  - It displays the `myAutoloader()` autoload function.
 
@@ -737,7 +748,7 @@ Which statement best describes the code on line 20 of `Autoload.php`?
 
 /// type=SS, id=a4defa7c-d24b-4c61-8ee0-f6d0f60d12c8, answer=[3]
 
-Which statement best describes `spl_autoload_register("myShapesLoader");` on line 21 of `Autoload.php`?
+Which statement best describes `spl_autoload_register("myShapesLoader");` on line 21 of `autoload.php`?
 
  - It displays the `myShapesLoader()` autoload function.
 
@@ -842,7 +853,7 @@ Which statement is true about the `dirname()` function?
 
 :::
 
-/// type=REPL, readonly=true, filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=REPL, readonly=true, filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 ```php
 <?php
@@ -861,7 +872,7 @@ spl_autoload_register("myAutoloader()");
 
 ```php
 <?php
-require_once("./Autoload.php");
+require_once(__DIR__ . "/autoload.php");
 
 $studentObject = new Student("May", 25);
 $studentObject->display();
@@ -899,14 +910,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -914,6 +928,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -961,33 +976,33 @@ What is the error message?
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `Autoload.php` on line number 4
+ - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `autoload.php` on line number 4
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ - Warning: `require_once(__DIR__ . /autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ 
+ - Fatal error: `require_once()`: Failed opening required `'/autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
- - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
-
- - Uncaught LogicException: Function `'myAutoloader()'` not found (function 'myAutoloader()' not found or invalid function name) in `Autoload.php` on line number 11
+ - Uncaught LogicException: Function `'myAutoloader()'` not found (function 'myAutoloader()' not found or invalid function name) in `autoload.php` on line number 11
 
 
 /// type=MS, id=32805955-48f1-45c1-881c-129545a8adcf, answer=[4,5]
 
 Which statements correctly describe the error?
 
- - There is no argument specified in `myAutoloader()` on line 11 of `Autoload.php`.
+ - There is no argument specified in `myAutoloader()` on line 11 of `autoload.php`.
 
- - There is no semicolon `;` at the end of the statement on line 11 of `Autoload.php`.
+ - There is no semicolon `;` at the end of the statement on line 11 of `autoload.php`.
 
- - On line 11 of `Autoload.php`, the argument `myAutoloader()` is enclosed in double quotes `""`.
+ - On line 11 of `autoload.php`, the argument `myAutoloader()` is enclosed in double quotes `""`.
 
- - On line 11 of `Autoload.php`, the statement `spl_autoload_register("myAutoloader()");` is invalid.
+ - On line 11 of `autoload.php`, the statement `spl_autoload_register("myAutoloader()");` is invalid.
 
- - There are parentheses `()` after `myAutoloader` in the statement `spl_autoload_register("myAutoloader()");` on line 11 of `Autoload.php`.
+ - There are parentheses `()` after `myAutoloader` in the statement `spl_autoload_register("myAutoloader()");` on line 11 of `autoload.php`.
 
 :::
 
 
-/// type=CR, id=d1a82401-b0f9-4112-8347-1e86fa77f727, answer=[tests/AutoloadingClasses/IncorrectSplRegisterArgumentTest.php], filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d1a82401-b0f9-4112-8347-1e86fa77f727, answer=[tests/AutoloadingClasses/IncorrectSplRegisterArgumentTest.php], filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `May is an adolescent human being.`.
 
@@ -1008,7 +1023,7 @@ spl_autoload_register("myAutoloader()");
 
 ```php
 <?php
-require_once("./Autoload.php");
+require_once(__DIR__ . "/autoload.php");
 
 $studentObject = new Student("May", 25);
 $studentObject->display();
@@ -1046,14 +1061,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1061,6 +1079,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1091,7 +1110,7 @@ class Student extends Person implements LifeCycle
 
 :::
 
-/// type=REPL, readonly=true, filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=REPL, readonly=true, filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 ```php
 <?php
@@ -1110,7 +1129,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./Autoload.php");
+require_once(__DIR__ . "/Autoload.php");
 
 $studentObject = new Student("May", 25);
 $studentObject->display();
@@ -1148,14 +1167,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1163,6 +1185,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1197,31 +1220,31 @@ Execute the program. What is the error message?
 
  - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `Autoload.php` on line number 4
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ - Warning: `require_once(__DIR__ . /autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
- - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
+ - Fatal error: `require_once()`: Failed opening required `'./autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
- - Uncaught LogicException: Function `'myAutoloader()'` not found (function 'myAutoloader()' not found or invalid function name) in `Autoload.php` on line number 11
+ - Uncaught LogicException: Function `'myAutoloader()'` not found (function 'myAutoloader()' not found or invalid function name) in `autoload.php` on line number 11
 
 
 /// type=MS, id=21a79fa9-a319-49f5-a7b6-7bfb31933277, answer=[2,5]
 
 Which statements correctly describe the error?
 
- - There is an assignment operator `=` after `$file` on line 4 of `Autoload.php`.
+ - There is an assignment operator `=` after `$file` on line 4 of `autoload.php`.
 
- - On line 4 of `Autoload.php`, the file extension `.php` is misspelled as `.phph`.
+ - On line 4 of `autoload.php`, the file extension `.php` is misspelled as `.phph`.
 
- - There is no semicolon `;` at the end of the statement on line 4 of `Autoload.php`.
+ - There is no semicolon `;` at the end of the statement on line 4 of `autoload.php`.
 
- - There is no concatenation operator `.` between `$className` and `.phph` on line 4 of `Autoload.php`.
+ - There is no concatenation operator `.` between `$className` and `.phph` on line 4 of `autoload.php`.
 
- - On line 4 of `Autoload.php`, the specified `.phph` file extension in the statement `$file = __DIR__ . '\\' . $className . '.phph';` is invalid.
+ - On line 4 of `autoload.php`, the specified `.phph` file extension in the statement `$file = __DIR__ . '\\' . $className . '.phph';` is invalid.
 
 :::
 
 
-/// type=CR, id=d15d78b4-0a2f-4fec-a766-d82304f8496f, answer=[tests/AutoloadingClasses/IncorrectFileExtensionTest.php], filename=[Autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d15d78b4-0a2f-4fec-a766-d82304f8496f, answer=[tests/AutoloadingClasses/IncorrectFileExtensionTest.php], filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `May is an adolescent human being.`.
 
@@ -1242,7 +1265,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./Autoload.php");
+require_once(__DIR__ . "/autoload.php");
 
 $studentObject = new Student("May", 25);
 $studentObject->display();
@@ -1280,14 +1303,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1295,6 +1321,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1325,7 +1352,7 @@ class Student extends Person implements LifeCycle
 
 :::
 
-/// type=REPL, readonly=true, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=REPL, readonly=true, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 ```php
 <?php
@@ -1344,7 +1371,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -1382,14 +1409,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1397,6 +1427,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1427,35 +1458,35 @@ class Student extends Person implements LifeCycle
 
 Execute the program. What are the error messages?
 
- - Undefined variable: `className` in `Autoload.php` on line number 4
+ - Undefined variable: `className` in `autoload.php` on line number 4
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `Autoload.php` on line number 4
+ - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `autoload.php` on line number 4
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ - Warning: `require_once(__DIR__ . /includes/autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
- - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
+ - Fatal error: `require_once()`: Failed opening required `'./includes/autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
 
 /// type=MS, id=f49a2d77-f3f7-4742-a9e4-dc9d23185303, answer=[4,5]
 
 Which statements correctly describe the error?
 
- - There is no parameter specified in the function declaration on line 2 of `Autoload.php`. 
+ - There is no parameter specified in the function declaration on line 2 of `autoload.php`. 
 
- - There is no semicolon `;` specified at the end of the statement on line 2 of `Autoload.php`.
+ - There is no semicolon `;` specified at the end of the statement on line 2 of `autoload.php`.
 
- - There is a dollar sign `$` that precedes the variable `className` on line 4 of `Autoload.php`.
+ - There is a dollar sign `$` that precedes the variable `className` on line 4 of `autoload.php`.
 
- - On line 2 of `Autoload.php`, the parameter `$classname` in the function declaration `function myAutoloader($class)` is miswritten as `$class`. 
+ - On line 2 of `autoload.php`, the parameter `$classname` in the function declaration `function myAutoloader($class)` is miswritten as `$class`. 
 
- - On line 4 of `Autoload.php`, the variable `$className` in the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` is not yet defined.
+ - On line 4 of `autoload.php`, the variable `$className` in the statement `$file = dirname(__DIR__) . '\\src\\' . $className . '.php';` is not yet defined.
 
 :::
 
 
-/// type=CR, id=976c6c75-c3ec-42fd-b67a-b20025db12a6, answer=[tests/AutoloadingClasses/IncorrectVariableNameAsParameterTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=CR, id=976c6c75-c3ec-42fd-b67a-b20025db12a6, answer=[tests/AutoloadingClasses/IncorrectVariableNameAsParameterTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -1476,7 +1507,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -1514,14 +1545,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1529,6 +1563,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1559,7 +1594,7 @@ class Student extends Person implements LifeCycle
 
 :::
 
-/// type=REPL, readonly=true, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=REPL, readonly=true, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 ```php
 <?php
@@ -1578,7 +1613,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./Autoload.php");
+require_once(__DIR__ . "/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -1616,14 +1651,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1631,6 +1669,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1661,15 +1700,15 @@ class Student extends Person implements LifeCycle
 
 Execute the program. What are the error messages?
 
- - Undefined variable: `className` in `Autoload.php` on line number 4
+ - Undefined variable: `className` in `autoload.php` on line number 4
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
  - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `Autoload.php` on line number 4
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ - Warning: `require_once(./autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
- - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
+ - Fatal error: `require_once()`: Failed opening required `'./autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
 
 /// type=MS, id=5e95a810-7f1a-4018-b006-16727f3a05c8, answer=[2,4,5]
@@ -1678,13 +1717,13 @@ Which statements correctly describe the error?
 
  - There is no semicolon `;` at the end of the statement on line 2 of `Main.php`.
 
- - On line 2 of `Main.php`, the statement `require_once("./Autoload.php");` is invalid.
+ - On line 2 of `Main.php`, the statement `require_once(__DIR__ . "/autoload.php");` is invalid.
 
  - There is no argument specified in the `require_once()` function on line 2 of `Main.php`.
 
- - On line 2 of `Main.php`, the specified file path `./Autoload.php` in `require_once("./Autoload.php");` is incorrect.
+ - On line 2 of `Main.php`, the specified file path `./autoload.php` in `require_once(__DIR__ . "/autoload.php");` is incorrect.
 
- - There is no directory name `autoloader` specified in the statement `require_once("./Autoload.php");` on line 2 of `Main.php`.
+ - There is no directory name `includes` specified in the statement `require_once(__DIR__ . "/autoload.php");` on line 2 of `Main.php`.
 
 :::
 
@@ -1710,7 +1749,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./Autoload.php");
+require_once(__DIR__ . "/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -1748,14 +1787,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1763,6 +1805,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1793,7 +1836,7 @@ class Student extends Person implements LifeCycle
 
 :::
 
-/// type=REPL, readonly=true, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=REPL, readonly=true, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 ```php
 <?php
@@ -1812,7 +1855,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -1850,14 +1893,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1865,6 +1911,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -1895,35 +1942,35 @@ class Student extends Person implements LifeCycle
 
 Execute the program. What is the error message?
 
- - Undefined variable: `className` in `Autoload.php` on line number 4
+ - Undefined variable: `className` in `autoload.php` on line number 4
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `Autoload.php` on line number 4
+ - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `autoload.php` on line number 4
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ - Warning: `require_once(./autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
- - Fatal error: `require_once()`: Failed opening required `'./Autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
+ - Fatal error: `require_once()`: Failed opening required `'./autoload.php'` (include_path='C:\xampp\php\PEAR') in `Main.php` on line number 2
 
 
 /// type=MS, id=0fb25381-6548-44c8-9015-71108f0858d6, answer=[1,2,5]
 
 Which statements correctly describe the error?
 
- - On line 4 of `Autoload.php`, the `__DIR__` magic constant is misspelled as `__DRI__`.
+ - On line 4 of `autoload.php`, the `__DIR__` magic constant is misspelled as `__DRI__`.
 
- - On line 4 of `Autoload.php`, the specified argument `__DRI__` in `dirname()` is incorrect.
+ - On line 4 of `autoload.php`, the specified argument `__DRI__` in `dirname()` is incorrect.
 
- - There is no assignment operator `=` between `$file` and `dirname()` on line 4 of `Autoload.php`.
+ - There is no assignment operator `=` between `$file` and `dirname()` on line 4 of `autoload.php`.
 
- - On line 4 of `Autoload.php`, the specified argument `__DRI__` in `dirname()` is not enclosed in double quotes `""`.
+ - On line 4 of `autoload.php`, the specified argument `__DRI__` in `dirname()` is not enclosed in double quotes `""`.
 
- - On line 4 of `Autoload.php`, the statement `$file = dirname(__DRI__) . '\\src\\' . $className . '.php';` is invalid.
+ - On line 4 of `autoload.php`, the statement `$file = dirname(__DRI__) . '\\src\\' . $className . '.php';` is invalid.
 
 :::
 
 
-/// type=CR, id=29ff363f-13a9-491f-a54c-89338baeecd1, answer=[tests/AutoloadingClasses/MisspelledDirConstantTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=CR, id=29ff363f-13a9-491f-a54c-89338baeecd1, answer=[tests/AutoloadingClasses/MisspelledDirConstantTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -1944,7 +1991,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -1982,14 +2029,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -1997,6 +2047,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -2027,7 +2078,7 @@ class Student extends Person implements LifeCycle
 
 :::
 
-/// type=REPL, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
+/// type=REPL, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
 
 ```php
 <?php
@@ -2056,7 +2107,7 @@ spl_autoload_register("myShapesLoader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -2097,14 +2148,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -2112,6 +2166,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -2209,9 +2264,9 @@ Execute the program. What is printed on line 3?
 
 /// type=SS, id=34e542fc-5af4-43a7-b195-7fbec376e503, answer=[2]
 
-In the statement `$file = dirname(__DIR__) . '\\Shapes\\' . $shapeClass . '.php';` on line 13 of `Autoload.php`, replace `Shapes` with `Circle`. Execute the program. What is the error message?
+In the statement `$file = dirname(__DIR__) . '\\Shapes\\' . $shapeClass . '.php';` on line 13 of `autoload.php`, replace `Shapes` with `Circle`. Execute the program. What is the error message?
 
- - Undefined variable: `className` in `Autoload.php` on line number 4
+ - Undefined variable: `className` in `autoload.php` on line number 4
 
  - Uncaught Error: Class `'Circle'` not found in `Main.php` on line number 7
 
@@ -2219,14 +2274,14 @@ In the statement `$file = dirname(__DIR__) . '\\Shapes\\' . $shapeClass . '.php'
 
  - Use of undefined constant `myAutoloader` - assumed `'myAutoloader'` in `Autoload.php` on line number 20
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ - Warning: `require_once(./autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
 :::
 
 
 :::
 
-/// type=REPL, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
+/// type=REPL, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
 
 ```php
 <?php
@@ -2255,7 +2310,7 @@ spl_autoload_register("myShapesLoader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -2296,14 +2351,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -2311,6 +2369,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -2393,24 +2452,24 @@ class Circle extends CircularShape
 ```
 /// type=MS, id=cf3dd233-996e-4567-9f30-0738a3a44686, answer=[1,3]
 
-On line 2 of `Autoload.php`, remove the parameter `$className` from `function myAutoloader($className)`. Execute the program. What are the error messages?
+On line 2 of `autoload.php`, remove the parameter `$className` from `function myAutoloader($className)`. Execute the program. What are the error messages?
 
- - Undefined variable: `className` in `Autoload.php` on line number 4
+ - Undefined variable: `className` in `autoload.php` on line number 4
 
  - Uncaught Error: Class `'Circle'` not found in `Main.php` on line number 7
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `myAutoloader` - assumed `'myAutoloader'` in `Autoload.php` on line number 20
+ - Use of undefined constant `myAutoloader` - assumed `'myAutoloader'` in `autoload.php` on line number 20
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
-
-:::
-
+ - Warning: `require_once(./autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
 :::
 
-/// type=REPL, filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
+
+:::
+
+/// type=REPL, filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
 
 ```php
 <?php
@@ -2439,7 +2498,7 @@ spl_autoload_register("myShapesLoader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -2480,14 +2539,17 @@ abstract class Person
             $this->age = $newAge;
         }
     }
+
     public function getAge()
     {
         return $this->age;
     }
+
     public function getName()
     {
         return $this->name;
     }
+
     private function checkAge($age)
     {
         if ($age > 0) {
@@ -2495,6 +2557,7 @@ abstract class Person
         }
         return false;
     }
+
     abstract public function display();
 }
 ?>
@@ -2577,22 +2640,22 @@ class Circle extends CircularShape
 ```
 /// type=MS, id=ada6dccc-50ff-494e-a96b-d8ed8541d589, answer=[1,3,4]
 
-Remove the double quotes `""` from the statement `spl_autoload_register("myAutoloader");` on line 20 of `Autoload.php`. Execute the program. What are the error messages?
+Remove the double quotes `""` from the statement `spl_autoload_register("myAutoloader");` on line 20 of `autoload.php`. Execute the program. What are the error messages?
 
- - Undefined variable: `className` in `Autoload.php` on line number 4
+ - Undefined variable: `className` in `autoload.php` on line number 4
 
  - Uncaught Error: Class `'Circle'` not found in `Main.php` on line number 7
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `myAutoloader` - assumed `'myAutoloader'` in `Autoload.php` on line number 20
+ - Use of undefined constant `myAutoloader` - assumed `'myAutoloader'` in `autoload.php` on line number 20
 
- - Warning: `require_once(./Autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
+ - Warning: `require_once(./autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
 :::
 
 
-/// type=CR, id=736883b2-7abb-4f89-a14b-65d377aa0484, answer=[tests/AutoloadingClasses/CorrectMultipleErrorsTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
+/// type=CR, id=736883b2-7abb-4f89-a14b-65d377aa0484, answer=[tests/AutoloadingClasses/CorrectMultipleErrorsTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
 
 Correct the code so that it outputs the strings `Charles is an adolescent human being.`, `Radius: 2.5`, `Diameter: 6.25`, `Area: 19.635`, and `Circumference: 15.708` in separate lines.
 
@@ -2623,7 +2686,7 @@ spl_autoload_register("myShapesLoader");
 
 ```php
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -2767,13 +2830,13 @@ class Circle extends CircularShape
 
 ### Part 4: Practice
 
-/// type=CR, id=18b1416a-678c-4568-a7df-60d12ac41a87, answer=[tests/AutoloadingClasses/CreateAutoloaderFunctionTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Animal.php,src/Mammal.php]
+/// type=CR, id=18b1416a-678c-4568-a7df-60d12ac41a87, answer=[tests/AutoloadingClasses/CreateAutoloaderFunctionTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Animal.php,src/Mammal.php]
 
-Given the classes and interface implementations, write a program that uses the `spl_autoload_register()` function to register a certain autoloader. In the `Autoload.php` tab, create an autoloader function named `myAnimalAutoloader` with the parameter `$animal`. Inside the `myAnimalAutoloader()` function body, add a statement that assigns `$file = dirname(__DIR__) . '\\src\\' . $animal . '.php';` to the variable `$file`. Then, add another statement that assigns `str_replace('\\', DIRECTORY_SEPARATOR, $file)` to `$file`. Next, add an `if` statement that checks if `$file` exists. Inside the `if` block, add the statement `require_once($file);`. After the `myAnimalAutoloader()` function, add a statement that registers the autoloader function `myAnimalAutoloader` using the `spl_autoload_register()` function. In the `Main.php` tab, add the statement `require_once("./autoloader/Autoload.php");`. Then, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
+Given the classes and interface implementations, write a program that uses the `spl_autoload_register()` function to register a certain autoloader. In the `autoload.php` tab, create an autoloader function named `myAnimalAutoloader` with the parameter `$animal`. Inside the `myAnimalAutoloader()` function body, add a statement that assigns `$file = dirname(__DIR__) . '\\src\\' . $animal . '.php';` to the variable `$file`. Then, add another statement that assigns `str_replace('\\', DIRECTORY_SEPARATOR, $file)` to `$file`. Next, add an `if` statement that checks if `$file` exists. Inside the `if` block, add the statement `require_once($file);`. After the `myAnimalAutoloader()` function, add a statement that registers the autoloader function `myAnimalAutoloader` using the `spl_autoload_register()` function. In the `Main.php` tab, add the statement `require_once(__DIR__ . "/includes/autoload.php");`. Then, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
 ```php
 <?php
-// Autoload.php code here...
+// autoload.php code here...
 
 
 ?>
