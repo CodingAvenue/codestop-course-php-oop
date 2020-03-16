@@ -19,7 +19,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -42,7 +42,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -64,8 +64,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -271,7 +271,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -294,7 +294,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -316,8 +316,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -358,7 +358,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -381,7 +381,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -403,8 +403,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(3.5);
 $square = new Square(2.5);
@@ -460,7 +460,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -483,7 +483,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -505,8 +505,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(3.5);
 $square = new Square(2.5);
@@ -547,7 +547,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -570,7 +570,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -592,8 +592,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(3.5);
 $square = new Square(3.5);
@@ -708,7 +708,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -731,7 +731,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -753,8 +753,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -825,7 +825,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -848,7 +848,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -870,8 +870,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -897,7 +897,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -915,7 +915,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -937,8 +937,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -994,7 +994,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -1012,7 +1012,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -1034,8 +1034,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -1061,7 +1061,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -1084,7 +1084,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -1106,8 +1106,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle();
 $square = new Square(2.5);
@@ -1163,7 +1163,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -1186,7 +1186,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -1208,8 +1208,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle();
 $square = new Square(2.5);
@@ -1235,7 +1235,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -1258,7 +1258,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implement MyShape
 {
@@ -1280,8 +1280,8 @@ class Square implement MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -1337,7 +1337,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Circle implements MyShape
 {
@@ -1360,7 +1360,7 @@ class Circle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implement MyShape
 {
@@ -1382,8 +1382,8 @@ class Square implement MyShape
 
 ```php
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);
@@ -1416,7 +1416,7 @@ interface MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Rectangle implements MyShape
 {
@@ -1446,7 +1446,7 @@ class Rectangle implements MyShape
 
 ```php
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 
 class Square implements MyShape
 {
@@ -1474,8 +1474,8 @@ class Square implements MyShape
 
 ```php
 <?php
-require_once("./Rectangle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Rectangle.php");
+require_once(__DIR__ . "/Square.php");
 
 $rectangle = new Rectangle(2.5, 3);
 $square = new Square(2.5);
