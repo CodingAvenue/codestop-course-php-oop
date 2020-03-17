@@ -90,24 +90,24 @@ Which of the following is a class declaration?
 
  - `class Person { }`
 
- - `public $name = "Diana";`
-
  - `echo $person->name;`
+
+ - `public $name = "Diana";`
 
  - `$person = new Person();`
 
  - `public function eat() { echo "This is an eat() method."; }`
 
 
-/// type=SS, id=fd0287de-bb5c-4a42-9ac1-141e122cc19b, answer=[2]
+/// type=SS, id=fd0287de-bb5c-4a42-9ac1-141e122cc19b, answer=[3]
 
 Which of the following is a property definition?
 
  - `class Person { }`
 
- - `public $name = "Diana";`
-
  - `echo $person->name;`
+
+ - `public $name = "Diana";`
 
  - `$person = new Person();`
 
@@ -120,9 +120,9 @@ Which of the following is a method definition?
 
  - `class Person { }`
 
- - `public $name = "Diana";`
-
  - `echo $person->name;`
+
+ - `public $name = "Diana";`
 
  - `$person = new Person();`
 
