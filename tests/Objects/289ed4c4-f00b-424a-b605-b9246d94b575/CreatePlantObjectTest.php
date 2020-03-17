@@ -38,14 +38,14 @@ class CreatePlantObjectTest extends TestCase
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable `plantObject`.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable `plant`.");
     }
 
-    public function testPlantObjectVariable()
+    public function testPlantVariable()
     {
-        $plantObject = self::$code->find('variable[name="plantObject"]');
+        $plant = self::$code->find('variable[name="plant"]');
 
-        $this->assertEquals(2, $plantObject->count(), "Expecting two occurrences of the variable named 'plantObject'.");
+        $this->assertEquals(2, $plant->count(), "Expecting two occurrences of the variable named 'plant'.");
     }
 
     public function testInstantiation()
@@ -93,8 +93,8 @@ class CreatePlantObjectTest extends TestCase
 
     public function testGrowCall()
     {
-        $grow = self::$code->find('method-call[name="grow", variable="plantObject"]');
+        $grow = self::$code->find('method-call[name="grow", variable="plant"]');
 
-        $this->assertEquals(1, $grow->count(), "Expecting a 'grow()' method call of 'plantObject'.");
+        $this->assertEquals(1, $grow->count(), "Expecting a 'grow()' method call of 'plant'.");
     }
 } 

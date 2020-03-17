@@ -38,14 +38,14 @@ class MissingParenthesesOnMethodTest extends TestCase
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'personObject'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'person'.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -93,8 +93,8 @@ class MissingParenthesesOnMethodTest extends TestCase
 
     public function testEatCall()
     {
-        $eat = self::$code->find('method-call[name="eat", variable="personObject"]');
+        $eat = self::$code->find('method-call[name="eat", variable="person"]');
 
-        $this->assertEquals(1, $eat->count(), "Expecting an 'eat()' method call of 'personObject'.");
+        $this->assertEquals(1, $eat->count(), "Expecting an 'eat()' method call of 'person'.");
     }
 } 

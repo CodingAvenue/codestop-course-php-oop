@@ -38,14 +38,14 @@ class MissingObjectOperatorTest extends TestCase
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'personObject'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'person'.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -93,8 +93,8 @@ class MissingObjectOperatorTest extends TestCase
 
     public function testNameCall()
     {
-        $name = self::$code->find('property-call[name="name", variable="personObject"]');
+        $name = self::$code->find('property-call[name="name", variable="person"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'personObject'.");
+        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
     }
 } 
