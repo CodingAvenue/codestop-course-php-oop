@@ -891,7 +891,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=bc7fb821-4dfe-421a-b1cc-9f8790366d71, answer=[tests/Methods/MissingArgumentOnMethodCallTest.php]
+/// type=CR, id=bc7fb821-4dfe-421a-b1cc-9f8790366d71, answer=[tests/Methods/bc7fb821-4dfe-421a-b1cc-9f8790366d71]
 
 Correct the code so that it outputs the string `Charles`.
 
@@ -965,7 +965,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=8d4fce8c-033b-4194-8c53-32e481f8baca, answer=[tests/Methods/MissingDollarSignOnObjectTest.php]
+/// type=CR, id=8d4fce8c-033b-4194-8c53-32e481f8baca, answer=[tests/Methods/8d4fce8c-033b-4194-8c53-32e481f8baca]
 
 Correct the code so that it outputs the string `Charles`.
 
@@ -1039,7 +1039,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=d98ba317-8907-4227-ac75-14a6ee9d69e2, answer=[tests/Methods/MissingFunctionKeywordOnMethodTest.php]
+/// type=CR, id=d98ba317-8907-4227-ac75-14a6ee9d69e2, answer=[tests/Methods/d98ba317-8907-4227-ac75-14a6ee9d69e2]
 
 Correct the code so that it outputs the string `Charles`.
 
@@ -1118,7 +1118,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=01001ba3-668a-46b2-ac04-b837dbeb8406, answer=[tests/Methods/MissingParenthesesOnMethodCallTest.php]
+/// type=CR, id=01001ba3-668a-46b2-ac04-b837dbeb8406, answer=[tests/Methods/01001ba3-668a-46b2-ac04-b837dbeb8406]
 
 Correct the code so that it outputs the string `My name is Charles.`.
 
@@ -1202,7 +1202,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=f568ae92-b9b0-45f3-9932-80dc75e7177b, answer=[tests/Methods/MissingObjectOperatorTest.php]
+/// type=CR, id=f568ae92-b9b0-45f3-9932-80dc75e7177b, answer=[tests/Methods/f568ae92-b9b0-45f3-9932-80dc75e7177b]
 
 Correct the code so that it outputs the string `My name is Charles.`.
 
@@ -1285,7 +1285,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=67265570-c30d-4094-9900-c3c4ce96b7ba, answer=[tests/Methods/MissingReturnThisOnMethodTest.php]
+/// type=CR, id=67265570-c30d-4094-9900-c3c4ce96b7ba, answer=[tests/Methods/67265570-c30d-4094-9900-c3c4ce96b7ba]
 
 Correct the code so that it outputs the string `My name is Charles.`.
 
@@ -1494,7 +1494,7 @@ In the property definition `public $name = "Diana";` on line 4, remove the dolla
 :::
 
 
-/// type=CR, id=98f22e4e-515f-434f-8929-924b5da8bbc5, answer=[tests/Methods/CorrectMultipleErrorsTest.php]
+/// type=CR, id=98f22e4e-515f-434f-8929-924b5da8bbc5, answer=[tests/Methods/98f22e4e-515f-434f-8929-924b5da8bbc5]
 
 Correct the code so that it outputs the string `My name is Charles.`.
 
@@ -1527,7 +1527,7 @@ Correct the code so that it outputs the string `My name is Charles.`.
 
 ### Part 4: Practice
 
-/// type=CR, id=2a4805e4-5361-4d08-adb9-2312f0ae5bc6, answer=[tests/Methods/ManipulateObjectMethodsTest.php]
+/// type=CR, id=2a4805e4-5361-4d08-adb9-2312f0ae5bc6, answer=[tests/Methods/2a4805e4-5361-4d08-adb9-2312f0ae5bc6]
 
 Write a program that adds and manipulates the methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
  

@@ -615,7 +615,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=8de62e70-dac4-44b8-88a6-eef890804869, answer=[tests/Objects/UnexpectedDollarSignOnNamePropertyTest.php]
+/// type=CR, id=8de62e70-dac4-44b8-88a6-eef890804869, answer=[tests/Objects/8de62e70-dac4-44b8-88a6-eef890804869]
 
 Correct the code so that it outputs the string `Diana`.
 
@@ -689,7 +689,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=f04d7209-ac3b-4858-b8fa-f572ec87d408, answer=[tests/Objects/MissingObjectOperatorTest.php]
+/// type=CR, id=f04d7209-ac3b-4858-b8fa-f572ec87d408, answer=[tests/Objects/f04d7209-ac3b-4858-b8fa-f572ec87d408]
 
 Correct the code so that it outputs the string `Diana`.
 
@@ -763,7 +763,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=25e8b187-15f1-427b-b55e-ede867bc6dca, answer=[tests/Objects/MissingParenthesesOnMethodTest.php]
+/// type=CR, id=25e8b187-15f1-427b-b55e-ede867bc6dca, answer=[tests/Objects/25e8b187-15f1-427b-b55e-ede867bc6dca]
 
 Correct the code so that it outputs the string `This is an eat() method.`.
 
@@ -837,7 +837,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=6137a825-b1ac-435a-bd44-77d911ab18ed, answer=[tests/Objects/MissingNewKeywordTest.php]
+/// type=CR, id=6137a825-b1ac-435a-bd44-77d911ab18ed, answer=[tests/Objects/6137a825-b1ac-435a-bd44-77d911ab18ed]
 
 Correct the code so that it outputs the string `This is an eat() method.`.
 
@@ -973,7 +973,7 @@ On line 12, remove the assignment operator `=` after `$person`. Execute the prog
 :::
 
 
-/// type=CR, id=2bd1d89c-0c6f-4d2c-8f7b-2f68de90ee54, answer=[tests/Objects/CorrectMultipleErrorTest.php]
+/// type=CR, id=2bd1d89c-0c6f-4d2c-8f7b-2f68de90ee54, answer=[tests/Objects/2bd1d89c-0c6f-4d2c-8f7b-2f68de90ee54]
 
 Correct the code so that it outputs the string `Charles`.
 
@@ -1002,7 +1002,7 @@ Correct the code so that it outputs the string `Charles`.
 
 ### Part 4: Practice
 
-/// type=CR, id=a0f225fc-b7e2-45a2-9a3a-febaa82ef6b8, answer=[tests/Objects/CreateNewObjectTest.php]
+/// type=CR, id=a0f225fc-b7e2-45a2-9a3a-febaa82ef6b8, answer=[tests/Objects/a0f225fc-b7e2-45a2-9a3a-febaa82ef6b8]
 
 Write a program that uses a `new` keyword to create an instance of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
@@ -1020,7 +1020,7 @@ After the class declaration, add a statement that creates the `$pet` object an i
 ```
 
 
-/// type=CR, id=289ed4c4-f00b-424a-b605-b9246d94b575, answer=[tests/Objects/CreatePlantObjectTest.php]
+/// type=CR, id=289ed4c4-f00b-424a-b605-b9246d94b575, answer=[tests/Objects/289ed4c4-f00b-424a-b605-b9246d94b575]
 
 Write a program that uses a `new` keyword to create an instance of a certain class. First, use a `class` keyword to declare a class named `Plant`. Within the curly braces `{}`, add the following statements:
 

@@ -591,7 +591,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=355f59d8-93c5-4399-bf42-ca1d010ee92e, answer=[tests/Classes/MissingAssignmentOperatorTest.php]
+/// type=CR, id=355f59d8-93c5-4399-bf42-ca1d010ee92e, answer=[tests/Classes/355f59d8-93c5-4399-bf42-ca1d010ee92e]
 
 Correct the code so that it outputs the string `This is a class property.`.
 
@@ -667,7 +667,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=f37728d4-5e19-4549-85de-8d7d3874ef4f, answer=[tests/Classes/MissingClassKeywordTest.php]
+/// type=CR, id=f37728d4-5e19-4549-85de-8d7d3874ef4f, answer=[tests/Classes/f37728d4-5e19-4549-85de-8d7d3874ef4f]
 
 Correct the code so that it outputs the string `This is a class property.`.
 
@@ -742,7 +742,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=6ea8778e-83a7-49e4-a517-021d123b738f, answer=[tests/Classes/MissingDollarSignOnPropertyTest.php]
+/// type=CR, id=6ea8778e-83a7-49e4-a517-021d123b738f, answer=[tests/Classes/6ea8778e-83a7-49e4-a517-021d123b738f]
 
 Correct the code so that it outputs the string `This is a class property.`.
 
@@ -817,7 +817,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=1f0bff5a-85ec-40cb-84d8-367b0eebb9ad, answer=[tests/Classes/MissingFunctionKeywordTest.php]
+/// type=CR, id=1f0bff5a-85ec-40cb-84d8-367b0eebb9ad, answer=[tests/Classes/1f0bff5a-85ec-40cb-84d8-367b0eebb9ad]
 
 Correct the code so that it outputs the string `This is a class method.`.
 
@@ -893,7 +893,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=c5132db2-9b98-4d32-b307-69d3c48f7075, answer=[tests/Classes/MissingParenthesesAfterMethodTest.php]
+/// type=CR, id=c5132db2-9b98-4d32-b307-69d3c48f7075, answer=[tests/Classes/c5132db2-9b98-4d32-b307-69d3c48f7075]
 
 Correct the code so that it outputs the string `This is a class method.`.
 
@@ -1045,7 +1045,7 @@ Remove the open curly brace `{` on line 3. Execute the program. What is the erro
 :::
 
 
-/// type=CR, id=3ce1a9ec-c263-41a9-8792-b2a21f45ec7d, answer=[tests/Classes/CorrectMultipleErrorsTest.php]
+/// type=CR, id=3ce1a9ec-c263-41a9-8792-b2a21f45ec7d, answer=[tests/Classes/3ce1a9ec-c263-41a9-8792-b2a21f45ec7d]
 
 Correct the code so that it outputs the string `This is a class method.`.
 
@@ -1074,7 +1074,7 @@ Correct the code so that it outputs the string `This is a class method.`.
 
 ### Part 4: Practice
 
-/// type=CR, id=0b0f737a-fa9c-4cf6-bbf2-dd6c4b217fde, answer=[tests/Classes/CreateSimpleClassTest.php]
+/// type=CR, id=0b0f737a-fa9c-4cf6-bbf2-dd6c4b217fde, answer=[tests/Classes/0b0f737a-fa9c-4cf6-bbf2-dd6c4b217fde]
 
 Write a program that uses a `class` keyword to create a class definition of a `Person` class. First, use a `class` keyword to declare a class named `Person`. Within the curly braces `{}`, add a property definition of a class property `$name` with the value `Diana`. Next, add a method definition for `eat()` method. Inside the `eat()` method body, add an `echo` statement to display the string `This is an eat method.`. After the class declaration, add a statement `$personObject = new Person();` to instantiate a `Person` class. Then, add another statement `$personObject->eat();` to call a class method. Run the program to view the output.
 

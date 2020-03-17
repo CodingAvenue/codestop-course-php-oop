@@ -580,7 +580,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=2d38580f-78ff-4ed4-8b2b-d43450d2fa81, answer=[tests/Properties/MissingPublicKeywordTest.php]
+/// type=CR, id=2d38580f-78ff-4ed4-8b2b-d43450d2fa81, answer=[tests/Properties/2d38580f-78ff-4ed4-8b2b-d43450d2fa81]
 
 Correct the code so that it outputs the string `Diana`.
 
@@ -654,7 +654,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=ddfec419-f572-4ab8-adda-bd9c5ab4779f, answer=[tests/Properties/MissingAssignmentOperatorTest.php]
+/// type=CR, id=ddfec419-f572-4ab8-adda-bd9c5ab4779f, answer=[tests/Properties/ddfec419-f572-4ab8-adda-bd9c5ab4779f]
 
 Correct the code so that it outputs the string `Diana`.
 
@@ -729,7 +729,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=2f36df9e-1c39-47fb-bd43-8fd4878f8089, answer=[tests/Properties/RemoveUnpexpectedDollarSignTest.php]
+/// type=CR, id=2f36df9e-1c39-47fb-bd43-8fd4878f8089, answer=[tests/Properties/2f36df9e-1c39-47fb-bd43-8fd4878f8089]
 
 Correct the code so that it outputs the string `Canada`.
 
@@ -805,7 +805,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=e9640e3b-0b32-4232-95cd-98a3647036a6, answer=[tests/Properties/MissingDollarSignOnObjectTest.php]
+/// type=CR, id=e9640e3b-0b32-4232-95cd-98a3647036a6, answer=[tests/Properties/e9640e3b-0b32-4232-95cd-98a3647036a6]
 
 Correct the code so that it outputs the string `Canada`.
 
@@ -1033,7 +1033,7 @@ Remove the dollar sign `$` from `$address` on line 5. Execute the program. What 
 :::
 
 
-/// type=CR, id=88ff20f9-2d23-4325-b1d1-520a29351a30, answer=[tests/Properties/CorrectMultipleErrorsTest.php]
+/// type=CR, id=88ff20f9-2d23-4325-b1d1-520a29351a30, answer=[tests/Properties/88ff20f9-2d23-4325-b1d1-520a29351a30]
 
 Correct the code so that it outputs the string `Canada`.
 
@@ -1063,7 +1063,7 @@ Correct the code so that it outputs the string `Canada`.
 
 ### Part 4: Practice
 
-/// type=CR, id=84334020-7682-4b7d-bfda-e7d45384630b, answer=[tests/Properties/ManipulateObjectPropertiesTest.php]
+/// type=CR, id=84334020-7682-4b7d-bfda-e7d45384630b, answer=[tests/Properties/84334020-7682-4b7d-bfda-e7d45384630b]
 
 Write a program that manipulates the properties of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
  
