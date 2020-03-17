@@ -1028,7 +1028,7 @@ Write a program that uses a `new` keyword to create an instance of a certain cla
 
  2. A method definition for the `grow()` method. Inside the `grow()` method body, add an `echo` statement to display the string `Plants grow everywhere.`.
 
-After the class declaration, add a statement that creates the `$plantObject` object an instance of a `Plant` class. Then, add another statement that calls the `grow()` method of the `$plantObject` object. Run the program to view the output.
+After the class declaration, add a statement that creates the `$plant` object an instance of a `Plant` class. Then, add another statement that calls the `grow()` method of the `$plant` object. Run the program to view the output.
 
 ```php
 <?php
