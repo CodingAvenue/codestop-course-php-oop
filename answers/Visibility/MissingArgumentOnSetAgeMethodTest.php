@@ -29,7 +29,7 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(45);
-$personObject->display();
+$person = new Person();
+$person->setAge(45);
+$person->display();
 ?>

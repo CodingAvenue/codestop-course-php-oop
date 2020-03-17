@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingArgumentOnSetAgeMethodTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingArgumentOnSetAgeMethodTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -33,11 +41,11 @@ class MissingArgumentOnSetAgeMethodTest extends Proof
         $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(3, $personObject->count(), "Expecting three occurrences of the variable named 'personObject'.");
+        $this->assertEquals(3, $person->count(), "Expecting three occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -111,16 +119,15 @@ class MissingArgumentOnSetAgeMethodTest extends Proof
 
         $this->assertEquals(1, $annaValue->count(), "Expecting the value 'Anna' assigned to the 'name' property.");
     }
-/*
+
     public function testSetAgeCallArgs()
     {
-        $setAge = self::$code->find('method-call[name="setAge", variable="personObject"]');
+        $setAge = self::$code->find('method-call[name="setAge", variable="person"]');
         $args = $setAge->getSubNode()->getSubnode();
-      
-        $value = $args->find('number[value="45"]');
-        print_r($value);
-        $this->assertEquals(1, $value->count(), "Expecting the argument `45` in the 'setAge()' method call of 'personObject'.");
-    } */
+        $value = $args->find('integer');
+        
+        $this->assertEquals(1, $value->count(), "Expecting an integer argument in the 'setAge()' method call of 'person'.");
+    }
 
     public function testClass()
     {
@@ -131,16 +138,16 @@ class MissingArgumentOnSetAgeMethodTest extends Proof
 
     public function testSetAgeCall()
     {
-        $setAge = self::$code->find('method-call[name="setAge", variable="personObject"]');
+        $setAge = self::$code->find('method-call[name="setAge", variable="person"]');
 
-        $this->assertEquals(1, $setAge->count(), "Expecting a 'setAge()' method call of 'personObject'.");
+        $this->assertEquals(1, $setAge->count(), "Expecting a 'setAge()' method call of 'person'.");
     }  
 
     public function testDisplayCall()
     {
-        $display = self::$code->find('method-call[name="display", variable="personObject"]');
+        $display = self::$code->find('method-call[name="display", variable="person"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'personObject'.");
+        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'person'.");
     }   
 
     public function testReturn()
@@ -198,5 +205,4 @@ class MissingArgumentOnSetAgeMethodTest extends Proof
         
         $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the class itself.");
     }
-    //still need to test the arguments in the method calls.
 }

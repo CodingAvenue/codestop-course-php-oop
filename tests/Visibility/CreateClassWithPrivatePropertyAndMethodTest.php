@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class CreateClassWithPrivatePropertyAndMethodTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class CreateClassWithPrivatePropertyAndMethodTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -166,16 +174,15 @@ class CreateClassWithPrivatePropertyAndMethodTest extends Proof
 
         $this->assertEquals(1, $value->count(), "Expecting the argument `Cat` in the 'changeType()' method call of 'pet'.");
     } 
-    /*
+
     public function testSetAgeCallArgs()
     {
         $setAge = self::$code->find('method-call[name="setAge", variable="pet"]');
         $args = $setAge->getSubNode()->getSubnode();
-      
-        $value = $args->find('number[value="1.5"]');
-        print_r($value);
-        $this->assertEquals(1, $value->count(), "Expecting the argument `45` in the 'setAge()' method call of 'pet'.");
-    } */
+        $value = $args->find('float'); //Note: This is still needs testing
+        
+        $this->assertEquals(1, $value->count(), "Expecting a float argument in the 'setAge()' method call of 'pet'.");
+    }
 
     public function testReturn()
     {
