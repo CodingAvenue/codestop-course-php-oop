@@ -41,11 +41,11 @@ class MissingParenthesesOnMethodCallTest extends TestCase
         $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(3, $personObject->count(), "Expecting three occurrences of the variable named 'personObject'.");
+        $this->assertEquals(3, $person->count(), "Expecting three occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -95,11 +95,11 @@ class MissingParenthesesOnMethodCallTest extends TestCase
         
     public function testChangeNameCallArgs()
     {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $changeName = self::$code->find('method-call[name="changeName", variable="person"]');
         $args = $changeName->getSubNode()->getSubnode();
         $value = $args->find('string[value="Charles"]');
    
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'person'.");
     } 
      
     public function testClass()
@@ -111,16 +111,16 @@ class MissingParenthesesOnMethodCallTest extends TestCase
 
     public function testChangeNameCall()
     {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $changeName = self::$code->find('method-call[name="changeName", variable="person"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'personObject'.");
+        $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'person'.");
     }  
 
     public function testDisplayCall()
     {
-        $display = self::$code->find('method-call[name="display", variable="personObject"]');
+        $display = self::$code->find('method-call[name="display", variable="person"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'personObject'.");
+        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'person'.");
     }
     
     public function testNewNameParam()

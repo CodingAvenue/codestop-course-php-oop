@@ -9,7 +9,7 @@
         }
     }
     
-    $personObject = new Person();
-    $personObject->changeName("Charles");
-    echo $personObject->name;
+    $person = new Person();
+    $person->changeName("Charles");
+    echo $person->name;
 ?>

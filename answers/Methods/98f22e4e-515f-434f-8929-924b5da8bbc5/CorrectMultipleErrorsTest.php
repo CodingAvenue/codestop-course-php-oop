@@ -14,7 +14,7 @@
         }
     }
 
-    $personObject = new Person();
-    $personObject->changeName("Charles");
-    $personObject->display();
+    $person = new Person();
+    $person->changeName("Charles");
+    $person->display();
 ?>

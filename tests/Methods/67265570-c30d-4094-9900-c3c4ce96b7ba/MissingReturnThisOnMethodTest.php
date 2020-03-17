@@ -41,11 +41,11 @@ class MissingReturnThisOnMethodTest extends TestCase
         $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -118,18 +118,18 @@ class MissingReturnThisOnMethodTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display"]');
         $subNode = $display->getSubNode();
-        $changeName = $subNode->find('method-call[name="changeName", variable="personObject"]');
+        $changeName = $subNode->find('method-call[name="changeName", variable="person"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting chain method calls for `changeName()` and `display()` methods of 'personObject'.");
+        $this->assertEquals(1, $changeName->count(), "Expecting chain method calls for `changeName()` and `display()` methods of 'person'.");
     }  
          
     public function testChangeNameCallArgs()
     {
-        $changeName = self::$code->find('method-call[name="changeName", variable="personObject"]');
+        $changeName = self::$code->find('method-call[name="changeName", variable="person"]');
         $args = $changeName->getSubNode()->getSubnode();
         $value = $args->find('string[value="Charles"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'personObject'.");
+        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'person'.");
     } 
   
     public function testNamePropertyCall()

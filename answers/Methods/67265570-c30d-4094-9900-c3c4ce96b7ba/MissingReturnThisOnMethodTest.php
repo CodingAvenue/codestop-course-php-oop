@@ -12,6 +12,6 @@
             echo "My name is " . $this->name . ".";
         }
     }
-    $personObject = new Person();
-    $personObject->changeName("Charles")->display();
+    $person = new Person();
+    $person->changeName("Charles")->display();
 ?>
