@@ -10,7 +10,7 @@
         }
     }
     
-    $personObject = new Person();
-    $personObject->address = "Canada";
-    echo $personObject->address;
+    $person = new Person();
+    $person->address = "Canada";
+    echo $person->address;
 ?>

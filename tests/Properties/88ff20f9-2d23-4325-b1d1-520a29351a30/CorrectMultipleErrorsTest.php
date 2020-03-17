@@ -41,11 +41,11 @@ class CorrectMultipleErrorsTest extends TestCase
         $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(3, $personObject->count(), "Expecting three occurrences of the variable named 'personObject'.");
+        $this->assertEquals(3, $person->count(), "Expecting three occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -102,8 +102,8 @@ class CorrectMultipleErrorsTest extends TestCase
 
     public function testAddressCall()
     {
-        $address = self::$code->find('property-call[name="address", variable="personObject"]');
+        $address = self::$code->find('property-call[name="address", variable="person"]');
 
-        $this->assertEquals(2, $address->count(), "Expecting two 'address' property calls of 'personObject'.");
+        $this->assertEquals(2, $address->count(), "Expecting two 'address' property calls of 'person'.");
     }
 }  

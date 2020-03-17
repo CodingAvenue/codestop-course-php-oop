@@ -10,6 +10,6 @@
         }
     }
     
-    $personObject = new Person();
-    echo $personObject->name;
+    $person = new Person();
+    echo $person->name;
 ?>

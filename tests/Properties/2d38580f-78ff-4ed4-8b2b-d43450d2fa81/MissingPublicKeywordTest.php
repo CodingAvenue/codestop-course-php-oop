@@ -41,11 +41,11 @@ class MissingPublicKeywordTest extends TestCase
         $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -102,8 +102,8 @@ class MissingPublicKeywordTest extends TestCase
 
     public function testNameCall()
     {
-        $name = self::$code->find('property-call[name="name", variable="personObject"]');
+        $name = self::$code->find('property-call[name="name", variable="person"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'personObject'.");
+        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
     }
 }  
