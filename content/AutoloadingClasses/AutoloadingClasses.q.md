@@ -311,7 +311,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once(__DIR__ . "/includes/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
 $studentObject = new Student("Charles", 15);
 $studentObject->display();
@@ -1129,7 +1129,7 @@ spl_autoload_register("myAutoloader");
 
 ```php
 <?php
-require_once(__DIR__ . "/Autoload.php");
+require_once(__DIR__ . "/autoload.php");
 
 $studentObject = new Student("May", 25);
 $studentObject->display();
@@ -1218,7 +1218,7 @@ Execute the program. What is the error message?
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `Autoload.php` on line number 4
+ - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `autoload.php` on line number 4
 
  - Warning: `require_once(__DIR__ . /autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
@@ -1704,7 +1704,7 @@ Execute the program. What are the error messages?
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `Autoload.php` on line number 4
+ - Use of undefined constant `__DRI__` - assumed `'__DRI__'` in `autoload.php` on line number 4
 
  - Warning: `require_once(./autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
@@ -1728,7 +1728,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=dc50b2e4-32be-45e3-948f-0a0e9192afea, answer=[tests/AutoloadingClasses/IncorrectDirectorySpecifiedInRequireTest.php], filename=[autoloader/Autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php
+/// type=CR, id=dc50b2e4-32be-45e3-948f-0a0e9192afea, answer=[tests/AutoloadingClasses/IncorrectDirectorySpecifiedInRequireTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -2272,7 +2272,7 @@ In the statement `$file = dirname(__DIR__) . '\\Shapes\\' . $shapeClass . '.php'
 
  - Uncaught Error: Class `'Student'` not found in `Main.php` on line number 4
 
- - Use of undefined constant `myAutoloader` - assumed `'myAutoloader'` in `Autoload.php` on line number 20
+ - Use of undefined constant `myAutoloader` - assumed `'myAutoloader'` in `autoload.php` on line number 20
 
  - Warning: `require_once(./autoload.php)`: failed to open stream: No such file or directory in `Main.php` on line number 2
 
