@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingDollarSignOnPropertyTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingParenthesesAfterMethodTest extends TestCase
 {
+	protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+	}
+	
 	public function testPhpStartTag()
 	{
 		$checkStart = self::$code->codeStartCheck();
@@ -14,7 +22,7 @@ class MissingDollarSignOnPropertyTest extends Proof
 	{
 		$evaluator = self::$code->evaluator();
 		$evaled    = $evaluator->evaluate();
-		$expected  = "This is a class property.";
+		$expected  = "This is a class method.";
 
 		$this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
 	}
@@ -23,7 +31,7 @@ class MissingDollarSignOnPropertyTest extends Proof
 	{
 		$nodes = self::$code->find('construct[name="echo"]');
 
-		$this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+		$this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
 	}
 
 	public function testAssignment()
@@ -61,7 +69,7 @@ class MissingDollarSignOnPropertyTest extends Proof
 		$obj = self::$code->find('class[name="MyClass"]');
 		$subNodes = $obj->getSubnode();
 		$myProp = $subNodes->find('property[name="myProp", type="public"]');
-		
+
 		$this->assertEquals(1, $myProp->count(), "Expecting a public class property named 'myProp'.");
 	}
 
@@ -72,10 +80,10 @@ class MissingDollarSignOnPropertyTest extends Proof
 		$this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `MyClass` class.");
 	}  
 
-	public function testMyPropCall()
+	public function testMyMethodCall()
 	{
-		$myProp = self::$code->find('property-call[name="myProp", variable="myObject"]');
+		$myProp = self::$code->find('method-call[name="myMethod", variable="myObject"]');
 
-		$this->assertEquals(1, $myProp->count(), "Expecting a 'myProp' property call of 'myObject'.");
+		$this->assertEquals(1, $myProp->count(), "Expecting a 'myMethod()' method call of 'myObject'.");
 	}
 }

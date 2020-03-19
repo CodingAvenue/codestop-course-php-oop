@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingClassKeywordTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingDollarSignOnPropertyTest extends TestCase
 {
+	protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+	}
+	
 	public function testPhpStartTag()
 	{
 		$checkStart = self::$code->codeStartCheck();
@@ -52,7 +60,7 @@ class MissingClassKeywordTest extends Proof
 		$obj = self::$code->find('class[name="MyClass"]');
 		$subNodes = $obj->getSubnode();
 		$myMethod = $subNodes->find('method[name="myMethod"]');
-
+		
 		$this->assertEquals(1, $myMethod->count(), "Expecting a myMethod() method.");
 	}
 
