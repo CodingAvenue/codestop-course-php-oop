@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingFunctionKeywordOnConstructTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingFunctionKeywordOnConstructTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -33,11 +41,11 @@ class MissingFunctionKeywordOnConstructTest extends Proof
         $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
     }
 	
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
         
-        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
     
     public function testInstantiation()
@@ -74,9 +82,9 @@ class MissingFunctionKeywordOnConstructTest extends Proof
  	
     public function testNameCall()
     {
-        $name = self::$code->find('property-call[name="name", variable="personObject"]');
+        $name = self::$code->find('property-call[name="name", variable="person"]');
         
-        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'personObject'.");
+        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
     }
 
     public function testNameParam()
@@ -92,5 +100,5 @@ class MissingFunctionKeywordOnConstructTest extends Proof
         
         $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `Person` class itself.");
     }
-    //still need to test the arguments in the method calls.
+
 }

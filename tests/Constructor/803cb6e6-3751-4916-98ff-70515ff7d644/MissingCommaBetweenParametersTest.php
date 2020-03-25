@@ -1,8 +1,16 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingCommaBetweenParametersTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingCommaBetweenParametersTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
@@ -33,11 +41,11 @@ class MissingCommaBetweenParametersTest extends Proof
         $this->assertEquals(4, $nodes->count(), "Expecting four assignment statements.");
     }
 	
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
         
-        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
     
     public function testInstantiation()
@@ -119,9 +127,9 @@ class MissingCommaBetweenParametersTest extends Proof
     
     public function testDisplayCall()
     {
-        $display = self::$code->find('method-call[name="display", variable="personObject"]');
+        $display = self::$code->find('method-call[name="display", variable="person"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'personObject'.");
+        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'person'.");
     }   
       
     public function testReturn()
@@ -186,5 +194,5 @@ class MissingCommaBetweenParametersTest extends Proof
         
         $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the class itself.");
     }
-    //still need to test the arguments in the method calls.
+
 }

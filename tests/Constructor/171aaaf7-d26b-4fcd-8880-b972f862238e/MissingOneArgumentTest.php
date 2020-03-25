@@ -1,12 +1,20 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class MissingCommaBetweenArgumentsTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingOneArgumentTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
-
+        
         $this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
     }
     
@@ -15,7 +23,7 @@ class MissingCommaBetweenArgumentsTest extends Proof
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
         $expected  = "James is 15 years old.";
-
+        
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
     
@@ -33,11 +41,11 @@ class MissingCommaBetweenArgumentsTest extends Proof
         $this->assertEquals(4, $nodes->count(), "Expecting four assignment statements.");
     }
 	
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
         
-        $this->assertEquals(2, $personObject->count(), "Expecting two occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
     
     public function testInstantiation()
@@ -119,22 +127,22 @@ class MissingCommaBetweenArgumentsTest extends Proof
     
     public function testDisplayCall()
     {
-        $display = self::$code->find('method-call[name="display", variable="personObject"]');
+        $display = self::$code->find('method-call[name="display", variable="person"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'personObject'.");
+        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'person'.");
     }   
       
     public function testReturn()
     {
         $nodes = self::$code->find('construct[name="return"]');
-
+        
         $this->assertEquals(3, $nodes->count(), "Expecting three return statements.");
     }
     
     public function testIf()
     {
         $nodes = self::$code->find('construct[name="if"]');
-
+        
         $this->assertEquals(3, $nodes->count(), "Expecting three if constructs.");
     }
 
@@ -186,5 +194,5 @@ class MissingCommaBetweenArgumentsTest extends Proof
         
         $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the class itself.");
     }
-    //still need to test the arguments in the method calls.
+
 }

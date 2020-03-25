@@ -1,15 +1,23 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class AddConstructorToClassTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class AddConstructorToClassTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
+
     public function testPhpStartTag()
     {
         $checkStart = self::$code->codeStartCheck();
         
         $this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
     }
-    
+
     public function testActualCode()
     {
         $evaluator = self::$code->evaluator();
@@ -18,7 +26,7 @@ class AddConstructorToClassTest extends Proof
         
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
-    
+
     public function testEcho()
     {
         $nodes = self::$code->find('construct[name="echo"]');
@@ -221,5 +229,4 @@ class AddConstructorToClassTest extends Proof
         $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the class itself.");
     }
 
-    //still need to test the arguments in the method calls.
 }
