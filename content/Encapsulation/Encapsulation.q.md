@@ -126,17 +126,17 @@ Which of the following are visibility keywords?
  - `function`
 
 
-/// type=MS, id=5f5631b3-5797-417c-98f4-22f9bc55d232, answer=[1,4]
+/// type=MS, id=5f5631b3-5797-417c-98f4-22f9bc55d232, answer=[3,4]
 
 In the statement `private $name = "Anna";` on line 4, what does `private` do?
-
- - It encapsulates the `$name` property of the `Person` class.
 
  - It sets the accessibility of the `$name` property everywhere.
 
  - It declares and initializes the `$name` property of the `Person` class.
 
  - It sets the accessibility of the `$name` property only within the `Person` class.
+
+ - It restricts other objects to directly access the `$name` property of the `Person` class.
 
  - It sets the accessibility of the `$name` property only within the `Person` class and its child or parent classes.
 
@@ -609,7 +609,7 @@ Which statements are the main purpose of encapsulation?
 
 /// type=SS, id=dc0e186a-15dc-4745-9fa9-99c86e07c6c2, answer=[2]
 
-Which visibility keyword is used to encapsulate properties and methods in a class?
+Which visibility keyword restricts other objects to directly access properties and methods in a class?
 
  - `public`
 

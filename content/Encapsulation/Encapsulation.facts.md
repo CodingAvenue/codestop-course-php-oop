@@ -6,7 +6,7 @@ The main purpose of encapsulation is to reduce software development complexity a
  
 `Encapsulation` is achieved by keeping each object state `private` inside a class that restricts other objects to directly access this state.
 
-`Accessors` and `Mutators` are used by objects in accessing and changing the values of the class properties defined as `private` or `protected`.
+`Accessors` and `Mutators` are used in accessing and changing the values of the class properties defined as `private` or `protected`.
 
 An object is not allowed to directly access and change its properties. It can only access and change the values of its properties through `public` methods.
 
