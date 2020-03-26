@@ -9,6 +9,6 @@
         }
     }
     
-    $personObject = new Person();
-    $personObject->eat();
+    $person = new Person();
+    echo $person->name;
 ?>

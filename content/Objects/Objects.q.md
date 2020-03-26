@@ -20,8 +20,8 @@
         }
     }
 
-    $personObject = new Person();
-    echo $personObject->name;
+    $person = new Person();
+    echo $person->name;
 ?>
 ```
 /// type=SS, id=871c4e38-65ea-4aa0-a7c3-7e74bf83c756, answer=[2]
@@ -90,26 +90,26 @@ Which of the following is a class declaration?
 
  - `class Person { }`
 
+ - `echo $person->name;`
+
  - `public $name = "Diana";`
 
- - `echo $personObject->name;`
-
- - `$personObject = new Person();`
+ - `$person = new Person();`
 
  - `public function eat() { echo "This is an eat() method."; }`
 
 
-/// type=SS, id=fd0287de-bb5c-4a42-9ac1-141e122cc19b, answer=[2]
+/// type=SS, id=fd0287de-bb5c-4a42-9ac1-141e122cc19b, answer=[3]
 
 Which of the following is a property definition?
 
  - `class Person { }`
 
+ - `echo $person->name;`
+
  - `public $name = "Diana";`
 
- - `echo $personObject->name;`
-
- - `$personObject = new Person();`
+ - `$person = new Person();`
 
  - `public function eat() { echo "This is an eat() method."; }`
 
@@ -120,18 +120,18 @@ Which of the following is a method definition?
 
  - `class Person { }`
 
+ - `echo $person->name;`
+
  - `public $name = "Diana";`
 
- - `echo $personObject->name;`
-
- - `$personObject = new Person();`
+ - `$person = new Person();`
 
  - `public function eat() { echo "This is an eat() method."; }`
 
 
 /// type=MS, id=f001c235-1869-42b5-a6b6-487beefcf91c, answer=[1,5]
 
-In the statement `$personObject = new Person();` on line 12, what is `$personObject`?
+In the statement `$person = new Person();` on line 12, what is `$person`?
 
  - It is an object.
 
@@ -146,37 +146,37 @@ In the statement `$personObject = new Person();` on line 12, what is `$personObj
 
 /// type=SS, id=9a9be46c-4d0f-4846-bbd4-d0db49489f21, answer=[5]
 
-In the statement `$personObject = new Person();` on line 12, what does the `new` keyword do?
+In the statement `$person = new Person();` on line 12, what does the `new` keyword do?
 
- - It assigns `Person()` to `$personObject`.
+ - It assigns `Person()` to `$person`.
 
- - It sets the value of `$personObject` to `Person()`.
+ - It sets the value of `$person` to `Person()`.
 
- - It defines the `$personObject` object in `Person()`.
+ - It defines the `$person` object in `Person()`.
 
- - It displays the `$personObject` object of the `Person` class.
+ - It displays the `$person` object of the `Person` class.
 
- - It creates the `$personObject` object as an instance of the `Person` class.
+ - It creates the `$person` object as an instance of the `Person` class.
 
 
 /// type=MS, id=87d5e0a5-ccd7-4f9a-8e32-d09348de5a47, answer=[2,5]
 
 Which statements correctly describe the code on line 12?
 
- - It assigns `Person()` to `$personObject`.
+ - It assigns `Person()` to `$person`.
 
  - It creates an instance of the `Person` class.
 
- - It sets the value of `$personObject` to `Person()`.
+ - It sets the value of `$person` to `Person()`.
 
- - It displays the `$personObject` object of the `Person` class.
+ - It displays the `$person` object of the `Person` class.
 
- - It assigns the new instance of the `Person` class to `$personObject`.
+ - It assigns the new instance of the `Person` class to `$person`.
 
 
 /// type=SS, id=4bb092b5-33af-45a2-84f1-cabac0cd2e54, answer=[1]
 
-In the statement `echo $personObject->name;` on line 13, what is `->`?
+In the statement `echo $person->name;` on line 13, what is `->`?
 
  - It is an object operator.
 
@@ -191,7 +191,7 @@ In the statement `echo $personObject->name;` on line 13, what is `->`?
 
 /// type=SS, id=ef743a7b-9e42-4e82-8db7-06771072a1c2, answer=[4]
 
-In the statement `echo $personObject->name;` on line 13, what is `name`?
+In the statement `echo $person->name;` on line 13, what is `name`?
 
  - It is a string.
 
@@ -206,32 +206,32 @@ In the statement `echo $personObject->name;` on line 13, what is `name`?
 
 /// type=SS, id=91e39709-6b3f-4ccc-85ba-e8143118cc05, answer=[5]
 
-In the statement `echo $personObject->name;` on line 13, what does `$personObject->name` do?
+In the statement `echo $person->name;` on line 13, what does `$person->name` do?
 
- - It sets the value of the `name` property of `$personObject`.
+ - It sets the value of the `name` property of `$person`.
 
- - It returns the value of the `name` property of `$personObject`.
+ - It returns the value of the `name` property of `$person`.
 
- - It removes the value of the `name` property of `$personObject`.
+ - It removes the value of the `name` property of `$person`.
 
- - It displays the value of the `name` property of `$personObject`.
+ - It displays the value of the `name` property of `$person`.
 
- - It accesses the value of the `name` property of `$personObject`.
+ - It accesses the value of the `name` property of `$person`.
  
 
 /// type=SS, id=f9f3ffed-4f37-421a-8015-c01fc35cae57, answer=[4]
 
 Which statement best describes the code on line 13?
 
- - It sets the value `Diana` of the `name` property as `$personObject`.
+ - It sets the value `Diana` of the `name` property as `$person`.
 
- - It adds the value `Diana` of the `name` property to `$personObject`.
+ - It adds the value `Diana` of the `name` property to `$person`.
 
- - It returns the value `Diana` of the `name` property of `$personObject`.
+ - It returns the value `Diana` of the `name` property of `$person`.
 
- - It displays the value `Diana` of the `name` property of `$personObject`.
+ - It displays the value `Diana` of the `name` property of `$person`.
 
- - It removes the value `Diana` of the `name` property of `$personObject`.
+ - It removes the value `Diana` of the `name` property of `$person`.
 
 :::
 
@@ -252,8 +252,8 @@ Which statement best describes the code on line 13?
         }
     }
 
-    $personObject = new Person();
-    $personObject->eat();
+    $person = new Person();
+    $person->eat();
 ?>
 ```
 /// type=SS, id=d36bc0bf-b948-4ad9-a5df-db88dc8345bc, answer=[5]
@@ -283,7 +283,7 @@ Which of the following is an object?
 
  - `Person`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=SS, id=9b7a55d3-3f4b-46e1-a73b-928ff9bc56c4, answer=[3]
@@ -298,7 +298,7 @@ Which of the following is a property?
 
  - `Person`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=SS, id=1e194ceb-6755-4a2b-ab6d-d2c2a97e2b41, answer=[2]
@@ -313,37 +313,37 @@ Which of the following is a method?
 
  - `Person`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=SS, id=fe674cd7-72ad-4e49-a04d-50428b3f0b20, answer=[1]
 
-On line 13, what does `$personObject->eat()` do?
+On line 13, what does `$person->eat()` do?
 
- - It calls the `eat()` method of `$personObject`.
+ - It calls the `eat()` method of `$person`.
 
- - It defines the `eat()` method of `$personObject`.
+ - It defines the `eat()` method of `$person`.
 
- - It creates the `eat()` method of `$personObject`.
+ - It creates the `eat()` method of `$person`.
 
- - It declares the `eat()` method of `$personObject`.
+ - It declares the `eat()` method of `$person`.
 
- - It displays the `eat()` method of `$personObject`.
+ - It displays the `eat()` method of `$person`.
 
 
 /// type=SS, id=7d4c7933-4b0f-4595-82b9-2dd430faf738, answer=[5]
 
-In the statement `$personObject->eat();` on line 13, what does the object operator `->` do?
+In the statement `$person->eat();` on line 13, what does the object operator `->` do?
 
- - It sets the `eat()` method of `$personObject`.
+ - It sets the `eat()` method of `$person`.
 
- - It creates the `eat()` method of `$personObject`.
+ - It creates the `eat()` method of `$person`.
 
- - It defines the `eat()` method of `$personObject`.
+ - It defines the `eat()` method of `$person`.
 
- - It declares the `eat()` method of `$personObject`.
+ - It declares the `eat()` method of `$person`.
 
- - It accesses the `eat()` method of `$personObject`.
+ - It accesses the `eat()` method of `$person`.
 
 :::
 
@@ -364,9 +364,9 @@ In the statement `$personObject->eat();` on line 13, what does the object operat
         }
     }
 
-    $personObject = new Person();
-    $personObject->name = "Charles";
-    echo $personObject->name;
+    $person = new Person();
+    $person->name = "Charles";
+    echo $person->name;
 ?>
 ```
 /// type=SS, id=dbbfe47c-6e0a-4ec0-9a0f-1566c358bdc1, answer=[3]
@@ -388,20 +388,20 @@ Execute the program. What is its output?
 
 Which statement best describes the code on line 13?
 
- - It adds the value `Charles` of the `name` property to `$personObject`.
+ - It adds the value `Charles` of the `name` property to `$person`.
 
- - It sets the value of the `name` property of `$personObject` to `Charles`.
+ - It sets the value of the `name` property of `$person` to `Charles`.
 
- - It returns the value `Charles` of the `name` property of `$personObject`.
+ - It returns the value `Charles` of the `name` property of `$person`.
 
- - It displays the value `Charles` of the `name` property of `$personObject`.
+ - It displays the value `Charles` of the `name` property of `$person`.
 
- - It removes the value `Charles` of the `name` property of `$personObject`.
+ - It removes the value `Charles` of the `name` property of `$person`.
 
 
 /// type=SS, id=6d96bd41-2721-45c0-b0b8-29a97a60dc55, answer=[3]
 
-On lines 12, 13, and 14, replace the `$personObject` object with `$person`. Execute the program. What is its output?
+On lines 12, 13, and 14, replace the `$person` object with `$person`. Execute the program. What is its output?
 
  - It prints `name`.
 
@@ -564,8 +564,8 @@ What does the object operator `->` do?
         }
     }
 
-    $personObject = new Person();
-    echo $personObject->$name;
+    $person = new Person();
+    echo $person->$name;
 ?>
 ```
 /// type=SS, id=95eac32e-218e-468f-a128-5e1358fcc2bf, answer=[3]
@@ -606,11 +606,11 @@ Which statements correctly describe the error?
 
  - There is no semicolon `;` after the `echo` statement on line 13.
 
- - On line 13, the statement `echo $personObject->$name;` is invalid.
+ - On line 13, the statement `echo $person->$name;` is invalid.
 
- - There are no parentheses `()` after `$personObject->$name` on line 13.
+ - There are no parentheses `()` after `$person->$name` on line 13.
 
- - There is no object operator `->` between `$personObject` and `$name` on line 13.
+ - There is no object operator `->` between `$person` and `$name` on line 13.
 
 :::
 
@@ -631,8 +631,8 @@ Correct the code so that it outputs the string `Diana`.
         }
     }
 
-    $personObject = new Person();
-    echo $personObject->$name;
+    $person = new Person();
+    echo $person->$name;
 ?>
 ```
 
@@ -653,8 +653,8 @@ Correct the code so that it outputs the string `Diana`.
         }
     }
 
-    $personObject = new Person();
-    echo $personObject.name;
+    $person = new Person();
+    echo $person.name;
 ?>
 ```
 /// type=MS, id=73702179-d7de-4c18-af8f-9a543dcff038, answer=[4,5]
@@ -676,15 +676,15 @@ Execute the program. What are the error messages?
 
 Which statements correctly describe the error?
 
- - On line 13, the statement `echo $personObject.name;` is invalid.
+ - On line 13, the statement `echo $person.name;` is invalid.
 
  - There is no semicolon `;` after the `echo` statement on line 13.
 
- - There are no parentheses `()` after `$personObject.name` on line 13.
+ - There are no parentheses `()` after `$person.name` on line 13.
 
- - On line 13, the dot operator `.` between `$personObject` and `name` is invalid.
+ - On line 13, the dot operator `.` between `$person` and `name` is invalid.
 
- - There is no object operator `->` between `$personObject` and `name` on line 13.
+ - There is no object operator `->` between `$person` and `name` on line 13.
 
 :::
 
@@ -705,8 +705,8 @@ Correct the code so that it outputs the string `Diana`.
         }
     }
 
-    $personObject = new Person();
-    echo $personObject.name;
+    $person = new Person();
+    echo $person.name;
 ?>
 ```
 
@@ -727,8 +727,8 @@ Correct the code so that it outputs the string `Diana`.
         }
     }
 
-    $personObject = new Person();
-    $personObject->eat;
+    $person = new Person();
+    $person->eat;
 ?>
 ```
 /// type=SS, id=fa93fa16-20f6-4206-abc5-2399f8230204, answer=[4]
@@ -750,15 +750,15 @@ Execute the program. What is the error message?
 
 Which statements correctly describe the error?
 
- - On line 13, the method call `$personObject->eat` is invalid.
+ - On line 13, the method call `$person->eat` is invalid.
 
  - There is no `new` keyword between `->` and `eat` on line 13.
 
  - There is no semicolon `;` at the end of the statement on line 13.
 
- - On line 13, the object operator `->` between `$personObject` and `eat` is invalid.
+ - On line 13, the object operator `->` between `$person` and `eat` is invalid.
 
- - There are no parentheses `()` after the method call `$personObject->eat` on line 13.
+ - There are no parentheses `()` after the method call `$person->eat` on line 13.
 
 :::
 
@@ -779,8 +779,8 @@ Correct the code so that it outputs the string `This is an eat() method.`.
         }
     }
 
-    $personObject = new Person();
-    $personObject->eat;
+    $person = new Person();
+    $person->eat;
 ?>
 ```
 
@@ -801,8 +801,8 @@ Correct the code so that it outputs the string `This is an eat() method.`.
         }
     }
 
-    $personObject = Person();
-    $personObject->eat();
+    $person = Person();
+    $person->eat();
 ?>
 ```
 /// type=SS, id=ac8918c6-a83f-4dac-9626-fe9c56868f56, answer=[4]
@@ -826,13 +826,13 @@ Which statement best describes the error?
 
  - There are parentheses `()` after `Person` on line 12.
 
- - On line 12, the statement `$personObject = Person();` is invalid.
+ - On line 12, the statement `$person = Person();` is invalid.
 
  - There is no `new` keyword between `=` and `Person()` on line 12.
 
  - There is no object operator `->` between `=` and `Person()` on line 12.
 
- - There is an assignment operator `=` between `$personObject` and `Person()` on line 12.
+ - There is an assignment operator `=` between `$person` and `Person()` on line 12.
 
 :::
 
@@ -853,8 +853,8 @@ Correct the code so that it outputs the string `This is an eat() method.`.
         }
     }
 
-    $personObject = Person();
-    $personObject->eat();
+    $person = Person();
+    $person->eat();
 ?>
 ```
 
@@ -1028,7 +1028,7 @@ Write a program that uses a `new` keyword to create an instance of a certain cla
 
  2. A method definition for the `grow()` method. Inside the `grow()` method body, add an `echo` statement to display the string `Plants grow everywhere.`.
 
-After the class declaration, add a statement that creates the `$plantObject` object an instance of a `Plant` class. Then, add another statement that calls the `grow()` method of the `$plantObject` object. Run the program to view the output.
+After the class declaration, add a statement that creates the `$plant` object an instance of a `Plant` class. Then, add another statement that calls the `grow()` method of the `$plant` object. Run the program to view the output.
 
 ```php
 <?php

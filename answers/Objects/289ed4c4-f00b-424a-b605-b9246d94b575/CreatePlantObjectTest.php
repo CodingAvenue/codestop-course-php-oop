@@ -9,6 +9,6 @@
         }
     }
     
-    $plantObject = new Plant();
-    $plantObject->grow();
+    $plant = new Plant();
+    $plant->grow();
 ?>
