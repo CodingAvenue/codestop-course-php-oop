@@ -6,6 +6,8 @@ The main purpose of encapsulation is to reduce software development complexity a
  
 `Encapsulation` is achieved by keeping each object state `private` inside a class that restricts other objects to directly access this state.
 
+`Accessors` and `Mutators` are used by objects in accessing and changing the values of the class properties defined as `private` or `protected`.
+
 An object is not allowed to directly access and change its properties. It can only access and change the values of its properties through `public` methods.
 
 Code:
@@ -62,6 +64,6 @@ Anna is 12 years old.
 
 The `checkAge()` method and the `$age` and `$name` properties are only accessible within the `Person` class.
 
-The `setName()` and `setAge()` methods are used to change the values of the `$name` and `$age` properties outside of the `Person` class.
+The `setName()` and `setAge()` mutator methods are used to change the values of the `$name` and `$age` properties outside of the `Person` class.
 
-The `getName()` and `getAge()` methods are used to access the values of the `$name` and `$age` properties outside of the `Person` class.
+The `getName()` and `getAge()` accessor methods are used to access the values of the `$name` and `$age` properties outside of the `Person` class.
