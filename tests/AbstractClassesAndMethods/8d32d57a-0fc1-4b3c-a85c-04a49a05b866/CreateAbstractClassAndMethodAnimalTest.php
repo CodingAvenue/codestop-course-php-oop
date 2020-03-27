@@ -27,35 +27,45 @@ class CreateAbstractClassAndMethodAnimalTest extends TestCase
 
     public function testGetAge()
     {
-        $getAge = self::$code->find('method[name="getAge", type="public"]');
+		$obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $getAge = $subNodes->find('method[name="getAge", type="public"]');
 
         $this->assertEquals(1, $getAge->count(), "Expecting a public method named 'getAge()'.");
     }
 
     public function testGetType()
     {
-        $getType = self::$code->find('method[name="getType", type="public"]');
+		$obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $getType = $subNodes->find('method[name="getType", type="public"]');
 
         $this->assertEquals(1, $getType->count(), "Expecting a public method named 'getType()'.");
     }
 
     public function testDisplay()
     {
-        $display = self::$code->find('method[name="display", type="public"]');
+		$obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
 
         $this->assertEquals(1, $display->count(), "Expecting one display() method.");
     }
 
     public function testIsValid()
     {
-        $isValid = self::$code->find('method[name="isValid", type="private"]');
+		$obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
 
         $this->assertEquals(1, $isValid->count(), "Expecting an isValid() method.");
     }
 
     public function testConstruct()
     {
-        $construct = self::$code->find('method[name="__construct", type="public"]');
+		$obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
 
         $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
     }
@@ -78,6 +88,17 @@ class CreateAbstractClassAndMethodAnimalTest extends TestCase
         $this->assertEquals(1, $type->count(), "Expecting a private class property named 'type'.");
     }
 
+    public function testTypeValue()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $type = $subNodes->find('property[name="type", type="private"]');
+        $value = $type->getSubNode()->getSubNode();
+        $dogValue = $value->find('string[value="Dog"]');
+
+        $this->assertEquals(1, $dogValue->count(), "Expecting the value 'Dog' assigned to the 'type' property.");
+    }
+
     public function testClassAnimal()
     {
         $nodes = self::$code->find('class[name="Animal", type="abstract"]');
@@ -94,24 +115,42 @@ class CreateAbstractClassAndMethodAnimalTest extends TestCase
 
     public function testAgeParam()
     {
-        $ageParam = self::$code->find('param[name="age"]');
+        $obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $ageParam = $construct->find('param[name="age"]');
 
-        $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age'.");
+        $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age' in the `__construct()` method.");
     }
 
     public function testTypeParam()
     {
-        $typeParam = self::$code->find('param[name="type"]');
+        $obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $typeParam = $construct->find('param[name="type"]');
         
-        $this->assertEquals(1, $typeParam->count(), "Expecting a parameter named 'type'.");
+        $this->assertEquals(1, $typeParam->count(), "Expecting a parameter named 'type' in the `__construct()` method.");
     }
 
     public function testValueParam()
     {
-        $valueParam = self::$code->find('param[name="value"]');
+        $obj = self::$code->find('class[name="Animal"]');
+		$subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
+        $valueParam = $isValid->find('param[name="value"]');
 
         $this->assertEquals(1, $valueParam->count(), "Expecting a parameter named 'value' in the `isValid()` method.");
     }
+
+    public function testIsValidCallArgs()
+    {
+        $isValid = self::$code->find('method-call[name="isValid", variable="this"]');
+        $args = $isValid->getSubNode()->getSubnode();
+        $value = $args->find('variable[name="age"]');
+    
+        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'isValid()' method call of the `Animal` class itself.");
+    } 
 
     public function testTypePropertyCall()
     {
