@@ -1,6 +1,6 @@
 <?php
-require_once('./Animal.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Animal.php');
+require_once(__DIR__ . '/LifeCycle.php');
 
 class Mammal extends Animal implements LifeCycle
 {
