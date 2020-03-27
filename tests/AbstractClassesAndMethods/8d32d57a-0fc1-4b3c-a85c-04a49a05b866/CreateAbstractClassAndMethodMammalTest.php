@@ -30,17 +30,17 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
     public function testEcho()
     {
         $nodes = self::$code->find('construct[name="echo"]');
-		
+
         $this->assertEquals(1, $nodes->count(), "Expecting one echo statement.");
     }
     
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
-	
+
         $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
     }
-	
+
     public function testPetMammalVariable()
     {
         $petMammal = self::$code->find('variable[name="petMammal"]');
@@ -51,7 +51,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
     public function testInstantiation()
     {
         $nodes = self::$code->find('instantiate[class="Mammal"]');
-		
+
         $this->assertEquals(1, $nodes->count(), "Expecting an instantiation statement of the 'Mammal' class.");
     } 
         
@@ -69,7 +69,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        
+
         $this->assertEquals(1, $display->count(), "Expecting one display() method.");
     }
 
@@ -78,7 +78,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
-        
+
         $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
     }
 
@@ -87,14 +87,14 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $name = $subNodes->find('property[name="name", type="private"]');
-        
+
         $this->assertEquals(1, $name->count(), "Expecting a private class property named 'name'.");
     }
 
     public function testClassMammal()
     {
         $nodes = self::$code->find('class[name="Mammal", extends="Animal"]');
-		
+
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Mammal` class that extends the `Animal` class.");
     }
 
@@ -115,7 +115,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
     public function testNameParam()
     {
         $obj = self::$code->find('class[name="Mammal"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nameParam = $construct->find('param[name="name"]');
 
@@ -125,7 +125,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
     public function testAgeParam()
     {
         $obj = self::$code->find('class[name="Mammal"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $ageParam = $construct->find('param[name="age"]');
         
@@ -135,7 +135,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
     public function testTypeParam()
     {
         $obj = self::$code->find('class[name="Mammal"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $typeParam = $construct->find('param[name="type"]');
         

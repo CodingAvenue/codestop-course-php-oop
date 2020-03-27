@@ -57,8 +57,8 @@ class ProtectedMethodCallOnObjectStudentTest extends TestCase
 
     public function testGetCourse()
     {
-		$obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
         $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
 
         $this->assertEquals(1, $getCourse->count(), "Expecting a public method named 'getCourse()'.");
@@ -66,8 +66,8 @@ class ProtectedMethodCallOnObjectStudentTest extends TestCase
 
     public function testDisplay()
     {
-		$obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
         $this->assertEquals(1, $display->count(), "Expecting one display() method.");
@@ -75,8 +75,8 @@ class ProtectedMethodCallOnObjectStudentTest extends TestCase
 
     public function testConstruct()
     {
-		$obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
         $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
@@ -115,7 +115,7 @@ class ProtectedMethodCallOnObjectStudentTest extends TestCase
     public function testNameParam()
     {
         $obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nameParam = $construct->find('param[name="name"]');
 
@@ -125,7 +125,7 @@ class ProtectedMethodCallOnObjectStudentTest extends TestCase
     public function testAgeParam()
     {
         $obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $ageParam = $construct->find('param[name="age"]');
 
@@ -135,7 +135,7 @@ class ProtectedMethodCallOnObjectStudentTest extends TestCase
     public function testCourseParam()
     {
         $obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $courseParam = $construct->find('param[name="course"]');
 

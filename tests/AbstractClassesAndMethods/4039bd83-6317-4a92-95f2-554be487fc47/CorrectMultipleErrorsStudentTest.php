@@ -115,7 +115,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
     public function testNameParam()
     {
         $obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nameParam = $construct->find('param[name="name"]');
     
@@ -125,7 +125,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
     public function testAgeParam()
     {
         $obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $ageParam = $construct->find('param[name="age"]');
     
@@ -135,7 +135,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
     public function testCourseParam()
     {
         $obj = self::$code->find('class[name="Student"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $courseParam = $construct->find('param[name="course"]');
     

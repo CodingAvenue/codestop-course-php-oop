@@ -114,7 +114,7 @@ class CorrectMultipleErrorsPersonTest extends TestCase
     public function testNameParam()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nameParam = $construct->find('param[name="name"]');
     
@@ -124,7 +124,7 @@ class CorrectMultipleErrorsPersonTest extends TestCase
     public function testAgeParam()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $ageParam = $construct->find('param[name="age"]');
     
@@ -134,7 +134,7 @@ class CorrectMultipleErrorsPersonTest extends TestCase
     public function testAgeParamCheckAge()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $ageParam = $checkAge->find('param[name="age"]');
     
@@ -144,7 +144,7 @@ class CorrectMultipleErrorsPersonTest extends TestCase
     public function testNewAgeParamSetAge()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $ageParam = $setAge->find('param[name="newAge"]');
     

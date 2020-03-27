@@ -28,7 +28,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testGetAge()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
 
         $this->assertEquals(1, $getAge->count(), "Expecting a public method named 'getAge()'.");
@@ -37,7 +37,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testGetName()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $getName = $subNodes->find('method[name="getName", type="public"]');
 
         $this->assertEquals(1, $getName->count(), "Expecting a public method named 'getName()'.");
@@ -46,7 +46,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testDisplay()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
         $this->assertEquals(1, $display->count(), "Expecting one display() method.");
@@ -55,7 +55,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testCheckAge()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
 
         $this->assertEquals(1, $checkAge->count(), "Expecting one private checkAge() method.");
@@ -64,7 +64,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testSetAge()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
 
         $this->assertEquals(1, $setAge->count(), "Expecting a setAge() method.");
@@ -73,7 +73,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testConstruct()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
         $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
@@ -114,7 +114,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testNameParamConstruct()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nameParam = $construct->find('param[name="name"]');
 
@@ -124,7 +124,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testAgeParamConstruct()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $ageParam = $construct->find('param[name="age"]');
 
@@ -134,7 +134,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testNewAgeParamSetAge()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $newAgeParam = $setAge->find('param[name="newAge"]');
 
@@ -144,7 +144,7 @@ class ProtectedMethodCallOnObjectPersonTest extends TestCase
     public function testAgeParamCheckAge()
     {
         $obj = self::$code->find('class[name="Person"]');
-		$subNodes = $obj->getSubnode();
+        $subNodes = $obj->getSubnode();
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $ageParam = $checkAge->find('param[name="age"]');
 
