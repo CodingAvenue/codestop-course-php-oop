@@ -1,5 +1,5 @@
 <?php
-require_once("Animal.php");
+require_once(__DIR__ . "/Animal.php");
 class Mammal extends Animal
 {
     private $name;
