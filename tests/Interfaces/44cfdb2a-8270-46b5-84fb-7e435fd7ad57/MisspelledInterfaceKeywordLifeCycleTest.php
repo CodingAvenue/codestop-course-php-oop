@@ -2,7 +2,7 @@
 use CodingAvenue\Proof\Code;
 use PHPUnit\Framework\TestCase;
 
-class CreateClassThatImplementsAnInterfaceLifeCycleTest extends TestCase
+class MisspelledInterfaceKeywordLifeCycleTest extends TestCase
 {
     protected static $code;
 
@@ -42,4 +42,4 @@ class CreateClassThatImplementsAnInterfaceLifeCycleTest extends TestCase
 
         $this->assertEquals(1, $nodes->count(), "Expecting a declaration of the `LifeCycle` interface.");
     }
-}
+} 

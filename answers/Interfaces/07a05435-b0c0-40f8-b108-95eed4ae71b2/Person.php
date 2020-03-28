@@ -1,5 +1,5 @@
 <?php
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Person implements LifeCycle
 {
     protected $name;
@@ -54,6 +54,6 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>

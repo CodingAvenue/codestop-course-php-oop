@@ -1,6 +1,6 @@
 <?php
-require_once('./Person.php');
-require_once('./LifeCycle.php');
+require_once(__DIR__ . '/Person.php');
+require_once(__DIR__ . '/LifeCycle.php');
 class Student extends Person implements LifeCycle
 {
     public function species()
@@ -19,6 +19,6 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>

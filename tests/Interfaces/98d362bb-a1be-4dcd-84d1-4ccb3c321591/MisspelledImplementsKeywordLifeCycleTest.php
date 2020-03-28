@@ -2,7 +2,7 @@
 use CodingAvenue\Proof\Code;
 use PHPUnit\Framework\TestCase;
 
-class CreateClassThatImplementsAnInterfaceLifeCycleTest extends TestCase
+class MisspelledImplementsKeywordLifeCycleTest extends TestCase
 {
     protected static $code;
 
@@ -23,7 +23,7 @@ class CreateClassThatImplementsAnInterfaceLifeCycleTest extends TestCase
         $obj = self::$code->find('interface[name="LifeCycle"]');
         $subNodes = $obj->getSubnode();
         $stage = $subNodes->find('method[name="stage", type="public"]');
-        
+
         $this->assertEquals(1, $stage->count(), "Expecting a stage() method.");
     }
 
@@ -32,7 +32,7 @@ class CreateClassThatImplementsAnInterfaceLifeCycleTest extends TestCase
         $obj = self::$code->find('interface[name="LifeCycle"]');
         $subNodes = $obj->getSubnode();
         $species = $subNodes->find('method[name="species", type="public"]');
-        
+
         $this->assertEquals(1, $species->count(), "Expecting a species() method.");
     }
 
@@ -42,4 +42,4 @@ class CreateClassThatImplementsAnInterfaceLifeCycleTest extends TestCase
 
         $this->assertEquals(1, $nodes->count(), "Expecting a declaration of the `LifeCycle` interface.");
     }
-}
+} 
