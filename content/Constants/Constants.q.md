@@ -193,8 +193,8 @@ class Circle
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=8ed42ff0-d506-4064-9339-e4c6ba71a8af, answer=[4]
@@ -224,10 +224,10 @@ Which of the following is a constant?
 
  - `$radius`
 
- - `$circleObject`
+ - `$circle`
 
 
-/// type=MS, id=0de00d1a-d1cf-40a5-9aa1-17bf4b1708ef, answer=[1,4]
+/// type=MS, id=0de00d1a-d1cf-40a5-9aa1-17bf4b1708ef, answer=[1,5]
 
 Which of the following are methods?
 
@@ -237,12 +237,12 @@ Which of the following are methods?
 
  - `$radius`
 
+ - `$circle`
+
  - `display()`
 
- - `$circleObject`
 
-
-/// type=SS, id=1a04d97f-f05b-49bf-8c17-a237fbabc6ec, answer=[5]
+/// type=SS, id=1a04d97f-f05b-49bf-8c17-a237fbabc6ec, answer=[4]
 
 Which of the following is an object?
 
@@ -252,9 +252,9 @@ Which of the following is an object?
 
  - `$radius`
 
- - `display()`
+ - `$circle`
 
- - `$circleObject`
+ - `display()`
 
 
 /// type=SS, id=642b98ed-4448-4380-9536-e93e5183a1f2, answer=[3]
@@ -269,7 +269,7 @@ Which of the following is a constant definition?
 
  - `class Circle {...}`
 
- - `$circleObject->display();`
+ - `$circle->display();`
 
 
 /// type=SS, id=9060dbab-2548-459e-8b1e-054052aa182b, answer=[5]
@@ -361,8 +361,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=5972fd23-5812-4782-b8b4-5708b3bbe9c9, answer=[4]
@@ -403,9 +403,9 @@ Which of the following is a parent class?
 
  - `Radius`
 
- - `diameter()`
+ - `$circle`
 
- - `$circleObject`
+ - `diameter()`
 
  - `CircularShape`
 
@@ -418,9 +418,9 @@ Which of the following is a child class?
 
  - `Radius`
 
- - `diameter()`
+ - `$circle`
 
- - `$circleObject`
+ - `diameter()`
 
  - `CircularShape`
 
@@ -722,8 +722,8 @@ class Circle
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=25c1a788-0001-439b-8768-ca68d18aa499, answer=[2]
@@ -790,8 +790,8 @@ class Circle
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 
@@ -828,8 +828,8 @@ class Circle
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=8ed96127-abea-4324-bf63-ee787604697e, answer=[1]
@@ -896,8 +896,8 @@ class Circle
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 
@@ -959,8 +959,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=4bd02ba7-bb9b-4d43-8b26-0db2507f1b87, answer=[5]
@@ -1052,8 +1052,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 
@@ -1115,8 +1115,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=d0dc8896-7ab8-4d1d-aae5-085345d3d6ae, answer=[1]
@@ -1193,8 +1193,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=0fa896db-09f1-4b7a-bfd7-93f7a598034e, answer=[3]
@@ -1271,8 +1271,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=22ea162b-ef97-414b-a0de-6a55c5de3d2a, answer=[4]
@@ -1349,8 +1349,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 /// type=SS, id=2387e091-fb86-4bae-a860-d79ea006445d, answer=[2]
@@ -1427,8 +1427,8 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>
 ```
 
@@ -1459,7 +1459,7 @@ Write a program that uses a `const` keyword to define a class constant. First, u
 
  8. A `public` method named `display()`. Inside the `display()` method, add an `echo` statement to display the string `"Area: " . $this->area() . "\nVolume: " . $this->volume()`.
  
-After the class declaration, add a statement that creates the `$cyObject` object an instance of the `Cylinder` class passing the arguments `1.5` and `3`. Then, add another statement that calls the `display()` method of the `$cyObject` object. Run the program to view the output.
+After the class declaration, add a statement that creates the `$cylinder` object an instance of the `Cylinder` class passing the arguments `1.5` and `3`. Then, add another statement that calls the `display()` method of the `$cylinder` object. Run the program to view the output.
 
 ```php
 <?php
