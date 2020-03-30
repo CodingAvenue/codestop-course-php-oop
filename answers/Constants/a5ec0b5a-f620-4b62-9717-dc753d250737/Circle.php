@@ -1,5 +1,5 @@
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     public function area()
@@ -26,6 +26,6 @@ class Circle extends CircularShape
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>

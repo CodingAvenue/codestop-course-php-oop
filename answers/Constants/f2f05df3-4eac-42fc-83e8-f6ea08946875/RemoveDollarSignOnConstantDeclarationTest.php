@@ -25,6 +25,6 @@ class Circle
     }
 }
 
-$circleObject = new Circle(3.5);
-$circleObject->display();
+$circle = new Circle(3.5);
+$circle->display();
 ?>

@@ -38,6 +38,6 @@ class Cylinder
     }
 }
 
-$cyObject = new Cylinder(1.5, 3);
-$cyObject->display();
+$cylinder = new Cylinder(1.5, 3);
+$cylinder->display();
 ?>
