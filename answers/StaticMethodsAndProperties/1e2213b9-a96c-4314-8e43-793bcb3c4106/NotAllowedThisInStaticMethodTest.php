@@ -43,6 +43,6 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject->display();
+$person = new Person("John", 12);
+$person->display();
 ?>

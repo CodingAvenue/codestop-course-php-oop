@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/Person.php');
+require_once(__DIR__ . '/Person.php');
 class Student extends Person
 {
     private $course;
@@ -21,6 +21,6 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
