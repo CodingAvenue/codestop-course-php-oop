@@ -102,14 +102,20 @@ class MissingReturnThisOnMethodTest extends TestCase
 
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $changeName = $subNodes->find('method[name="changeName", type="public"]');
+        $nodes = $changeName->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a return statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `changeName()` method of the `Person` class itself.");
     }
     
     public function testNewNameParam()
     {
-        $newNameParam = self::$code->find('param[name="newName"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $changeName = $subNodes->find('method[name="changeName"]');
+        $newNameParam = $changeName->find('param[name="newName"]');
     
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
     }
@@ -132,10 +138,24 @@ class MissingReturnThisOnMethodTest extends TestCase
         $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'person'.");
     } 
   
+    
     public function testNamePropertyCall()
     {
-        $name = self::$code->find('property-call[name="name", variable="this"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $changeName = $subNodes->find('method[name="changeName"]');
+        $name = $changeName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(2, $name->count(), "Expecting two `name` property calls inside the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `changeName()` method of the `Person` class itself.");
+    }
+
+    public function testNamePropertyCallDis()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display"]');
+        $name = $display->find('property-call[name="name", variable="this"]');
+
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `display()` method of the `Person` class itself.");
     }
 }

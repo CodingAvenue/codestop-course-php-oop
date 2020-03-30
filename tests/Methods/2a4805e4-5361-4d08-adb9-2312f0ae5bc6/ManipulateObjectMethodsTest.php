@@ -116,7 +116,10 @@ class ManipulateObjectMethodsTest extends TestCase
 
     public function testNewTypeParam()
     {
-        $newTypeParam = self::$code->find('param[name="newType"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $changeType = $subNodes->find('method[name="changeType"]');
+        $newTypeParam = $changeType->find('param[name="newType"]');
     
         $this->assertEquals(1, $newTypeParam->count(), "Expecting a parameter named 'newType' in the `changeType()` method.");
     }
@@ -130,10 +133,23 @@ class ManipulateObjectMethodsTest extends TestCase
         $this->assertEquals(1, $value->count(), "Expecting the argument `Cat` in the 'changeType()' method call of 'pet'.");
     } 
 
+    public function testTypePropertyCallDis()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $type = $display->find('property-call[name="type", variable="this"]');
+
+        $this->assertEquals(1, $type->count(), "Expecting one `type` property call inside the `display()` method of the `Animal` class itself.");
+    }
+
     public function testTypePropertyCall()
     {
-        $type = self::$code->find('property-call[name="type", variable="this"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $changeType = $subNodes->find('method[name="changeType", type="public"]');
+        $type = $changeType->find('property-call[name="type", variable="this"]');
 
-        $this->assertEquals(2, $type->count(), "Expecting two `type` property calls inside the `Animal` class itself.");
+        $this->assertEquals(1, $type->count(), "Expecting one `type` property call inside the `changeType()` method of the `Animal` class itself.");
     }
 } 

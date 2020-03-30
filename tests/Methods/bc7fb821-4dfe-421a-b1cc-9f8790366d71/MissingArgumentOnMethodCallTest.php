@@ -99,25 +99,31 @@ class MissingArgumentOnMethodCallTest extends TestCase
 
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
     }  
-
-    public function testChangeNameCall()
-    {
-        $changeName = self::$code->find('method-call[name="changeName", variable="person"]');
-
-        $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'person'.");
-    }
-
+    
     public function testNewNameParam()
     {
-        $newNameParam = self::$code->find('param[name="newName"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $changeName = $subNodes->find('method[name="changeName"]');
+        $newNameParam = $changeName->find('param[name="newName"]');
     
         $this->assertEquals(1, $newNameParam->count(), "Expecting a parameter named 'newName' in the `changeName()` method.");
     }
-
+    
     public function testNamePropertyCall()
     {
-        $name = self::$code->find('property-call[name="name", variable="this"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $changeName = $subNodes->find('method[name="changeName"]');
+        $name = $changeName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `changeName()` method of the `Person` class itself.");
+    }
+
+    public function testNamePropertyCallPerson()
+    {
+        $name = self::$code->find('property-call[name="name", variable="person"]');
+
+        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
     }
 } 
