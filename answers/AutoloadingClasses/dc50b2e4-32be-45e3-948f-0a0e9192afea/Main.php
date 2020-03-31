@@ -1,6 +1,6 @@
 <?php
-require_once("./autoloader/Autoload.php");
+require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>

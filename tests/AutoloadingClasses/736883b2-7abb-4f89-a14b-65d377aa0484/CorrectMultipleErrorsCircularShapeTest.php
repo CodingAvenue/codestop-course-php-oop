@@ -118,4 +118,24 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
 
         $this->assertEquals(1, $radParam->count(), "Expecting a parameter named 'radius' in the `__construct()` method.");
     }
+
+    public function testConstPi()
+    {
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $pi = $subNodes->find('const[name="PI"]');
+    
+        $this->assertEquals(1, $pi->count(), "Expecting a class constant named `PI`.");
+    }
+
+    public function testConstPiValue()
+    {
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $pi = $subNodes->find('const[name="PI"]');
+        $value = $pi->getSubNode()->getSubNode();
+        $piValue = $value->find('float'); // NOTE: need to verify and improve this validation
+
+        $this->assertEquals(1, $piValue->count(), "Expecting a class PI constant value of type float.");
+    }
 }
