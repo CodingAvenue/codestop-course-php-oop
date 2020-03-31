@@ -1002,7 +1002,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=d1a82401-b0f9-4112-8347-1e86fa77f727, answer=[tests/AutoloadingClasses/IncorrectSplRegisterArgumentTest.php], filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d1a82401-b0f9-4112-8347-1e86fa77f727, answer=[tests/AutoloadingClasses/d1a82401-b0f9-4112-8347-1e86fa77f727], filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `May is an adolescent human being.`.
 
@@ -1244,7 +1244,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=d15d78b4-0a2f-4fec-a766-d82304f8496f, answer=[tests/AutoloadingClasses/IncorrectFileExtensionTest.php], filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d15d78b4-0a2f-4fec-a766-d82304f8496f, answer=[tests/AutoloadingClasses/d15d78b4-0a2f-4fec-a766-d82304f8496f], filename=[autoload.php,Main.php,LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `May is an adolescent human being.`.
 
@@ -1486,7 +1486,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=976c6c75-c3ec-42fd-b67a-b20025db12a6, answer=[tests/AutoloadingClasses/IncorrectVariableNameAsParameterTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=CR, id=976c6c75-c3ec-42fd-b67a-b20025db12a6, answer=[tests/AutoloadingClasses/976c6c75-c3ec-42fd-b67a-b20025db12a6], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -1728,7 +1728,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=dc50b2e4-32be-45e3-948f-0a0e9192afea, answer=[tests/AutoloadingClasses/IncorrectDirectorySpecifiedInRequireTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php
+/// type=CR, id=dc50b2e4-32be-45e3-948f-0a0e9192afea, answer=[tests/AutoloadingClasses/dc50b2e4-32be-45e3-948f-0a0e9192afea], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -1970,7 +1970,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=29ff363f-13a9-491f-a54c-89338baeecd1, answer=[tests/AutoloadingClasses/MisspelledDirConstantTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
+/// type=CR, id=29ff363f-13a9-491f-a54c-89338baeecd1, answer=[tests/AutoloadingClasses/29ff363f-13a9-491f-a54c-89338baeecd1], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php]
 
 Correct the code so that it outputs the string `Charles is an adolescent human being.`.
 
@@ -2655,7 +2655,7 @@ Remove the double quotes `""` from the statement `spl_autoload_register("myAutol
 :::
 
 
-/// type=CR, id=736883b2-7abb-4f89-a14b-65d377aa0484, answer=[tests/AutoloadingClasses/CorrectMultipleErrorsTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
+/// type=CR, id=736883b2-7abb-4f89-a14b-65d377aa0484, answer=[tests/AutoloadingClasses/736883b2-7abb-4f89-a14b-65d377aa0484], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Person.php,src/Student.php,Shapes/CircularShape.php,Shapes/Circle.php]
 
 Correct the code so that it outputs the strings `Charles is an adolescent human being.`, `Radius: 2.5`, `Diameter: 6.25`, `Area: 19.635`, and `Circumference: 15.708` in separate lines.
 
@@ -2830,7 +2830,7 @@ class Circle extends CircularShape
 
 ### Part 4: Practice
 
-/// type=CR, id=18b1416a-678c-4568-a7df-60d12ac41a87, answer=[tests/AutoloadingClasses/CreateAutoloaderFunctionTest.php], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Animal.php,src/Mammal.php]
+/// type=CR, id=18b1416a-678c-4568-a7df-60d12ac41a87, answer=[tests/AutoloadingClasses/18b1416a-678c-4568-a7df-60d12ac41a87], filename=[includes/autoload.php,Main.php,src/LifeCycle.php,src/Animal.php,src/Mammal.php]
 
 Given the classes and interface implementations, write a program that uses the `spl_autoload_register()` function to register a certain autoloader. In the `autoload.php` tab, create an autoloader function named `myAnimalAutoloader` with the parameter `$animal`. Inside the `myAnimalAutoloader()` function body, add a statement that assigns `$file = dirname(__DIR__) . '\\src\\' . $animal . '.php';` to the variable `$file`. Then, add another statement that assigns `str_replace('\\', DIRECTORY_SEPARATOR, $file)` to `$file`. Next, add an `if` statement that checks if `$file` exists. Inside the `if` block, add the statement `require_once($file);`. After the `myAnimalAutoloader()` function, add a statement that registers the autoloader function `myAnimalAutoloader` using the `spl_autoload_register()` function. In the `Main.php` tab, add the statement `require_once(__DIR__ . "/includes/autoload.php");`. Then, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
