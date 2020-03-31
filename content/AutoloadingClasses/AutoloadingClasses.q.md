@@ -27,8 +27,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/autoload.php");
 
-$studentObject = new Student("May", 25);
-$studentObject->display();
+$student = new Student("May", 25);
+$student->display();
 ?>
 ```
 
@@ -313,8 +313,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>
 ```
 
@@ -549,8 +549,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -874,8 +874,8 @@ spl_autoload_register("myAutoloader()");
 <?php
 require_once(__DIR__ . "/autoload.php");
 
-$studentObject = new Student("May", 25);
-$studentObject->display();
+$student = new Student("May", 25);
+$student->display();
 ?>
 ```
 
@@ -1025,8 +1025,8 @@ spl_autoload_register("myAutoloader()");
 <?php
 require_once(__DIR__ . "/autoload.php");
 
-$studentObject = new Student("May", 25);
-$studentObject->display();
+$student = new Student("May", 25);
+$student->display();
 ?>
 ```
 
@@ -1131,8 +1131,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/autoload.php");
 
-$studentObject = new Student("May", 25);
-$studentObject->display();
+$student = new Student("May", 25);
+$student->display();
 ?>
 ```
 
@@ -1267,8 +1267,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/autoload.php");
 
-$studentObject = new Student("May", 25);
-$studentObject->display();
+$student = new Student("May", 25);
+$student->display();
 ?>
 ```
 
@@ -1373,8 +1373,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>
 ```
 
@@ -1509,8 +1509,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>
 ```
 
@@ -1615,8 +1615,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>
 ```
 
@@ -1751,8 +1751,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>
 ```
 
@@ -1857,8 +1857,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>
 ```
 
@@ -1993,8 +1993,8 @@ spl_autoload_register("myAutoloader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 ?>
 ```
 
@@ -2109,8 +2109,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -2312,8 +2312,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -2500,8 +2500,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
@@ -2688,8 +2688,8 @@ spl_autoload_register("myShapesLoader");
 <?php
 require_once(__DIR__ . "/includes/autoload.php");
 
-$studentObject = new Student("Charles", 15);
-$studentObject->display();
+$student = new Student("Charles", 15);
+$student->display();
 echo "\n";
 $circ = new Circle(2.5);
 $circ->display();
