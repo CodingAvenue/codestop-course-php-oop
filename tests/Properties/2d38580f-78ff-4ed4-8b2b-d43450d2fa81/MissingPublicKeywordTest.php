@@ -27,6 +27,16 @@ class MissingPublicKeywordTest extends TestCase
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
 
+    public function testEchoEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `eat()` method.");
+    }
+
     public function testEcho()
     {
         $nodes = self::$code->find('construct[name="echo"]');
@@ -53,7 +63,7 @@ class MissingPublicKeywordTest extends TestCase
         $nodes = self::$code->find('instantiate[class="Person"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting an instantiation statement of the 'Person' class.");
-    } 
+    }
 
     public function testEat()
     {
@@ -74,13 +84,13 @@ class MissingPublicKeywordTest extends TestCase
     }
 
     public function testAddressProperty()
-    {        
+    {
         $obj = self::$code->find('class[name="Person"]');
         $subNodes = $obj->getSubnode();
         $address = $subNodes->find('property[name="address", type="public"]');
 
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
-    }     
+    }
 
     public function testNameValue()
     {
@@ -92,13 +102,13 @@ class MissingPublicKeywordTest extends TestCase
 
         $this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
     }
-    
+
     public function testClass()
     {
         $nodes = self::$code->find('class[name="Person"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
-    }  
+    }
 
     public function testNameCall()
     {
@@ -106,4 +116,4 @@ class MissingPublicKeywordTest extends TestCase
 
         $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
     }
-}  
+}

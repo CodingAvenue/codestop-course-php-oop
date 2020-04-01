@@ -34,6 +34,16 @@ class ManipulateObjectPropertiesTest extends TestCase
         $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
     }
 
+    public function testEchoMove()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $move = $subNodes->find('method[name="move"]');
+        $nodes = $move->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `move()` method.");
+    }
+
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');

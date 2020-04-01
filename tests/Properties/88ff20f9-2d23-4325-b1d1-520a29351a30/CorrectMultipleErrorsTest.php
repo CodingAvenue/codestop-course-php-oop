@@ -34,6 +34,16 @@ class CorrectMultipleErrorsTest extends TestCase
         $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
     }
 
+    public function testEchoEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `eat()` method.");
+    }
+
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
@@ -53,7 +63,7 @@ class CorrectMultipleErrorsTest extends TestCase
         $nodes = self::$code->find('instantiate[class="Person"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting an instantiation statement of the 'Person' class.");
-    } 
+    }
 
     public function testEat()
     {
@@ -74,13 +84,13 @@ class CorrectMultipleErrorsTest extends TestCase
     }
 
     public function testAddressProperty()
-    {        
+    {
         $obj = self::$code->find('class[name="Person"]');
         $subNodes = $obj->getSubnode();
         $address = $subNodes->find('property[name="address", type="public"]');
 
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
-    } 
+    }
 
     public function testNameValue()
     {
@@ -98,7 +108,7 @@ class CorrectMultipleErrorsTest extends TestCase
         $nodes = self::$code->find('class[name="Person"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
-    }  
+    }
 
     public function testAddressCall()
     {
@@ -106,4 +116,4 @@ class CorrectMultipleErrorsTest extends TestCase
 
         $this->assertEquals(2, $address->count(), "Expecting two 'address' property calls of 'person'.");
     }
-}  
+}

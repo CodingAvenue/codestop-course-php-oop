@@ -34,6 +34,16 @@ class RemoveUnpexpectedDollarSignTest extends TestCase
         $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
     }
 
+    public function testEchoEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `eat()` method.");
+    }
+
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
