@@ -36,9 +36,12 @@ class MissingFunctionKeywordOnConstructTest extends TestCase
     
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 	
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement in the `__construct()` method.");
     }
 	
     public function testPersonVariable()
@@ -89,16 +92,22 @@ class MissingFunctionKeywordOnConstructTest extends TestCase
 
     public function testNameParam()
     {
-        $nameParam = self::$code->find('param[name="name"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nameParam = $construct->find('param[name="name"]');
     
         $this->assertEquals(1, $nameParam->count(), "Expecting a parameter named 'name' in the `__construct()` method.");
     }
 
     public function testNamePropertyCall()
     {
-        $name = self::$code->find('property-call[name="name", variable="this"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $name = $construct->find('property-call[name="name", variable="this"]');
         
-        $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `__construct()` method of the `Person` class itself.");
     }
 
 }
