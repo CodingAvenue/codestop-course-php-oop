@@ -29,16 +29,22 @@ class CorrectMultipleErrorsStudentTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
     }
 
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement in the `__construct()` method.");
     }
 
     public function testStudentVariable()
@@ -96,20 +102,23 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $nodes = self::$code->find('class[name="Student", extends="Person"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Student` class that extends the `Person` class.");
-    }
+    }  
 
     public function testDisplayCall()
     {
         $display = self::$code->find('method-call[name="display", variable="student"]');
 
         $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'student'.");
-    }
+    }   
 
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
+        $nodes = $getCourse->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getCourse()` method.");
     }
 
     public function testNameParam()
@@ -118,7 +127,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nameParam = $construct->find('param[name="name"]');
-    
+
         $this->assertEquals(1, $nameParam->count(), "Expecting a parameter named 'name' in the `__construct()` method.");
     }
 
@@ -128,7 +137,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $ageParam = $construct->find('param[name="age"]');
-    
+
         $this->assertEquals(1, $ageParam->count(), "Expecting a parameter named 'age' in the `__construct()` method.");
     }
 
@@ -138,22 +147,28 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $courseParam = $construct->find('param[name="course"]');
-    
+
         $this->assertEquals(1, $courseParam->count(), "Expecting a parameter named 'course' in the `__construct()` method.");
     }
 
     public function testParentCall()
     {
-        $parent = self::$code->find('static-call[class="parent", method="__construct"]');
-        
-        $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent class.");
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $parent = $construct->find('static-call[class="parent", method="__construct"]');
+
+        $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent class in the `__construct()` method of the `Student` class.");
     }   
 
     public function testParentGetNameCall()
     {
-        $parent = self::$code->find('static-call[class="parent", method="getName"]');
-        
-        $this->assertEquals(1, $parent->count(), "Expecting a 'getName()' method call of the parent class.");
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $parent = $display->find('static-call[class="parent", method="getName"]');
+
+        $this->assertEquals(1, $parent->count(), "Expecting a 'getName()' method call of the parent class in the `display()` method.");
     }  
 
     public function testParentCallNameArgs()
@@ -174,13 +189,36 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $ageVar = $ageArgs->find('variable[name="age"]');
  
         $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
+    }  
+
+    public function testCoursePropertyCallDis()
+    {
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $course = $display->find('property-call[name="course", variable="this"]');
+
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `display()` method of the `Student` class itself.");
+    }
+
+    public function testCoursePropertyCallCons()
+    {
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $course = $construct->find('property-call[name="course", variable="this"]');
+
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `__construct()` method of the `Student` class itself.");
     }
 
     public function testCoursePropertyCall()
     {
-        $course = self::$code->find('property-call[name="course", variable="this"]');
-        
-        $this->assertEquals(3, $course->count(), "Expecting three `course` property calls inside the `Student` class itself.");
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
+        $course = $getCourse->find('property-call[name="course", variable="this"]');
+
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `getCourse()` method of the `Student` class itself.");
     }
 
     public function testRequireOnceCall()

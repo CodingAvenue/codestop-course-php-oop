@@ -20,9 +20,12 @@ class CreateAbstractClassAndMethodAnimalTest extends TestCase
 
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 	
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements in the `__construct()` method.");
     }
 
     public function testGetAge()
@@ -106,11 +109,54 @@ class CreateAbstractClassAndMethodAnimalTest extends TestCase
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the abstract `Animal` class.");
     }  
 
+    public function testIf()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
+        $nodes = $isValid->find('construct[name="if"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `isValid()` method.");
+    }
+
+    public function testIfCons()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('construct[name="if"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `__construct()` method.");
+    }
+
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
+        $nodes = $isValid->find('construct[name="return"]');
 
-        $this->assertEquals(4, $nodes->count(), "Expecting four return statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `isValid()` method.");
+    }
+
+    public function testReturnGetAge()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getAge = $subNodes->find('method[name="getAge", type="public"]');
+        $nodes = $getAge->find('construct[name="return"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getAge()` method.");
+    }
+
+    public function testReturnGetType()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getType = $subNodes->find('method[name="getType", type="public"]');
+        $nodes = $getType->find('construct[name="return"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getType()` method.");
     }
 
     public function testAgeParam()
@@ -152,24 +198,53 @@ class CreateAbstractClassAndMethodAnimalTest extends TestCase
         $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'isValid()' method call of the `Animal` class itself.");
     } 
 
-    public function testTypePropertyCall()
+    public function testTypePropertyCallCons()
     {
-        $type = self::$code->find('property-call[name="type", variable="this"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $type = $construct->find('property-call[name="type", variable="this"]');
 
-        $this->assertEquals(2, $type->count(), "Expecting two `type` property calls inside the `Animal` class itself.");
+        $this->assertEquals(1, $type->count(), "Expecting one `type` property call inside the `__construct()` method of the `Animal` class itself.");
+    }
+
+    public function testTypePropertyCallGet()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getType = $subNodes->find('method[name="getType", type="public"]');
+        $type = $getType->find('property-call[name="type", variable="this"]');
+
+        $this->assertEquals(1, $type->count(), "Expecting one `type` property call inside the `getType()` method of the `Animal` class itself.");
+    }
+
+    public function testAgePropertyCallCons()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $age = $construct->find('property-call[name="age", variable="this"]');
+
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call inside the `__construct()` method of the `Animal` class itself.");
     }
 
     public function testAgePropertyCall()
     {
-        $age = self::$code->find('property-call[name="age", variable="this"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getAge = $subNodes->find('method[name="getAge", type="public"]');
+        $age = $getAge->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(2, $age->count(), "Expecting two `age` property calls inside the `Animal` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call inside the `getAge()` method of the `Animal` class itself.");
     }
 
     public function testIsValidCall()
     {
-        $isValid = self::$code->find('method-call[name="isValid", variable="this"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $isValid = $construct->find('method-call[name="isValid", variable="this"]');
 
-        $this->assertEquals(1, $isValid->count(), "Expecting one 'isValid()' method call inside the `Animal` class itself.");
+        $this->assertEquals(1, $isValid->count(), "Expecting one 'isValid()' method call inside the `__construct()` method of the `Animal` class itself.");
     }
 }
