@@ -46,9 +46,9 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(12);
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(12);
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=a59f5f40-d624-40ed-b24a-d14c916cf189, answer=[5]
@@ -74,41 +74,41 @@ Which of the following are properties?
 
  - `$name`
 
+ - `$person`
+
  - `getAge()`
 
  - `getName()`
 
- - `$personObject`
 
-
-/// type=MS, id=4895378f-27f3-4aa3-987f-6da746a8862e, answer=[2,3,4]
+/// type=MS, id=4895378f-27f3-4aa3-987f-6da746a8862e, answer=[3,4,5]
 
 Which of the following are methods?
 
  - `$name`
 
+ - `$person`
+
  - `getAge()`
 
  - `setName()`
 
  - `checkAge()`
 
- - `$personObject`
 
-
-/// type=SS, id=5d2004da-af63-4578-8847-076ff7901b3d, answer=[4]
+/// type=SS, id=5d2004da-af63-4578-8847-076ff7901b3d, answer=[5]
 
 Which of the following is a private method?
 
  - `$name`
 
+ - `$person`
+
  - `getAge()`
 
  - `setName()`
 
  - `checkAge()`
-
- - `$personObject`
 
 
 /// type=MS, id=c40bd1a5-10d4-4ff3-ada2-27f4847a0433, answer=[3,4]
@@ -203,22 +203,22 @@ Which statements correctly describe the `checkAge()` method?
 
 /// type=SS, id=ad3969da-26f7-4754-ab0a-adb3cbd6009d, answer=[2]
 
-What does the statement `$personObject->setAge(12);` do?
+What does the statement `$person->setAge(12);` do?
 
- - It returns the argument `12` in the `setAge()` method of `$personObject`.
+ - It returns the argument `12` in the `setAge()` method of `$person`.
 
- - It calls the `setAge()` method of `$personObject` passing the argument `12`.
+ - It calls the `setAge()` method of `$person` passing the argument `12`.
 
- - It creates the `setAge()` method of `$personObject` with the parameter `12`.
+ - It creates the `setAge()` method of `$person` with the parameter `12`.
 
- - It removes the argument `12` from the `setAge()` method of `$personObject`.
+ - It removes the argument `12` from the `setAge()` method of `$person`.
 
- - It accesses the argument `12` from the `setAge()` method of `$personObject`.
+ - It accesses the argument `12` from the `setAge()` method of `$person`.
 
 
 /// type=MS, id=b9c8ef00-58ef-4c65-9d83-522c049823e5, answer=[4,5]
 
-In the `echo` statement on line 40, what does `$personObject->getName()` do?
+In the `echo` statement on line 40, what does `$person->getName()` do?
 
  - It creates the `getName()` method of the `Person` class.
 
@@ -228,7 +228,7 @@ In the `echo` statement on line 40, what does `$personObject->getName()` do?
 
  - It accesses the value of the private property `$name` outside of the `Person` class.
 
- - It calls the `getName()` method of `$personObject` to access the value of the `$name` property.
+ - It calls the `getName()` method of `$person` to access the value of the `$name` property.
 
 :::
 
@@ -275,14 +275,14 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(12);
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(12);
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=cf1233fb-f531-4434-9c1f-cc1cd9ff0f96, answer=[3]
 
-Replace the statement `$personObject->setAge(12);` on line 39 with `$personObject->age = 12;`. Execute the program. What is its output?
+Replace the statement `$person->setAge(12);` on line 39 with `$person->age = 12;`. Execute the program. What is its output?
 
  - It prints `Anna`.
 
@@ -339,29 +339,29 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->age = 12;
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->age = 12;
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=MS, id=231a88c8-a0c2-41cd-8032-4c1a4905ad26, answer=[3,4,5]
 
-Why does setting the value of the `$age` property of `$personObject` using the statement `$personObject->age = 12;` produce an error?
+Why does setting the value of the `$age` property of `$person` using the statement `$person->age = 12;` produce an error?
 
  - There is no `$age` property defined in the `Person` class.
 
- - `$personObject` is not declared as the instance of the `Person` class.
+ - `$person` is not declared as the instance of the `Person` class.
 
  - The private property `$age` is not accessible outside of the `Person` class.
 
  - The `$age` property is encapsulated and accessible only inside the `Person` class.
 
- - `$personObject` is not allowed to directly access the `$age` property of the `Person` class.
+ - `$person` is not allowed to directly access the `$age` property of the `Person` class.
 
 
 /// type=SS, id=cc71e87f-048f-458b-be6f-693496681009, answer=[4]
 
-In the statement `$personObject->age = 12;` on line 39, replace `age = 12` with `setAge(15)`. Execute the program. What is its output?
+In the statement `$person->age = 12;` on line 39, replace `age = 12` with `setAge(15)`. Execute the program. What is its output?
 
  - It prints `Anna`.
 
@@ -418,14 +418,14 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=c4660106-6bf7-423b-8c12-b021dc4d97b9, answer=[5]
 
-Add the statement `$personObject->setName("John");` before the `echo` statement on line 40. Execute the program. What is its output? 
+Add the statement `$person->setName("John");` before the `echo` statement on line 40. Execute the program. What is its output? 
 
  - It prints `Anna`.
 
@@ -482,15 +482,15 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName("John");
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName("John");
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=91909009-182d-4fcf-9c6a-bd39790e4ac1, answer=[3]
 
-In the `echo` statement on line 41, replace `$personObject->getName()` with `$personObject->name`. Execute the program. What is its output?
+In the `echo` statement on line 41, replace `$person->getName()` with `$person->name`. Execute the program. What is its output?
 
  - It prints `Anna`.
 
@@ -547,25 +547,25 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName("John");
-echo $personObject->name . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName("John");
+echo $person->name . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=MS, id=acc2cdb9-e555-4a58-8b23-9ea6893c003a, answer=[3,4,5]
 
-Why does accessing the `$name` property of `$personObject` using `$personObject->name` produce an error?
+Why does accessing the `$name` property of `$person` using `$person->name` produce an error?
 
  - There is no `$name` property defined in the `Person` class.
 
- - `$personObject` is not declared as the instance of the `Person` class.
+ - `$person` is not declared as the instance of the `Person` class.
 
  - The private property `$name` is not accessible outside of the `Person` class.
 
  - The `$name` property is encapsulated and accessible only inside the `Person` class.
 
- - `$personObject` is not allowed to directly access the `$name` property of the `Person` class.
+ - `$person` is not allowed to directly access the `$name` property of the `Person` class.
 
 :::
 
@@ -671,9 +671,9 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(12);
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(12);
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=d33f029c-8a28-48b6-964c-df9caa7c04a4, answer=[3]
@@ -765,9 +765,9 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(12);
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(12);
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 
@@ -814,9 +814,9 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->age = 12;
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->age = 12;
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=a6b9551f-6b2f-4d2a-9b3c-f5587b0cef16, answer=[2]
@@ -840,13 +840,13 @@ Which statements correctly describe the error?
 
  - There is no dollar sign `$` in the `age` property on line 39.
 
- - On line 39, the statement `$personObject->age = 12;` is invalid.
+ - On line 39, the statement `$person->age = 12;` is invalid.
 
  - The private property `$age` is not accessible outside of the `Person` class.
 
  - The `$age` property is encapsulated and accessible only inside the `Person` class.
 
- - `$personObject` is not allowed to directly access the `$age` property of the `Person` class.
+ - `$person` is not allowed to directly access the `$age` property of the `Person` class.
 
 :::
 
@@ -893,9 +893,9 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->age = 12;
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->age = 12;
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 
@@ -942,10 +942,10 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName("John");
-echo $personObject->name . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName("John");
+echo $person->name . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=16dfffb3-3949-4b04-83c2-f77557d19319, answer=[3]
@@ -967,15 +967,15 @@ Execute the program. What is the error message?
 
 Which statements correctly describe the error?
 
- - In the `echo` statement on line 41, `$personObject->name` is invalid.
+ - In the `echo` statement on line 41, `$person->name` is invalid.
 
  - The private property `$name` is not accessible outside of the `Person` class.
 
  - The `$name` property is encapsulated and accessible only inside the `Person` class.
 
- - `$personObject` is not allowed to directly access the `$name` property of the `Person` class.
+ - `$person` is not allowed to directly access the `$name` property of the `Person` class.
 
- - There are no parentheses `()` after `$personObject->name` in the `echo` statement on line 41.
+ - There are no parentheses `()` after `$person->name` in the `echo` statement on line 41.
 
 :::
 
@@ -1022,10 +1022,10 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName("John");
-echo $personObject->name . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName("John");
+echo $person->name . " is " . $person->getAge() . " years old.";
 ?>
 ```
 
@@ -1072,10 +1072,10 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName();
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName();
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=MS, id=143b3acd-b33c-4295-91c1-c0673ef8009a, answer=[1,5]
@@ -1099,13 +1099,13 @@ Which statements correctly describe the error?
 
  - There is no `setName()` method defined in the `Person` class.
 
- - On line 40, the statement `$personObject->setName();` is invalid.
+ - On line 40, the statement `$person->setName();` is invalid.
 
  - There is no argument specified in the `setName()` method on line 40.
 
  - The `setName()` method of the `Person` class requires an argument when called.
 
- - `$personObject` is not allowed to access the `setName()` method of the `Person` class.
+ - `$person` is not allowed to access the `setName()` method of the `Person` class.
 
 :::
 
@@ -1152,10 +1152,10 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName();
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName();
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 
@@ -1202,10 +1202,10 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName("John");
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName("John");
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
 ```
 /// type=SS, id=d75d8bf7-17bc-4d97-aec1-f28710d723fc, answer=[5]
@@ -1225,7 +1225,7 @@ Execute the program. What is its output?
 
 /// type=SS, id=4155ba08-48e7-48bc-8a7d-453c5f70b334, answer=[2]
 
-In the `echo` statement on line 41, replace `$personObject->getAge()` with `$personObject->age`. Execute the program. What is the error message?
+In the `echo` statement on line 41, replace `$person->getAge()` with `$person->age`. Execute the program. What is the error message?
 
  - Undefined variable: `newAge` on line number 14
 
@@ -1282,15 +1282,15 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->setName("John");
-echo $personObject->getName() . " is " . $personObject->age . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName("John");
+echo $person->getName() . " is " . $person->age . " years old.";
 ?>
 ```
 /// type=SS, id=9f0d58fd-a378-49fb-9bf1-b96ebb97a5d7, answer=[3]
 
-In the statement `$personObject->setName("John");` on line 40, replace `setName("John")` with `name = "John"`. Execute the program. What is the error message?
+In the statement `$person->setName("John");` on line 40, replace `setName("John")` with `name = "John"`. Execute the program. What is the error message?
 
  - Undefined variable: `newAge` on line number 14
 
@@ -1347,15 +1347,15 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->name = "John";
-echo $personObject->getName() . " is " . $personObject->age . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->name = "John";
+echo $person->getName() . " is " . $person->age . " years old.";
 ?>
 ```
 /// type=MS, id=cf388b75-0beb-401b-aac5-2dac18dca54c, answer=[1,3,5]
 
-In the statement `$personObject->setAge(15);` on line 39, remove the argument `15` from `setAge()`. Execute the program. What are the error messages?
+In the statement `$person->setAge(15);` on line 39, remove the argument `15` from `setAge()`. Execute the program. What are the error messages?
 
  - Undefined variable: `newAge` on line number 14
 
@@ -1412,10 +1412,10 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge();
-$personObject->name = "John";
-echo $personObject->getName() . " is " . $personObject->age . " years old.";
+$person = new Person();
+$person->setAge();
+$person->name = "John";
+echo $person->getName() . " is " . $person->age . " years old.";
 ?>
 ```
 
