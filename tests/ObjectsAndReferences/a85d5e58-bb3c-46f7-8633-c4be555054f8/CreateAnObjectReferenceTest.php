@@ -27,11 +27,24 @@ class CreateAnObjectReferenceTest extends TestCase
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
 
-    public function testEcho()
+    public function testEchoAnimal()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Animal` class.");
+    }
+
+    public function testEchoMammal()
+    {
+        $obj = self::$code->find('class[name="Mammal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Mammal` class.");
     }
 
     public function testAssignment()
@@ -90,13 +103,24 @@ class CreateAnObjectReferenceTest extends TestCase
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Mammal` class.");
     } 
 
-    public function testDisplay()
+    public function testDisplayAnimal()
     {
-        $display = self::$code->find('method[name="display", type="public"]');
-        
-        $this->assertEquals(2, $display->count(), "Expecting two display() methods.");
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+
+        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Animal` class.");
     }
-        
+
+    public function testDisplayMammal()
+    {
+        $obj = self::$code->find('class[name="Mammal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+
+        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Mammal` class.");
+    }
+
     public function testDisplayCallB()
     {
         $display = self::$code->find('method-call[name="display", variable="animalB"]');
