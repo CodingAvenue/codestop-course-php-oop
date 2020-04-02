@@ -20,7 +20,9 @@ class CorrectMultipleErrorsConstantsTest extends TestCase
 
     public function testConstPi()
     {
-        $pi = self::$code->find('const[name="PI"]');
+        $obj = self::$code->find('class[name="Constants"]');
+        $subNodes = $obj->getSubnode();
+        $pi = $subNodes->find('const[name="PI"]');
 
         $this->assertEquals(1, $pi->count(), "Expecting a class constant named `PI`.");
     }

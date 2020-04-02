@@ -20,14 +20,18 @@ class DefineAndImportNamespacesCircularShapeTest extends TestCase
 
     public function testRadiusProperty()
     {
-        $radius = self::$code->find('property[name="radius", type="private"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $radius = $subNodes->find('property[name="radius", type="private"]');
 
         $this->assertEquals(1, $radius->count(), "Expecting a private class property named 'radius'.");
     }
 
     public function testConstruct()
     {
-        $construct = self::$code->find('method[name="__construct", type="public"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
 
         $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
     }
@@ -41,9 +45,12 @@ class DefineAndImportNamespacesCircularShapeTest extends TestCase
 
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
+        $nodes = $getRadius->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a return statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getRadius()` method.");
     }
 
     public function testNamespace()
@@ -55,36 +62,67 @@ class DefineAndImportNamespacesCircularShapeTest extends TestCase
 
     public function testCircumference()
     {
-        $circumference = self::$code->find('method[name="circumference", type="public"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $circumference = $subNodes->find('method[name="circumference", type="public"]');
 
         $this->assertEquals(1, $circumference->count(), "Expecting a public circumference() method.");
     }
 
     public function testDiameter()
     {
-        $diameter = self::$code->find('method[name="diameter", type="public"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $diameter = $subNodes->find('method[name="diameter", type="public"]');
 
         $this->assertEquals(1, $diameter->count(), "Expecting a public diameter() method.");
     }
 
     public function testArea()
     {
-        $area = self::$code->find('method[name="area", type="public"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $area = $subNodes->find('method[name="area", type="public"]');
 
         $this->assertEquals(1, $area->count(), "Expecting a public area() method.");
     }
 
     public function testRadiusParam()
     {
-        $radiusParam = self::$code->find('param[name="radius"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $radiusParam = $construct->find('param[name="radius"]');
 
-        $this->assertEquals(1, $radiusParam->count(), "Expecting a parameter named 'radius'.");
+        $this->assertEquals(1, $radiusParam->count(), "Expecting a parameter named 'radius' in the `__construct()` method.");
     }
 
-    public function testRadiusPropertyCall()
+    public function testRadiusPropertyCallCons()
     {
-        $radius = self::$code->find('property-call[name="radius", variable="this"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $radius = $construct->find('property-call[name="radius", variable="this"]');
 
-        $this->assertEquals(2, $radius->count(), "Expecting two `radius` property calls inside the `CircularShape` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `__construct()` method of the `CircularShape` class itself.");
     }
-} 
+
+    public function testRadiusPropertyCallGet()
+    {
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
+        $radius = $getRadius->find('property-call[name="radius", variable="this"]');
+
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `getRadius()` method of the `CircularShape` class itself.");
+    }
+
+    public function testGetRadius()
+    {
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
+
+        $this->assertEquals(1, $getRadius->count(), "Expecting one getRadius() method.");
+    }
+}

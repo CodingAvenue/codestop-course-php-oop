@@ -20,7 +20,9 @@ class CorrectMultipleErrorsMathTest extends TestCase
 
     public function testConstPi()
     {
-        $pi = self::$code->find('const[name="PI"]');
+        $obj = self::$code->find('class[name="Geometry"]');
+        $subNodes = $obj->getSubnode();
+        $pi = $subNodes->find('const[name="PI"]');
 
         $this->assertEquals(1, $pi->count(), "Expecting a class constant named `PI`.");
     }
@@ -34,9 +36,12 @@ class CorrectMultipleErrorsMathTest extends TestCase
 
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Geometry"]');
+        $subNodes = $obj->getSubnode();
+        $getCircleArea = $subNodes->find('method[name="getCircleArea", type="static"]');
+        $nodes = $getCircleArea->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a return statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getCircleArea()` method.");
     }
 
     public function testNamespace()
@@ -48,22 +53,30 @@ class CorrectMultipleErrorsMathTest extends TestCase
 
     public function testGetCircleArea()
     {
-        $getCircleArea = self::$code->find('method[name="getCircleArea", type="static"]');
+        $obj = self::$code->find('class[name="Geometry"]');
+        $subNodes = $obj->getSubnode();
+        $getCircleArea = $subNodes->find('method[name="getCircleArea", type="static"]');
 
         $this->assertEquals(1, $getCircleArea->count(), "Expecting a static getCircleArea() method.");
     }
 
     public function testRadiusParam()
     {
-        $radiusParam = self::$code->find('param[name="radius"]');
+        $obj = self::$code->find('class[name="Geometry"]');
+        $subNodes = $obj->getSubnode();
+        $getCircleArea = $subNodes->find('method[name="getCircleArea", type="static"]');
+        $radiusParam = $getCircleArea->find('param[name="radius"]');
 
-        $this->assertEquals(1, $radiusParam->count(), "Expecting a parameter named 'radius'.");
+        $this->assertEquals(1, $radiusParam->count(), "Expecting a parameter named 'radius' in the `getCircleArea()` method.");
     }
 
     public function testPiCall()
     {
-        $piCall = self::$code->find('const-fetch[name="PI", class="self"]');
+        $obj = self::$code->find('class[name="Geometry"]');
+        $subNodes = $obj->getSubnode();
+        $getCircleArea = $subNodes->find('method[name="getCircleArea", type="static"]');
+        $piCall = $getCircleArea->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `Geometry` class.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `getCircleArea()` method of the `Geometry` class.");
     }
 } 

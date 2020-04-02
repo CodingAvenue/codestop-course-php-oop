@@ -4,7 +4,7 @@ namespace Math\Geometry;
 use Math\Constants;
 use Math\Geometry\CircularShape;
 
-require_once(__DIR__.'/CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 
 class Circle extends CircularShape
 {	
