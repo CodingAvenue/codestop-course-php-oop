@@ -172,7 +172,7 @@ class CreateClassWithEncapsulatedPropertiesAndMethodTest extends TestCase
     {
         $setAge = self::$code->find('method-call[name="setAge", variable="pet"]');
         $args = $setAge->getSubNode()->getSubnode();
-        $value = $args->find('integer"]');
+        $value = $args->find('integer');
     
         $this->assertEquals(1, $value->count(), "Expecting an integer argument in the 'setAge()' method call of 'pet'.");
     } 

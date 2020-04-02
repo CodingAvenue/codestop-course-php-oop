@@ -35,7 +35,8 @@ class Person
     }
 }
 
-$personObject = new Person();
-$personObject->setAge(12);
-echo $personObject->getName() . " is " . $personObject->getAge() . " years old.";
+$person = new Person();
+$person->setAge(15);
+$person->setName("John");
+echo $person->getName() . " is " . $person->getAge() . " years old.";
 ?>
