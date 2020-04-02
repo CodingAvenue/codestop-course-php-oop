@@ -1076,7 +1076,7 @@ Correct the code so that it outputs the string `This is a class method.`.
 
 /// type=CR, id=0b0f737a-fa9c-4cf6-bbf2-dd6c4b217fde, answer=[tests/Classes/CreateSimpleClassTest.php]
 
-Write a program that uses a `class` keyword to create a class definition of a `Person` class. First, use a `class` keyword to declare a class named `Person`. Within the curly braces `{}`, add a property definition of a class property `$name` with the value `Diana`. Next, add a method definition for `eat()` method. Inside the `eat()` method body, add an `echo` statement to display the string `This is an eat method.`. After the class declaration, add a statement `$pObject = new Person();` to instantiate a `Person` class. Then, add another statement `$pObject->eat();` to call a class method. Run the program to view the output.
+Write a program that uses a `class` keyword to create a class definition of a `Person` class. First, use a `class` keyword to declare a class named `Person`. Within the curly braces `{}`, add a property definition of a class property `$name` with the value `Diana`. Next, add a method definition for `eat()` method. Inside the `eat()` method body, add an `echo` statement to display the string `This is an eat method.`. After the class declaration, add a statement `$personObject = new Person();` to instantiate a `Person` class. Then, add another statement `$personObject->eat();` to call a class method. Run the program to view the output.
 
 ```php
 <?php

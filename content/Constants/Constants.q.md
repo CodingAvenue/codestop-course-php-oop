@@ -334,7 +334,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     public function area()
@@ -932,7 +932,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     public function area()
@@ -1025,7 +1025,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     public function area()
@@ -1088,7 +1088,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     public function area()
@@ -1166,7 +1166,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     public function area()
@@ -1244,7 +1244,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     private function area()
@@ -1322,7 +1322,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     private function area()
@@ -1400,7 +1400,7 @@ abstract class CircularShape
 
 ```php
 <?php
-require_once('./CircularShape.php');
+require_once(__DIR__ . '/CircularShape.php');
 class Circle extends CircularShape
 {
     private function area()
