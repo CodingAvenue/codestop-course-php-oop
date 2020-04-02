@@ -9,6 +9,6 @@
         }
     }
 
-    $pObject = new Person();
-    $pObject->eat();
+    $personObject = new Person();
+    $personObject->eat();
 ?>
