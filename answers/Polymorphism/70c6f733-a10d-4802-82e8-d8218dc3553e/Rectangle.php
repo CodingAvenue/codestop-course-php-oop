@@ -1,5 +1,5 @@
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 class Rectangle implements MyShape
 {
     private $length;

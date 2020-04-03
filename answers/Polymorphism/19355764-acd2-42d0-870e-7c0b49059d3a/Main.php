@@ -1,6 +1,6 @@
 <?php
-require_once("./Circle.php");
-require_once("./Square.php");
+require_once(__DIR__ . "/Circle.php");
+require_once(__DIR__ . "/Square.php");
 
 $circle = new Circle(2.5);
 $square = new Square(2.5);

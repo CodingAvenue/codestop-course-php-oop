@@ -1,5 +1,5 @@
 <?php
-require_once("./MyShape.php");
+require_once(__DIR__ . "/MyShape.php");
 class Circle implements MyShape
 {
     const PI = 3.14159;
