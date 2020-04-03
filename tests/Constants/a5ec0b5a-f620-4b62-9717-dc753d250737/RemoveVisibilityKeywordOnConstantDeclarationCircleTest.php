@@ -29,9 +29,12 @@ class RemoveVisibilityKeywordOnConstantDeclarationCircleTest extends TestCase
     
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Circle"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(4, $nodes->count(), "Expecting four echo statements.");
+        $this->assertEquals(4, $nodes->count(), "Expecting four echo statements in the `display()` method.");
     }
     
     public function testAssignment()

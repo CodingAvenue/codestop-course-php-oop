@@ -29,16 +29,22 @@ class AddConstantDefinitionInClassTest extends TestCase
     
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Cylinder"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements in the `display()` method.");
     }
     
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Cylinder"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 	
-        $this->assertEquals(3, $nodes->count(), "Expecting three assignment statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements in the `__construct()` method.");
     }
 	
     public function testCylinderVariable()

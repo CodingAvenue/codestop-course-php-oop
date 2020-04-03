@@ -20,9 +20,12 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
 
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="CircularShape"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 	
-        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement in the `__construct()` method.");
     }
 
     public function testConstruct()

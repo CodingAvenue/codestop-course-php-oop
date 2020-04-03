@@ -29,16 +29,22 @@ class RemoveDollarSignOnConstantDeclarationTest extends TestCase
     
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
-		
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement.");
+        $obj = self::$code->find('class[name="Circle"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
     }
     
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Circle"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 	
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement in the `__construct()` method.");
     }
 	
     public function testCircleVariable()
@@ -62,6 +68,15 @@ class RemoveDollarSignOnConstantDeclarationTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         
         $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+    }
+
+    public function testConstruct()
+    {
+        $obj = self::$code->find('class[name="Circle"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        
+        $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
     }
 
     public function testArea()
