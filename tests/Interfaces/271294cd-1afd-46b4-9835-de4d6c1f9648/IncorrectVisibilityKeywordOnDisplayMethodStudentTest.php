@@ -29,9 +29,12 @@ class IncorrectVisibilityKeywordOnDisplayMethodStudentTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -96,11 +99,24 @@ class IncorrectVisibilityKeywordOnDisplayMethodStudentTest extends TestCase
         $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'student'.");
     }
 
-    public function testReturn()
+    public function testReturnStage()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $stage = $subNodes->find('method[name="stage", type="public"]');
+        $nodes = $stage->find('construct[name="return"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two return statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `stage()` method.");
+    }
+
+    public function testReturnSpecies()
+    {
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $species = $subNodes->find('method[name="species", type="public"]');
+        $nodes = $species->find('construct[name="return"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `species()` method.");
     }
 
     public function testNamePropertyCall()
@@ -110,7 +126,7 @@ class IncorrectVisibilityKeywordOnDisplayMethodStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $name = $display->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `Student` class itself in the `display()` method.");
+        $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `display()` method of the `Student` class itself.");
     }
 
     public function testStageCall()
@@ -120,7 +136,7 @@ class IncorrectVisibilityKeywordOnDisplayMethodStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $stage = $display->find('method-call[name="stage", variable="this"]');
 
-        $this->assertEquals(1, $stage->count(), "Expecting a 'stage()' method call inside the class itself in the `display()` method.");
+        $this->assertEquals(1, $stage->count(), "Expecting a 'stage()' method call inside the `display()` method of the `Student` class itself.");
     }
 
     public function testSpeciesCall()
@@ -130,7 +146,7 @@ class IncorrectVisibilityKeywordOnDisplayMethodStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $species = $display ->find('method-call[name="species", variable="this"]');
 
-        $this->assertEquals(1, $species->count(), "Expecting a 'species()' method call inside the class itself.");
+        $this->assertEquals(1, $species->count(), "Expecting a 'species()' method call inside the `display()` method of the `Student` class itself.");
     }
 
     public function testRequireOnceCall()
@@ -139,4 +155,4 @@ class IncorrectVisibilityKeywordOnDisplayMethodStudentTest extends TestCase
 
         $this->assertEquals(2, $nodes->count(), "Expecting two function calls for the require_once() function.");
     }
-} 
+}

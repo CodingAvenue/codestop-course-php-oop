@@ -20,9 +20,12 @@ class CreateClassThatImplementsAnInterfaceAnimalTest extends TestCase
 
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 	
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements in the `__construct()` method.");
     }
 
     public function testDisplay()
@@ -45,12 +48,15 @@ class CreateClassThatImplementsAnInterfaceAnimalTest extends TestCase
 
     public function testIsValidCallArgs()
     {
-        $isValid = self::$code->find('method-call[name="isValid", variable="this"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $isValid = $construct->find('method-call[name="isValid", variable="this"]');
         $args = $isValid->getSubNode()->getSubnode();
         $value = $args->find('variable[name="age"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'isValid()' method call of the `Animal` class itself.");
-    } 
+        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'isValid()' method call in the `__construct()` method of the `Animal` class itself.");
+    }
 
     public function testGetAge()
     {
@@ -134,11 +140,54 @@ class CreateClassThatImplementsAnInterfaceAnimalTest extends TestCase
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Animal` class.");
     }  
 
-    public function testReturn()
+    public function testIfIsValid()
     {
-        $nodes = self::$code->find('construct[name="return"]');
-        
-        $this->assertEquals(4, $nodes->count(), "Expecting four return statements.");
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
+        $nodes = $isValid->find('construct[name="if"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `isValid()` method.");
+    }
+
+    public function testIfCons()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('construct[name="if"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `__construct()` method.");
+    }
+
+    public function testReturnIsValid()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
+        $nodes = $isValid->find('construct[name="return"]');
+
+        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `isValid()` method.");
+    }
+
+    public function testReturnGetAge()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getAge = $subNodes->find('method[name="getAge", type="public"]');
+        $nodes = $getAge->find('construct[name="return"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getAge()` method.");
+    }
+
+    public function testReturnGetType()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $getType = $subNodes->find('method[name="getType", type="public"]');
+        $nodes = $getType->find('construct[name="return"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getType()` method.");
     }
 
     public function testAgePropertyCallThis()
