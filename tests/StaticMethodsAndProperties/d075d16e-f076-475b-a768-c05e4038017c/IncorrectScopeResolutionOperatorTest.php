@@ -26,21 +26,37 @@ class IncorrectScopeResolutionOperatorTest extends TestCase
 
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
-    
+
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
     }
-    
+
+    public function testAssignmentCons()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
+	
+        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements in the `__construct()` method.");
+    }
+	
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $setAge = $subNodes->find('method[name="setAge", type="public"]');
+        $nodes = $setAge->find('operator[name="assignment"]');
 	
-        $this->assertEquals(4, $nodes->count(), "Expecting four assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement in the `setAge()` method.");
     }
-	
+
     public function testPersonVariable()
     {
         $person = self::$code->find('variable[name="person"]');
@@ -143,16 +159,62 @@ class IncorrectScopeResolutionOperatorTest extends TestCase
       
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
+        $nodes = $checkAge->find('construct[name="return"]');
 
-        $this->assertEquals(4, $nodes->count(), "Expecting four return statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `checkAge()` method.");
     }
-    
+
+    public function testReturnGet()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $getAge = $subNodes->find('method[name="getAge", type="public"]');
+        $nodes = $getAge->find('construct[name="return"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getAge()` method.");
+    }
+
+    public function testReturnGreet()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $greeting = $subNodes->find('method[name="greeting", type="static"]');
+        $nodes = $greeting->find('construct[name="return"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `greeting()` method.");
+    }
+
     public function testIf()
     {
-        $nodes = self::$code->find('construct[name="if"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
+        $nodes = $checkAge->find('construct[name="if"]');
 
-        $this->assertEquals(3, $nodes->count(), "Expecting three if constructs.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `checkAge()` method.");
+    }
+
+    public function testIfSet()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $setAge = $subNodes->find('method[name="setAge", type="public"]');
+        $nodes = $setAge->find('construct[name="if"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `setAge()` method.");
+    }
+
+    public function testIfCons()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('construct[name="if"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `__construct()` method.");
     }
 
     public function testNameValue()

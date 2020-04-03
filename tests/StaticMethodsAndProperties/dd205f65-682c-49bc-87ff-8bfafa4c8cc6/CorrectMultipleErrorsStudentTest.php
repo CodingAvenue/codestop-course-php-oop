@@ -29,16 +29,22 @@ class CorrectMultipleErrorsStudentTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="public"]');
+        $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
     }
 
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement in the `__construct()` method.");
     }
 
     public function testStudentVariable()
@@ -107,9 +113,12 @@ class CorrectMultipleErrorsStudentTest extends TestCase
 
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Student"]');
+        $subNodes = $obj->getSubnode();
+        $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
+        $nodes = $getCourse->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getCourse()` method.");
     }
 
     public function testNameParam()

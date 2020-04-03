@@ -29,16 +29,22 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display", type="static"]');
+        $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
     }
 
     public function testAssignment()
     {
-        $nodes = self::$code->find('operator[name="assignment"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('operator[name="assignment"]');
 
-        $this->assertEquals(3, $nodes->count(), "Expecting three assignment statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements in the `__construct()` method.");
     }
 
     public function testPetVariable()
@@ -116,16 +122,32 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
 
     public function testReturn()
     {
-        $nodes = self::$code->find('construct[name="return"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
+        $nodes = $isValid->find('construct[name="return"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two return statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `isValid()` method.");
     }
 
     public function testIf()
     {
-        $nodes = self::$code->find('construct[name="if"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $isValid = $subNodes->find('method[name="isValid", type="private"]');
+        $nodes = $isValid->find('construct[name="if"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two if constructs.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `isValid()` method.");
+    }
+
+    public function testIfCons()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $construct = $subNodes->find('method[name="__construct", type="public"]');
+        $nodes = $construct->find('construct[name="if"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `__construct()` method.");
     }
 
     public function testTypeValue()
