@@ -810,7 +810,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=f739a867-c330-4a14-a82c-49f6635352dc, answer=[tests/Polymorphism/IncorrectCalculateAreaVisibilityTest.php], filename=[MyShape.php,Circle.php,Square.php,Main.php]
+/// type=CR, id=f739a867-c330-4a14-a82c-49f6635352dc, answer=[tests/Polymorphism/f739a867-c330-4a14-a82c-49f6635352dc], filename=[MyShape.php,Circle.php,Square.php,Main.php]
 
 Correct the code so that it outputs the strings `Circle area: 19.6349375` and `Square area: 6.25` in separate lines.
 
@@ -979,7 +979,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=19355764-acd2-42d0-870e-7c0b49059d3a, answer=[tests/Polymorphism/UnimplementedCalculateAreaMethodTest.php], filename=[MyShape.php,Circle.php,Square.php,Main.php]
+/// type=CR, id=19355764-acd2-42d0-870e-7c0b49059d3a, answer=[tests/Polymorphism/19355764-acd2-42d0-870e-7c0b49059d3a], filename=[MyShape.php,Circle.php,Square.php,Main.php]
 
 Correct the code so that it outputs the strings `Circle area: 19.6349375` and `Square area: 6.25` in separate lines.
 
@@ -1148,7 +1148,7 @@ Which statements correctly describe the error message?
 :::
 
 
-/// type=CR, id=cdb41f32-a1ed-4770-9cf3-291468ce8747, answer=[tests/Polymorphism/MissingArgumentOnObjectInstantiationTest.php], filename=[MyShape.php,Circle.php,Square.php,Main.php]
+/// type=CR, id=cdb41f32-a1ed-4770-9cf3-291468ce8747, answer=[tests/Polymorphism/cdb41f32-a1ed-4770-9cf3-291468ce8747], filename=[MyShape.php,Circle.php,Square.php,Main.php]
 
 Correct the code so that it outputs the strings `Circle area: 19.6349375` and `Square area: 6.25` in separate lines.
 
@@ -1322,7 +1322,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=39ff970a-5189-4364-b483-05895d51c7aa, answer=[tests/Polymorphism/MisspelledImplementsKeywordTest.php], filename=[MyShape.php,Circle.php,Square.php,Main.php]
+/// type=CR, id=39ff970a-5189-4364-b483-05895d51c7aa, answer=[tests/Polymorphism/39ff970a-5189-4364-b483-05895d51c7aa], filename=[MyShape.php,Circle.php,Square.php,Main.php]
 
 Correct the code so that it outputs the strings `Circle area: 19.6349375` and `Square area: 6.25` in separate lines.
 
@@ -1400,7 +1400,7 @@ echo "\nSquare area: " . $square->calculateArea();
 
 ### Part 4: Practice
 
-/// type=CR, id=70c6f733-a10d-4802-82e8-d8218dc3553e, answer=[tests/Polymorphism/ApplyPolymorphismConceptTest.php], filename=[MyShape.php,Rectangle.php,Square.php,Main.php]
+/// type=CR, id=70c6f733-a10d-4802-82e8-d8218dc3553e, answer=[tests/Polymorphism/70c6f733-a10d-4802-82e8-d8218dc3553e], filename=[MyShape.php,Rectangle.php,Square.php,Main.php]
 
 Given the initial implementations of `Rectangle` and `Square` classes, provide implementations to the specified abstract methods of the `MyShape` interface. In the `Rectangle.php` tab, add an implementation or method body to all abstract methods of the `MyShape` interface. In the `calculateArea()` method body, add a statement that returns the product of `$length` and `$width`. Inside the `getPerimeter()` method body, add the statement `return 2 * ($this->length + $this->width);`. In the `Square.php` tab, add an implementation or method body to the abstract method `getPerimeter()` of the `MyShape` interface. Inside the `getPerimeter()` method body, add a statement that returns the product of `4` and `$side`. Run the program to view the output.
 
