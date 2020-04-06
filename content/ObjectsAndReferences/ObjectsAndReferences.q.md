@@ -530,7 +530,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=3e23cbe1-3872-4c7c-abf4-67cf15e395c2, answer=[tests/ObjectsAndReferences/IncorrectAmperandPositionTest.php]
+/// type=CR, id=3e23cbe1-3872-4c7c-abf4-67cf15e395c2, answer=[tests/ObjectsAndReferences/3e23cbe1-3872-4c7c-abf4-67cf15e395c2]
 
 Correct the code so that it outputs the string `This is a person class.`.
 
@@ -620,7 +620,7 @@ Which statement best describe the error?
 :::
 
 
-/// type=CR, id=8966cdec-0047-4deb-87a9-ce6b119402c4, answer=[tests/ObjectsAndReferences/MissingSemicolonTest.php]
+/// type=CR, id=8966cdec-0047-4deb-87a9-ce6b119402c4, answer=[tests/ObjectsAndReferences/8966cdec-0047-4deb-87a9-ce6b119402c4]
 
 Correct the code so that it outputs the string `This is a person class.`.
 
@@ -711,7 +711,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=6a7d9398-bb5b-45f4-a675-534204be8645, answer=[tests/ObjectsAndReferences/IncorrectObjectOperatorTest.php]
+/// type=CR, id=6a7d9398-bb5b-45f4-a675-534204be8645, answer=[tests/ObjectsAndReferences/6a7d9398-bb5b-45f4-a675-534204be8645]
 
 Correct the code so that it outputs the string `This is a person class.`.
 
@@ -804,7 +804,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=28dc6250-a538-4656-9809-c119767c7d0c, answer=[tests/ObjectsAndReferences/MissingNewKeywordTest.php]
+/// type=CR, id=28dc6250-a538-4656-9809-c119767c7d0c, answer=[tests/ObjectsAndReferences/28dc6250-a538-4656-9809-c119767c7d0c]
 
 Correct the code so that it outputs the strings `This is a person class.` and `This is a student class.` in separate lines.
 
@@ -898,7 +898,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=6d2e5aa8-9b8a-4a37-ad2b-e4229e44579f, answer=[tests/ObjectsAndReferences/MissingDollarSignTest.php]
+/// type=CR, id=6d2e5aa8-9b8a-4a37-ad2b-e4229e44579f, answer=[tests/ObjectsAndReferences/6d2e5aa8-9b8a-4a37-ad2b-e4229e44579f]
 
 Correct the code so that it outputs the strings `This is a person class.` and `This is a student class.` in separate lines.
 
@@ -936,7 +936,7 @@ objectVarC->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=a85d5e58-bb3c-46f7-8633-c4be555054f8, answer=[tests/ObjectsAndReferences/CreateAnObjectReferenceTest.php]
+/// type=CR, id=a85d5e58-bb3c-46f7-8633-c4be555054f8, answer=[tests/ObjectsAndReferences/a85d5e58-bb3c-46f7-8633-c4be555054f8]
 
 Given the initial program implementation below, add a code that creates a reference to a certain class instance. On line 18, add a statement that creates an instance of the `Animal` class and assigns it to the variable `$animalA`. Add another statement that assigns `$animalA` to `$animalB`. Next, add the statement `$animalB->display();` on line 20. On line 21, add a statement that sets the variable `$animalC` an alias of the variable `$animalA`. Then, add another statement `$animalC->display();` on line 22. On line 23, add a statement that creates an instance of the `Mammal` class and assigns it to the variable `$animalA`. On line 24, add the statement `$animalC->display();`. Run the program to view the result.
 
