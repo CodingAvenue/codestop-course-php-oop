@@ -723,7 +723,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=cf8c7a66-a421-4e4c-9160-aa07068fab51, answer=[tests/Encapsulation/MissingPrivateKeywordTest.php]
+/// type=CR, id=cf8c7a66-a421-4e4c-9160-aa07068fab51, answer=[tests/Encapsulation/cf8c7a66-a421-4e4c-9160-aa07068fab51]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -851,7 +851,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=dd039b33-e6c2-4644-aa55-75072b238d38, answer=[tests/Encapsulation/IncorrectAssignmentStatementTest.php]
+/// type=CR, id=dd039b33-e6c2-4644-aa55-75072b238d38, answer=[tests/Encapsulation/dd039b33-e6c2-4644-aa55-75072b238d38]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -980,7 +980,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=f93be282-ab07-4c13-a801-5cd3352a27a0, answer=[tests/Encapsulation/IncorrectNamePropertyAccessTest.php]
+/// type=CR, id=f93be282-ab07-4c13-a801-5cd3352a27a0, answer=[tests/Encapsulation/f93be282-ab07-4c13-a801-5cd3352a27a0]
 
 Correct the code so that it outputs the string `John is 15 years old.`.
 
@@ -1110,7 +1110,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=89c2ab69-9a55-4ac1-b068-4937e0cb74e0, answer=[tests/Encapsulation/MissingArgumentOnSetNameTest.php]
+/// type=CR, id=89c2ab69-9a55-4ac1-b068-4937e0cb74e0, answer=[tests/Encapsulation/89c2ab69-9a55-4ac1-b068-4937e0cb74e0]
 
 Correct the code so that it outputs the string `John is 15 years old.`.
 
@@ -1370,7 +1370,7 @@ In the statement `$person->setAge(15);` on line 39, remove the argument `15` fro
 :::
 
 
-/// type=CR, id=fdc5106d-74b4-4f66-aaea-290fb4b14880, answer=[tests/Encapsulation/CorrectMultipleErrorsTest.php]
+/// type=CR, id=fdc5106d-74b4-4f66-aaea-290fb4b14880, answer=[tests/Encapsulation/fdc5106d-74b4-4f66-aaea-290fb4b14880]
 
 Correct the code so that it outputs the string `John is 15 years old.`.
 
@@ -1427,7 +1427,7 @@ echo $person->getName() . " is " . $person->age . " years old.";
 
 ### Part 4: Practice
 
-/// type=CR, id=000d51a9-1ffa-45c7-8ed8-c64a42b5797d, answer=[tests/Encapsulation/CreateClassWithEncapsulatedPropertiesAndMethodTest.php]
+/// type=CR, id=000d51a9-1ffa-45c7-8ed8-c64a42b5797d, answer=[tests/Encapsulation/000d51a9-1ffa-45c7-8ed8-c64a42b5797d]
 
 Write a program that uses the `private` visibility keyword to encapsulate the properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
