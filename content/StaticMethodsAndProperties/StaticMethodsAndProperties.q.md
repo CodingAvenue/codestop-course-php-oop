@@ -1065,7 +1065,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=37f3e1d7-2535-4d05-9868-2d9cec8e9ba3, answer=[tests/StaticMethodsAndProperties/IncorrectThisKeywordTest.php]
+/// type=CR, id=37f3e1d7-2535-4d05-9868-2d9cec8e9ba3, answer=[tests/StaticMethodsAndProperties/37f3e1d7-2535-4d05-9868-2d9cec8e9ba3]
 
 Correct the code so that it outputs the string `Hello, Anna!`.
 
@@ -1137,7 +1137,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=150808ea-de53-426b-920d-15d04406dcfd, answer=[tests/StaticMethodsAndProperties/IncorrectCallToProtectedMethodTest.php]
+/// type=CR, id=150808ea-de53-426b-920d-15d04406dcfd, answer=[tests/StaticMethodsAndProperties/150808ea-de53-426b-920d-15d04406dcfd]
 
 Correct the code so that it outputs the string `Hello, Anna!`.
 
@@ -1210,7 +1210,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=a191ecbc-609e-4cdf-9cdc-01e170c241ba, answer=[tests/StaticMethodsAndProperties/IncorrectOperatorUsedInMethodCallTest.php]
+/// type=CR, id=a191ecbc-609e-4cdf-9cdc-01e170c241ba, answer=[tests/StaticMethodsAndProperties/a191ecbc-609e-4cdf-9cdc-01e170c241ba]
 
 Correct the code so that it outputs the string `Hello, James!`.
 
@@ -1284,7 +1284,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=dc7bacce-fa18-45b6-bb77-f760ab1b186d, answer=[tests/StaticMethodsAndProperties/IncorrectAccessToPrivatePropertyTest.php]
+/// type=CR, id=dc7bacce-fa18-45b6-bb77-f760ab1b186d, answer=[tests/StaticMethodsAndProperties/dc7bacce-fa18-45b6-bb77-f760ab1b186d]
 
 Correct the code so that it outputs the string `Hello, James!`.
 
@@ -1392,7 +1392,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=739ddd29-eba7-4e88-a781-93117f3ef8a9, answer=[tests/StaticMethodsAndProperties/MissingSelfKeywordTest.php]
+/// type=CR, id=739ddd29-eba7-4e88-a781-93117f3ef8a9, answer=[tests/StaticMethodsAndProperties/739ddd29-eba7-4e88-a781-93117f3ef8a9]
 
 Correct the code so that it outputs the string `Hello, John! You are 12 years old.`.
 
@@ -1534,7 +1534,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=d075d16e-f076-475b-a768-c05e4038017c, answer=[tests/StaticMethodsAndProperties/IncorrectScopeResolutionOperatorTest.php]
+/// type=CR, id=d075d16e-f076-475b-a768-c05e4038017c, answer=[tests/StaticMethodsAndProperties/d075d16e-f076-475b-a768-c05e4038017c]
 
 Correct the code so that it outputs the string `Hello, John! You are 12 years old.`.
 
@@ -1676,7 +1676,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=1e2213b9-a96c-4314-8e43-793bcb3c4106, answer=[tests/StaticMethodsAndProperties/NotAllowedThisInStaticMethodTest.php]
+/// type=CR, id=1e2213b9-a96c-4314-8e43-793bcb3c4106, answer=[tests/StaticMethodsAndProperties/1e2213b9-a96c-4314-8e43-793bcb3c4106]
 
 Correct the code so that it outputs the string `Hello, John! You are 12 years old.`.
 
@@ -2038,7 +2038,7 @@ In the declaration `public static function greeting($greet)` on line 35 of `Pers
 :::
 
 
-/// type=CR, id=dd205f65-682c-49bc-87ff-8bfafa4c8cc6, answer=[tests/StaticMethodsAndProperties/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=dd205f65-682c-49bc-87ff-8bfafa4c8cc6, answer=[tests/StaticMethodsAndProperties/dd205f65-682c-49bc-87ff-8bfafa4c8cc6], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS. Good day, John!`.
 
@@ -2126,7 +2126,7 @@ $studentObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=93fc08d1-94e6-42ec-b00b-e067d20179f8, answer=[tests/StaticMethodsAndProperties/CreateNewClassWithStaticMethodAndPropertyTest.php]
+/// type=CR, id=93fc08d1-94e6-42ec-b00b-e067d20179f8, answer=[tests/StaticMethodsAndProperties/93fc08d1-94e6-42ec-b00b-e067d20179f8]
 
 Write a program that uses `static` and `self` keywords to define and access a static method and property of a class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 
