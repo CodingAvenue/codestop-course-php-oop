@@ -1785,7 +1785,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=3e4e6057-507e-489c-9bfe-9ff0c90838ab, answer=[tests/Namespaces/UnspecifiedUserClassNamespaceTest.php], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=3e4e6057-507e-489c-9bfe-9ff0c90838ab, answer=[tests/Namespaces/3e4e6057-507e-489c-9bfe-9ff0c90838ab], filename=[UserApp.php,UserModel.php,Main.php]
 
 Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
@@ -1901,7 +1901,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=2b901a20-9fc0-4191-b1bc-5fb2820cf71a, answer=[tests/Namespaces/IncorrectUseStatementTest.php], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=2b901a20-9fc0-4191-b1bc-5fb2820cf71a, answer=[tests/Namespaces/2b901a20-9fc0-4191-b1bc-5fb2820cf71a], filename=[UserApp.php,UserModel.php,Main.php]
 
 Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
@@ -2019,7 +2019,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=63b29fa1-ceb8-4b85-833b-d54f811ba10b, answer=[tests/Namespaces/MissingUseKeywordTest.php], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=63b29fa1-ceb8-4b85-833b-d54f811ba10b, answer=[tests/Namespaces/63b29fa1-ceb8-4b85-833b-d54f811ba10b], filename=[UserApp.php,UserModel.php,Main.php]
 
 Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
@@ -2137,7 +2137,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=a9789614-a3cb-46ed-ae56-a96f4dc848be, answer=[tests/Namespaces/UnusedUserAliasTest.php], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=a9789614-a3cb-46ed-ae56-a96f4dc848be, answer=[tests/Namespaces/a9789614-a3cb-46ed-ae56-a96f4dc848be], filename=[UserApp.php,UserModel.php,Main.php]
 
 Correct the code so that it outputs the string `This is a user in the App\Model namespace.`.
 
@@ -2255,7 +2255,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=c902b2d3-c528-472d-8798-453873358108, answer=[tests/Namespaces/MissingAsKeywordTest.php], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=c902b2d3-c528-472d-8798-453873358108, answer=[tests/Namespaces/c902b2d3-c528-472d-8798-453873358108], filename=[UserApp.php,UserModel.php,Main.php]
 
 Correct the code so that it outputs the string `This is a user in the App\Model namespace.`.
 
@@ -2563,7 +2563,7 @@ Remove `as` from the statement `use Math\Geometry\Circle as NewCircle;` on line 
 :::
 
 
-/// type=CR, id=d2261d1d-3946-4afd-9188-07e6bda2645b, answer=[tests/Namespaces/CorrectMultipleErrorsTest.php], filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=CR, id=d2261d1d-3946-4afd-9188-07e6bda2645b, answer=[tests/Namespaces/d2261d1d-3946-4afd-9188-07e6bda2645b], filename=[Math.php,Constants.php,Circle.php,Main.php]
 
 Correct the code so that it outputs the string `The circumference of the circle is: 62.8318`.
 
@@ -2636,7 +2636,7 @@ echo "The circumference of the circle is: " . $circle->getCircumference();
 
 ### Part 4: Practice
 
-/// type=CR, id=21d3b203-f487-4088-ba3b-d701cd68b664, answer=[tests/Namespaces/DefineAndImportNamespacesTest.php], filename=[Constants.php,CircularShape.php,Circle.php,Main.php]
+/// type=CR, id=21d3b203-f487-4088-ba3b-d701cd68b664, answer=[tests/Namespaces/21d3b203-f487-4088-ba3b-d701cd68b664], filename=[Constants.php,CircularShape.php,Circle.php,Main.php]
 
 Given the initial implementations of the classes below, add a statement that defines namespaces and assigns each class to a certain namespace. In the `Constants.php` tab, add a statement that defines the `Math` namespace using the `namespace` keyword after the `<?php` opening tag. In the `CircularShape.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace at the first line of the PHP file. In the `Circle.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace. Then, add two statements that import the `Constants` class in the `Math` namespace and the `CircularShape` class in the `Math\Geometry` namespace. In the `Main.php` tab, add a statement that imports the `Circle` class in the `Math\Geometry` namespace and aliased as `MyCircle`. Run the program to view the output.
 
