@@ -352,8 +352,8 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject->display();
+$person = new Person("John", 12);
+$person->display();
 ?>
 ```
 /// type=SS, id=6a7106ed-fba5-45c2-9bf7-f736f1228e6c, answer=[5]
@@ -398,7 +398,7 @@ Which of the following is a static property?
 
  - `$newAge`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=SS, id=6e3b4ed9-7de6-4b65-8b0a-e0f23b1d21a2, answer=[1]
@@ -524,8 +524,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=f2e0873c-cdb8-4e16-9105-14a18bf1c3e2, answer=[4]
@@ -558,7 +558,7 @@ Which of the following is a static method definition?
  - `public function __construct($name, $age) {...}`
 
 
-/// type=MS, id=9e0475a4-20bc-446a-b258-8b1c8dabbe3b, answer=[3,5]
+/// type=MS, id=9e0475a4-20bc-446a-b258-8b1c8dabbe3b, answer=[4,5]
 
 Which of the following are static method calls?
 
@@ -566,9 +566,9 @@ Which of the following are static method calls?
 
  - `parent::$name`
 
- - `self::greeting("Hello")`
+ - `$student->display()`
 
- - `$studentObject->display()`
+ - `self::greeting("Hello")`
 
  - `parent::greeting("Good day")`
 
@@ -711,8 +711,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=19d948cb-daf5-4866-9b55-b427db40def6, answer=[4]
@@ -808,8 +808,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=b56bf8e5-343f-4857-a25b-66b3925afefc, answer=[5]
@@ -905,8 +905,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=f2107647-50aa-4d7a-9847-28209e148fc7, answer=[1]
@@ -1356,8 +1356,8 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject->display();
+$person = new Person("John", 12);
+$person->display();
 ?>
 ```
 /// type=SS, id=c7cf6020-5dcd-4ab8-81ef-060ce49d1601, answer=[1]
@@ -1442,8 +1442,8 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject->display();
+$person = new Person("John", 12);
+$person->display();
 ?>
 ```
 
@@ -1498,8 +1498,8 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject::display();
+$person = new Person("John", 12);
+$person::display();
 ?>
 ```
 /// type=MS, id=8a51d2ee-048d-4d2d-a970-a60dfdbe8fe2, answer=[3,4]
@@ -1523,13 +1523,13 @@ Which statements correctly describe the error?
 
  - There are no parentheses `()` after `display` on line 47.
 
- - The method call `$personObject::display()` on line 47 is invalid.
+ - The method call `$person::display()` on line 47 is invalid.
 
  - The scope resolution operator `::` is not allowed in accessing non-static methods.
 
- - There is no argument specified in the method call `$personObject::display()` on line 47.
+ - There is no argument specified in the method call `$person::display()` on line 47.
 
- - There is a scope resolution operator `::` between `$personObject` and `display()` on line 47.
+ - There is a scope resolution operator `::` between `$person` and `display()` on line 47.
 
 :::
 
@@ -1584,8 +1584,8 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject::display();
+$person = new Person("John", 12);
+$person::display();
 ?>
 ```
 
@@ -1640,8 +1640,8 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject->display();
+$person = new Person("John", 12);
+$person->display();
 ?>
 ```
 /// type=SS, id=619d836c-51dc-40e1-a31f-efab7850fafb, answer=[2]
@@ -1726,8 +1726,8 @@ class Person
     }
 }
 
-$personObject = new Person("John", 12);
-$personObject->display();
+$person = new Person("John", 12);
+$person->display();
 ?>
 ```
 
@@ -1808,8 +1808,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=bb052a21-d1f6-4c16-beba-488900ee2dd6, answer=[5]
@@ -1920,8 +1920,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=MS, id=07ffe5d0-7d09-4ee0-80cc-f27c52f72e61, answer=[1,3,4]
@@ -2017,8 +2017,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=40b996ca-815e-42ed-8fa7-1d72720a38be, answer=[5]
@@ -2114,8 +2114,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 
