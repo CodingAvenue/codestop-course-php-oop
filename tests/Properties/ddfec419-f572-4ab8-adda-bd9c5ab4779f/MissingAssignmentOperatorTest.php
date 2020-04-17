@@ -1,8 +1,15 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class RemoveUnpexpectedDollarSignTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingAssignmentOperatorTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
 
     public function testPhpStartTag()
     {
@@ -15,7 +22,7 @@ class RemoveUnpexpectedDollarSignTest extends Proof
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
-        $expected  = "Canada";
+        $expected  = "Diana";
 
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
@@ -27,18 +34,28 @@ class RemoveUnpexpectedDollarSignTest extends Proof
         $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
     }
 
+    public function testEchoEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `eat()` method.");
+    }
+
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(3, $personObject->count(), "Expecting three occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -73,7 +90,7 @@ class RemoveUnpexpectedDollarSignTest extends Proof
         $address = $subNodes->find('property[name="address", type="public"]');
 
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
-    }  
+    }    
 
     public function testNameValue()
     {
@@ -93,10 +110,10 @@ class RemoveUnpexpectedDollarSignTest extends Proof
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
     }  
 
-    public function testAddressCall()
+    public function testNameCall()
     {
-        $address = self::$code->find('property-call[name="address", variable="personObject"]');
+        $name = self::$code->find('property-call[name="name", variable="person"]');
 
-        $this->assertEquals(2, $address->count(), "Expecting two 'address' property calls of 'personObject'.");
+        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
     }
 }  

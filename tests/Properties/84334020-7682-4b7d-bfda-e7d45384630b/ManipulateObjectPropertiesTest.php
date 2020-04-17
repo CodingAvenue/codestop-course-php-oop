@@ -1,8 +1,15 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class ManipulateObjectPropertiesTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class ManipulateObjectPropertiesTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
 
     public function testPhpStartTag()
     {
@@ -25,6 +32,16 @@ class ManipulateObjectPropertiesTest extends Proof
         $nodes = self::$code->find('construct[name="echo"]');
 
         $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+    }
+
+    public function testEchoMove()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $move = $subNodes->find('method[name="move"]');
+        $nodes = $move->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `move()` method.");
     }
 
     public function testAssignment()

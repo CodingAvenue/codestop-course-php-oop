@@ -1,8 +1,15 @@
 <?php
 use CodingAvenue\Proof\Code;
-use Proofs\Proof;
-class CorrectMultipleErrorsTest extends Proof
+use PHPUnit\Framework\TestCase;
+
+class MissingPublicKeywordTest extends TestCase
 {
+    protected static $code;
+
+    public static function setupBeforeClass()
+    {
+        self::$code = new Code(getcwd() . "/" . getenv("TEST_INDEX"));
+    }
 
     public function testPhpStartTag()
     {
@@ -15,9 +22,19 @@ class CorrectMultipleErrorsTest extends Proof
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
-        $expected  = "Canada";
+        $expected  = "Diana";
 
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
+    }
+
+    public function testEchoEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `eat()` method.");
     }
 
     public function testEcho()
@@ -31,14 +48,14 @@ class CorrectMultipleErrorsTest extends Proof
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two assignment statements.");
+        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement.");
     }
 
-    public function testPersonObjectVariable()
+    public function testPersonVariable()
     {
-        $personObject = self::$code->find('variable[name="personObject"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(3, $personObject->count(), "Expecting three occurrences of the variable named 'personObject'.");
+        $this->assertEquals(2, $person->count(), "Expecting two occurrences of the variable named 'person'.");
     }
 
     public function testInstantiation()
@@ -46,7 +63,7 @@ class CorrectMultipleErrorsTest extends Proof
         $nodes = self::$code->find('instantiate[class="Person"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting an instantiation statement of the 'Person' class.");
-    } 
+    }
 
     public function testEat()
     {
@@ -67,13 +84,13 @@ class CorrectMultipleErrorsTest extends Proof
     }
 
     public function testAddressProperty()
-    {        
+    {
         $obj = self::$code->find('class[name="Person"]');
         $subNodes = $obj->getSubnode();
         $address = $subNodes->find('property[name="address", type="public"]');
 
         $this->assertEquals(1, $address->count(), "Expecting a public class property named 'address'.");
-    } 
+    }
 
     public function testNameValue()
     {
@@ -91,12 +108,12 @@ class CorrectMultipleErrorsTest extends Proof
         $nodes = self::$code->find('class[name="Person"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting a class declaration of the `Person` class.");
-    }  
-
-    public function testAddressCall()
-    {
-        $address = self::$code->find('property-call[name="address", variable="personObject"]');
-
-        $this->assertEquals(2, $address->count(), "Expecting two 'address' property calls of 'personObject'.");
     }
-}  
+
+    public function testNameCall()
+    {
+        $name = self::$code->find('property-call[name="name", variable="person"]');
+
+        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
+    }
+}
