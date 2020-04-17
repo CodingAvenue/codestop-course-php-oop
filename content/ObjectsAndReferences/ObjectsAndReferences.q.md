@@ -26,10 +26,10 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarA->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$person->display();
 ?>
 ```
 /// type=SS, id=64ba6376-93b5-4cea-ba67-3c3e376dd8c9, answer=[3]
@@ -70,9 +70,9 @@ Which of the following is a method?
 
  - `display()`
 
- - `$objectVarB`
+ - `$person`
 
- - `$objectVarA`
+ - `$personRef`
 
  - `echo "This is a person class.\n";`
 
@@ -85,11 +85,11 @@ Which of the following are classes?
 
  - `Student`
 
+ - `$person`
+
  - `display()`
 
- - `$objectVarB`
-
- - `$objectVarA`
+ - `$personRef`
 
 
 /// type=SS, id=9963321f-7f1e-4fef-88c0-f341fe3e00bc, answer=[2]
@@ -98,33 +98,33 @@ Which of the following is a method call?
 
  - `class Student {...}`
 
- - `$objectVarA->display();`
+ - `$person->display();`
 
- - `$objectVarB = $objectVarA;`
+ - `$personRef = $person;`
 
- - `$objectVarA = new Person();`
+ - `$person = new Person();`
 
  - `echo "This is a person class.\n";`
 
 
 /// type=MS, id=c73787e6-8834-4c14-b311-4928753ecd2f, answer=[3,4,5]
 
-Which statements correctly describe `$objectVarA = new Person();` on line 18?
+Which statements correctly describe `$person = new Person();` on line 18?
 
- - It assigns `Person()` to the variable `$objectVarA`.
+ - It assigns `Person()` to the variable `$person`.
 
- - It displays the value of `$objectVarA` in `Person()`.
+ - It displays the value of `$person` in `Person()`.
 
- - It creates `$objectVarA` as an instance of the `Person` class.
+ - It creates `$person` as an instance of the `Person` class.
 
- - It sets the variable `$objectVarA` to point to the `Person` object.
+ - It sets the variable `$person` to point to the `Person` object.
 
- - It creates the variable `$objectVarA` and the `Person` object in the memory.
+ - It creates the variable `$person` and the `Person` object in the memory.
 
 
 /// type=SS, id=2388a5d7-6f4f-4243-9c68-2b8e96218ef6, answer=[4]
 
-In the statement `$objectVarB = $objectVarA;` on line 19, what is `$objectVarB`?
+In the statement `$personRef = $person;` on line 19, what is `$personRef`?
 
  - It is a class.
 
@@ -137,39 +137,39 @@ In the statement `$objectVarB = $objectVarA;` on line 19, what is `$objectVarB`?
  - it is a property.
 
 
-/// type=MS, id=2507f800-92e2-42cb-8a62-363272b9204a, answer=[1,5]
+/// type=MS, id=2507f800-92e2-42cb-8a62-363272b9204a, answer=[3,5]
 
-What does `$objectVarB = $objectVarA;` do on line 19?
+What does `$personRef = $person;` do on line 19?
 
- - It creates the variable `$objectVarB` in the memory.
+ - It assigns the value of `$person` to `$personRef`.
 
- - It assigns the value of `$objectVarA` to `$objectVarB`.
+ - It displays the value of `$person` in `$personRef`.
 
- - It displays the value of `$objectVarA` in `$objectVarB`.
+ - It creates the variable `$personRef` in the memory.
 
- - It creates the variable `$objectVarB` as an instance of `$objectVarA`.
+ - It creates the variable `$personRef` as an instance of `$person`.
 
- - It sets the variable `$objectVarB` to point to the `Person` object that `$objectVarA` is currently pointing.
+ - It sets the variable `$personRef` to point to the `Person` object that `$person` is currently pointing.
 
 
 /// type=SS, id=f3b79249-da3f-44ab-a5d0-32eceef3d87a, answer=[1]
 
-Which object does `$objectVarB` reference or point to?
+Which object does `$personRef` reference or point to?
 
  - `Person`
 
  - `Student`
 
- - `$objectVarC`
+ - `$person`
 
- - `$objectVarA`
+ - `$personRef`
 
- - `$objectVarB`
+ - `$anotherPersonRef`
 
 
 /// type=SS, id=90fd1cc5-512a-4fd0-ae22-5bc914f472cd, answer=[2]
 
-In the statement `$objectVarC = &$objectVarA;` on line 20, what does `&` indicate?
+In the statement `$anotherPersonRef = &$person;` on line 20, what does `&` indicate?
 
  - A pass by value.
 
@@ -184,7 +184,7 @@ In the statement `$objectVarC = &$objectVarA;` on line 20, what does `&` indicat
 
 /// type=SS, id=39b00737-0c9b-4d62-bf24-5e0f72545c29, answer=[4]
 
-In the statement `$objectVarC = &$objectVarA;` on line 20, what is `$objectVarC`?
+In the statement `$anotherPersonRef = &$person;` on line 20, what is `$anotherPersonRef`?
 
  - It is a class.
 
@@ -199,43 +199,43 @@ In the statement `$objectVarC = &$objectVarA;` on line 20, what is `$objectVarC`
 
 /// type=MS, id=87881980-b48e-4f8d-923c-4e9a6ca12d99, answer=[3,5]
 
-Which statements correctly describe `$objectVarC = &$objectVarA;` on line 20?
+Which statements correctly describe `$anotherPersonRef = &$person;` on line 20?
 
- - It assigns the value of `$objectVarA` to `$objectVarC`.
+ - It assigns the value of `$person` to `$anotherPersonRef`.
 
- - It displays the value of `$objectVarA` in `$objectVarC`.
+ - It displays the value of `$person` in `$anotherPersonRef`.
 
- - It creates the variable `$objectVarC` as an alias of `$objectVarA`.
+ - It creates the variable `$anotherPersonRef` as an alias of `$person`.
 
- - It creates the variable `$objectVarC` as an instance of `$objectVarA`.
+ - It creates the variable `$anotherPersonRef` as an instance of `$person`.
 
- - It sets the variable `$objectVarC` to behave exactly the same as `$objectVarA`.
+ - It sets the variable `$anotherPersonRef` to behave exactly the same as `$person`.
 
 
 /// type=SS, id=a8b2ef39-2c6e-478e-83ba-7d914aaad9d0, answer=[1]
 
-Which statement best describes `$objectVarA->display();` on line 21?
+Which statement best describes `$person->display();` on line 21?
 
- - It calls the `display()` method of `$objectVarA`.
+ - It calls the `display()` method of `$person`.
 
- - It creates the `display()` method of `$objectVarA`.
+ - It creates the `display()` method of `$person`.
 
- - It removes the `display()` method of `$objectVarA`.
+ - It returns the `display()` method of `$person`.
 
- - It returns the `display()` method of `$objectVarA`.
+ - It displays the `display()` method of `$person`.
 
- - It displays the `display()` method of `$objectVarA`.
+ - It removes the `display()` method of `$person`.
 
 
 /// type=SS, id=021e6d5a-6e8b-4f51-90cc-f45ce9d0df50, answer=[4]
 
-What value is returned by the method call `$objectVarA->display();` on line 21?
+What value is returned by the method call `$person->display();` on line 21?
 
  - `Person`
 
  - `Student`
 
- - `$objectVarA`
+ - `$person`
 
  - `This is a person class.`
 
@@ -266,12 +266,12 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarC->display();
-$objectVarA = new Student();
-$objectVarC->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$anotherPersonRef->display();
+$person = new Student();
+$anotherPersonRef->display();
 ?>
 ```
 /// type=SS, id=2b0e1987-b4ac-4ca9-bc3a-4b96c6f18575, answer=[5]
@@ -289,19 +289,19 @@ Execute the program. What is its output?
  - It prints `This is a person class.` and `This is a student class.` in separate lines.
 
 
-/// type=SS, id=de7501b3-14f3-4ac5-9e57-51f683611ef9, answer=[3]
+/// type=SS, id=de7501b3-14f3-4ac5-9e57-51f683611ef9, answer=[4]
 
 Which of the following is a pass by reference statement?
 
- - `$objectVarC->display();`
+ - `$personRef = $person;`
 
- - `$objectVarB = $objectVarA;`
+ - `$person = new Person();`
 
- - `$objectVarC = &$objectVarA;`
+ - `$person = new Student();`
 
- - `$objectVarA = new Person();`
+ - `$anotherPersonRef = &$person;`
 
- - `$objectVarA = new Student();`
+ - `$anotherPersonRef->display();`
 
 
 /// type=SS, id=fbbfe56c-f2d0-43f0-a1ac-a5aba0aa670e, answer=[5]
@@ -312,22 +312,22 @@ Which of the following is an alias variable?
 
  - `Student`
 
- - `$objectVarA`
+ - `$person`
 
- - `$objectVarB`
+ - `$personRef`
 
- - `$objectVarC`
+ - `$anotherPersonRef`
 
 
 /// type=SS, id=32d6e32b-efcf-4f73-a9c4-8a7dd892f43c, answer=[4]
 
-What value is returned by the method call `$objectVarC->display();` on line 21?
+What value is returned by the method call `$anotherPersonRef->display();` on line 21?
 
  - `Person`
 
  - `Student`
 
- - `$objectVarA`
+ - `$person`
 
  - `This is a person class.`
 
@@ -336,58 +336,58 @@ What value is returned by the method call `$objectVarC->display();` on line 21?
 
 /// type=MS, id=bace9a02-b610-434a-a0de-a00283c9e58e, answer=[1,4,5]
 
-What does `$objectVarA = new Student();` do on line 22?
+What does `$person = new Student();` do on line 22?
 
  - It creates the `Student` object in the memory.
 
- - It assigns `Student()` to the variable `$objectVarA`.
+ - It assigns `Student()` to the variable `$person`.
 
- - It displays the value of `$objectVarA` in `Student()`.
+ - It displays the value of `$person` in `Student()`.
 
- - It creates `$objectVarA` as an instance of the `Student` class.
+ - It creates `$person` as an instance of the `Student` class.
 
- - It sets the variable `$objectVarA` to point to the `Student` object.
+ - It sets the variable `$person` to point to the `Student` object.
 
 
 /// type=SS, id=f60a4124-f722-4e8a-b24f-0a624fbd733b, answer=[2]
 
-After the statement on line 22, which object does `$objectVarA` reference or point to?
+After the statement on line 22, which object does `$person` reference or point to?
 
  - `Person`
 
  - `Student`
 
- - `$objectVarC`
+ - `$person`
 
- - `$objectVarA`
+ - `$personRef`
 
- - `$objectVarB`
+ - `$anotherPersonRef`
 
 
 /// type=SS, id=0bf8597f-c930-40c8-b2c1-952de3b42076, answer=[1]
 
-Which object does `$objectVarB` reference or point to?
+Which object does `$personRef` reference or point to?
 
  - `Person`
 
  - `Student`
 
- - `$objectVarC`
+ - `$person`
 
- - `$objectVarA`
+ - `$personRef`
 
- - `$objectVarB`
+ - `$anotherPersonRef`
 
 
 /// type=SS, id=9636ce2e-e6cb-45b7-bdf5-c01d2c51108a, answer=[5]
 
-What value is returned by the method call `$objectVarC->display();` on line 23?
+What value is returned by the method call `$anotherPersonRef->display();` on line 23?
 
  - `Person`
 
  - `Student`
 
- - `$objectVarA`
+ - `$person`
 
  - `This is a person class.`
 
@@ -396,17 +396,17 @@ What value is returned by the method call `$objectVarC->display();` on line 23?
 
 /// type=MS, id=299628ee-34c1-43a8-ad49-7de9fb3af92f, answer=[1,4,5]
 
-Why does the returned value of the method call `$objectVarC->display();` change?
+Why does the returned value of the method call `$anotherPersonRef->display();` change?
 
- - The variable `$objectVarC` is an alias of `$objectVarA`.
+ - The variable `$anotherPersonRef` is an alias of `$person`.
 
- - The variable `$objectVarC` points to the `Person` object.
+ - The variable `$anotherPersonRef` points to the `Person` object.
 
- - The value assigned to the variable `$objectVarC` changes.
+ - The value assigned to the variable `$anotherPersonRef` changes.
 
- - The object that the variable `$objectVarA` points to changes.
+ - The object that the variable `$person` points to changes.
 
- - The variable `$objectVarC` should behave similar to `$objectVarA`.
+ - The variable `$anotherPersonRef` should behave similar to `$person`.
 
 :::
 
@@ -477,10 +477,10 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = $&objectVarA;
-$objectVarA->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = $&person;
+$person->display();
 ?>
 ```
 /// type=SS, id=5873b385-b15e-4e67-81a2-adfd3d037fe6, answer=[1]
@@ -508,7 +508,7 @@ What is the error message?
 
  - Uncaught Error: Call to undefined function `Student()` on line number 22
 
- - syntax error, unexpected `'$objectVarC'` (T_VARIABLE) on line number 20
+ - syntax error, unexpected `'$anotherPersonRef'` (T_VARIABLE) on line number 20
 
  - syntax error, unexpected `'&'`, expecting variable (T_VARIABLE) or `'{'` or `'$'` on line number 20
 
@@ -517,15 +517,15 @@ What is the error message?
 
 Which statements correctly describe the error?
 
- - The variable `$objectVarC` starts with a dollar sign `$`.
+ - The variable `$anotherPersonRef` starts with a dollar sign `$`.
 
  - There is no semicolon `;` at the end of the statement on line 20.
 
- - On line 20, the statement `$objectVarC = $&objectVarA;` is invalid.
+ - On line 20, the statement `$anotherPersonRef = $&person;` is invalid.
 
- - The ampersand `&` symbol in `$&objectVarA` should come first before the dollar sign `$`.
+ - The ampersand `&` symbol in `$&person` should come first before the dollar sign `$`.
 
- - There is no assignment operator `=` between `$objectVarC` and `$&objectVarA` on line 20.
+ - There is no assignment operator `=` between `$anotherPersonRef` and `$&person` on line 20.
 
 :::
 
@@ -552,10 +552,10 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = $&objectVarA;
-$objectVarA->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = $&person;
+$person->display();
 ?>
 ```
 
@@ -582,10 +582,10 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA
-$objectVarC = &$objectVarA;
-$objectVarA->display();
+$person = new Person();
+$personRef = $person
+$anotherPersonRef = &$person;
+$person->display();
 ?>
 ```
 /// type=SS, id=752c5deb-f9b8-4785-a19e-880f89be4d0b, answer=[4]
@@ -598,7 +598,7 @@ Execute the program. What is the error message?
 
  - Uncaught Error: Call to undefined function `Student()` on line number 22
 
- - syntax error, unexpected `'$objectVarC'` (T_VARIABLE) on line number 20
+ - syntax error, unexpected `'$anotherPersonRef'` (T_VARIABLE) on line number 20
 
  - syntax error, unexpected `'&'`, expecting variable (T_VARIABLE) or `'{'` or `'$'` on line number 20
 
@@ -607,15 +607,15 @@ Execute the program. What is the error message?
 
 Which statement best describe the error?
 
- - The variable `$objectVarC` starts with a dollar sign `$`.
+ - The variable `$anotherPersonRef` starts with a dollar sign `$`.
 
  - There is no semicolon `;` at the end of the statement on line 19.
 
- - On line 20, the statement `$objectVarC = &$objectVarA;` is invalid.
+ - On line 20, the statement `$anotherPersonRef = &$person;` is invalid.
 
- - The ampersand `&` symbol in `&$objectVarA` should be written after the dollar sign `$`.
+ - The ampersand `&` symbol in `&$person` should be written after the dollar sign `$`.
 
- - There is no assignment operator `=` between `$objectVarC` and `$&objectVarA` on line 20.
+ - There is no assignment operator `=` between `$anotherPersonRef` and `$&person` on line 20.
 
 :::
 
@@ -642,10 +642,10 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA
-$objectVarC = &$objectVarA;
-$objectVarA->display();
+$person = new Person();
+$personRef = $person
+$anotherPersonRef = &$person;
+$person->display();
 ?>
 ```
 
@@ -672,10 +672,10 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarA-display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$person-display();
 ?>
 ```
 /// type=SS, id=58d8eda4-e740-4686-9c63-45e241c10ac4, answer=[2]
@@ -688,7 +688,7 @@ Execute the program. What is the error message?
 
  - Uncaught Error: Call to undefined function `Student()` on line number 22
 
- - syntax error, unexpected `'$objectVarC'` (T_VARIABLE) on line number 20
+ - syntax error, unexpected `'$anotherPersonRef'` (T_VARIABLE) on line number 20
 
  - syntax error, unexpected `'&'`, expecting variable (T_VARIABLE) or `'{'` or `'$'` on line number 20
 
@@ -697,15 +697,15 @@ Execute the program. What is the error message?
 
 Which statements correctly describe the error?
 
+ - The variable `$person` starts with a dollar sign `$`.
+
  - There are parentheses `()` after `display` on line 21.
 
- - The variable `$objectVarA` starts with a dollar sign `$`.
-
- - On line 21, the statement `$objectVarA-display();` is invalid.
+ - On line 21, the statement `$person-display();` is invalid.
 
  - There is no semicolon `;` at the end of the statement on line 21.
 
- - The object operator `->` between `$objectVarA` and `display()` is miswritten as `-`.
+ - The object operator `->` between `$person` and `display()` is miswritten as `-`.
 
 
 :::
@@ -733,10 +733,10 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarA-display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$person-display();
 ?>
 ```
 
@@ -763,12 +763,12 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarC->display();
-$objectVarA = Student();
-$objectVarC->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$anotherPersonRef->display();
+$person = Student();
+$anotherPersonRef->display();
 ?>
 ```
 /// type=SS, id=b5151478-2ebb-4907-97a1-259f7361885b, answer=[3]
@@ -781,24 +781,24 @@ Execute the program. What is the error message?
 
  - Uncaught Error: Call to undefined function `Student()` on line number 22
 
- - syntax error, unexpected `'$objectVarC'` (T_VARIABLE) on line number 20
+ - syntax error, unexpected `'$anotherPersonRef'` (T_VARIABLE) on line number 20
 
  - syntax error, unexpected `'&'`, expecting variable (T_VARIABLE) or `'{'` or `'$'` on line number 20
 
 
-/// type=MS, id=d7d282b0-0e36-47f8-aa58-f2fe116f6786, answer=[4,5]
+/// type=MS, id=d7d282b0-0e36-47f8-aa58-f2fe116f6786, answer=[3,5]
 
 Which statements correctly describe the error?
 
+ - The variable `$person` starts with a dollar sign `$`.
+
  - There are parentheses `()` after `Student` on line 22.
 
- - The variable `$objectVarA` starts with a dollar sign `$`.
+ - On line 22, the statement `$person = Student();` is invalid.
 
  - There is no semicolon `;` at the end of the statement on line 21.
 
  - There is no `new` keyword specified before `Student()` on line 22.
-
- - On line 22, the statement `$objectVarA = Student();` is invalid.
 
 
 :::
@@ -826,12 +826,12 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarC->display();
-$objectVarA = Student();
-$objectVarC->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$anotherPersonRef->display();
+$person = Student();
+$anotherPersonRef->display();
 ?>
 ```
 
@@ -858,12 +858,12 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarC->display();
-$objectVarA = new Student();
-objectVarC->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$anotherPersonRef->display();
+$person = new Student();
+anotherPersonRef->display();
 ?>
 ```
 /// type=SS, id=2f20e013-199e-403a-a0fe-d2111e9932a3, answer=[1]
@@ -876,24 +876,24 @@ Execute the program. What is the error message?
 
  - Uncaught Error: Call to undefined function `Student()` on line number 22
 
- - syntax error, unexpected `'$objectVarC'` (T_VARIABLE) on line number 20
+ - syntax error, unexpected `'$anotherPersonRef'` (T_VARIABLE) on line number 20
 
  - syntax error, unexpected `'&'`, expecting variable (T_VARIABLE) or `'{'` or `'$'` on line number 20
 
 
-/// type=MS, id=2cadc349-7dc4-429b-ae9e-5c702b17c963, answer=[2,4]
+/// type=MS, id=2cadc349-7dc4-429b-ae9e-5c702b17c963, answer=[3,4]
 
 Which statements correctly describe the error?
 
  - There are parentheses `()` after `display` on line 23.
 
- - On line 23, the statement `objectVarC->display();` is invalid.
-
  - There is no semicolon `;` at the end of the statement on line 23.
 
- - On line 23, the variable `objectVarC` does not start with a dollar sign `$`.
+ - On line 23, the statement `anotherPersonRef->display();` is invalid.
 
- - There is no object operator `->` specified between `objectVarC` and `display()` on line 23.
+ - On line 23, the variable `anotherPersonRef` does not start with a dollar sign `$`.
+
+ - There is no object operator `->` specified between `anotherPersonRef` and `display()` on line 23.
 
 :::
 
@@ -920,12 +920,12 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarC->display();
-$objectVarA = new Student();
-objectVarC->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$anotherPersonRef->display();
+$person = new Student();
+anotherPersonRef->display();
 ?>
 ```
 
@@ -938,7 +938,7 @@ objectVarC->display();
 
 /// type=CR, id=a85d5e58-bb3c-46f7-8633-c4be555054f8, answer=[tests/ObjectsAndReferences/a85d5e58-bb3c-46f7-8633-c4be555054f8]
 
-Given the initial program implementation below, add a code that creates a reference to a certain class instance. On line 18, add a statement that creates an instance of the `Animal` class and assigns it to the variable `$animalA`. Add another statement that assigns `$animalA` to `$animalB`. Next, add the statement `$animalB->display();` on line 20. On line 21, add a statement that sets the variable `$animalC` an alias of the variable `$animalA`. Then, add another statement `$animalC->display();` on line 22. On line 23, add a statement that creates an instance of the `Mammal` class and assigns it to the variable `$animalA`. On line 24, add the statement `$animalC->display();`. Run the program to view the result.
+Given the initial program implementation below, add a code that creates a reference to a certain class instance. On line 18, add a statement that creates an instance of the `Animal` class and assigns it to the variable `$animal`. Add another statement that assigns `$animal` to `$animalRef`. Next, add the statement `$animalRef->display();` on line 20. On line 21, add a statement that sets the variable `$anotherAnimalRef` an alias of the variable `$animal`. Then, add another statement `$anotherAnimalRef->display();` on line 22. On line 23, add a statement that creates an instance of the `Mammal` class and assigns it to the variable `$animal`. On line 24, add the statement `$anotherAnimalRef->display();`. Run the program to view the result.
 
 ```php
 <?php
