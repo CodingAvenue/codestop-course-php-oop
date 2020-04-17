@@ -54,25 +54,25 @@ class CreateAnObjectReferenceTest extends TestCase
         $this->assertEquals(3, $nodes->count(), "Expecting three assignment statements.");
     }
 
-    public function testAnimalAVariable()
+    public function testAnimalVariable()
     {
-        $animalA = self::$code->find('variable[name="animalA"]');
+        $animal = self::$code->find('variable[name="animal"]');
 
-        $this->assertEquals(4, $animalA->count(), "Expecting four occurrences of the variable named 'animalA'.");
+        $this->assertEquals(4, $animal->count(), "Expecting four occurrences of the variable named 'animal'.");
     }
 
-    public function testAnimalBVariable()
+    public function testAnimalRefVariable()
     {
-        $animalB = self::$code->find('variable[name="animalB"]');
+        $animalRef = self::$code->find('variable[name="animalRef"]');
 
-        $this->assertEquals(2, $animalB->count(), "Expecting two occurrences of the variable named 'animalB'.");
+        $this->assertEquals(2, $animalRef->count(), "Expecting two occurrences of the variable named 'animalRef'.");
     }
 
-    public function testAnimalCVariable()
+    public function testAnotherAnimalRefVariable()
     {
-        $animalC = self::$code->find('variable[name="animalC"]');
+        $anotherAnimalRef = self::$code->find('variable[name="anotherAnimalRef"]');
 
-        $this->assertEquals(3, $animalC->count(), "Expecting three occurrences of the variable named 'animalC'.");
+        $this->assertEquals(3, $anotherAnimalRef->count(), "Expecting three occurrences of the variable named 'anotherAnimalRef'.");
     }
 
     public function testInstantiationAnimal()
@@ -123,22 +123,22 @@ class CreateAnObjectReferenceTest extends TestCase
 
     public function testDisplayCallB()
     {
-        $display = self::$code->find('method-call[name="display", variable="animalB"]');
+        $display = self::$code->find('method-call[name="display", variable="animalRef"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'animalB'.");
+        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'animalRef'.");
     }
 
     public function testDisplayCallC()
     {
-        $display = self::$code->find('method-call[name="display", variable="animalC"]');
+        $display = self::$code->find('method-call[name="display", variable="anotherAnimalRef"]');
         
-        $this->assertEquals(2, $display->count(), "Expecting two 'display()' method calls of 'animalC'.");
+        $this->assertEquals(2, $display->count(), "Expecting two 'display()' method calls of 'anotherAnimalRef'.");
     }
 
     public function testObjectReference()
     {
-        $nodes = self::$code->find('assign-ref[variable="animalC", variable-ref="animalA"]');
+        $nodes = self::$code->find('assign-ref[variable="anotherAnimalRef", variable-ref="animal"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting the `animalA` variable as a reference of the `animalC` variable.");
+        $this->assertEquals(1, $nodes->count(), "Expecting the `animal` variable as a reference of the `anotherAnimalRef` variable.");
     }
 }

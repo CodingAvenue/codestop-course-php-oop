@@ -54,25 +54,25 @@ class MissingDollarSignTest extends TestCase
         $this->assertEquals(3, $nodes->count(), "Expecting three assignment statements.");
     }
 
-    public function testObjectVarAVariable()
+    public function testPersonVariable()
     {
-        $objectVarA = self::$code->find('variable[name="objectVarA"]');
+        $person = self::$code->find('variable[name="person"]');
 
-        $this->assertEquals(4, $objectVarA->count(), "Expecting four occurrences of the variable named 'objectVarA'.");
+        $this->assertEquals(4, $person->count(), "Expecting four occurrences of the variable named 'person'.");
     }
 
-    public function testObjectVarBVariable()
+    public function testPersonRefVariable()
     {
-        $objectVarB = self::$code->find('variable[name="objectVarB"]');
+        $personRef = self::$code->find('variable[name="personRef"]');
 
-        $this->assertEquals(1, $objectVarB->count(), "Expecting one occurrence of the variable named 'objectVarB'.");
+        $this->assertEquals(1, $personRef->count(), "Expecting one occurrence of the variable named 'personRef'.");
     }
 
-    public function testObjectVarCVariable()
+    public function testAnotherPersonRefVariable()
     {
-        $objectVarC = self::$code->find('variable[name="objectVarC"]');
+        $anotherPersonRef = self::$code->find('variable[name="anotherPersonRef"]');
 
-        $this->assertEquals(3, $objectVarC->count(), "Expecting three occurrences of the variable named 'objectVarC'.");
+        $this->assertEquals(3, $anotherPersonRef->count(), "Expecting three occurrences of the variable named 'anotherPersonRef'.");
     }
 
     public function testInstantiationPerson()
@@ -123,15 +123,15 @@ class MissingDollarSignTest extends TestCase
 
     public function testDisplayCallC()
     {
-        $display = self::$code->find('method-call[name="display", variable="objectVarC"]');
+        $display = self::$code->find('method-call[name="display", variable="anotherPersonRef"]');
         
-        $this->assertEquals(2, $display->count(), "Expecting two 'display()' method calls of 'objectVarC'.");
+        $this->assertEquals(2, $display->count(), "Expecting two 'display()' method calls of 'anotherPersonRef'.");
     }   
 
     public function testObjectReference()
     {
-        $nodes = self::$code->find('assign-ref[variable="objectVarC", variable-ref="objectVarA"]');
+        $nodes = self::$code->find('assign-ref[variable="anotherPersonRef", variable-ref="person"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting the `objectVarA` variable as a reference of the `objectVarC` variable.");
+        $this->assertEquals(1, $nodes->count(), "Expecting the `person` variable as a reference of the `anotherPersonRef` variable.");
     }
 }  

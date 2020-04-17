@@ -15,11 +15,11 @@ class Mammal
     }
 }
 
-$animalA = new Animal();
-$animalB = $animalA;
-$animalB->display();
-$animalC = &$animalA;
-$animalC->display();
-$animalA = new Mammal();
-$animalC->display();
+$animal = new Animal();
+$animalRef = $animal;
+$animalRef->display();
+$anotherAnimalRef = &$animal;
+$anotherAnimalRef->display();
+$animal = new Mammal();
+$anotherAnimalRef->display();
 ?>

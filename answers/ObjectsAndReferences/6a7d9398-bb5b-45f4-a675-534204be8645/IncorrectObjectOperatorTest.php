@@ -15,8 +15,8 @@ class Student
     }
 }
 
-$objectVarA = new Person();
-$objectVarB = $objectVarA;
-$objectVarC = &$objectVarA;
-$objectVarA->display();
+$person = new Person();
+$personRef = $person;
+$anotherPersonRef = &$person;
+$person->display();
 ?>
