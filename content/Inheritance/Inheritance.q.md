@@ -569,6 +569,154 @@ Which statements correctly describe the code on line 25 of `Student.php`?
 
 :::
 
+/// type=REPL, readonly=true, filename=[main.php,Person.php,Student.php]
+
+```php
+<?php
+require_once(__DIR__ . '/Student.php');
+
+$student = new Student("John", 20, "BSCS");
+$student->display();
+?>
+```
+
+```php
+<?php
+class Person
+{
+    protected $name;
+    private $age;
+	
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
+    }
+    
+    public function setAge($newAge)
+    {
+        if ($this->checkAge($newAge)) {
+            $this->age = $newAge;
+        }
+    }
+
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    private function checkAge($age)
+    {
+        if ($age > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public function display()
+    {
+        echo $this->name . " is " . $this->getAge() . " years old.";
+    }
+}
+?>
+```
+
+```php
+<?php 
+require_once(__DIR__ . '/Person.php');
+class Student extends Person
+{
+    private $course;
+    	
+    public function __construct($name, $age, $course)
+    {
+        parent::__construct($name, $age);
+        $this->course = $course;
+    }
+    
+    public function getCourse()
+    {
+        return $this->course;
+    }
+
+    public function display()
+    {
+        echo parent::getName() . " is taking up " . $this->course . ".";
+    }
+}
+?>
+```
+/// type=SS, id=d54c3088-24a4-4821-adf2-61998d90c413, answer=[5]
+
+Execute the program. What is its output?
+
+ - It prints `20`.
+
+ - It prints `John`.
+
+ - It prints `BSCS`.
+
+ - It prints `John is 20 years old.`.
+
+ - It prints `John is taking up BSCS.`.
+
+
+/// type=SS, id=632cf959-8ae2-450c-9604-297c4fa6ba0c, answer=[3]
+
+Which statement best describes `require_once(__DIR__ . '/Student.php');` on line 2 of `main.php`?
+
+- It updates the file `Student.php`.
+
+- It establishes a relationship between classes.
+
+- It includes the file `Student.php` in the file `main.php`.
+
+- It removes the file `Student.php` in the file `main.php`.
+
+- It excludes the file `Student.php` in the file `main.php`.
+
+
+/// type=SS, id=0a8fa28f-7170-4089-8243-b7568cc3927e, answer=[5]
+
+Which statement best describes `$student = new Student("John", 20, "BSCS");` on line 4 of `main.php`?
+
+ - It sets the arguments `John`, `20`, and `BSCS` to the `$student` object.
+
+ - It defines the `$name`, `$age`, and `$course` properties of the `$student` object.
+
+ - It returns the `$student` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
+
+ - It declares the `$student` object of the `Student` class with the parameters `John`,`20`, and `BSCS`.
+
+ - It creates the `$student` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
+
+
+/// type=MS, id=7369e982-d7c5-4e79-865c-e3c9773e6c90, answer=[4,5]
+
+Why does the instantiation of the `Student` class separated from the class declaration?
+
+ - It separates the object instantiation to shorten the code of the program.
+
+ - Combining the object instantiation and the class declaration produces an error.
+
+ - Adding the object instantiation in the class declaration is not allowed in PHP.
+
+ - It is a best practice to separate the class declaration from the object instantiation.
+
+ - Separating the class declaration from the object instantiation reduces the complexity and increases the efficiency of the program.
+
+:::
+
+
+:::
+
 /// type=REPL, filename=[Person.php,Student.php]
 
 ```php
@@ -1926,6 +2074,212 @@ class Student extends Person
 
 $student = new Student("John", 20, "BSCS");
 $student->display();
+?>
+```
+
+
+:::
+
+/// type=REPL, readonly=true, filename=[main.php,Person.php,Student.php]
+
+```php
+<?php
+require_once(__DIR__  '/Student.php');
+
+$student = new Student("John", 20, "BSCS");
+$student->display();
+?>
+```
+
+```php
+<?php
+class Person
+{
+    protected $name;
+    private $age;
+	
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
+    }
+    
+    public function setAge($newAge)
+    {
+        if ($this->checkAge($newAge)) {
+            $this->age = $newAge;
+        }
+    }
+
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    private function checkAge($age)
+    {
+        if ($age > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public function display()
+    {
+        echo $this->name . " is " . $this->getAge() . " years old.";
+    }
+}
+?>
+```
+
+```php
+<?php 
+require_once(__DIR__ . '/Person.php');
+class Student extends Person
+{
+    private $course;
+    	
+    public function __construct($name, $age, $course)
+    {
+        parent::__construct($name, $age);
+        $this->course = $course;
+    }
+    
+    public function getCourse()
+    {
+        return $this->course;
+    }
+
+    public function display()
+    {
+        echo parent::getName() . " is taking up " . $this->course . ".";
+    }
+}
+?>
+```
+/// type=SS, id=61fb6da3-90f9-466e-bc42-6ee14bd9e9ea, answer=[5]
+
+Execute the program. What is the error message?
+
+ - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
+
+ - Uncaught Error: Call to private method `Person::checkAge()` on line 24
+
+ - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
+
+ - Access level to `Student::display()` must be public (as in class Person) on line number 18
+
+ - syntax error, unexpected `''/Student.php''` (T_CONSTANT_ENCAPSED_STRING) in `/main.php` on line number 2
+
+
+/// type=MS, id=f3a7e5c2-41ce-4cad-8fd0-6244f05be82a, answer=[3,5]
+
+Which statements correctly describe the error?
+
+ - There is no semicolon `;` at the end of the statement on line 2 of `main.php`.
+
+ - On line 2 of `main.php`, the `__DIR__` magic constant is not enclosed in double quotes `""`.
+
+ - On line 2 of `main.php`, the statement `require_once(__DIR__  '/Student.php');` is invalid.
+
+ - There is no comma `,` between `__DIR__` and `'/Student.php'` in the `require_once()` statement on line 2 of `main.php`.
+
+ - There is no concatenation operator `.` between `__DIR__` and `'/Student.php'` in the `require_once()` statement on line 2 of `main.php`.
+
+:::
+
+
+/// type=CR, id=49dc2595-49d9-460a-9696-138595f2bd68, answer=[tests/Inheritance/MissingConcatOnRequireInMainTest.php], filename=[main.php,Person.php,Student.php]
+
+Correct the code so that it outputs the string `John is taking up BSCS.`.
+
+```php
+<?php
+require_once(__DIR__  '/Student.php');
+
+$student = new Student("John", 20, "BSCS");
+$student->display();
+?>
+```
+
+```php
+<?php
+class Person
+{
+    protected $name;
+    private $age;
+	
+    public function __construct($name, $age)
+    {
+        $this->name = $name;
+        if ($this->checkAge($age)) {
+            $this->age = $age;
+        }
+    }
+    
+    public function setAge($newAge)
+    {
+        if ($this->checkAge($newAge)) {
+            $this->age = $newAge;
+        }
+    }
+
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    private function checkAge($age)
+    {
+        if ($age > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public function display()
+    {
+        echo $this->name . " is " . $this->getAge() . " years old.";
+    }
+}
+?>
+```
+
+```php
+<?php 
+require_once(__DIR__ . '/Person.php');
+class Student extends Person
+{
+    private $course;
+    	
+    public function __construct($name, $age, $course)
+    {
+        parent::__construct($name, $age);
+        $this->course = $course;
+    }
+    
+    public function getCourse()
+    {
+        return $this->course;
+    }
+
+    public function display()
+    {
+        echo parent::getName() . " is taking up " . $this->course . ".";
+    }
+}
 ?>
 ```
 
