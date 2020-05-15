@@ -31,12 +31,13 @@ class UnspecifiedUserClassNamespaceMainTest extends TestCase
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'user'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
     }
 
     public function testUserVariable()
     {
-        $user = self::$code->find('variable[name="user"]');
+        $nodes = self::$code->find('operator[name="assignment"]');
+        $user = $nodes->find('variable[name="user"]');
 
         $this->assertEquals(1, $user->count(), "Expecting one occurrence of the variable named 'user'.");
     }
@@ -45,6 +46,14 @@ class UnspecifiedUserClassNamespaceMainTest extends TestCase
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgsFile()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/UserApp.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/UserApp.php` as an argument in the `require_once()` statement.");
     }
 } 

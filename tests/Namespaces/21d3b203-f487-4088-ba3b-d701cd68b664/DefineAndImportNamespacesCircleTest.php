@@ -32,7 +32,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
         $nodes = $circumference->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `circumference()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `circumference()` method.");
     }
 
     public function testReturnArea()
@@ -42,7 +42,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $nodes = $area->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `area()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `area()` method.");
     }
 
     public function testReturnDiameter()
@@ -52,7 +52,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $diameter = $subNodes->find('method[name="diameter", type="public"]');
         $nodes = $diameter->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `diameter()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `diameter()` method.");
     }
 
     public function testNamespace()
@@ -68,7 +68,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
 
-        $this->assertEquals(1, $circumference->count(), "Expecting a public circumference() method.");
+        $this->assertEquals(1, $circumference->count(), "Expecting a public `circumference()` method.");
     }
 
     public function testArea()
@@ -77,7 +77,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $area = $subNodes->find('method[name="area", type="public"]');
 
-        $this->assertEquals(1, $area->count(), "Expecting a public area() method.");
+        $this->assertEquals(1, $area->count(), "Expecting a public `area()` method.");
     }
 
     public function testDiameter()
@@ -86,21 +86,21 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $diameter = $subNodes->find('method[name="diameter", type="public"]');
 
-        $this->assertEquals(1, $diameter->count(), "Expecting a public diameter() method.");
+        $this->assertEquals(1, $diameter->count(), "Expecting a public `diameter()` method.");
     }
 
     public function testUseConstants()
     {
         $nodes = self::$code->find('use[class="Math\Constants"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a use statement for `Math\Constants` namespace.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `use` statement for `Math\Constants` namespace.");
     }
 
     public function testUseGeometry()
     {
         $nodes = self::$code->find('use[class="Math\Geometry\CircularShape"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a use statement for `Math\Geometry\CircularShape` namespace.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `use` statement for `Math\Geometry\CircularShape` namespace.");
     }
 
     public function testPiCallArea()
@@ -110,7 +110,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $piCall = $area->find('const-fetch[name="PI", class="Constants"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `area()` method of the `Circle` class.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `area()` method of the `Circle` class.");
     }
 
     public function testPiCallCirc()
@@ -120,14 +120,22 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
         $piCall = $circumference->find('const-fetch[name="PI", class="Constants"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `circumference()` method of the `Circle` class.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `circumference()` method of the `Circle` class.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgsFile()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/CircularShape.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/CircularShape.php` as an argument in the `require_once()` statement.");
     }
 
     public function testGetRadiusCallCirc()
@@ -137,7 +145,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
         $getRadius = $circumference->find('method-call[name="getRadius", variable="this"]');
 
-        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call inside the `circumference()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call in the `circumference()` method of the `Circle` class itself.");
     }
 
     public function testGetRadiusCallArea()
@@ -147,7 +155,7 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $getRadius = $area->find('method-call[name="getRadius", variable="this"]');
 
-        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call inside the `area()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call in the `area()` method of the `Circle` class itself.");
     }
 
     public function testGetRadiusCallDia()
@@ -157,6 +165,6 @@ class DefineAndImportNamespacesCircleTest extends TestCase
         $diameter = $subNodes->find('method[name="diameter", type="public"]');
         $getRadius = $diameter->find('method-call[name="getRadius", variable="this"]');
 
-        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call inside the `diameter()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call in the `diameter()` method of the `Circle` class itself.");
     }
 }

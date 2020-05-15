@@ -33,7 +33,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting one `__construct()` method.");
     }
 
     public function testClassCircle()
@@ -50,7 +50,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $getCircumference = $subNodes->find('method[name="getCircumference", type="public"]');
         $nodes = $getCircumference->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getCircumference()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getCircumference()` method.");
     }
 
     public function testNamespace()
@@ -66,7 +66,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getCircumference = $subNodes->find('method[name="getCircumference", type="public"]');
 
-        $this->assertEquals(1, $getCircumference->count(), "Expecting a public getCircumference() method.");
+        $this->assertEquals(1, $getCircumference->count(), "Expecting a public `getCircumference()` method.");
     }
 
     public function testRadiusParam()
@@ -83,7 +83,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
     {
         $nodes = self::$code->find('use[class="Math\Constants"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a use statement for `Math\Constants` namespace.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `use` statement for `Math\Constants` namespace.");
     }
 
     public function testRadiusPropertyCallCons()
@@ -93,7 +93,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $radius = $construct->find('property-call[name="radius", variable="this"]');
 
-        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `__construct()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call in the `__construct()` method of the `Circle` class itself.");
     }
 
     public function testRadiusPropertyCallCirc()
@@ -103,7 +103,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $getCircumference = $subNodes->find('method[name="getCircumference", type="public"]');
         $radius =$getCircumference->find('property-call[name="radius", variable="this"]');
 
-        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `getCircumference()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call in the `getCircumference()` method of the `Circle` class itself.");
     }
 
     public function testPiCall()
@@ -113,6 +113,6 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $getCircumference = $subNodes->find('method[name="getCircumference", type="public"]');
         $piCall = $getCircumference->find('const-fetch[name="PI", class="Constants"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `getCircumference()` method of the `Circle` class.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `getCircumference()` method of the `Circle` class.");
     }
 } 

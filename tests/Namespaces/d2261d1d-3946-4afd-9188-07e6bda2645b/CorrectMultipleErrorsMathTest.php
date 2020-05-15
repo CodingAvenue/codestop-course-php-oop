@@ -41,7 +41,7 @@ class CorrectMultipleErrorsMathTest extends TestCase
         $getCircleArea = $subNodes->find('method[name="getCircleArea", type="static"]');
         $nodes = $getCircleArea->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getCircleArea()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getCircleArea()` method.");
     }
 
     public function testNamespace()
@@ -57,7 +57,7 @@ class CorrectMultipleErrorsMathTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getCircleArea = $subNodes->find('method[name="getCircleArea", type="static"]');
 
-        $this->assertEquals(1, $getCircleArea->count(), "Expecting a static getCircleArea() method.");
+        $this->assertEquals(1, $getCircleArea->count(), "Expecting one static `getCircleArea()` method.");
     }
 
     public function testRadiusParam()
@@ -77,6 +77,6 @@ class CorrectMultipleErrorsMathTest extends TestCase
         $getCircleArea = $subNodes->find('method[name="getCircleArea", type="static"]');
         $piCall = $getCircleArea->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `getCircleArea()` method of the `Geometry` class.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `getCircleArea()` method of the `Geometry` class.");
     }
 } 

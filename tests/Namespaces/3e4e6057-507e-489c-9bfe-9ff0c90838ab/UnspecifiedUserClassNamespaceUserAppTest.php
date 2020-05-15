@@ -25,7 +25,7 @@ class UnspecifiedUserClassNamespaceUserAppTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nodes = $construct ->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `__construct()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `__construct()` method.");
     }
 
     public function testConstruct()
@@ -34,7 +34,7 @@ class UnspecifiedUserClassNamespaceUserAppTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting one `__construct()` method.");
     }
 
     public function testClassUser()

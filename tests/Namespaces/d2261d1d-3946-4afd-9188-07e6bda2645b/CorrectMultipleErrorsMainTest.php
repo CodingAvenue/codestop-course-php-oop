@@ -31,14 +31,14 @@ class CorrectMultipleErrorsMainTest extends TestCase
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'circle'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
     }
 
     public function testEcho()
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement.");
     }
 
     public function testCircleVariable()
@@ -52,14 +52,30 @@ class CorrectMultipleErrorsMainTest extends TestCase
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two function calls for require_once() function.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `require_once()` statements.");
+    }
+
+    public function testRequireOnceCallArgsFile()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Constants.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Constants.php` as an argument in the `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgsFile1()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Circle.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Circle.php` as an argument in the `require_once()` statement.");
     }
 
     public function testUse()
     {
         $nodes = self::$code->find('use[class="Math\Geometry\Circle"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a use statement for `Math\Geometry\Circle` namespace.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `use` statement for `Math\Geometry\Circle` namespace.");
     }
 
     public function testAlias()
