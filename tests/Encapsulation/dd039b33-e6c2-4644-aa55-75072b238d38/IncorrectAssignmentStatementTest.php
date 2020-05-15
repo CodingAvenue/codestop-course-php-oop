@@ -31,7 +31,7 @@ class IncorrectAssignmentStatementTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement.");
     }
 
     public function testAssignmentSetAge()
@@ -153,21 +153,21 @@ class IncorrectAssignmentStatementTest extends TestCase
     {
         $setAge = self::$code->find('method-call[name="setAge", variable="person"]');
 
-        $this->assertEquals(1, $setAge->count(), "Expecting a 'setAge()' method call of 'person'.");
+        $this->assertEquals(1, $setAge->count(), "Expecting one 'setAge()' method call of 'person'.");
     }  
 
     public function testGetAgeCall()
     {
         $getAge = self::$code->find('method-call[name="getAge", variable="person"]');
 
-        $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call of 'person'.");
+        $this->assertEquals(1, $getAge->count(), "Expecting one 'getAge()' method call of 'person'.");
     }
 
     public function testGetNameCall()
     {
         $getName = self::$code->find('method-call[name="getName", variable="person"]');
 
-        $this->assertEquals(1, $getName->count(), "Expecting a 'getName()' method call of 'person'.");
+        $this->assertEquals(1, $getName->count(), "Expecting one 'getName()' method call of 'person'.");
     }
 
     public function testSetAgeCallArgs()
@@ -186,7 +186,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $nodes = $checkAge->find('construct[name="return"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `checkAge()` method.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `return` statements in the `checkAge()` method.");
     }
 
     public function testReturnGetAge()
@@ -196,7 +196,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
         $nodes = $getAge->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getAge()` method.");
     }
 
     public function testReturnGetName()
@@ -206,7 +206,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $getName = $subNodes->find('method[name="getName", type="public"]');
         $nodes = $getName->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getName()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getName()` method.");
     }
 
     public function testIf()
@@ -216,7 +216,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $nodes = $checkAge->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `checkAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `checkAge()` method.");
     }
 
     public function testIfSet()
@@ -226,7 +226,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $nodes = $setAge->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `setAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `setAge()` method.");
     }
 
     public function testAgeParam()
@@ -266,7 +266,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $setName = $subNodes->find('method[name="setName", type="public"]');
         $name = $setName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `setName()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `setName()` method of the `Person` class itself.");
     }
 
     public function testNamePropertyCallGet()
@@ -276,7 +276,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $getName = $subNodes->find('method[name="setName", type="public"]');
         $name = $getName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `getName()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `getName()` method of the `Person` class itself.");
     }
 
     public function testAgePropertyCallGet()
@@ -286,7 +286,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
         $age = $getAge->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting one `age` property call inside the `getAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `getAge()` method of the `Person` class itself.");
     }
 
     public function testAgePropertyCallSet()
@@ -296,7 +296,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $age = $setAge->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting one `age` property call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `setAge()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCall()
@@ -306,7 +306,7 @@ class IncorrectAssignmentStatementTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $checkAge = $setAge->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting a 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `setAge()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCallArgs()
