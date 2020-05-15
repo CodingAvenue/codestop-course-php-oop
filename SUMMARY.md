@@ -34,7 +34,7 @@
     > In this lesson, you will learn how to declare and access constants within classes.
 
 * [Autoloading Classes](content/AutoloadingClasses/AutoloadingClasses.q.md) ** -  minutes**
-    > Discover how you can organize and load class files automatically using `spl_autoload_register()` and `__autoload()` functions.
+    > Discover how you can organize and load class files automatically using the `spl_autoload_register()` function.
 
 * [Namespaces](content/Namespaces/Namespaces.q.md) ** -  minutes**
     > Discover how you can group related classes, interfaces, methods, and constants using the `namespace` keyword.
