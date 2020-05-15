@@ -34,7 +34,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $display = $subNodes->find('method[name="display", type="static"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -85,7 +85,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
 
     public function testTypeProperty()
@@ -117,7 +117,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="pet"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'pet'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'pet'.");
     } 
 
     public function testReturn()
@@ -127,7 +127,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $isValid = $subNodes->find('method[name="isValid", type="private"]');
         $nodes = $isValid->find('construct[name="return"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `isValid()` method.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `return` statements in the `isValid()` method.");
     }
 
     public function testIf()
@@ -137,7 +137,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $isValid = $subNodes->find('method[name="isValid", type="private"]');
         $nodes = $isValid->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `isValid()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `isValid()` method.");
     }
 
     public function testIfCons()
@@ -147,7 +147,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nodes = $construct->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `__construct()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `__construct()` method.");
     }
 
     public function testTypeValue()
@@ -198,7 +198,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $isValid = $construct->find('method-call[name="isValid", variable="this"]');
         
-        $this->assertEquals(1, $isValid->count(), "Expecting one 'isValid()' method call inside the `__construct()` method of the `Animal` class itself.");
+        $this->assertEquals(1, $isValid->count(), "Expecting one 'isValid()' method call in the `__construct()` method of the `Animal` class itself.");
     }
 
     public function testIsValidCallArgs()
@@ -220,7 +220,7 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $selfCall = $display->find('static-prop-fetch[class="self"]');
 
-        $this->assertEquals(2, $selfCall->count(), "Expecting two static property calls inside the `display()` method of the `Animal` class itself.");
+        $this->assertEquals(2, $selfCall->count(), "Expecting two static property calls in the `display()` method of the `Animal` class itself.");
     }
 
     public function testStaticPropertySelfCallCons()
@@ -230,6 +230,6 @@ class CreateNewClassWithStaticMethodAndPropertyTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $selfCall = $construct->find('static-prop-fetch[class="self"]');
 
-        $this->assertEquals(2, $selfCall->count(), "Expecting two static property calls inside the `__construct()` method of the `Animal` class itself.");
+        $this->assertEquals(2, $selfCall->count(), "Expecting two static property calls in the `__construct()` method of the `Animal` class itself.");
     }
 } 

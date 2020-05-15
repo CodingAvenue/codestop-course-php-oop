@@ -34,7 +34,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignmentCons()
@@ -104,7 +104,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testGreeting()
@@ -122,7 +122,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         
-        $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
     
     public function testNameProperty()
@@ -164,7 +164,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $nodes = $checkAge->find('construct[name="return"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `checkAge()` method.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `return` statements in the `checkAge()` method.");
     }
 
     public function testReturnGet()
@@ -174,7 +174,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
         $nodes = $getAge->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getAge()` method.");
     }
 
     public function testReturnGreet()
@@ -184,7 +184,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $greeting = $subNodes->find('method[name="greeting", type="static"]');
         $nodes = $greeting->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `greeting()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `greeting()` method.");
     }
 
     public function testIf()
@@ -194,7 +194,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $nodes = $checkAge->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `checkAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `checkAge()` method.");
     }
 
     public function testIfSet()
@@ -204,7 +204,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $nodes = $setAge->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `setAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `setAge()` method.");
     }
 
     public function testIfCons()
@@ -214,7 +214,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nodes = $construct->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `__construct()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `__construct()` method.");
     }
 
     public function testNameValue()
@@ -297,7 +297,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $parent = $display->find('static-call[class="self", method="greeting"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a 'greeting()' method call inside the `display()` method of the `Person` class.");
+        $this->assertEquals(1, $parent->count(), "Expecting one 'greeting()' method call in the `display()` method of the `Person` class.");
     }
 
     public function testAgePropertyCallCons()
@@ -307,7 +307,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $age = $construct->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting an `age` property call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `__construct()` method of the `Person` class itself.");
     }
 
     public function testAgePropertyCallSet()
@@ -317,7 +317,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $age = $setAge->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting an `age` property call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `setAge()` method of the `Person` class itself.");
     }
 
     public function testAgePropertyCallGet()
@@ -327,7 +327,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
         $age = $getAge->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting an `age` property call inside the `getAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `getAge()` method of the `Person` class itself.");
     }
 
     public function testGetAgeCall()
@@ -337,7 +337,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $getAge = $display->find('method-call[name="getAge", variable="this"]');
 
-        $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the `display()` method of the `Person` class itself.");
+        $this->assertEquals(1, $getAge->count(), "Expecting one 'getAge()' method call in the `display()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCallCons()
@@ -347,7 +347,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $checkAge = $construct->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting a 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `__construct()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCall()
@@ -357,7 +357,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $checkAge = $setAge->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting a 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `setAge()` method of the `Person` class itself.");
     }
 
     public function testStaticPropertySelfCall()
@@ -367,7 +367,7 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $selfCall = $construct->find('static-prop-fetch[class="self"]');
 
-        $this->assertEquals(1, $selfCall->count(), "Expecting one static property call inside the `__contruct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $selfCall->count(), "Expecting one static property call in the `__contruct()` method of the `Person` class itself.");
     }
 
     public function testStaticPropertySelfCallGreeting()
@@ -377,6 +377,6 @@ class NotAllowedThisInStaticMethodTest extends TestCase
         $greeting = $subNodes->find('method[name="greeting", type="public"]');
         $selfCall = $greeting->find('static-prop-fetch[class="self"]');
 
-        $this->assertEquals(1, $selfCall->count(), "Expecting one static property call inside the `greeting()` method of the `Person` class itself.");
+        $this->assertEquals(1, $selfCall->count(), "Expecting one static property call in the `greeting()` method of the `Person` class itself.");
     }
 }

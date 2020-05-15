@@ -31,7 +31,7 @@ class IncorrectAccessToPrivatePropertyTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement.");
     }
     
     public function testAssignment()
@@ -110,6 +110,6 @@ class IncorrectAccessToPrivatePropertyTest extends TestCase
         $greeting = $subNodes->find('method[name="greeting", type="public"]');
         $selfCall = $greeting->find('static-prop-fetch[class="self"]');
 
-        $this->assertEquals(1, $selfCall->count(), "Expecting one static property call inside the `greeting()` method of the `Person` class itself.");
+        $this->assertEquals(1, $selfCall->count(), "Expecting one static property call in the `greeting()` method of the `Person` class itself.");
     }
 }
