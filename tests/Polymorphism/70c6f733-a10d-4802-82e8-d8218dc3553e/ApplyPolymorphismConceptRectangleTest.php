@@ -34,7 +34,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting one `__construct()` method.");
     }
 
     public function testCalculateArea()
@@ -43,7 +43,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
 
-        $this->assertEquals(1, $calculateArea->count(), "Expecting one calculateArea() method in the `Rectangle` class.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one `calculateArea()` method in the `Rectangle` class.");
     }
 
     public function testGetPerimeter()
@@ -52,7 +52,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getPerimeter = $subNodes->find('method[name="getPerimeter", type="public"]');
 
-        $this->assertEquals(1, $getPerimeter->count(), "Expecting one getPerimeter() method in the `Rectangle` class.");
+        $this->assertEquals(1, $getPerimeter->count(), "Expecting one `getPerimeter()` method in the `Rectangle` class.");
     }
 
     public function testClassRectangle()
@@ -69,7 +69,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $getPerimeter = $subNodes->find('method[name="getPerimeter", type="public"]');
         $nodes = $getPerimeter->find('construct[name="return"]');
         
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getPerimeter()` method of the `Rectangle` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getPerimeter()` method of the `Rectangle` class.");
     }
 
     public function testReturnCalc()
@@ -79,7 +79,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $nodes = $calculateArea->find('construct[name="return"]');
         
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `calculateArea()` method of the `Rectangle` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `calculateArea()` method of the `Rectangle` class.");
     }
 
     public function testLengthPropertyCallGet()
@@ -89,7 +89,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $getPerimeter = $subNodes->find('method[name="getPerimeter", type="public"]');
         $length = $getPerimeter->find('property-call[name="length", variable="this"]');
         
-        $this->assertEquals(1, $length->count(), "Expecting one `length` property call inside the `getPerimeter()` method of the `Rectangle` class itself.");
+        $this->assertEquals(1, $length->count(), "Expecting one `length` property call in the `getPerimeter()` method of the `Rectangle` class itself.");
     }
 
     public function testLengthPropertyCallCons()
@@ -99,7 +99,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $length = $construct->find('property-call[name="length", variable="this"]');
         
-        $this->assertEquals(1, $length->count(), "Expecting one `length` property call inside the `__construct()` method of the `Rectangle` class itself.");
+        $this->assertEquals(1, $length->count(), "Expecting one `length` property call in the `__construct()` method of the `Rectangle` class itself.");
     }
 
     public function testLengthPropertyCallCalc()
@@ -109,7 +109,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $length = $calculateArea->find('property-call[name="length", variable="this"]');
         
-        $this->assertEquals(1, $length->count(), "Expecting one `length` property call inside the `calculateArea()` method of the `Rectangle` class itself.");
+        $this->assertEquals(1, $length->count(), "Expecting one `length` property call in the `calculateArea()` method of the `Rectangle` class itself.");
     }
 
     public function testWidthPropertyCallCalc()
@@ -119,7 +119,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $width = $calculateArea->find('property-call[name="width", variable="this"]');
         
-        $this->assertEquals(1, $width->count(), "Expecting one `width` property call inside the `calculateArea()` method of the `Rectangle` class itself.");
+        $this->assertEquals(1, $width->count(), "Expecting one `width` property call in the `calculateArea()` method of the `Rectangle` class itself.");
     }
 
     public function testWidthPropertyCallCons()
@@ -129,7 +129,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $width = $construct->find('property-call[name="width", variable="this"]');
         
-        $this->assertEquals(1, $width->count(), "Expecting one `width` property call inside the `__construct()` method of the `Rectangle` class itself.");
+        $this->assertEquals(1, $width->count(), "Expecting one `width` property call in the `__construct()` method of the `Rectangle` class itself.");
     }
 
     public function testWidthPropertyCallGet()
@@ -139,7 +139,7 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
         $getPerimeter = $subNodes->find('method[name="getPerimeter", type="public"]');
         $width = $getPerimeter->find('property-call[name="width", variable="this"]');
         
-        $this->assertEquals(1, $width->count(), "Expecting one `width` property call inside the `getPerimeter()` method of the `Rectangle` class itself.");
+        $this->assertEquals(1, $width->count(), "Expecting one `width` property call in the `getPerimeter()` method of the `Rectangle` class itself.");
     }
 
     public function testLengthProperty()
@@ -184,6 +184,14 @@ class ApplyPolymorphismConceptRectangleTest extends TestCase
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/MyShape.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/MyShape.php` as an argument in the `require_once()` statement.");
     }
 }

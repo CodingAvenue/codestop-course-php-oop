@@ -31,7 +31,7 @@ class ApplyPolymorphismConceptMainTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 		
-        $this->assertEquals(4, $nodes->count(), "Expecting four echo statements.");
+        $this->assertEquals(4, $nodes->count(), "Expecting four `echo` statements.");
     }
     
     public function testAssignment()
@@ -66,34 +66,50 @@ class ApplyPolymorphismConceptMainTest extends TestCase
     {
         $calculateArea = self::$code->find('method-call[name="calculateArea", variable="rectangle"]');
         
-        $this->assertEquals(1, $calculateArea->count(), "Expecting a 'calculateArea()' method call of `rectangle`.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one 'calculateArea()' method call of `rectangle`.");
     }
 
     public function testGetPerimeterCallRectangle()
     {
         $getPerimeter = self::$code->find('method-call[name="getPerimeter", variable="rectangle"]');
         
-        $this->assertEquals(1, $getPerimeter->count(), "Expecting a 'getPerimeter()' method call of `rectangle`.");
+        $this->assertEquals(1, $getPerimeter->count(), "Expecting one 'getPerimeter()' method call of `rectangle`.");
     }
 
     public function testCalculateAreaCallSquare()
     {
         $calculateArea = self::$code->find('method-call[name="calculateArea", variable="square"]');
         
-        $this->assertEquals(1, $calculateArea->count(), "Expecting a 'calculateArea()' method call of `square`.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one 'calculateArea()' method call of `square`.");
     }
 
     public function testGetPerimeterCallSquare()
     {
         $getPerimeter = self::$code->find('method-call[name="getPerimeter", variable="square"]');
         
-        $this->assertEquals(1, $getPerimeter->count(), "Expecting a 'getPerimeter()' method call of `square`.");
+        $this->assertEquals(1, $getPerimeter->count(), "Expecting one 'getPerimeter()' method call of `square`.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two function calls for the `require_once()` function.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `require_once()` statements.");
+    }
+
+    public function testRequireOnceCallArgsRec()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Rectangle.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Rectangle.php` as an argument in the `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgsSquare()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Square.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Square.php` as an argument in the `require_once()` statement.");
     }
 }

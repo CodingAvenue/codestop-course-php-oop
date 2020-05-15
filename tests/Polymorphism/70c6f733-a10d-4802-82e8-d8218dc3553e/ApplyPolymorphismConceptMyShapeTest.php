@@ -31,7 +31,7 @@ class ApplyPolymorphismConceptMyShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         
-        $this->assertEquals(1, $calculateArea->count(), "Expecting one calculateArea() method in the `MyShape` interface.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one `calculateArea()` method in the `MyShape` interface.");
     }
 
     public function testGetPerimeter()
@@ -40,6 +40,6 @@ class ApplyPolymorphismConceptMyShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getPerimeter = $subNodes->find('method[name="getPerimeter", type="public"]');
         
-        $this->assertEquals(1, $getPerimeter->count(), "Expecting one getPerimeter() method in the `MyShape` interface.");
+        $this->assertEquals(1, $getPerimeter->count(), "Expecting one `getPerimeter()` method in the `MyShape` interface.");
     }
 }

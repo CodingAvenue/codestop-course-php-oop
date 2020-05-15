@@ -31,6 +31,6 @@ class IncorrectCalculateAreaVisibilityMyShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         
-        $this->assertEquals(1, $calculateArea->count(), "Expecting one calculateArea() method in the `MyShape` interface.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one `calculateArea()` method in the `MyShape` interface.");
     }
 }

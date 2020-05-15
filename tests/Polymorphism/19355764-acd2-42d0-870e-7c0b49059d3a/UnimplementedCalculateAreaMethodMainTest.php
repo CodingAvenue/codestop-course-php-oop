@@ -31,7 +31,7 @@ class UnimplementedCalculateAreaMethodMainTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `echo` statements.");
     }
     
     public function testAssignment()
@@ -73,20 +73,36 @@ class UnimplementedCalculateAreaMethodMainTest extends TestCase
     {
         $calculateArea = self::$code->find('method-call[name="calculateArea", variable="circle"]');
 
-        $this->assertEquals(1, $calculateArea->count(), "Expecting a 'calculateArea()' method call of `circle`.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one 'calculateArea()' method call of `circle`.");
     }
 
     public function testCalculateAreaCallSquare()
     {
         $calculateArea = self::$code->find('method-call[name="calculateArea", variable="square"]');
 
-        $this->assertEquals(1, $calculateArea->count(), "Expecting a 'calculateArea()' method call of `square`.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one 'calculateArea()' method call of `square`.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two function calls for the `require_once()` function.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `require_once()` statements.");
+    }
+
+    public function testRequireOnceCallArgsCir()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Circle.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Circle.php` as an argument in the `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgsSquare()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Square.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Square.php` as an argument in the `require_once()` statement.");
     }
 }

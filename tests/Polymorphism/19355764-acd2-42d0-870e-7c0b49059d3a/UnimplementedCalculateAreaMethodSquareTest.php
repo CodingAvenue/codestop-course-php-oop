@@ -34,7 +34,7 @@ class UnimplementedCalculateAreaMethodSquareTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method in the `Square` class.");
+        $this->assertEquals(1, $construct->count(), "Expecting one `__construct()` method in the `Square` class.");
     }
 
     public function testCalculateArea()
@@ -43,7 +43,7 @@ class UnimplementedCalculateAreaMethodSquareTest extends TestCase
         $subNodes = $obj->getSubnode();
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
 
-        $this->assertEquals(1, $calculateArea->count(), "Expecting one calculateArea() method in the `Square` class.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one `calculateArea()` method in the `Square` class.");
     }
 
     public function testClassSquare()
@@ -60,7 +60,7 @@ class UnimplementedCalculateAreaMethodSquareTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $nodes = $calculateArea->find('construct[name="return"]');
         
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `calculateArea()` method of the `Square` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `calculateArea()` method of the `Square` class.");
     }
 
     public function testSidePropertyCall()
@@ -70,7 +70,7 @@ class UnimplementedCalculateAreaMethodSquareTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $side = $calculateArea->find('property-call[name="side", variable="this"]');
         
-        $this->assertEquals(2, $side->count(), "Expecting two `side` property calls inside the `calculateArea()` method of the `Square` class itself.");
+        $this->assertEquals(2, $side->count(), "Expecting two `side` property calls in the `calculateArea()` method of the `Square` class itself.");
     }
 
     public function testSideProperty()
@@ -89,13 +89,22 @@ class UnimplementedCalculateAreaMethodSquareTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $sideParam = $construct->find('param[name="side"]');
     
-        $this->assertEquals(1, $sideParam->count(), "Expecting a parameter named 'side' inside the `__construct()` method of the `Square` class.");
+        $this->assertEquals(1, $sideParam->count(), "Expecting a parameter named 'side' in the `__construct()` method of the `Square` class.");
     }
+
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/MyShape.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/MyShape.php` as an argument in the `require_once()` statement.");
     }
 }

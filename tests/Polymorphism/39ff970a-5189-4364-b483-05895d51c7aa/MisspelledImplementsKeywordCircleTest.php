@@ -34,7 +34,7 @@ class MisspelledImplementsKeywordCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method in the `Circle` class.");
+        $this->assertEquals(1, $construct->count(), "Expecting one `__construct()` method in the `Circle` class.");
     }
 
     public function testCalculateArea()
@@ -43,7 +43,7 @@ class MisspelledImplementsKeywordCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
 
-        $this->assertEquals(1, $calculateArea->count(), "Expecting one calculateArea() method in the `Circle` class.");
+        $this->assertEquals(1, $calculateArea->count(), "Expecting one `calculateArea()` method in the `Circle` class.");
     }
 
     public function testRadiusProperty()
@@ -78,7 +78,7 @@ class MisspelledImplementsKeywordCircleTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $nodes = $calculateArea->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement inside the `calculateArea()` method of the `Circle` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `calculateArea()` method of the `Circle` class.");
     }
 
     public function testPiCall()
@@ -88,7 +88,7 @@ class MisspelledImplementsKeywordCircleTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $piCall = $calculateArea->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `calculateArea()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `calculateArea()` method of the `Circle` class itself.");
     } 
 
     public function testRadiusPropertyCall()
@@ -98,7 +98,7 @@ class MisspelledImplementsKeywordCircleTest extends TestCase
         $calculateArea = $subNodes->find('method[name="calculateArea", type="public"]');
         $radius = $calculateArea->find('property-call[name="radius", variable="this"]');
 
-        $this->assertEquals(2, $radius->count(), "Expecting two `radius` property calls inside the `calculateArea()` method of the `Circle` class itself.");
+        $this->assertEquals(2, $radius->count(), "Expecting two `radius` property calls in the `calculateArea()` method of the `Circle` class itself.");
     }
 
     public function testRadiusPropertyCallCons()
@@ -108,7 +108,7 @@ class MisspelledImplementsKeywordCircleTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $radius = $construct->find('property-call[name="radius", variable="this"]');
         
-        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property calls inside the `__construct()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call in the `__construct()` method of the `Circle` class itself.");
     }
 
     public function testRadiusParam()
@@ -125,6 +125,14 @@ class MisspelledImplementsKeywordCircleTest extends TestCase
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/MyShape.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/MyShape.php` as an argument in the `require_once()` statement.");
     }
 }
