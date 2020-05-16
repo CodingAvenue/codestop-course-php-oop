@@ -34,7 +34,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -64,7 +64,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testStage()
@@ -73,7 +73,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $subNodes = $obj->getSubnode();
         $stage = $subNodes->find('method[name="stage", type="public"]');
 
-        $this->assertEquals(1, $stage->count(), "Expecting a stage() method.");
+        $this->assertEquals(1, $stage->count(), "Expecting a `stage()` method.");
     }
 
     public function testSpecies()
@@ -82,7 +82,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $subNodes = $obj->getSubnode();
         $species = $subNodes->find('method[name="species", type="public"]');
 
-        $this->assertEquals(1, $species->count(), "Expecting a species() method.");
+        $this->assertEquals(1, $species->count(), "Expecting a `species()` method.");
     }
  
     public function testClass()
@@ -96,7 +96,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="petMammal"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'petMammal'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'petMammal'.");
     }
 
     public function testReturnStage()
@@ -106,7 +106,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $stage = $subNodes->find('method[name="stage", type="public"]');
         $nodes = $stage->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `stage()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `stage()` method.");
     }
 
     public function testReturnSpecies()
@@ -116,7 +116,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $species = $subNodes->find('method[name="species", type="public"]');
         $nodes = $species->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `species()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `species()` method.");
     }
 
     public function testStageCall()
@@ -126,7 +126,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $stage = $display->find('method-call[name="stage", variable="this"]');
 
-        $this->assertEquals(1, $stage->count(), "Expecting a 'stage()' method call inside the `display()` method of the `Mammal` class itself.");
+        $this->assertEquals(1, $stage->count(), "Expecting one 'stage()' method call in the `display()` method of the `Mammal` class itself.");
     }
 
     public function testSpeciesCall()
@@ -136,7 +136,7 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $species = $display ->find('method-call[name="species", variable="this"]');
 
-        $this->assertEquals(1, $species->count(), "Expecting a 'species()' method call inside the `display()` method of the `Mammal` class itself.");
+        $this->assertEquals(1, $species->count(), "Expecting one 'species()' method call in the `display()` method of the `Mammal` class itself.");
     }
 
     public function testParentGetTypeCall()
@@ -146,13 +146,29 @@ class CreateClassThatImplementsAnInterfaceMammalTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $parent = $display->find('static-call[class="parent", method="getType"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a 'getType()' method call of the parent class in the `display()` method of the `Mammal` class.");
+        $this->assertEquals(1, $parent->count(), "Expecting one 'getType()' method call of the parent class in the `display()` method of the `Mammal` class.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two function calls for require_once() function.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `require_once()` statements.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/LifeCycle.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/LifeCycle.php` as an argument in the `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs2()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Animal.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Animal.php` as an argument in the `require_once()` statement.");
     }
 }

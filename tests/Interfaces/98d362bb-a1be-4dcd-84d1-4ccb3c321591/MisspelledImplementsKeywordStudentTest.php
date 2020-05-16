@@ -34,14 +34,14 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 	
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
     }
 	
     public function testStudentVariable()
@@ -64,7 +64,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testStage()
@@ -73,7 +73,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $stage = $subNodes->find('method[name="stage", type="public"]');
 
-        $this->assertEquals(1, $stage->count(), "Expecting a stage() method.");
+        $this->assertEquals(1, $stage->count(), "Expecting a `stage()` method.");
     }
 
     public function testSpecies()
@@ -82,7 +82,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $species = $subNodes->find('method[name="species", type="public"]');
 
-        $this->assertEquals(1, $species->count(), "Expecting a species() method.");
+        $this->assertEquals(1, $species->count(), "Expecting a `species()` method.");
     }
 
     public function testClass()
@@ -96,7 +96,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="student"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'student'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'student'.");
     }
 
     public function testReturnStage()
@@ -106,7 +106,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $stage = $subNodes->find('method[name="stage", type="public"]');
         $nodes = $stage->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `stage()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `stage()` method.");
     }
 
     public function testReturnSpecies()
@@ -116,7 +116,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $species = $subNodes->find('method[name="species", type="public"]');
         $nodes = $species->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `species()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `species()` method.");
     }
 
     public function testNamePropertyCall()
@@ -126,7 +126,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $name = $display->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `display()` method the `Student` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `display()` method the `Student` class itself.");
     }
 
     public function testStageCall()
@@ -136,7 +136,7 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $stage = $display->find('method-call[name="stage", variable="this"]');
 
-        $this->assertEquals(1, $stage->count(), "Expecting a 'stage()' method call inside the `display()` method of the `Student` class itself.");
+        $this->assertEquals(1, $stage->count(), "Expecting one 'stage()' method call in the `display()` method of the `Student` class itself.");
     }
 
     public function testSpeciesCall()
@@ -146,13 +146,29 @@ class MisspelledImplementsKeywordStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $species = $display ->find('method-call[name="species", variable="this"]');
 
-        $this->assertEquals(1, $species->count(), "Expecting a 'species()' method call inside the `display()` method of the `Student` class itself.");
+        $this->assertEquals(1, $species->count(), "Expecting one 'species()' method call in the `display()` method of the `Student` class itself.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two function calls for the require_once() function.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `require_once()` statements.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/LifeCycle.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/LifeCycle.php` as an argument in the `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs2()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Person.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Person.php` as an argument in the `require_once()` statement.");
     }
 }
