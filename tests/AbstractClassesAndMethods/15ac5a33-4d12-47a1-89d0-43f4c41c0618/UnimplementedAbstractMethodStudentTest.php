@@ -34,7 +34,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -76,7 +76,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testConstruct()
@@ -85,7 +85,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting one `__construct()` method.");
     }
 
     public function testCourseProperty()
@@ -108,7 +108,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="student"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'student'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'student'.");
     }   
 
     public function testReturn()
@@ -118,7 +118,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
         $nodes = $getCourse->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getCourse()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getCourse()` method.");
     }
 
     public function testNameParam()
@@ -158,7 +158,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $parent = $construct->find('static-call[class="parent", method="__construct"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent class in the `__construct()` method of the `Student` class.");
+        $this->assertEquals(1, $parent->count(), "Expecting one '__construct()' method call of the parent class in the `__construct()` method of the `Student` class.");
     }   
 
     public function testParentGetNameCall()
@@ -168,7 +168,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $parent = $display->find('static-call[class="parent", method="getName"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a 'getName()' method call of the parent class in the `display()` method.");
+        $this->assertEquals(1, $parent->count(), "Expecting one 'getName()' method call of the parent class in the `display()` method.");
     }  
 
     public function testParentCallNameArgs()
@@ -198,7 +198,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $course = $display->find('property-call[name="course", variable="this"]');
 
-        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `display()` method of the `Student` class itself.");
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call in the `display()` method of the `Student` class itself.");
     }
 
     public function testCoursePropertyCallCons()
@@ -208,7 +208,7 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $course = $construct->find('property-call[name="course", variable="this"]');
 
-        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `__construct()` method of the `Student` class itself.");
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call in the `__construct()` method of the `Student` class itself.");
     }
 
     public function testCoursePropertyCall()
@@ -218,13 +218,21 @@ class UnimplementedAbstractMethodPersonTest extends TestCase
         $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
         $course = $getCourse->find('property-call[name="course", variable="this"]');
 
-        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `getCourse()` method of the `Student` class itself.");
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call in the `getCourse()` method of the `Student` class itself.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/Person.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/Person.php` as an argument in the `require_once()` statement.");
     }
 }
