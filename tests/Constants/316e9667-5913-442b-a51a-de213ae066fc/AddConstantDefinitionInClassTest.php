@@ -34,7 +34,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements in the `display()` method.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `echo` statements in the `display()` method.");
     }
     
     public function testAssignment()
@@ -67,7 +67,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testArea()
@@ -76,7 +76,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $area = $subNodes->find('method[name="area", type="public"]');
         
-        $this->assertEquals(1, $area->count(), "Expecting an area() method.");
+        $this->assertEquals(1, $area->count(), "Expecting an `area()` method.");
     }
 
     public function testVolume()
@@ -85,7 +85,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $volume = $subNodes->find('method[name="volume", type="public"]');
         
-        $this->assertEquals(1, $volume->count(), "Expecting a volume() method.");
+        $this->assertEquals(1, $volume->count(), "Expecting a `volume()` method.");
     }
 
     public function testConstruct()
@@ -94,7 +94,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         
-        $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
 
     public function testGetRadius()
@@ -103,7 +103,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
         
-        $this->assertEquals(1, $getRadius->count(), "Expecting a getRadius() method.");
+        $this->assertEquals(1, $getRadius->count(), "Expecting a `getRadius()` method.");
     }
 
     public function testGetHeight()
@@ -112,7 +112,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getHeight = $subNodes->find('method[name="getHeight", type="public"]');
         
-        $this->assertEquals(1, $getHeight->count(), "Expecting a getHeight() method.");
+        $this->assertEquals(1, $getHeight->count(), "Expecting a `getHeight()` method.");
     }
 
     public function testRadiusProperty()
@@ -144,7 +144,7 @@ class AddConstantDefinitionInClassTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="cylinder"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'cylinder'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'cylinder'.");
     }   
 
     public function testReturnArea()
@@ -154,7 +154,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $nodes = $area->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `area()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `area()` method.");
     }
 
     public function testReturnVolume()
@@ -164,7 +164,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $volume = $subNodes->find('method[name="volume", type="public"]');
         $nodes = $volume->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `volume()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `volume()` method.");
     }
 
     public function testReturnGetRadius()
@@ -174,7 +174,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
         $nodes = $getRadius->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getRadius()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getRadius()` method.");
     }
 
     public function testReturnGetHeight()
@@ -184,7 +184,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $getHeight = $subNodes->find('method[name="getHeight", type="public"]');
         $nodes = $getHeight->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getHeight()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getHeight()` method.");
     }
 
     public function testRadiusPropertyCall()
@@ -194,7 +194,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
         $radius = $getRadius->find('property-call[name="radius", variable="this"]');
         
-        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `getRadius()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call in the `getRadius()` method of the `Cylinder` class itself.");
     }
 
     public function testRadiusPropertyCallCons()
@@ -204,7 +204,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $radius = $construct->find('property-call[name="radius", variable="this"]');
         
-        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `__construct()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call in the `__construct()` method of the `Cylinder` class itself.");
     }
 
     public function testHeightPropertyCall()
@@ -214,7 +214,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $getHeight = $subNodes->find('method[name="getHeight", type="public"]');
         $height = $getHeight->find('property-call[name="height", variable="this"]');
         
-        $this->assertEquals(1, $height->count(), "Expecting one `height` property call inside the `getHeight()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $height->count(), "Expecting one `height` property call in the `getHeight()` method of the `Cylinder` class itself.");
     }
 
     public function testHeightPropertyCallCons()
@@ -224,7 +224,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $height = $construct->find('property-call[name="height", variable="this"]');
         
-        $this->assertEquals(1, $height->count(), "Expecting one `height` property call inside the `__construct()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $height->count(), "Expecting one `height` property call in the `__construct()` method of the `Cylinder` class itself.");
     }
 
     public function testAreaCall()
@@ -234,7 +234,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $area = $display->find('method-call[name="area", variable="this"]');
 
-        $this->assertEquals(1, $area->count(), "Expecting an 'area()' method call inside the `display()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $area->count(), "Expecting one 'area()' method call in the `display()` method of the `Cylinder` class itself.");
     }
 
     public function testVolumeCall()
@@ -244,7 +244,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $volume = $display->find('method-call[name="volume", variable="this"]');
 
-        $this->assertEquals(1, $volume->count(), "Expecting a 'volume()' method call inside the `display()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $volume->count(), "Expecting one 'volume()' method call in the `display()` method of the `Cylinder` class itself.");
     } 
 
     public function testConstPi()
@@ -264,7 +264,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $value = $pi->getSubNode()->getSubNode();
         $piValue = $value->find('float'); // NOTE: need to verify and improve this validation
 
-        $this->assertEquals(1, $piValue->count(), "Expecting a class PI constant value of type float.");
+        $this->assertEquals(1, $piValue->count(), "Expecting a class `PI` constant value of type float.");
     }
 
     public function testPiCallVolume()
@@ -274,7 +274,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $volume = $subNodes->find('method[name="volume", type="public"]');
         $piCall = $volume->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `volume()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `volume()` method of the `Cylinder` class itself.");
     } 
 
     public function testGetRadiusCallVolume()
@@ -284,7 +284,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $volume = $subNodes->find('method[name="volume", type="public"]');
         $getRadiusCall = $volume->find('method-call[name="getRadius", variable="this"]');
 
-        $this->assertEquals(2, $getRadiusCall->count(), "Expecting two 'getRadius()' method calls inside the `volume()` method of the `Cylinder` class itself.");
+        $this->assertEquals(2, $getRadiusCall->count(), "Expecting two 'getRadius()' method calls in the `volume()` method of the `Cylinder` class itself.");
     }
 
     public function testGetHeightCallVolume()
@@ -294,7 +294,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $volume = $subNodes->find('method[name="volume", type="public"]');
         $getHeightCall = $volume->find('method-call[name="getHeight", variable="this"]');
 
-        $this->assertEquals(1, $getHeightCall->count(), "Expecting one 'getHeight()' method call inside the `volume()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $getHeightCall->count(), "Expecting one 'getHeight()' method call in the `volume()` method of the `Cylinder` class itself.");
     }
 
     public function testGetRadiusCallArea()
@@ -304,7 +304,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $getRadiusCall = $area->find('method-call[name="getRadius", variable="this"]');
 
-        $this->assertEquals(2, $getRadiusCall->count(), "Expecting two 'getRadius()' method calls inside the `area()` method of the `Cylinder` class itself.");
+        $this->assertEquals(2, $getRadiusCall->count(), "Expecting two 'getRadius()' method calls in the `area()` method of the `Cylinder` class itself.");
     }
 
     public function testGetHeightCallArea()
@@ -314,7 +314,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $getHeightCall = $area->find('method-call[name="getHeight", variable="this"]');
 
-        $this->assertEquals(1, $getHeightCall->count(), "Expecting one 'getHeight()' method call inside the `area()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $getHeightCall->count(), "Expecting one 'getHeight()' method call in the `area()` method of the `Cylinder` class itself.");
     }
 
     public function testPiCallArea()
@@ -324,7 +324,7 @@ class AddConstantDefinitionInClassTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $piCall = $area->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `area()` method of the `Cylinder` class itself.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `area()` method of the `Cylinder` class itself.");
     }
 
     public function testRadiusParam()

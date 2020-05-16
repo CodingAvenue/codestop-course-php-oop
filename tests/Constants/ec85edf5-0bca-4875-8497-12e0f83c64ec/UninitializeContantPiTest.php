@@ -31,7 +31,7 @@ class UninitializeContantPiTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement.");
     }
  
     public function testClass()
@@ -48,7 +48,7 @@ class UninitializeContantPiTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $nodes = $area->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `area()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `area()` method.");
     }
 
     public function testConstPi()
@@ -68,7 +68,7 @@ class UninitializeContantPiTest extends TestCase
         $value = $pi->getSubNode()->getSubNode();
         $piValue = $value->find('float'); // NOTE: need to verify and improve this validation
 
-        $this->assertEquals(1, $piValue->count(), "Expecting a class PI constant value of type float.");
+        $this->assertEquals(1, $piValue->count(), "Expecting a class `PI` constant value of type float.");
     }
 
     public function testPiCallArea()
@@ -78,14 +78,14 @@ class UninitializeContantPiTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $piCall = $area->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `area()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `area()` method of the `Circle` class itself.");
     }
 
     public function testCirclePiCall()
     {
         $piCall = self::$code->find('const-fetch[name="PI", class="Circle"]');
         
-        $this->assertEquals(1, $piCall->count(), "Expecting a 'PI' constant call outside the `Circle` class.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call outside the `Circle` class.");
     } 
 
     public function testArea()
@@ -94,7 +94,7 @@ class UninitializeContantPiTest extends TestCase
         $subNodes = $obj->getSubnode();
         $area = $subNodes->find('method[name="area", type="public"]');
 
-        $this->assertEquals(1, $area->count(), "Expecting an area() method.");
+        $this->assertEquals(1, $area->count(), "Expecting an `area()` method.");
     }
 
     public function testRadiusParam()

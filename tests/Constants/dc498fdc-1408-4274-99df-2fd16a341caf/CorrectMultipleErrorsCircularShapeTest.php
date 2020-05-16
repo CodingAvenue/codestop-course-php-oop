@@ -34,7 +34,7 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
 
     public function testArea()
@@ -43,7 +43,7 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $area = $subNodes->find('method[name="area", type="public"]');
 
-        $this->assertEquals(1, $area->count(), "Expecting an area() method.");
+        $this->assertEquals(1, $area->count(), "Expecting an `area()` method.");
     }
 
     public function testGetRadius()
@@ -52,7 +52,7 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
 
-        $this->assertEquals(1, $getRadius->count(), "Expecting a getRadius() method.");
+        $this->assertEquals(1, $getRadius->count(), "Expecting a `getRadius()` method.");
     }
 
     public function testDiameter()
@@ -61,7 +61,7 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $diameter = $subNodes->find('method[name="diameter", type="public"]');
 
-        $this->assertEquals(1, $diameter->count(), "Expecting a diameter() method.");
+        $this->assertEquals(1, $diameter->count(), "Expecting a `diameter()` method.");
     }
 
     public function testCircumference()
@@ -70,7 +70,7 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $subNodes = $obj->getSubnode();
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
 
-        $this->assertEquals(1, $circumference->count(), "Expecting a circumference() method.");
+        $this->assertEquals(1, $circumference->count(), "Expecting a `circumference()` method.");
     }
 
     public function testClass()
@@ -87,7 +87,7 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
         $nodes = $getRadius->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getRadius()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getRadius()` method.");
     }
 
     public function testRadiusParam()
@@ -136,7 +136,7 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $getRadius = $subNodes->find('method[name="getRadius", type="public"]');
         $radius = $getRadius->find('property-call[name="radius", variable="this"]');
 
-        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `getRadius()` method of the `CircularShape` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call in the `getRadius()` method of the `CircularShape` class itself.");
     }
 
     public function testRadiusPropertyCallCons()
@@ -146,6 +146,6 @@ class CorrectMultipleErrorsCircularShapeTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $radius = $construct->find('property-call[name="radius", variable="this"]');
 
-        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call inside the `__construct()` method of the `CircularShape` class itself.");
+        $this->assertEquals(1, $radius->count(), "Expecting one `radius` property call in the `__construct()` method of the `CircularShape` class itself.");
     }
 }

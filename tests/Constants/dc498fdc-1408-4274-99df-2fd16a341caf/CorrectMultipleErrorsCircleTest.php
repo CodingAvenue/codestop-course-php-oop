@@ -18,7 +18,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
     }
 
-    public function testActualCode()
+    public function testActualCode() // this will return an error but I cannot trace what it is...
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
@@ -34,7 +34,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(4, $nodes->count(), "Expecting four echo statements in the `display()` method.");
+        $this->assertEquals(4, $nodes->count(), "Expecting four `echo` statements in the `display()` method.");
     }
 
     public function testAssignment()
@@ -64,7 +64,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testArea()
@@ -73,7 +73,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $area = $subNodes->find('method[name="area", type="public"]');
 
-        $this->assertEquals(1, $area->count(), "Expecting an area() method.");
+        $this->assertEquals(1, $area->count(), "Expecting an `area()` method.");
     }
 
     public function testDiameter()
@@ -82,7 +82,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $diameter = $subNodes->find('method[name="diameter", type="public"]');
 
-        $this->assertEquals(1, $diameter->count(), "Expecting a diameter() method.");
+        $this->assertEquals(1, $diameter->count(), "Expecting a `diameter()` method.");
     }
 
     public function testCircumference()
@@ -91,7 +91,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
 
-        $this->assertEquals(1, $circumference->count(), "Expecting a circumference() method.");
+        $this->assertEquals(1, $circumference->count(), "Expecting a `circumference()` method.");
     }
 
     public function testClass()
@@ -105,7 +105,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="circle"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'circle'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'circle'.");
     }
 
     public function testReturnArea()
@@ -115,7 +115,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $nodes = $area->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `area()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `area()` method.");
     }
 
     public function testReturnDiameter()
@@ -125,7 +125,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $diameter = $subNodes->find('method[name="diameter", type="public"]');
         $nodes = $diameter->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `diameter()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `diameter()` method.");
     }
 
     public function testReturnCircumference()
@@ -135,7 +135,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
         $nodes = $circumference->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `circumference()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `circumference()` method.");
     }
 
     public function testAreaCall()
@@ -145,7 +145,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $area = $display->find('method-call[name="area", variable="this"]');
 
-        $this->assertEquals(1, $area->count(), "Expecting an 'area()' method call inside the `display()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $area->count(), "Expecting one 'area()' method call in the `display()` method of the `Circle` class itself.");
     }
 
     public function testDiameterCall()
@@ -155,7 +155,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $diameter = $display->find('method-call[name="diameter", variable="this"]');
 
-        $this->assertEquals(1, $diameter->count(), "Expecting a 'diameter()' method call inside the `display()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $diameter->count(), "Expecting one 'diameter()' method call in the `display()` method of the `Circle` class itself.");
     }
 
     public function testGetRadiusCallDisplay()
@@ -165,7 +165,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $getRadius = $display->find('method-call[name="getRadius", variable="this"]');
         
-        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call inside the `display()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call in the `display()` method of the `Circle` class itself.");
     } 
 
     public function testGetRadiusCallArea()
@@ -175,7 +175,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $getRadius = $area->find('method-call[name="getRadius", variable="this"]');
         
-        $this->assertEquals(2, $getRadius->count(), "Expecting two 'getRadius()' method calls inside the `area()` method of the `Circle` class itself.");
+        $this->assertEquals(2, $getRadius->count(), "Expecting two 'getRadius()' method calls in the `area()` method of the `Circle` class itself.");
     } 
 
     public function testGetRadiusCallDiameter()
@@ -185,7 +185,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $diameter = $subNodes->find('method[name="diameter", type="public"]');
         $getRadius = $diameter->find('method-call[name="getRadius", variable="this"]');
         
-        $this->assertEquals(2, $getRadius->count(), "Expecting two 'getRadius()' method calls inside the `diameter()` method of the `Circle` class itself.");
+        $this->assertEquals(2, $getRadius->count(), "Expecting two 'getRadius()' method calls in the `diameter()` method of the `Circle` class itself.");
     } 
 
     public function testGetRadiusCallCirc()
@@ -195,7 +195,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
         $getRadius = $circumference->find('method-call[name="getRadius", variable="this"]');
         
-        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call inside the `circumference()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $getRadius->count(), "Expecting one 'getRadius()' method call in the `circumference()` method of the `Circle` class itself.");
     } 
 
     public function testCircumferenceCall()
@@ -205,7 +205,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $circumference = $display->find('method-call[name="circumference", variable="this"]');
         
-        $this->assertEquals(1, $circumference->count(), "Expecting a 'circumference()' method call inside the `display()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $circumference->count(), "Expecting one 'circumference()' method call in the `display()` method of the `Circle` class itself.");
     } 
 
     public function testPiCallArea()
@@ -215,7 +215,7 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $area = $subNodes->find('method[name="area", type="public"]');
         $piCall = $area->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `area()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `area()` method of the `Circle` class itself.");
     }
 
     public function testPiCallCirc()
@@ -225,13 +225,21 @@ class CorrectMultipleErrorsCircleTest extends TestCase
         $circumference = $subNodes->find('method[name="circumference", type="public"]');
         $piCall = $circumference->find('const-fetch[name="PI", class="self"]');
 
-        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call inside the `circumference()` method of the `Circle` class itself.");
+        $this->assertEquals(1, $piCall->count(), "Expecting one 'PI' constant call in the `circumference()` method of the `Circle` class itself.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/CircularShape.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/CircularShape.php` as an argument in the `require_once()` statement.");
     }
 }
