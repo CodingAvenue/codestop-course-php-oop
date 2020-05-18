@@ -29,16 +29,30 @@ class CreateSimpleClassTest extends TestCase
 
 	public function testEcho()
 	{
-		$nodes = self::$code->find('construct[name="echo"]');
+		$obj = self::$code->find('class[name="Person"]');
+		$subNodes = $obj->getSubnode();
+		$eat = $subNodes->find('method[name="eat"]');
+		$nodes = $eat->find('construct[name="echo"]');
 
-		$this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+		$this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `eat()` method.");
+	}
+
+	public function testStringInEcho()
+	{
+		$obj = self::$code->find('class[name="Person"]');
+		$subNodes = $obj->getSubnode();
+		$eat = $subNodes->find('method[name="eat"]');
+		$nodes = $eat->find('construct[name="echo"]');
+		$string = $nodes->find('string[value="This is an eat method."]');
+
+		$this->assertEquals(1, $string->count(), "Expecting a string `This is an eat method.` in the `echo` statement of the `eat()` method.");
 	}
 
 	public function testAssignment()
 	{
 		$nodes = self::$code->find('operator[name="assignment"]');
 
-		$this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'personObject'.");
+		$this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
 	}
 
 	public function testPersonObjectVariable()
@@ -84,6 +98,17 @@ class CreateSimpleClassTest extends TestCase
 	{
 		$eat = self::$code->find('method-call[name="eat", variable="personObject"]');
 
-		$this->assertEquals(1, $eat->count(), "Expecting an 'eat()' method call of 'personObject'.");
+		$this->assertEquals(1, $eat->count(), "Expecting one 'eat()' method call of 'personObject'.");
+	}
+	
+	public function testNameValue()
+	{
+		$obj = self::$code->find('class[name="Person"]');
+		$subNodes = $obj->getSubnode();
+		$name = $subNodes->find('property[name="name", type="public"]');
+		$value = $name->getSubNode()->getSubNode();
+		$dianaValue = $value->find('string[value="Diana"]');
+
+		$this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
 	}
 }
