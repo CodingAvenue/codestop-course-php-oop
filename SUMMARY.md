@@ -15,6 +15,9 @@
 * [Visibility](content/Visibility/Visibility.q.md) ** -  minutes**
     > Explore the things you can do to manipulate the methods and properties of a class. In this lesson, you will learn what visibility is, how it works, and why it is important in Object Oriented PHP.
 
+* [Encapsulation](content/Encapsulation/Encapsulation.q.md) ** -  minutes**
+    > Discover how you can hide the internal implementation of an object from other objects for protection purposes.
+
 * [Constructor](content/Constructor/Constructor.q.md) ** -  minutes**
     > Learn how you can use the `__construct()` method to define a constructor for a class.
 
