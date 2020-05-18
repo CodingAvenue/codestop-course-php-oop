@@ -31,7 +31,7 @@ class MissingFunctionKeywordOnMethodTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement.");
     }
 
     public function testAssignment()
@@ -61,7 +61,7 @@ class MissingFunctionKeywordOnMethodTest extends TestCase
         $subNodes = $obj->getSubnode();
         $changeName = $subNodes->find('method[name="changeName"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a changeName() method.");
+        $this->assertEquals(1, $changeName->count(), "Expecting a `changeName()` method.");
     }
 
     public function testNameProperty()
@@ -104,7 +104,7 @@ class MissingFunctionKeywordOnMethodTest extends TestCase
     {
         $changeName = self::$code->find('method-call[name="changeName", variable="person"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'person'.");
+        $this->assertEquals(1, $changeName->count(), "Expecting one 'changeName()' method call of 'person'.");
     }
     
     public function testNewNameParam()
@@ -124,13 +124,13 @@ class MissingFunctionKeywordOnMethodTest extends TestCase
         $changeName = $subNodes->find('method[name="changeName"]');
         $name = $changeName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `changeName()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `changeName()` method of the `Person` class itself.");
     }
 
     public function testNamePropertyCallPerson()
     {
         $name = self::$code->find('property-call[name="name", variable="person"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
+        $this->assertEquals(1, $name->count(), "Expecting one 'name' property call of 'person'.");
     }  
 } 

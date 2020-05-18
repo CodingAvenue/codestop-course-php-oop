@@ -29,9 +29,12 @@ class MissingReturnThisOnMethodTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display"]');
+        $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -61,7 +64,7 @@ class MissingReturnThisOnMethodTest extends TestCase
         $subNodes = $obj->getSubnode();
         $changeName = $subNodes->find('method[name="changeName"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a changeName() method.");
+        $this->assertEquals(1, $changeName->count(), "Expecting a `changeName()` method.");
     }
 
     public function testDisplay()
@@ -70,7 +73,7 @@ class MissingReturnThisOnMethodTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testNameProperty()
@@ -107,7 +110,7 @@ class MissingReturnThisOnMethodTest extends TestCase
         $changeName = $subNodes->find('method[name="changeName", type="public"]');
         $nodes = $changeName->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `changeName()` method of the `Person` class itself.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `changeName()` method of the `Person` class itself.");
     }
     
     public function testNewNameParam()
@@ -146,7 +149,7 @@ class MissingReturnThisOnMethodTest extends TestCase
         $changeName = $subNodes->find('method[name="changeName"]');
         $name = $changeName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `changeName()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `changeName()` method of the `Person` class itself.");
     }
 
     public function testNamePropertyCallDis()
@@ -156,6 +159,6 @@ class MissingReturnThisOnMethodTest extends TestCase
         $display = $subNodes->find('method[name="display"]');
         $name = $display->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `display()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `display()` method of the `Person` class itself.");
     }
 }
