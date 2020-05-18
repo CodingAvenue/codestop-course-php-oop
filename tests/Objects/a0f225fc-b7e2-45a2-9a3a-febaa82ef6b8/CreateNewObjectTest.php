@@ -29,16 +29,30 @@ class CreateNewObjectTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $move = $subNodes->find('method[name="move"]');
+        $nodes = $move->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `move()` method.");
+    }
+
+    public function testStringInEcho()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $move = $subNodes->find('method[name="move"]');
+        $nodes = $move->find('construct[name="echo"]');
+        $string = $nodes->find('string[value="Animals move from one place to another."]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting a string `Animals move from one place to another.` in the `echo` statement of the `move()` method.");
     }
 
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable `pet`.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
     }
 
     public function testPetVariable()
@@ -61,7 +75,7 @@ class CreateNewObjectTest extends TestCase
         $subNodes = $obj->getSubnode();
         $move = $subNodes->find('method[name="move"]');
         
-        $this->assertEquals(1, $move->count(), "Expecting a move() method.");
+        $this->assertEquals(1, $move->count(), "Expecting a `move()` method.");
     }
 
     public function testTypeProperty()
@@ -95,6 +109,6 @@ class CreateNewObjectTest extends TestCase
     {
         $move = self::$code->find('method-call[name="move", variable="pet"]');
 
-        $this->assertEquals(1, $move->count(), "Expecting a 'move()' method call of 'pet'.");
+        $this->assertEquals(1, $move->count(), "Expecting one 'move()' method call of 'pet'.");
     }
 } 
