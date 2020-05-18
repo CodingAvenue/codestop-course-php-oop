@@ -31,17 +31,28 @@ class ManipulateObjectPropertiesTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `echo` statements.");
     }
 
-    public function testEchoMove()
+    public function testEchoInMove()
     {
         $obj = self::$code->find('class[name="Animal"]');
         $subNodes = $obj->getSubnode();
         $move = $subNodes->find('method[name="move"]');
         $nodes = $move->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `move()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `move()` method.");
+    }
+
+    public function testStringInEchoOfMove()
+    {
+        $obj = self::$code->find('class[name="Animal"]');
+        $subNodes = $obj->getSubnode();
+        $move = $subNodes->find('method[name="move"]');
+        $nodes = $move->find('construct[name="echo"]');
+        $string = $nodes->find('string[value="Animals move from one place to another."]');
+
+        $this->assertEquals(1, $string->count(), "Expecting a string `Animals move from one place to another.` in the `echo` statement of the `move()` method.");
     }
 
     public function testAssignment()
@@ -71,7 +82,7 @@ class ManipulateObjectPropertiesTest extends TestCase
         $subNodes = $obj->getSubnode();
         $move = $subNodes->find('method[name="move"]');
 
-        $this->assertEquals(1, $move->count(), "Expecting a move() method.");
+        $this->assertEquals(1, $move->count(), "Expecting a `move()` method.");
     }
 
     public function testTypeProperty()

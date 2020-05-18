@@ -31,17 +31,28 @@ class MissingDollarSignOnObjectTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two echo statements.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `echo` statements.");
     }
 
-    public function testEchoEat()
+    public function testEchoInEat()
     {
         $obj = self::$code->find('class[name="Person"]');
         $subNodes = $obj->getSubnode();
         $eat = $subNodes->find('method[name="eat"]');
         $nodes = $eat->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `eat()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `eat()` method.");
+    }
+
+    public function testStringInEchoOfEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+        $string = $nodes->find('string[value="This is an eat() method."]');
+
+        $this->assertEquals(1, $string->count(), "Expecting a string `This is an eat() method.` in the `echo` statement of the `eat()` method.");
     }
 
     public function testAssignment()
@@ -71,7 +82,7 @@ class MissingDollarSignOnObjectTest extends TestCase
         $subNodes = $obj->getSubnode();
         $eat = $subNodes->find('method[name="eat"]');
 
-        $this->assertEquals(1, $eat->count(), "Expecting an eat() method.");
+        $this->assertEquals(1, $eat->count(), "Expecting an `eat()` method.");
     }
 
     public function testNameProperty()
