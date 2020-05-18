@@ -59,7 +59,7 @@ class IncorrectFileExtensionAutoloadTest extends TestCase
         $nodes = $subNodes->find('include[type="require_once"]');
         $args = $nodes->find('variable[name="file"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one variable named `file` in the `require_once()` statement of the `myAutoloader()` function.");
+        $this->assertEquals(1, $args->count(), "Expecting one variable named `file` in the `require_once()` statement of the `myAutoloader()` function.");
     }
 
     public function testMyAutoloaderFunction()
