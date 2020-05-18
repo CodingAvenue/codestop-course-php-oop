@@ -31,7 +31,7 @@ class CreateAutoloaderFunctionLifeCycleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $stage = $subNodes->find('method[name="stage", type="public"]');
 
-        $this->assertEquals(1, $stage->count(), "Expecting a stage() method.");
+        $this->assertEquals(1, $stage->count(), "Expecting a `stage()` method.");
     }
 
     public function testSpecies()
@@ -40,6 +40,6 @@ class CreateAutoloaderFunctionLifeCycleTest extends TestCase
         $subNodes = $obj->getSubnode();
         $species = $subNodes->find('method[name="species", type="public"]');
 
-        $this->assertEquals(1, $species->count(), "Expecting a species() method.");
+        $this->assertEquals(1, $species->count(), "Expecting a `species()` method.");
     }
 }

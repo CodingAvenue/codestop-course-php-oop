@@ -31,7 +31,7 @@ class IncorrectFileExtensionMainTest extends TestCase
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
     }
 
     public function testStudentVariable()
@@ -52,6 +52,6 @@ class IncorrectFileExtensionMainTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="student"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'student'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'student'.");
     }
 }

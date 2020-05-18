@@ -10,7 +10,7 @@ function myAutoloader($className)
 
 function myShapesLoader($shapeClass)
 {
-    $file = dirname(__DIR__) . '\\Shapes\\' . $shapeClass . '.php';
+    $file = dirname(__DIR__) . '\\shapes\\' . $shapeClass . '.php';
     $file = str_replace('\\', DIRECTORY_SEPARATOR, $file);
     if (file_exists($file)) {
         require_once($file);

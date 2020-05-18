@@ -18,7 +18,7 @@ class CreateAutoloaderFunctionMainTest extends TestCase
         $this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
     }
 
-    public function testActualCode()
+    public function testActualCode() // this produces an error but i cannot trace its cause. need further investigation
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
@@ -45,13 +45,21 @@ class CreateAutoloaderFunctionMainTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="petMammal"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'petMammal'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'petMammal'.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $string = $nodes->find('string[value="/includes/autoload.php"]');
+
+        $this->assertEquals(1, $string->count(), "Expecting `/includes/autoload.php` as an argument in the `require_once()` statement.");
     }
 }

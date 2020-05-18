@@ -31,7 +31,7 @@ class IncorrectFileExtensionAutoloadTest extends TestCase
     {
         $nodes=self::$code->find('call[name="spl_autoload_register"]');
         
-        $this->assertEquals(1, $nodes->count(), "Expecting one function call for spl_autoload_register() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one function call for `spl_autoload_register()` function.");
     }
 
     public function testFunctionCallArgs1()
@@ -49,14 +49,24 @@ class IncorrectFileExtensionAutoloadTest extends TestCase
         $subNodes = $nodes->getSubnode();
         $nodes = $subNodes->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for the require_once() function inside the `myAutoloader()` function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement in the `myAutoloader()` function.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes=self::$code->find('function[name="myAutoloader"]');
+        $subNodes = $nodes->getSubnode();
+        $nodes = $subNodes->find('include[type="require_once"]');
+        $args = $nodes->find('variable[name="file"]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting one variable named `file` in the `require_once()` statement of the `myAutoloader()` function.");
     }
 
     public function testMyAutoloaderFunction()
     {
         $nodes=self::$code->find('function[name="myAutoloader"]');
         
-        $this->assertEquals(1, $nodes->count(), "Expecting a myAutoloader() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting a `myAutoloader()` function.");
     }
 
     public function testClassParam()

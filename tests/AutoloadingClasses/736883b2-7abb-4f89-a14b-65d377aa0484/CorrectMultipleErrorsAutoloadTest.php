@@ -67,7 +67,17 @@ class CorrectMultipleErrorsAutoloadTest extends TestCase
         $subNodes = $nodes->getSubnode();
         $nodes = $subNodes->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for the require_once() function inside the `myShapesLoader()` function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement in the `myShapesLoader()` function.");
+    }
+
+    public function testRequireOnceCallShapesArgs()
+    {
+        $nodes=self::$code->find('function[name="myShapesLoader"]');
+        $subNodes = $nodes->getSubnode();
+        $nodes = $subNodes->find('include[type="require_once"]');
+        $args = $nodes->find('variable[name="file"]');
+
+        $this->assertEquals(1, $args->count(), "Expecting one variable named `file` in the `require_once()` statement of the `myShapesLoader()` function.");
     }
 
     public function testRequireOnceCall()
@@ -76,21 +86,31 @@ class CorrectMultipleErrorsAutoloadTest extends TestCase
         $subNodes = $nodes->getSubnode();
         $nodes = $subNodes->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for the require_once() function inside the `myAutoloader()` function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement in the `myAutoloader()` function.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes=self::$code->find('function[name="myAutoloader"]');
+        $subNodes = $nodes->getSubnode();
+        $nodes = $subNodes->find('include[type="require_once"]');
+        $args = $nodes->find('variable[name="file"]');
+
+        $this->assertEquals(1, $args->count(), "Expecting one variable named `file` in the `require_once()` statement of the `myAutoloader()` function.");
     }
 
     public function testMyAutoloaderFunction()
     {
         $nodes=self::$code->find('function[name="myAutoloader"]');
-        
-        $this->assertEquals(1, $nodes->count(), "Expecting a myAutoloader() function.");
+
+        $this->assertEquals(1, $nodes->count(), "Expecting a `myAutoloader()` function.");
     }
 
     public function testMyShapesLoaderFunction()
     {
         $nodes=self::$code->find('function[name="myShapesLoader"]');
         
-        $this->assertEquals(1, $nodes->count(), "Expecting a myShapesLoader() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting a `myShapesLoader()` function.");
     }
 
     public function testClassParam()
