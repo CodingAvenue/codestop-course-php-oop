@@ -6,7 +6,7 @@
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -136,22 +136,22 @@ What does the statement `namespace App\Model;` do?
 
 /// type=SS, id=8f60fe15-a416-4ce3-b9e1-d9affe3052b2, answer=[3]
 
-Which statement best describes `require_once(__DIR__ . "/UserApp.php");` on line 2 of `Main.php`?
+Which statement best describes `require_once(__DIR__ . "/UserApp.php");` on line 2 of `main.php`?
 
 - It updates the file `UserApp.php`.
 
 - It establishes a relationship between classes.
 
-- It includes the file `UserApp.php` in the file `Main.php`.
+- It includes the file `UserApp.php` in the file `main.php`.
 
-- It removes the file `UserApp.php` in the file `Main.php`.
+- It removes the file `UserApp.php` in the file `main.php`.
 
-- It excludes the file `UserApp.php` in the file `Main.php`.
+- It excludes the file `UserApp.php` in the file `main.php`.
 
 
 /// type=MS, id=f3c808e9-e8db-4f02-897b-030743ebdc30, answer=[4,5]
 
-Which statements correctly describe `$user = new App\User();` on line 4 of `Main.php`?
+Which statements correctly describe `$user = new App\User();` on line 4 of `main.php`?
 
  - It assigns `App\User()` to `$user`.
 
@@ -168,7 +168,7 @@ Which statements correctly describe `$user = new App\User();` on line 4 of `Main
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -240,7 +240,7 @@ Which of the following are namespace definitions?
 
 /// type=SS, id=191f75a7-f13c-4d9a-95a0-7b31941ef4f2, answer=[4]
 
-In the statement `use App\User;` on line 4 of `Main.php`, what is `use`?
+In the statement `use App\User;` on line 4 of `main.php`, what is `use`?
 
  - It is a value.
 
@@ -255,7 +255,7 @@ In the statement `use App\User;` on line 4 of `Main.php`, what is `use`?
 
 /// type=SS, id=b5781321-3b03-4304-93c4-2f1b7bbe5273, answer=[3]
 
-Which statement best describes `use App\User;` on line 4 of `Main.php`?
+Which statement best describes `use App\User;` on line 4 of `main.php`?
 
  - It calls the `User` class in the `App` namespace.
 
@@ -272,7 +272,7 @@ Which statement best describes `use App\User;` on line 4 of `Main.php`?
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -344,7 +344,7 @@ Which of the following are namespaces?
 
 /// type=SS, id=25450c81-527c-4b62-a672-206d7a12efbd, answer=[4]
 
-In the statement `use App\Model\User as NewUser;` on line 4 of `Main.php`, what is `as`?
+In the statement `use App\Model\User as NewUser;` on line 4 of `main.php`, what is `as`?
 
  - It is a value.
 
@@ -359,7 +359,7 @@ In the statement `use App\Model\User as NewUser;` on line 4 of `Main.php`, what 
 
 /// type=SS, id=f98a0aad-5664-4f74-baaa-14204800cb72, answer=[5]
 
-In the statement `use App\Model\User as NewUser;` on line 4 of `Main.php`, what is `NewUser`?
+In the statement `use App\Model\User as NewUser;` on line 4 of `main.php`, what is `NewUser`?
 
  - It is a class.
 
@@ -374,7 +374,7 @@ In the statement `use App\Model\User as NewUser;` on line 4 of `Main.php`, what 
 
 /// type=SS, id=3d585eb2-f7f5-45da-a8b7-b2fc5d6bec23, answer=[3]
 
-Which statement best describes `use App\Model\User as NewUser;` on line 4 of `Main.php`?
+Which statement best describes `use App\Model\User as NewUser;` on line 4 of `main.php`?
 
  - It calls the `User` class in the `App\Model` namespace with the alias `NewUser`.
 
@@ -391,7 +391,7 @@ Which statement best describes `use App\Model\User as NewUser;` on line 4 of `Ma
 
 :::
 
-/// type=REPL, readonly=true, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, readonly=true, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -576,7 +576,7 @@ Which statement best describes `use Math\Constants;`?
 
 /// type=SS, id=f0676c1f-0a84-416c-b2c6-708c3b7943ce, answer=[3]
 
-Which statement best describes `Geometry::getCircleArea(10)` on line 6 of `Main.php`?
+Which statement best describes `Geometry::getCircleArea(10)` on line 6 of `main.php`?
 
  - It removes the argument `10` from the `getCircleArea()` method of the `Geometry` class.
 
@@ -593,7 +593,7 @@ Which statement best describes `Geometry::getCircleArea(10)` on line 6 of `Main.
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -658,7 +658,7 @@ echo "The area of the circle is: " . Geometry::getCircleArea(10);
 ```
 /// type=SS, id=e0ba2648-fa49-45b0-b775-47fb6405b601, answer=[3]
 
-Remove the statement `use Math\Geometry;` on line 4 of `Main.php`. Execute the program. What is its output?
+Remove the statement `use Math\Geometry;` on line 4 of `main.php`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -675,7 +675,7 @@ Remove the statement `use Math\Geometry;` on line 4 of `Main.php`. Execute the p
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -738,7 +738,7 @@ echo "The area of the circle is: " . Geometry::getCircleArea(10);
 ```
 /// type=SS, id=7210ca0a-8d60-4f34-afd2-40809aea8b13, answer=[5]
 
-On line 4 of `Main.php`, replace `Geometry::getCircleArea(10)` with `Math\Geometry::getCircleArea(10)`. Execute the program. What is its output?
+On line 4 of `main.php`, replace `Geometry::getCircleArea(10)` with `Math\Geometry::getCircleArea(10)`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -755,7 +755,7 @@ On line 4 of `Main.php`, replace `Geometry::getCircleArea(10)` with `Math\Geomet
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -837,7 +837,7 @@ Execute the program. What is its output?
 
 /// type=SS, id=331437d6-2012-4173-9700-0cdb13ad6268, answer=[3]
 
-On line 5 of `Main.php`, remove `as NewCircle` from the statement `use Math\Geometry\Circle as NewCircle;`. Execute the program. What is its output?
+On line 5 of `main.php`, remove `as NewCircle` from the statement `use Math\Geometry\Circle as NewCircle;`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -854,7 +854,7 @@ On line 5 of `Main.php`, remove `as NewCircle` from the statement `use Math\Geom
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -921,7 +921,7 @@ echo "The circumference of the circle is: " . $circle->getCircumference();
 ```
 /// type=SS, id=feaabc8d-5b80-4ce4-8f3a-64971a9415e3, answer=[5]
 
-In the statement `$circle = new NewCircle(10);` on line 7 of `Main.php`, replace `NewCircle(10)` with `Circle(10)`. Execute the program. What is its output?
+In the statement `$circle = new NewCircle(10);` on line 7 of `main.php`, replace `NewCircle(10)` with `Circle(10)`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -938,7 +938,7 @@ In the statement `$circle = new NewCircle(10);` on line 7 of `Main.php`, replace
 
 :::
 
-/// type=REPL, readonly=true, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, readonly=true, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -1045,7 +1045,7 @@ In the statement `throw new \Exception("Invalid value assigned to radius.");` on
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -1120,7 +1120,7 @@ try {
 ```
 /// type=SS, id=89289d30-1d65-423a-a8c9-c146b5743d04, answer=[5]
 
-In the statement `echo "The area of the circle is: " . Geometry::getCircleArea(10);` on line 9 of `Main.php`, replace the argument `10` with `-10`. Execute the program. What is its output?
+In the statement `echo "The area of the circle is: " . Geometry::getCircleArea(10);` on line 9 of `main.php`, replace the argument `10` with `-10`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -1137,7 +1137,7 @@ In the statement `echo "The area of the circle is: " . Geometry::getCircleArea(1
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -1212,7 +1212,7 @@ try {
 ```
 /// type=SS, id=952d8972-3606-42f0-8931-062fe6c44ecc, answer=[2]
 
-Remove the backslash `\` from `catch(\Exception $e)` on line 10 of `Main.php`. Execute the program. What is its output?
+Remove the backslash `\` from `catch(\Exception $e)` on line 10 of `main.php`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -1229,7 +1229,7 @@ Remove the backslash `\` from `catch(\Exception $e)` on line 10 of `Main.php`. E
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -1319,7 +1319,7 @@ Why does removing the backslash `\` before `Exception` produce an error?
 
 /// type=SS, id=c4a58d26-56b8-4cdd-9df3-4553cf54102e, answer=[5]
 
-Add the statement `use Exception;` on line 5 of `Main.php`. Execute the program. What is its output?
+Add the statement `use Exception;` on line 5 of `main.php`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -1336,7 +1336,7 @@ Add the statement `use Exception;` on line 5 of `Main.php`. Execute the program.
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -1411,7 +1411,7 @@ try {
 ```
 /// type=SS, id=0fc42d08-ffd9-445b-965c-39caee9f60fc, answer=[2]
 
-Remove the statement `use Math\Geometry;` on line 6 of `Main.php`. Execute the program. What is its output?
+Remove the statement `use Math\Geometry;` on line 6 of `main.php`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -1428,7 +1428,7 @@ Remove the statement `use Math\Geometry;` on line 6 of `Main.php`. Execute the p
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -1509,7 +1509,7 @@ Why does removing the statement `use Math\Geometry;` from the code produce an er
 
  - There is no `getCircleArea()` method found in the `Geometry` class.
 
- - On line 9 of `Main.php`, `Geometry::getCircleArea(-10)` requires the statement `use Math\Geometry;`. 
+ - On line 9 of `main.php`, `Geometry::getCircleArea(-10)` requires the statement `use Math\Geometry;`. 
 
  - The `Geometry` class in the `Math` namespace is not accessible from the `Test` namespace without the statement `use Math\Geometry;`.
 
@@ -1518,7 +1518,7 @@ Why does removing the statement `use Math\Geometry;` from the code produce an er
 
 /// type=SS, id=85a95ea5-4153-4dfb-9e4b-8b68153014b4, answer=[5]
 
-In the `echo` statement on line 9 of `Main.php`, replace `Geometry::getCircleArea(-10)` with `\Math\Geometry::getCircleArea(-10)`. Execute the program. What is its output?
+In the `echo` statement on line 9 of `main.php`, replace `Geometry::getCircleArea(-10)` with `\Math\Geometry::getCircleArea(-10)`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -1535,7 +1535,7 @@ In the `echo` statement on line 9 of `Main.php`, replace `Geometry::getCircleAre
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -1610,7 +1610,7 @@ try {
 ```
 /// type=SS, id=73455217-aaf9-4281-8263-70a0aa00d994, answer=[2]
 
-Remove the backlash `\` before `Math` from `\Math\Geometry::getCircleArea(-10)` on line 9 of `Main.php`. Execute the program. What is its output?
+Remove the backlash `\` before `Math` from `\Math\Geometry::getCircleArea(-10)` on line 9 of `main.php`. Execute the program. What is its output?
 
  - It prints `10`.
 
@@ -1700,7 +1700,7 @@ What does the `as` keyword do?
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -1757,35 +1757,35 @@ Execute the program. What is its output?
 
 What is the error message?
 
- - Uncaught Error: Class `'User'` not found in `Main.php` on line number 4
+ - Uncaught Error: Class `'User'` not found in `main.php` on line number 4
 
- - syntax error, unexpected `'$user'` (T_VARIABLE) in `Main.php` on line number 4
+ - syntax error, unexpected `'$user'` (T_VARIABLE) in `main.php` on line number 4
 
- - Uncaught Error: Undefined constant `'App\User'` in `Main.php` on line number 4
+ - Uncaught Error: Undefined constant `'App\User'` in `main.php` on line number 4
 
- - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 4
+ - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 4
 
- - Warning: The use statement with non-compound name `'App'` has no effect in `Main.php` on line number 4
+ - Warning: The use statement with non-compound name `'App'` has no effect in `main.php` on line number 4
 
 
 /// type=MS, id=7921b12b-b7d9-45c3-9a3f-345648fbf5ca, answer=[1,5]
 
 Which statements correctly describe the error?
 
- - On line 4 of `Main.php`, the statement `$user = new User();` is invalid.
+ - On line 4 of `main.php`, the statement `$user = new User();` is invalid.
 
- - There is no semicolon `;` at the end of the statement on line 4 of `Main.php`.
+ - There is no semicolon `;` at the end of the statement on line 4 of `main.php`.
 
- - On line 2 of `Main.php`, the statement `require_once("./UserApp.php");` is invalid.
+ - On line 2 of `main.php`, the statement `require_once("./UserApp.php");` is invalid.
 
- - There is no argument specified in the `require_once()` method on line 2 of `Main.php`.
+ - There is no argument specified in the `require_once()` method on line 2 of `main.php`.
 
- - There is no namespace specified in the statement `$user = new User();` on line 4 of `Main.php`.
+ - There is no namespace specified in the statement `$user = new User();` on line 4 of `main.php`.
 
 :::
 
 
-/// type=CR, id=3e4e6057-507e-489c-9bfe-9ff0c90838ab, answer=[tests/Namespaces/3e4e6057-507e-489c-9bfe-9ff0c90838ab], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=3e4e6057-507e-489c-9bfe-9ff0c90838ab, answer=[tests/Namespaces/3e4e6057-507e-489c-9bfe-9ff0c90838ab], filename=[UserApp.php,UserModel.php,main.php]
 
 Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
@@ -1829,7 +1829,7 @@ $user = new User();
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -1873,35 +1873,35 @@ $user = new User();
 
 Execute the program. What are the error messages?
 
- - Uncaught Error: Class `'User'` not found in `Main.php` on line number 6
+ - Uncaught Error: Class `'User'` not found in `main.php` on line number 6
 
- - syntax error, unexpected `'$user'` (T_VARIABLE) in `Main.php` on line number 4
+ - syntax error, unexpected `'$user'` (T_VARIABLE) in `main.php` on line number 4
 
- - Uncaught Error: Undefined constant `'App\User'` in `Main.php` on line number 4
+ - Uncaught Error: Undefined constant `'App\User'` in `main.php` on line number 4
 
- - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 4
+ - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 4
 
- - Warning: The use statement with non-compound name `'App'` has no effect in `Main.php` on line number 4
+ - Warning: The use statement with non-compound name `'App'` has no effect in `main.php` on line number 4
 
 
 /// type=MS, id=096d5f08-dab3-4454-8df8-f8fb16f5e9af, answer=[1,4,5]
 
 Which statements correctly describe the error?
 
- - On line 4 of `Main.php`, the statement `use App;` is invalid.
+ - On line 4 of `main.php`, the statement `use App;` is invalid.
 
  - There is no `App` namespace defined in the file `UserApp.php`.
 
- - There is no `as` keyword specified after `App` on line 4 of `Main.php`.
+ - There is no `as` keyword specified after `App` on line 4 of `main.php`.
 
- - On line 4 of `Main.php`, the statement `use App\User;` is miswritten as `use App;`.
+ - On line 4 of `main.php`, the statement `use App\User;` is miswritten as `use App;`.
 
- - There is no `User` class specified in the statement `use App;` on line 4 of `Main.php`.
+ - There is no `User` class specified in the statement `use App;` on line 4 of `main.php`.
 
 :::
 
 
-/// type=CR, id=2b901a20-9fc0-4191-b1bc-5fb2820cf71a, answer=[tests/Namespaces/2b901a20-9fc0-4191-b1bc-5fb2820cf71a], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=2b901a20-9fc0-4191-b1bc-5fb2820cf71a, answer=[tests/Namespaces/2b901a20-9fc0-4191-b1bc-5fb2820cf71a], filename=[UserApp.php,UserModel.php,main.php]
 
 Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
@@ -1947,7 +1947,7 @@ $user = new User();
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -1991,35 +1991,35 @@ $user = new User();
 
 Execute the program. What is the error message?
 
- - Uncaught Error: Class `'User'` not found in `Main.php` on line number 6
+ - Uncaught Error: Class `'User'` not found in `main.php` on line number 6
 
- - syntax error, unexpected `'$user'` (T_VARIABLE) in `Main.php` on line number 4
+ - syntax error, unexpected `'$user'` (T_VARIABLE) in `main.php` on line number 4
 
- - Uncaught Error: Undefined constant `'App\User'` in `Main.php` on line number 4
+ - Uncaught Error: Undefined constant `'App\User'` in `main.php` on line number 4
 
- - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 4
+ - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 4
 
- - Warning: The use statement with non-compound name `'App'` has no effect in `Main.php` on line number 4
+ - Warning: The use statement with non-compound name `'App'` has no effect in `main.php` on line number 4
 
 
 /// type=MS, id=a092b812-75fa-4b70-8e09-a3db2ad19231, answer=[1,5]
 
 Which statements correctly describe the error?
 
- - On line 4 of `Main.php`, the statement `App\User;` is invalid.
+ - On line 4 of `main.php`, the statement `App\User;` is invalid.
 
  - There is no `App` namespace defined in the file `UserApp.php`.
 
- - There is a backslash `\` between `App` and `User` on line 4 of `Main.php.`
+ - There is a backslash `\` between `App` and `User` on line 4 of `main.php.`
 
- - There is no `as` keyword specified after `App\User` on line 4 of `Main.php`.
+ - There is no `as` keyword specified after `App\User` on line 4 of `main.php`.
 
- - There is no `use` keyword specified before `App\User;` on line 4 of `Main.php`.
+ - There is no `use` keyword specified before `App\User;` on line 4 of `main.php`.
 
 :::
 
 
-/// type=CR, id=63b29fa1-ceb8-4b85-833b-d54f811ba10b, answer=[tests/Namespaces/63b29fa1-ceb8-4b85-833b-d54f811ba10b], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=63b29fa1-ceb8-4b85-833b-d54f811ba10b, answer=[tests/Namespaces/63b29fa1-ceb8-4b85-833b-d54f811ba10b], filename=[UserApp.php,UserModel.php,main.php]
 
 Correct the code so that it outputs the string `This is a user in the App namespace.`.
 
@@ -2065,7 +2065,7 @@ $user = new User();
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -2109,35 +2109,35 @@ $user = new User();
 
 Execute the program. What is the error message?
 
- - Uncaught Error: Class `'User'` not found in `Main.php` on line number 6
+ - Uncaught Error: Class `'User'` not found in `main.php` on line number 6
 
- - syntax error, unexpected `'$user'` (T_VARIABLE) in `Main.php` on line number 4
+ - syntax error, unexpected `'$user'` (T_VARIABLE) in `main.php` on line number 4
 
- - Uncaught Error: Undefined constant `'App\User'` in `Main.php` on line number 4
+ - Uncaught Error: Undefined constant `'App\User'` in `main.php` on line number 4
 
- - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 4
+ - syntax error, unexpected `'NewUser'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 4
 
- - Warning: The use statement with non-compound name `'App'` has no effect in `Main.php` on line number 4
+ - Warning: The use statement with non-compound name `'App'` has no effect in `main.php` on line number 4
 
 
 /// type=MS, id=7d71befb-542c-4a65-b136-e756ebf7ca53, answer=[3,5]
 
 Which statements correctly describe the error?
 
- - There is a backslash `\` between `App` and `Model` on line 4 of `Main.php.`
+ - There is a backslash `\` between `App` and `Model` on line 4 of `main.php.`
 
  - There is no `App\Model` namespace defined in the file `UserModel.php`.
 
- - On line 6 of `Main.php`, the statement `$user = new User();` is invalid.
+ - On line 6 of `main.php`, the statement `$user = new User();` is invalid.
 
- - There is no `as` keyword specified after `App\Model\User` on line 4 of `Main.php`.
+ - There is no `as` keyword specified after `App\Model\User` on line 4 of `main.php`.
 
- - The `User` class in the `App\Model` namespace is aliased as `NewModel` on line 4 of `Main.php`
+ - The `User` class in the `App\Model` namespace is aliased as `NewModel` on line 4 of `main.php`
 
 :::
 
 
-/// type=CR, id=a9789614-a3cb-46ed-ae56-a96f4dc848be, answer=[tests/Namespaces/a9789614-a3cb-46ed-ae56-a96f4dc848be], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=a9789614-a3cb-46ed-ae56-a96f4dc848be, answer=[tests/Namespaces/a9789614-a3cb-46ed-ae56-a96f4dc848be], filename=[UserApp.php,UserModel.php,main.php]
 
 Correct the code so that it outputs the string `This is a user in the App\Model namespace.`.
 
@@ -2183,7 +2183,7 @@ $user = new User();
 
 :::
 
-/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,Main.php]
+/// type=REPL, readonly=true, filename=[UserApp.php,UserModel.php,main.php]
 
 ```php
 <?php
@@ -2227,35 +2227,35 @@ $user = new NewModel();
 
 Execute the program. What is the error message?
 
- - Uncaught Error: Class `'User'` not found in `Main.php` on line number 6
+ - Uncaught Error: Class `'User'` not found in `main.php` on line number 6
 
- - syntax error, unexpected `'$user'` (T_VARIABLE) in `Main.php` on line number 4
+ - syntax error, unexpected `'$user'` (T_VARIABLE) in `main.php` on line number 4
 
- - Uncaught Error: Undefined constant `'App\User'` in `Main.php` on line number 4
+ - Uncaught Error: Undefined constant `'App\User'` in `main.php` on line number 4
 
- - syntax error, unexpected `'NewModel'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 4
+ - syntax error, unexpected `'NewModel'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 4
 
- - Warning: The use statement with non-compound name `'App'` has no effect in `Main.php` on line number 4
+ - Warning: The use statement with non-compound name `'App'` has no effect in `main.php` on line number 4
 
 
 /// type=MS, id=a8786f15-bf6f-4bf0-89ee-01f430bbf9a5, answer=[4,5]
 
 Which statements correctly describe the error?
 
- - There is no semicolon `;` at the end of the statement on line 4 of `Main.php`.
+ - There is no semicolon `;` at the end of the statement on line 4 of `main.php`.
 
- - On line 6 of `Main.php`, the statement `$user = new NewModel();` is invalid.
+ - On line 6 of `main.php`, the statement `$user = new NewModel();` is invalid.
 
- - There is no `use` keyword specified before `App\Model\User` on line 4 of `Main.php`.
+ - There is no `use` keyword specified before `App\Model\User` on line 4 of `main.php`.
 
- - On line 4 of `Main.php`, the statement `use App\Model\User  NewModel;` is invalid.
+ - On line 4 of `main.php`, the statement `use App\Model\User  NewModel;` is invalid.
 
- - There is no `as` keyword specified after `App\Model\User` and `NewModel` on line 4 of `Main.php`.
+ - There is no `as` keyword specified after `App\Model\User` and `NewModel` on line 4 of `main.php`.
 
 :::
 
 
-/// type=CR, id=c902b2d3-c528-472d-8798-453873358108, answer=[tests/Namespaces/c902b2d3-c528-472d-8798-453873358108], filename=[UserApp.php,UserModel.php,Main.php]
+/// type=CR, id=c902b2d3-c528-472d-8798-453873358108, answer=[tests/Namespaces/c902b2d3-c528-472d-8798-453873358108], filename=[UserApp.php,UserModel.php,main.php]
 
 Correct the code so that it outputs the string `This is a user in the App\Model namespace.`.
 
@@ -2301,7 +2301,7 @@ $user = new NewModel();
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -2385,22 +2385,22 @@ Execute the program. What is its output?
 
 Remove the statement `use Math\Constants;` on line 4 of `Circle.php`. Execute the program. What is the error message?
 
- - Uncaught Error: Class `'Circle'` not found in `Main.php` on line number 7
+ - Uncaught Error: Class `'Circle'` not found in `main.php` on line number 7
 
- - syntax error, unexpected `'$circle'` (T_VARIABLE) in `Main.php` on line number 7
+ - syntax error, unexpected `'$circle'` (T_VARIABLE) in `main.php` on line number 7
 
- - Uncaught Error: Undefined constant `'Math\Geometry'` in `Main.php` on line number 5
+ - Uncaught Error: Undefined constant `'Math\Geometry'` in `main.php` on line number 5
 
  - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 18
 
- - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 5
+ - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 5
 
 :::
 
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -2466,24 +2466,24 @@ echo "The circumference of the circle is: " . $circle->getCircumference();
 ```
 /// type=SS, id=d967a2dd-5ee1-4045-b3ca-a6cff239af3b, answer=[1]
 
-In the statement `$circle = new NewCircle(10);` on line 7 of `Main.php`, replace `NewCircle` with `Circle`. Execute the program. What is the error message?
+In the statement `$circle = new NewCircle(10);` on line 7 of `main.php`, replace `NewCircle` with `Circle`. Execute the program. What is the error message?
 
- - Uncaught Error: Class `'Circle'` not found in `Main.php` on line number 7
+ - Uncaught Error: Class `'Circle'` not found in `main.php` on line number 7
 
- - syntax error, unexpected `'$circle'` (T_VARIABLE) in `Main.php` on line number 7
+ - syntax error, unexpected `'$circle'` (T_VARIABLE) in `main.php` on line number 7
 
- - Uncaught Error: Undefined constant `'Math\Geometry'` in `Main.php` on line number 5
+ - Uncaught Error: Undefined constant `'Math\Geometry'` in `main.php` on line number 5
 
  - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 18
 
- - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 5
+ - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 5
 
 :::
 
 
 :::
 
-/// type=REPL, filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=REPL, filename=[Math.php,Constants.php,Circle.php,main.php]
 
 ```php
 <?php
@@ -2548,22 +2548,22 @@ echo "The circumference of the circle is: " . $circle->getCircumference();
 ```
 /// type=SS, id=8a0f49a9-60e3-43ba-9dc9-e0007a130bbb, answer=[5]
 
-Remove `as` from the statement `use Math\Geometry\Circle as NewCircle;` on line 5 of `Main.php`. Execute the program. What is the error message?
+Remove `as` from the statement `use Math\Geometry\Circle as NewCircle;` on line 5 of `main.php`. Execute the program. What is the error message?
 
- - Uncaught Error: Class `'Circle'` not found in `Main.php` on line number 7
+ - Uncaught Error: Class `'Circle'` not found in `main.php` on line number 7
 
- - syntax error, unexpected `'$circle'` (T_VARIABLE) in `Main.php` on line number 7
+ - syntax error, unexpected `'$circle'` (T_VARIABLE) in `main.php` on line number 7
 
- - Uncaught Error: Undefined constant `'Math\Geometry'` in `Main.php` on line number 5
+ - Uncaught Error: Undefined constant `'Math\Geometry'` in `main.php` on line number 5
 
  - Uncaught Error: Class `'Math\Geometry\Constants'` not found in `Circle.php` on line number 18
 
- - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `Main.php` on line number 5
+ - syntax error, unexpected `'NewCircle'` (T_STRING), expecting `','` or `';'` in `main.php` on line number 5
 
 :::
 
 
-/// type=CR, id=d2261d1d-3946-4afd-9188-07e6bda2645b, answer=[tests/Namespaces/d2261d1d-3946-4afd-9188-07e6bda2645b], filename=[Math.php,Constants.php,Circle.php,Main.php]
+/// type=CR, id=d2261d1d-3946-4afd-9188-07e6bda2645b, answer=[tests/Namespaces/d2261d1d-3946-4afd-9188-07e6bda2645b], filename=[Math.php,Constants.php,Circle.php,main.php]
 
 Correct the code so that it outputs the string `The circumference of the circle is: 62.8318`.
 
@@ -2636,9 +2636,9 @@ echo "The circumference of the circle is: " . $circle->getCircumference();
 
 ### Part 4: Practice
 
-/// type=CR, id=21d3b203-f487-4088-ba3b-d701cd68b664, answer=[tests/Namespaces/21d3b203-f487-4088-ba3b-d701cd68b664], filename=[Constants.php,CircularShape.php,Circle.php,Main.php]
+/// type=CR, id=21d3b203-f487-4088-ba3b-d701cd68b664, answer=[tests/Namespaces/21d3b203-f487-4088-ba3b-d701cd68b664], filename=[Constants.php,CircularShape.php,Circle.php,main.php]
 
-Given the initial implementations of the classes below, add a statement that defines namespaces and assigns each class to a certain namespace. In the `Constants.php` tab, add a statement that defines the `Math` namespace using the `namespace` keyword after the `<?php` opening tag. In the `CircularShape.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace at the first line of the PHP file. In the `Circle.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace. Then, add two statements that import the `Constants` class in the `Math` namespace and the `CircularShape` class in the `Math\Geometry` namespace. In the `Main.php` tab, add a statement that imports the `Circle` class in the `Math\Geometry` namespace and aliased as `MyCircle`. Run the program to view the output.
+Given the initial implementations of the classes below, add a statement that defines namespaces and assigns each class to a certain namespace. In the `Constants.php` tab, add a statement that defines the `Math` namespace using the `namespace` keyword after the `<?php` opening tag. In the `CircularShape.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace at the first line of the PHP file. In the `Circle.php` tab, add a statement that defines the `Geometry` namespace inside the `Math` namespace. Then, add two statements that import the `Constants` class in the `Math` namespace and the `CircularShape` class in the `Math\Geometry` namespace. In the `main.php` tab, add a statement that imports the `Circle` class in the `Math\Geometry` namespace and aliased as `MyCircle`. Run the program to view the output.
 
 ```php
 <?php
