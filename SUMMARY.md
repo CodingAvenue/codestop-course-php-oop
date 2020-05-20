@@ -13,7 +13,7 @@
     > Methods are one of the basic building blocks of classes. In this lesson, you will learn how to add methods to a class. 
 
 * [Visibility](content/Visibility/Visibility.q.md) ** -  minutes**
-    > Explore the things you can do to manipulate the methods and properties of a class. In this lesson, you will learn what visibility is, how it works, and why it is important in Object Oriented PHP.
+    > Explore the things you can do to manipulate the methods and properties of a class. In this lesson, you will learn what visibility is, how it works, and why it is important in Object-Oriented PHP.
 
 * [Encapsulation](content/Encapsulation/Encapsulation.q.md) ** -  minutes**
     > Discover how you can hide the internal implementation of an object from other objects for protection purposes.
@@ -29,6 +29,9 @@
 
 * [Interfaces](content/Interfaces/Interfaces.q.md) ** -  minutes**
     > Interfaces are outlines of what an object can do. In this lesson, you will learn how to work with `interfaces` to define `public methods` that a class must `implement`.
+
+* [Polymorphism](content/Polymorphism/Polymorphism.q.md) ** -  minutes**
+    > Discover how a method behaves differently based on the specified instance.
 
 * [Static Methods and Properties](content/StaticMethodsAndProperties/StaticMethodsAndProperties.q.md) ** -  minutes**
     > Discover how you can make class properties and methods accessible without an instance of the created object. 
