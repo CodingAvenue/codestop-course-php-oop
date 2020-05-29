@@ -30,7 +30,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -53,13 +53,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 

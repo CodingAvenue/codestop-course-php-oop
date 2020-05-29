@@ -433,13 +433,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -635,13 +635,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -717,13 +717,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -797,13 +797,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -896,13 +896,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -950,7 +950,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -983,13 +983,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -1057,7 +1057,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -1090,13 +1090,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -1149,7 +1149,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -1182,13 +1182,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -1241,7 +1241,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -1274,13 +1274,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -1348,7 +1348,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -1381,13 +1381,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -1440,7 +1440,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -1473,13 +1473,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -1547,7 +1547,7 @@ class Geometry
 	
     static function getCircleArea($radius)
     {
-        if ($radius<=0) {
+        if ($radius <= 0) {
             throw new \Exception("Invalid value assigned to radius.");
         }
         //The formula to calculate the area of a circle is: (pi)(r^2)
@@ -1580,13 +1580,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -2343,13 +2343,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -2441,13 +2441,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -2523,13 +2523,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -2605,13 +2605,13 @@ class Circle
 	
     public function __construct($radius)
     {
-        $this -> radius = $radius;
+        $this->radius = $radius;
     }
 	
     public function getCircumference()
     {
         // The formula to calculate the circumference of a circle is: 2(pi)(r)
-        return 2 * Constants::PI * $this -> radius;
+        return 2 * Constants::PI * $this->radius;
     }
 }
 ?>
@@ -2685,17 +2685,17 @@ class Circle extends CircularShape
 {	
     public function diameter()
     {
-        return $this -> getRadius() * 2;
+        return $this->getRadius() * 2;
     }
 
     public function area()
     {
-        return Constants::PI * $this -> getRadius() ** 2; 
+        return Constants::PI * $this->getRadius() ** 2; 
     }
     
     public function circumference()
     {
-        return 2 * Constants::PI * $this -> getRadius();
+        return 2 * Constants::PI * $this->getRadius();
     }
 }
 ?>
