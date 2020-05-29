@@ -10,17 +10,17 @@ class Circle extends CircularShape
 {	
     public function diameter()
     {
-        return $this -> getRadius() * 2;
+        return $this->getRadius() * 2;
     }
     
     public function area()
     {
-        return Constants::PI * $this -> getRadius() ** 2; 
+        return Constants::PI * $this->getRadius() ** 2; 
     }
     
     public function circumference()
     {
-        return 2 * Constants::PI * $this -> getRadius();
+        return 2 * Constants::PI * $this->getRadius();
     }
 }
 ?>
