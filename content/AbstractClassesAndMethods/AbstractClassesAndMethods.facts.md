@@ -51,7 +51,7 @@ class TestStudent extends TestPerson
 	
     public function display()
     {
-        echo parent::getTestName() . " is taking up " . $this->course . ".";
+        echo $this->getTestName() . " is taking up " . $this->course . ".";
     }
 }
 $studentObject = new TestStudent("Anna", "BSIT");

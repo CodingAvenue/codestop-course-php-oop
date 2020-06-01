@@ -17,7 +17,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 

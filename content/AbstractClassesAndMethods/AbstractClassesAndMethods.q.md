@@ -73,7 +73,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -169,21 +169,6 @@ Which statement best describes `parent::__construct($name, $age);` on line 9 of 
  - It defines the `__construct()` method of the parent class `Person` with the parameters `$name` and `$age` inside the child class `Student`.
 
  - It removes the arguments `$name` and `$age` from the `__construct()` method of the parent class `Person` inside the child class `Student`.
-
-
-/// type=SS, id=75619d4e-0c88-4197-90af-2cd11a3948bb, answer=[1]
-
-In the `echo` statement on line 20 of `Student.php`, what does `parent::getName()` do?
-
- - It calls the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It removes the `getName()` method of the parent class `Person` from the child class `Student`.
-
- - It returns the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It creates the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It defines the `getName()` method of the parent class `Person` inside the child class `Student`.
 
 
 /// type=MS, id=8b6cf284-8b97-45c4-8469-bb4428093cf9, answer=[3,4]
@@ -302,7 +287,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -396,7 +381,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -490,7 +475,7 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -584,7 +569,7 @@ class Student extends Person
 
     function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -678,7 +663,7 @@ class Student extends Person
 
     function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1024,7 +1009,7 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1133,7 +1118,7 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1212,7 +1197,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1321,7 +1306,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1400,7 +1385,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1509,7 +1494,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1588,7 +1573,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1682,7 +1667,7 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1776,7 +1761,7 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1870,7 +1855,7 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1964,7 +1949,7 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -2058,7 +2043,7 @@ class Student  Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -2088,7 +2073,7 @@ In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal`
  
  2. A `__construct()` method with the parameters `$type`, `$age`, and `$name`. Inside the `__construct()` method body, add a statement that calls the parent class constructor `__construct()` passing the arguments `$type` and `$age`. Then, add another statement that assigns the value of `$name` to the `$name` property of the `Mammal` class. 
  
- 3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the abstract `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " named " . $this->getName() . " is a " . parent::getAge() . "-year old mammal."`. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. 
+ 3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the abstract `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " named " . $this->getName() . " is a " . $this->getAge() . "-year old mammal."`. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. 
  
 After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat`, `3`, and `Catsie`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
