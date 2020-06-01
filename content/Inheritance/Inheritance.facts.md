@@ -85,3 +85,5 @@ In the `TestStudent` class declaration above, the code breaks down as follows:
  - `public function display() {...}` is the method definition that overrides the `display()` method of the parent class `TestPerson`. 
 
  - `parent::getTestName()` accesses the `getTestName()` method of the parent class `TestPerson`.
+
+It is a best practice to separate the class declaration from object instantiation to reduce complexity and increase the efficiency of a program.
