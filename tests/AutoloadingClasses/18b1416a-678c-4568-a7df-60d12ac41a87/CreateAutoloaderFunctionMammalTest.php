@@ -102,13 +102,13 @@ class CreateAutoloaderFunctionMammalTest extends TestCase
         $this->assertEquals(1, $species->count(), "Expecting one 'species()' method call in the `display()` method of the `Mammal` class itself.");
     } 
 
-    public function testParentGetTypeCall()
+    public function testThisGetTypeCall()
     {
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getType"]');
+        $method = $display->find('method-call[name="getType", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting one 'getType()' method call in the `display()` method of the `Animal` parent class.");
+        $this->assertEquals(1, $method->count(), "Expecting one 'getType()' method call in the `display()` method of the `Animal` parent class.");
     }
 }
