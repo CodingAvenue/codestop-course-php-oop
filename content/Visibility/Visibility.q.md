@@ -40,9 +40,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->display();
+$person = new Person();
+$person->setAge(15);
+$person->display();
 ?>
 ```
 /// type=SS, id=a597fbec-e128-4d34-8058-d46c5bb14434, answer=[5]
@@ -72,7 +72,7 @@ Which of the following are properties?
 
  - `$newAge`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=MS, id=836b5830-1489-440e-9218-2fc7162bf248, answer=[2,3,4,5]
@@ -132,7 +132,7 @@ Which of the following is a pseudo-variable?
 
  - `$newAge`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=MS, id=4156e0cf-92dd-4f14-a2d0-479ba59f0494, answer=[2,4]
@@ -147,7 +147,7 @@ Which of the following are visibility keywords?
 
  - `private`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=SS, id=eb8bee64-d186-4d29-90dd-a9ba1ca58c92, answer=[4]
@@ -293,14 +293,14 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(15);
-$personObject->display();
+$person = new Person();
+$person->setAge(15);
+$person->display();
 ?>
 ```
 /// type=SS, id=73e4efca-445c-4ab4-ba09-d784507ec590, answer=[4]
 
-In the method call `$personObject->setAge(15);` on line 33, replace the argument `15` with `-15`. Execute the program. What is its output?
+In the method call `$person->setAge(15);` on line 33, replace the argument `15` with `-15`. Execute the program. What is its output?
 
  - It prints `-15`.
 
@@ -351,16 +351,16 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(-15);
-$personObject->display();
+$person = new Person();
+$person->setAge(-15);
+$person->display();
 ?>
 ```
 /// type=MS, id=49c29bba-420b-4a1a-95e0-cc4bccadc787, answer=[1,4,5]
 
 Why is there no value of the `$age` property displayed?
 
- - There is no value assigned to the `$age` property of `$personObject`.
+ - There is no value assigned to the `$age` property of `$person`.
 
  - There is no semicolon `;` at the end of the statement on line 33.
 
@@ -368,7 +368,7 @@ Why is there no value of the `$age` property displayed?
 
  - On line 33, the argument `-15` in the `setAge()` method is less than `0`.
 
- - The `setAge()` method only assigns values greater than `0` to the `$age` property of `$personObject`.
+ - The `setAge()` method only assigns values greater than `0` to the `$age` property of `$person`.
 
 
 /// type=SS, id=18de9f00-2e5a-44ad-8c57-b9c1f1ac9a75, answer=[1]
@@ -383,7 +383,7 @@ Which property is accessible only within the `Person` class?
 
  - `$newAge`
 
- - `$personObject`
+ - `$person`
 
 
 /// type=SS, id=500ed813-e9bb-4cf6-9dbc-ddf71bd0c8fb, answer=[5]
@@ -403,7 +403,7 @@ Which method is accessible only within the `Person` class?
 
 /// type=SS, id=65d55d70-873d-45fe-8b8d-b10ddc49f7e5, answer=[4]
 
-In the method call `$personObject->setAge(-15);` on line 33, replace the argument `-15` with `45`. Execute the program. What is its output?
+In the method call `$person->setAge(-15);` on line 33, replace the argument `-15` with `45`. Execute the program. What is its output?
 
  - It prints `45`.
 
@@ -454,14 +454,14 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(45);
-$personObject->display();
+$person = new Person();
+$person->setAge(45);
+$person->display();
 ?>
 ```
 /// type=SS, id=7a06eb9f-cd8b-41c8-84c0-fc767ca8787e, answer=[1]
 
-On line 34, replace the method call `$personObject->display();` with `echo $personObject->getAge();`. Execute the program. What is its output?
+On line 34, replace the method call `$person->display();` with `echo $person->getAge();`. Execute the program. What is its output?
 
  - It prints `45`.
 
@@ -512,14 +512,14 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(45);
-echo $personObject->getAge();
+$person = new Person();
+$person->setAge(45);
+echo $person->getAge();
 ?>
 ```
 /// type=SS, id=e9a625ae-d49b-43d7-9401-66669113bc47, answer=[2]
 
-In the statement `echo $personObject->getAge();` on line 34, replace `getAge()` with `name`. Execute the program. What is its output?
+In the statement `echo $person->getAge();` on line 34, replace `getAge()` with `name`. Execute the program. What is its output?
 
  - It prints `45`.
 
@@ -570,14 +570,14 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(45);
-echo $personObject->name;
+$person = new Person();
+$person->setAge(45);
+echo $person->name;
 ?>
 ```
 /// type=SS, id=98743d80-39d7-49d9-b0b5-9fb18597cd36, answer=[3]
 
-In the statement `echo $personObject->name;` on line 34, replace `name` with `age`. Execute the program. What is its output?
+In the statement `echo $person->name;` on line 34, replace `name` with `age`. Execute the program. What is its output?
 
  - It prints `45`.
 
@@ -628,14 +628,14 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(45);
-echo $personObject->age;
+$person = new Person();
+$person->setAge(45);
+echo $person->age;
 ?>
 ```
 /// type=SS, id=b30cd497-f7d7-43a3-b967-f4a3817b10b0, answer=[3]
 
-In the method call `$personObject->setAge(45);` on line 33, replace `setAge` with `checkAge`. Execute the program. What is its output?
+In the method call `$person->setAge(45);` on line 33, replace `setAge` with `checkAge`. Execute the program. What is its output?
 
  - It prints `45`.
 
@@ -760,9 +760,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->age = 12;
-$personObject->display();
+$person = new Person();
+$person->age = 12;
+$person->display();
 ?>
 ```
 /// type=SS, id=836837b9-e0ee-4d33-b43e-35c8a740448d, answer=[3]
@@ -801,13 +801,13 @@ Which statements correctly describe the error?
 
  - The private property `$age` is not accessible outside of the `Person` class.
 
- - There is no object operator `->` between `$personObject` and `age` on line 33.
+ - There is no object operator `->` between `$person` and `age` on line 33.
 
- - On line 33, the assignment statement `$personObject->age = 12;` is invalid.
+ - On line 33, the assignment statement `$person->age = 12;` is invalid.
 
- - There is no semicolon `;` at the end of the statement `$personObject->age = 12` on line 33.
+ - There is no semicolon `;` at the end of the statement `$person->age = 12` on line 33.
 
- - `$personObject` is not allowed to access and assign the value `12` to the private property `$age` of the `Person` class.
+ - `$person` is not allowed to access and assign the value `12` to the private property `$age` of the `Person` class.
 
 :::
 
@@ -848,9 +848,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->age = 12;
-$personObject->display();
+$person = new Person();
+$person->age = 12;
+$person->display();
 ?>
 ```
 
@@ -891,9 +891,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(12);
-$personObject->age;
+$person = new Person();
+$person->setAge(12);
+$person->age;
 ?>
 ```
 /// type=SS, id=2569ae58-52ba-44d3-aa35-56fe6c913cef, answer=[4]
@@ -904,26 +904,26 @@ Execute the program. What is the error message?
 
  - Use of undefined constant `age` - assumed `'age'` on line number 34
 
- - syntax error, unexpected `'$personObject'` (T_VARIABLE) on line number 34
+ - syntax error, unexpected `'$person'` (T_VARIABLE) on line number 34
 
  - Uncaught Error: Cannot access private property `Person::$age` on line number 34
 
  - Missing argument `1` for `Person::setAge()`, called on line 33 and defined on line number 7
 
 
-/// type=MS, id=63756910-2934-4865-a81a-b67214fdab32, answer=[1,2,5]
+/// type=MS, id=63756910-2934-4865-a81a-b67214fdab32, answer=[1,3,5]
 
 Which statements correctly describe the error?
 
- - On line 34, the statement `$personObject->age;` is invalid.
+ - On line 34, the statement `$person->age;` is invalid.
+
+ - There is no object operator `->` between `$person` and `age` on line 34.
 
  - The private property `$age` is not accessible outside of the `Person` class.
 
- - There is no object operator `->` between `$personObject` and `age` on line 34.
+ - There is no semicolon `;` at the end of the statement `$person->age` on line 34.
 
- - There is no semicolon `;` at the end of the statement `$personObject->age` on line 34.
-
- - `$personObject` is not allowed to access the private property `$age` of the `Person` class.
+ - `$person` is not allowed to access the private property `$age` of the `Person` class.
 
 :::
 
@@ -964,9 +964,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(12);
-$personObject->age;
+$person = new Person();
+$person->setAge(12);
+$person->age;
 ?>
 ```
 
@@ -1007,9 +1007,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->checkAge(12);
-$personObject->display();
+$person = new Person();
+$person->checkAge(12);
+$person->display();
 ?>
 ```
 /// type=SS, id=0e13a046-cbf8-4a34-909c-4cafb1858008, answer=[3]
@@ -1027,19 +1027,19 @@ Execute the program. What is the error message?
  - Missing argument `1` for `Person::setAge()`, called on line 33 and defined on line number 7
 
 
-/// type=MS, id=dd7aedb8-f578-41f4-a2b2-1216f2ea082d, answer=[2,3,5]
+/// type=MS, id=dd7aedb8-f578-41f4-a2b2-1216f2ea082d, answer=[1,4,5]
 
 Which statements correctly describe the error?
 
+ - On line 33, the method call `$person->checkAge(12);` is invalid.
+
  - There are no parentheses `()` after the `checkAge` method call on line 33.
 
- - On line 33, the method call `$personObject->checkAge(12);` is invalid.
+ - There is no object operator `->` between `$person` and `checkAge()` on line 33.
 
  - The private method `checkAge()` is not accessible outside of the `Person` class.
 
- - There is no object operator `->` between `$personObject` and `checkAge()` on line 33.
-
- - `$personObject` is not allowed to access the private method `checkAge()` of the `Person` class.
+ - `$person` is not allowed to access the private method `checkAge()` of the `Person` class.
 
 :::
 
@@ -1080,9 +1080,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->checkAge(12);
-$personObject->display();
+$person = new Person();
+$person->checkAge(12);
+$person->display();
 ?>
 ```
 
@@ -1123,9 +1123,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge();
-$personObject->display();
+$person = new Person();
+$person->setAge();
+$person->display();
 ?>
 ```
 /// type=MS, id=d6c547e4-020f-437d-93e9-274273ccfc11, answer=[1,5]
@@ -1143,19 +1143,19 @@ Execute the program. What are the error messages?
  - Missing argument `1` for `Person::setAge()`, called on line 33 and defined on line number 7
 
 
-/// type=MS, id=ba4c60eb-3e0d-408c-8681-b0a7b615c6d6, answer=[2,5]
+/// type=MS, id=ba4c60eb-3e0d-408c-8681-b0a7b615c6d6, answer=[1,5]
 
 Which statements correctly describe the error?
 
- - There is no semicolon `;` at the end of the statement on line 33.
+ - On line 33, the method call `$person->setAge();` is invalid.
 
- - On line 33, the method call `$personObject->setAge();` is invalid.
+ - There is no semicolon `;` at the end of the statement on line 33.
 
  - There are no parentheses `()` after the `setAge` method call on line 33.
 
- - There is no object operator `->` between `$personObject` and `setAge()` on line 33.
+ - There is no object operator `->` between `$person` and `setAge()` on line 33.
 
- - There is no argument specified in the `setAge()` method call of `$personObject` on line 33.
+ - There is no argument specified in the `setAge()` method call of `$person` on line 33.
 
 :::
 
@@ -1196,9 +1196,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge();
-$personObject->display();
+$person = new Person();
+$person->setAge();
+$person->display();
 ?>
 ```
 
@@ -1239,9 +1239,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = new Person();
-$personObject->setAge(45);
-$personObject->display();
+$person = new Person();
+$person->setAge(45);
+$person->display();
 ?>
 ```
 /// type=SS, id=0d16dd7e-2a98-4f85-937a-fbe199eecae4, answer=[5]
@@ -1261,7 +1261,7 @@ Execute the program. What is its output?
 
 /// type=SS, id=e99cf65e-0e7e-43eb-832d-2ecd507ebd74, answer=[2]
 
-Remove the `new` keyword from the statement `$personObject = new Person();` on line 32. Execute the program. What is the error message?
+Remove the `new` keyword from the statement `$person = new Person();` on line 32. Execute the program. What is the error message?
 
  - syntax error, unexpected `'return'` (T_RETURN) on line number 22
 
@@ -1312,9 +1312,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = Person();
-$personObject->setAge(45);
-$personObject->display();
+$person = Person();
+$person->setAge(45);
+$person->display();
 ?>
 ```
 /// type=SS, id=4c97382a-a385-4287-97b6-888928ac628c, answer=[1]
@@ -1370,9 +1370,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = Person();
-$personObject->setAge(45);
-$personObject->display();
+$person = Person();
+$person->setAge(45);
+$person->display();
 ?>
 ```
 /// type=SS, id=aa45987f-8a3b-4e93-96ab-4dd01cefe9e1, answer=[4]
@@ -1428,9 +1428,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = Person();
-$personObject->setAge(45);
-$personObject->display();
+$person = Person();
+$person->setAge(45);
+$person->display();
 ?>
 ```
 /// type=SS, id=cbd3d06c-8873-4e99-a5cf-516c4233cc90, answer=[5]
@@ -1486,9 +1486,9 @@ class Person
         echo $this->name . " is " . $this->getAge() . " years old.";
     }
 }
-$personObject = Person();
-$personObject->setAge(45);
-$personObject->display();
+$person = Person();
+$person->setAge(45);
+$person->display();
 ?>
 ```
 
