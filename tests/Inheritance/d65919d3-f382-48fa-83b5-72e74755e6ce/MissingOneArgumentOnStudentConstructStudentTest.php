@@ -161,14 +161,14 @@ class MissingOneArgumentOnStudentConstructStudentTest extends TestCase
         $this->assertEquals(1, $parent->count(), "Expecting one '__construct()' method call of the parent `Person` class in the `__construct()` method of the `Student` class.");
     }
 
-    public function testParentGetNameCall()
+    public function testThisGetNameCall()
     {
         $obj = self::$code->find('class[name="Student"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getName"]');
+        $method = $display->find('method-call[name="getName", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting one 'getName()' method call of the parent `Person` class in the `display()` method of the `Student` class.");
+        $this->assertEquals(1, $method->count(), "Expecting one 'getName()' method call of the `Person` class in the `display()` method of the `Student` class.");
     }
 
     public function testParentCallNameArgs()

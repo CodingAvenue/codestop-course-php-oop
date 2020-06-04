@@ -161,24 +161,24 @@ class CreateChildClassMammalTest extends TestCase
         $this->assertEquals(1, $parent->count(), "Expecting one '__construct()' method call of the parent `Animal` class in the `__construct()` method of the `Mammal` class.");
     }
 
-    public function testParentGetTypeCall()
+    public function testThisGetTypeCall()
     {
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getType"]');
+        $method = $display->find('method-call[name="getType", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting one 'getType()' method call of the parent `Animal` class in the `display()` method of the `Mammal` class.");
+        $this->assertEquals(1, $method->count(), "Expecting one 'getType()' method call of the `Animal` class in the `display()` method of the `Mammal` class.");
     }
 
-    public function testParentGetAgeCall()
+    public function testThisGetAgeCall()
     {
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getAge"]');
+        $method = $display->find('method-call[name="getAge", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting one 'getAge()' method call of the parent `Animal` class in the `display()` method of the `Mammal` class.");
+        $this->assertEquals(1, $method->count(), "Expecting one 'getAge()' method call of the `Animal` class in the `display()` method of the `Mammal` class.");
     }
 
     public function testParentCallTypeArgs()

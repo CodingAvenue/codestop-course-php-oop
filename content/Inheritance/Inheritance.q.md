@@ -332,7 +332,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -505,21 +505,6 @@ Which statement best describes `parent::__construct($name, $age);`?
  - It removes the arguments `$name` and `$age` from the `__construct()` method of the parent class `Person` inside the child class `Student`.
 
 
-/// type=SS, id=95257132-69e2-4a7f-9b03-8d573b39beb2, answer=[1]
-
-In the `echo` statement on line 20 of `Student.php`, what does `parent::getName()` do?
-
- - It calls the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It removes the `getName()` method of the parent class `Person` from the child class `Student`.
-
- - It returns the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It creates the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It defines the `getName()` method of the parent class `Person` inside the child class `Student`.
-
-
 /// type=MS, id=83c43e46-3ab5-40ae-a662-0fc4dbaf39ff, answer=[3,5]
 
 Which statements correctly describe the `display()` method of the `Student` class?
@@ -648,7 +633,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 ?>
@@ -787,7 +772,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -797,7 +782,7 @@ $student->display();
 ```
 /// type=SS, id=9b100649-e262-4588-82fa-5160fd683831, answer=[5]
 
-In the `echo` statement on line 20 of `Student.php`, replace `parent::getName()` with `$this->name`. Execute the program. What is its output?
+In the `echo` statement on line 20 of `Student.php`, replace `$this->getName()` with `$this->name`. Execute the program. What is its output?
 
  - It prints `20`.
 
@@ -1553,7 +1538,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent:getName() . " is taking up " . $this->course . ".";
+        echo $this-getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1576,15 +1561,15 @@ Execute the program. What is its output?
  - It prints `John is taking up BSCS.`.
 
 
-/// type=SS, id=628e48d4-da82-474b-8db9-d4a03695b5f4, answer=[2]
+/// type=SS, id=628e48d4-da82-474b-8db9-d4a03695b5f4, answer=[3]
 
 What is the error message?
 
  - Undefined variable: `course` on line number 10
 
- - syntax error, unexpected `':'`, expecting `','` or `';'` on line number 19
-
  - Uncaught Error: Call to private method `Person::checkAge()` on line 24
+
+ - Uncaught Error: Call to undefined function `getName()` in `Student.php` on line 20
 
  - Missing argument `3` for `Student::__construct()` on line 24 and defined on line number 7
 
@@ -1595,15 +1580,15 @@ What is the error message?
 
 Which statements correctly describe the error?
 
- - On line 20 of `Student.php`, the method call `parent:getName()` is invalid.
+ - On line 20 of `Student.php`, the method call `$this-getName()` is invalid.
 
- - There are no parentheses `()` after `parent:getName()` on line 20 of `Student.php`.
+ - There are no parentheses `()` after `$this-getName()` on line 20 of `Student.php`.
 
  - There is no semicolon `;` at the end of the `echo` statement on line 20 of `Student.php`.
 
- - On line 20 of `Student.php`, the scope resolution operator `::` after `parent` is replaced with a colon `:`. 
+ - On line 20 of `Student.php`, the object operator `->` after `$this` is replaced with a dash `-`. 
 
- - There is no concatenation operator `.` between `parent:getName()` and `" is taking up "` on line 20 of `Student.php`.
+ - There is no concatenation operator `.` between `$this-getName()` and `" is taking up "` on line 20 of `Student.php`.
 
 :::
 
@@ -1680,7 +1665,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent:getName() . " is taking up " . $this->course . ".";
+        echo $this-getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1762,7 +1747,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1874,7 +1859,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -1956,7 +1941,7 @@ class Student extends Person
 
     private function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -2068,7 +2053,7 @@ class Student extends Person
 
     private function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -2159,7 +2144,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 ?>
@@ -2277,7 +2262,7 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 ?>
@@ -2880,7 +2865,7 @@ Given the parent class `Animal` implementation, write a program that uses the `e
  
  2. A `__construct()` method with the parameters `$type`, `$age`, and `$name`. Inside the `__construct()` method body, add a statement that calls the parent class constructor `__construct()` passing the arguments `$type` and `$age`. Then, add another statement that assigns the value of `$name` to the `$name` property of the `Mammal` class. 
  
- 3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the existing `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " named " . $this->getName() . " is a " . parent::getAge() . "-year old mammal."`. 
+ 3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the existing `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " named " . $this->getName() . " is a " . $this->getAge() . "-year old mammal."`. 
  
  4. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. 
  

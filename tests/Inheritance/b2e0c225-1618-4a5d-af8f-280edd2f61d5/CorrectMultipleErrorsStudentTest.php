@@ -161,14 +161,14 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $this->assertEquals(1, $parent->count(), "Expecting one '__construct()' method call of the parent `Person` class in the `__construct()` method of the `Student` class.");
     }
 
-    public function testParentGetNameCall()
+    public function testThisNameCall()
     {
         $obj = self::$code->find('class[name="Student"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getName"]');
+        $name = $display->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting one 'getName()' method call of the parent `Person` class in the `display()` method of the `Student` class.");
+        $this->assertEquals(1, $name->count(), "Expecting one 'name' property call of the parent `Person` class in the `display()` method of the `Student` class.");
     }
 
     public function testParentCallNameArgs()
