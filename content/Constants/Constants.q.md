@@ -354,10 +354,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -952,10 +952,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -1045,10 +1045,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -1108,10 +1108,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -1186,10 +1186,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -1264,10 +1264,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -1342,10 +1342,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -1420,10 +1420,10 @@ class Circle extends CircularShape
     
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 
@@ -1457,7 +1457,7 @@ Write a program that uses a `const` keyword to define a class constant. First, u
 
  7. A `public` method named `volume()`. Inside the `volume()` method, add a statement that returns the volume of a cylinder using the formula `PI * radius * radius * height`.
 
- 8. A `public` method named `display()`. Inside the `display()` method, add an `echo` statement to display the string `"Area: " . $this->area() . "\nVolume: " . $this->volume()`.
+ 8. A `public` method named `display()`. Inside the `display()` method, add two `echo` statements to display `"Area: " . $this->area() . "\n"` and `"Volume: " . $this->volume()` respectively.
  
 After the class declaration, add a statement that creates the `$cylinder` object an instance of the `Cylinder` class passing the arguments `1.5` and `3`. Then, add another statement that calls the `display()` method of the `$cylinder` object. Run the program to view the output.
 

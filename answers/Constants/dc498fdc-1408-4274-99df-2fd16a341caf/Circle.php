@@ -19,10 +19,10 @@ class Circle extends CircularShape
 
     public function display()
     {
-        echo "Radius: " . $this->getRadius();
-        echo "\nDiameter: " . $this->diameter();
-        echo "\nArea: " . $this->area();
-        echo "\nCircumference: " . $this->circumference(); 
+        echo "Radius: " . $this->getRadius() . "\n";
+        echo "Diameter: " . $this->diameter() . "\n";
+        echo "Area: " . $this->area() . "\n";
+        echo "Circumference: " . $this->circumference(); 
     }
 }
 

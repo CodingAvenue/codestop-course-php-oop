@@ -33,8 +33,8 @@ class Cylinder
 
     public function display()
     {
-        echo "Area: " . $this->area();
-        echo "\nVolume: " . $this->volume();
+        echo "Area: " . $this->area() . "\n";
+        echo "Volume: " . $this->volume();
     }
 }
 
