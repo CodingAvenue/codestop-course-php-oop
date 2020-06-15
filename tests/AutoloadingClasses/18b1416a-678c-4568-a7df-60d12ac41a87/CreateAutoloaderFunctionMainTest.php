@@ -18,7 +18,7 @@ class CreateAutoloaderFunctionMainTest extends TestCase
         $this->assertEquals(true, $checkStart, "Expecting the `<?php` tag on the first line.");
     }
 
-    public function testActualCode() // this produces an error but i cannot trace its cause. need further investigation
+    public function testActualCode()
     {
         $evaluator = self::$code->evaluator();
         $evaled    = $evaluator->evaluate();
