@@ -754,7 +754,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=800c09ed-7b06-4976-9b88-97859aa64b49, answer=[tests/Interfaces/IncorrectInterfaceMethodDefinitionTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=800c09ed-7b06-4976-9b88-97859aa64b49, answer=[tests/Interfaces/800c09ed-7b06-4976-9b88-97859aa64b49], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -938,7 +938,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=44cfdb2a-8270-46b5-84fb-7e435fd7ad57, answer=[tests/Interfaces/MisspelledInterfaceKeywordTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=44cfdb2a-8270-46b5-84fb-7e435fd7ad57, answer=[tests/Interfaces/44cfdb2a-8270-46b5-84fb-7e435fd7ad57], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -1122,7 +1122,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=07a05435-b0c0-40f8-b108-95eed4ae71b2, answer=[tests/Interfaces/RemoveUnwantedSemicolonOnMethodTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=07a05435-b0c0-40f8-b108-95eed4ae71b2, answer=[tests/Interfaces/07a05435-b0c0-40f8-b108-95eed4ae71b2], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -1316,7 +1316,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=98d362bb-a1be-4dcd-84d1-4ccb3c321591, answer=[tests/Interfaces/MisspelledImplementsKeywordTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=98d362bb-a1be-4dcd-84d1-4ccb3c321591, answer=[tests/Interfaces/98d362bb-a1be-4dcd-84d1-4ccb3c321591], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1515,7 +1515,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=d558d4c1-3fb9-4f31-ae30-a54219bd4b27, answer=[tests/Interfaces/MissingStageMethodImplementationTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d558d4c1-3fb9-4f31-ae30-a54219bd4b27, answer=[tests/Interfaces/d558d4c1-3fb9-4f31-ae30-a54219bd4b27], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1714,7 +1714,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=271294cd-1afd-46b4-9835-de4d6c1f9648, answer=[tests/Interfaces/IncorrectVisibilityKeywordOnDisplayMethodTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=271294cd-1afd-46b4-9835-de4d6c1f9648, answer=[tests/Interfaces/271294cd-1afd-46b4-9835-de4d6c1f9648], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -2326,7 +2326,7 @@ In `Student.php`, remove the `extends` keyword from `class Student extends Perso
 :::
 
 
-/// type=CR, id=f67e7b3c-803d-4215-a8ac-f1a10138731a, answer=[tests/Interfaces/CorrectMultipleErrorsTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=f67e7b3c-803d-4215-a8ac-f1a10138731a, answer=[tests/Interfaces/f67e7b3c-803d-4215-a8ac-f1a10138731a], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -2419,7 +2419,7 @@ $student->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=b447ca5d-c0f2-4664-8e83-ca91f39a71be, answer=[tests/Interfaces/CreateClassThatImplementsAnInterfaceTest.php], filename=[LifeCycle.php,Animal.php,Mammal.php]
+/// type=CR, id=b447ca5d-c0f2-4664-8e83-ca91f39a71be, answer=[tests/Interfaces/b447ca5d-c0f2-4664-8e83-ca91f39a71be], filename=[LifeCycle.php,Animal.php,Mammal.php]
 
 Given the `Animal` class and `LifeCycle` interface, write a program that uses an `implements` keyword to implement an interface. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the `Animal` class and `implements` the `LifeCycle` interface. Within the curly braces `{}`, add an implementation or method body to all abstract methods of the `LifeCycle` interface. Inside the `stage()` method body, add the statement `return "adult";`. Inside the `species()` method body, add a statement that returns the string `animal`. Then, add another `public` method `display()` that overrides the abstract `display()` method of the `Animal` class. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " is an " . $this->stage() . " " . $this->species() . "."`. After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 

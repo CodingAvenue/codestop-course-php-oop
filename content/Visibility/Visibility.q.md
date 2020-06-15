@@ -812,7 +812,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=6e24e44a-276f-435a-9792-103ba1dd9ae2, answer=[tests/Visibility/IncorrectAccessToPrivatePropertyTest.php]
+/// type=CR, id=6e24e44a-276f-435a-9792-103ba1dd9ae2, answer=[tests/Visibility/6e24e44a-276f-435a-9792-103ba1dd9ae2]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -928,7 +928,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=929d22d2-8998-4fe5-ab99-d0cb42c5ef05, answer=[tests/Visibility/IncorrectAccessToAgePropertyTest.php]
+/// type=CR, id=929d22d2-8998-4fe5-ab99-d0cb42c5ef05, answer=[tests/Visibility/929d22d2-8998-4fe5-ab99-d0cb42c5ef05]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -1044,7 +1044,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=f1ecfba2-c407-44e4-9c00-9089d60b98ab, answer=[tests/Visibility/IncorrectAccessToCheckAgePrivateMethodTest.php]
+/// type=CR, id=f1ecfba2-c407-44e4-9c00-9089d60b98ab, answer=[tests/Visibility/f1ecfba2-c407-44e4-9c00-9089d60b98ab]
 
 Correct the code so that it outputs the string `Anna is 12 years old.`.
 
@@ -1160,7 +1160,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=6b7f92f6-673d-40e7-a4c2-b575fe27b38f, answer=[tests/Visibility/MissingArgumentOnSetAgeMethodTest.php]
+/// type=CR, id=6b7f92f6-673d-40e7-a4c2-b575fe27b38f, answer=[tests/Visibility/6b7f92f6-673d-40e7-a4c2-b575fe27b38f]
 
 Correct the code so that it outputs the string `Anna is 45 years old.`.
 
@@ -1450,7 +1450,7 @@ Remove the `private` keyword from the property definition `private $age;` on lin
 :::
 
 
-/// type=CR, id=4ac396f3-37cc-4a0b-9730-fd31829941ba, answer=[tests/Visibility/CorrectMultipleErrorsTest.php]
+/// type=CR, id=4ac396f3-37cc-4a0b-9730-fd31829941ba, answer=[tests/Visibility/4ac396f3-37cc-4a0b-9730-fd31829941ba]
 
 Correct the code so that it outputs the string `Anna is 45 years old.`.
 
@@ -1500,7 +1500,7 @@ $person->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=9fd0ca61-97d0-4fd9-887e-bd12c3d524c5, answer=[tests/Visibility/CreateClassWithPrivatePropertyAndMethodTest.php]
+/// type=CR, id=9fd0ca61-97d0-4fd9-887e-bd12c3d524c5, answer=[tests/Visibility/9fd0ca61-97d0-4fd9-887e-bd12c3d524c5]
 
 Write a program that adds and manipulates the private properties and methods of a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 

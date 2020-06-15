@@ -866,7 +866,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=15ac5a33-4d12-47a1-89d0-43f4c41c0618, answer=[tests/AbstractClassesAndMethods/UnimplementedAbstractMethodTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=15ac5a33-4d12-47a1-89d0-43f4c41c0618, answer=[tests/AbstractClassesAndMethods/15ac5a33-4d12-47a1-89d0-43f4c41c0618], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1049,7 +1049,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=0b8d656f-d71c-4787-9ba2-a16eaeeec79e, answer=[tests/AbstractClassesAndMethods/ProtectedMethodCallOnObjectTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=0b8d656f-d71c-4787-9ba2-a16eaeeec79e, answer=[tests/AbstractClassesAndMethods/0b8d656f-d71c-4787-9ba2-a16eaeeec79e], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1237,7 +1237,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=a60a2677-fd0d-44d2-b7be-88b927102df8, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInPersonTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=a60a2677-fd0d-44d2-b7be-88b927102df8, answer=[tests/AbstractClassesAndMethods/a60a2677-fd0d-44d2-b7be-88b927102df8], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1425,7 +1425,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=b0142146-8669-4b24-8d49-1f6892288837, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInDisplayMethodTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=b0142146-8669-4b24-8d49-1f6892288837, answer=[tests/AbstractClassesAndMethods/b0142146-8669-4b24-8d49-1f6892288837], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1974,7 +1974,7 @@ In `Student.php`, remove the `extends` keyword from `class Student extends Perso
 :::
 
 
-/// type=CR, id=4039bd83-6317-4a92-95f2-554be487fc47, answer=[tests/AbstractClassesAndMethods/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=4039bd83-6317-4a92-95f2-554be487fc47, answer=[tests/AbstractClassesAndMethods/4039bd83-6317-4a92-95f2-554be487fc47], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -2059,7 +2059,7 @@ $student->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=8d32d57a-0fc1-4b3c-a85c-04a49a05b866, answer=[tests/AbstractClassesAndMethods/CreateAbstractClassAndMethodTest.php], filename=[Animal.php,Mammal.php]
+/// type=CR, id=8d32d57a-0fc1-4b3c-a85c-04a49a05b866, answer=[tests/AbstractClassesAndMethods/8d32d57a-0fc1-4b3c-a85c-04a49a05b866], filename=[Animal.php,Mammal.php]
 
 Write a program that uses an `abstract` keyword to define an abstract class and method. In the `Animal.php` tab, perform the following:
 

@@ -597,7 +597,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=59e1a824-3583-4f47-bb67-a56cf2318b31, answer=[tests/Constants/IncorrectConstantDefinitionTest.php]
+/// type=CR, id=59e1a824-3583-4f47-bb67-a56cf2318b31, answer=[tests/Constants/59e1a824-3583-4f47-bb67-a56cf2318b31]
 
 Correct the code so that it outputs the string `The PI value is: 3.1416`.
 
@@ -669,7 +669,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=ec85edf5-0bca-4875-8497-12e0f83c64ec, answer=[tests/Constants/UninitializeContantPiTest.php]
+/// type=CR, id=ec85edf5-0bca-4875-8497-12e0f83c64ec, answer=[tests/Constants/ec85edf5-0bca-4875-8497-12e0f83c64ec]
 
 Correct the code so that it outputs the string `The PI value is: 3.1416`.
 
@@ -758,7 +758,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=d7322e50-6b7d-4dcb-bd37-1f4649acacb7, answer=[tests/Constants/IncorrectConstantAccessInsideMethodTest.php]
+/// type=CR, id=d7322e50-6b7d-4dcb-bd37-1f4649acacb7, answer=[tests/Constants/d7322e50-6b7d-4dcb-bd37-1f4649acacb7]
 
 Correct the code so that it outputs the string `The area of the circle with 3.5 radius is: 38.4846`.
 
@@ -864,7 +864,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=f2f05df3-4eac-42fc-83e8-f6ea08946875, answer=[tests/Constants/RemoveDollarSignOnConstantDeclarationTest.php]
+/// type=CR, id=f2f05df3-4eac-42fc-83e8-f6ea08946875, answer=[tests/Constants/f2f05df3-4eac-42fc-83e8-f6ea08946875]
 
 Correct the code so that it outputs the string `The area of the circle with 3.5 radius is: 38.4846`.
 
@@ -995,7 +995,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=a5ec0b5a-f620-4b62-9717-dc753d250737, answer=[tests/Constants/RemoveVisibilityKeywordOnConstantDeclarationTest.php], filename=[CircularShape.php,Circle.php]
+/// type=CR, id=a5ec0b5a-f620-4b62-9717-dc753d250737, answer=[tests/Constants/a5ec0b5a-f620-4b62-9717-dc753d250737], filename=[CircularShape.php,Circle.php]
 
 Correct the code so that it outputs the strings `Radius: 3.5`, `Diameter: 12.25`, `Area: 38.4846`, and `Circumference: 21.9912` in separate lines.
 
@@ -1370,7 +1370,7 @@ On line 4 of `CircularShape.php`, replace the declaration `const PI = 3.1416;` w
 :::
 
 
-/// type=CR, id=dc498fdc-1408-4274-99df-2fd16a341caf, answer=[tests/Constants/CorrectMultipleErrorsTest.php], filename=[CircularShape.php,Circle.php]
+/// type=CR, id=dc498fdc-1408-4274-99df-2fd16a341caf, answer=[tests/Constants/dc498fdc-1408-4274-99df-2fd16a341caf], filename=[CircularShape.php,Circle.php]
 
 Correct the code so that it outputs the strings `Radius: 3.5`, `Diameter: 12.25`, `Area: 38.4846`, and `Circumference: 21.9912` in separate lines.
 
@@ -1439,7 +1439,7 @@ $circleObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=316e9667-5913-442b-a51a-de213ae066fc, answer=[tests/Constants/AddConstantDefinitionInClassTest.php]
+/// type=CR, id=316e9667-5913-442b-a51a-de213ae066fc, answer=[tests/Constants/316e9667-5913-442b-a51a-de213ae066fc]
 
 Write a program that uses a `const` keyword to define a class constant. First, use a `class` keyword to declare a class named `Cylinder`. Within the curly braces `{}`, add the following statements:
  
