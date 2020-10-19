@@ -1593,7 +1593,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=91b33c9d-8c7d-4a40-ba1d-fc1b16a641eb, answer=[tests/Inheritance/MissingOneColonInParentMethodCallTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=91b33c9d-8c7d-4a40-ba1d-fc1b16a641eb, answer=[tests/Inheritance/91b33c9d-8c7d-4a40-ba1d-fc1b16a641eb], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1787,7 +1787,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=d65919d3-f382-48fa-83b5-72e74755e6ce, answer=[tests/Inheritance/MissingOneArgumentOnStudentConstructTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=d65919d3-f382-48fa-83b5-72e74755e6ce, answer=[tests/Inheritance/d65919d3-f382-48fa-83b5-72e74755e6ce], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1981,7 +1981,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=c5a9f7eb-7e5f-44ec-8578-7fd18ca59470, answer=[tests/Inheritance/IncorrectDisplayMethodVisibilityTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=c5a9f7eb-7e5f-44ec-8578-7fd18ca59470, answer=[tests/Inheritance/c5a9f7eb-7e5f-44ec-8578-7fd18ca59470], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -2769,7 +2769,7 @@ Remove the `class` keyword before `Student` on line 3 of `Student.php`. Execute 
 :::
 
 
-/// type=CR, id=b2e0c225-1618-4a5d-af8f-280edd2f61d5, answer=[tests/Inheritance/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=b2e0c225-1618-4a5d-af8f-280edd2f61d5, answer=[tests/Inheritance/b2e0c225-1618-4a5d-af8f-280edd2f61d5], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -2857,7 +2857,7 @@ student->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=e24ba8e9-4c60-474c-945c-bd3bed1cc4bd, answer=[tests/Inheritance/CreateChildClassTest.php], filename=[Animal.php,Mammal.php]
+/// type=CR, id=e24ba8e9-4c60-474c-945c-bd3bed1cc4bd, answer=[tests/Inheritance/e24ba8e9-4c60-474c-945c-bd3bed1cc4bd], filename=[Animal.php,Mammal.php]
 
 Given the parent class `Animal` implementation, write a program that uses the `extends` keyword to establish `parent-child` relationships to classes. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the parent class `Animal`. Within the curly braces `{}`, add the following statements:
 

@@ -75,8 +75,8 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>
 ```
 /// type=SS, id=fd3a2079-add4-4c68-8523-9fdf6460d290, answer=[5]
@@ -256,7 +256,7 @@ Which of the following are method calls?
 
  - `function display()`
 
- - `$personObject->display()`
+ - `$person->display()`
 
 
 /// type=MS, id=fa0be19b-233c-42b7-ba29-9aeaa8e8355f, answer=[1,4,5]
@@ -372,8 +372,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=a8f568f3-839e-4393-877d-2c3f15184bad, answer=[5]
@@ -401,9 +401,9 @@ Which of the following is an abstract class?
 
  - `Student`
 
- - `LifeCycle`
+ - `$student`
 
- - `$studentObject`
+ - `LifeCycle`
 
 
 /// type=MS, id=70eca6be-eec5-4eeb-9195-f5ee10be78e6, answer=[1,2,3]
@@ -421,7 +421,7 @@ Which of the following are abstract methods?
  - `public function getAge() { return $this->age; }`
 
 
-/// type=SS, id=bcde6925-c823-43fd-be80-3b41da800900, answer=[4]
+/// type=SS, id=bcde6925-c823-43fd-be80-3b41da800900, answer=[5]
 
 Which of the following is an interface?
 
@@ -431,9 +431,9 @@ Which of the following is an interface?
 
  - `Student`
 
- - `LifeCycle`
+ - `$student`
 
- - `$studentObject`
+ - `LifeCycle`
 
 
 /// type=SS, id=c8e0d9d9-cf81-41ae-83bd-73a5986d7955, answer=[3]
@@ -446,9 +446,9 @@ Which of the following is a child class?
 
  - `Student`
 
- - `LifeCycle`
+ - `$student`
 
- - `$studentObject`
+ - `LifeCycle`
 
 
 /// type=SS, id=4b27f81d-a58e-43d5-836e-797075ae2ffe, answer=[2]
@@ -461,9 +461,9 @@ Which of the following is a parent class?
 
  - `Student`
 
- - `LifeCycle`
+ - `$student`
 
- - `$studentObject`
+ - `LifeCycle`
 
 
 /// type=SS, id=9dad320f-3a4c-4240-8a06-b7dc79257bdd, answer=[1]
@@ -491,9 +491,9 @@ Which class implements the `LifeCycle` interface?
 
  - `Student`
 
- - `LifeCycle`
+ - `$student`
 
- - `$studentObject`
+ - `LifeCycle`
 
 
 /// type=SS, id=79478e5a-4391-4b42-a4a6-f11001d11106, answer=[2]
@@ -703,8 +703,8 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>
 ```
 /// type=SS, id=a90155a6-655e-4cde-a7f4-9cb38fe281c7, answer=[3]
@@ -754,7 +754,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=800c09ed-7b06-4976-9b88-97859aa64b49, answer=[tests/Interfaces/IncorrectInterfaceMethodDefinitionTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=800c09ed-7b06-4976-9b88-97859aa64b49, answer=[tests/Interfaces/800c09ed-7b06-4976-9b88-97859aa64b49], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -825,8 +825,8 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>
 ```
 
@@ -902,8 +902,8 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>
 ```
 /// type=SS, id=effce7e6-d55b-48d0-b46f-d9691e038d21, answer=[1]
@@ -938,7 +938,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=44cfdb2a-8270-46b5-84fb-7e435fd7ad57, answer=[tests/Interfaces/MisspelledInterfaceKeywordTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=44cfdb2a-8270-46b5-84fb-7e435fd7ad57, answer=[tests/Interfaces/44cfdb2a-8270-46b5-84fb-7e435fd7ad57], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -1009,8 +1009,8 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>
 ```
 
@@ -1086,8 +1086,8 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>
 ```
 /// type=SS, id=4ebc1c62-66b7-43df-83a1-3a68302a4213, answer=[3]
@@ -1122,7 +1122,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=07a05435-b0c0-40f8-b108-95eed4ae71b2, answer=[tests/Interfaces/RemoveUnwantedSemicolonOnMethodTest.php], filename=[LifeCycle.php,Person.php]
+/// type=CR, id=07a05435-b0c0-40f8-b108-95eed4ae71b2, answer=[tests/Interfaces/07a05435-b0c0-40f8-b108-95eed4ae71b2], filename=[LifeCycle.php,Person.php]
 
 Correct the code so that it outputs the string `Anna is an adolescent human being.`.
 
@@ -1193,8 +1193,8 @@ class Person implements LifeCycle
     }
 }
 
-$personObject = new Person("Anna", 12);
-$personObject->display();
+$person = new Person("Anna", 12);
+$person->display();
 ?>
 ```
 
@@ -1280,8 +1280,8 @@ class Student extends Person implement LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=3a1b4505-cbbd-41cf-a148-ee9aedb89e5f, answer=[4]
@@ -1316,7 +1316,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=98d362bb-a1be-4dcd-84d1-4ccb3c321591, answer=[tests/Interfaces/MisspelledImplementsKeywordTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=98d362bb-a1be-4dcd-84d1-4ccb3c321591, answer=[tests/Interfaces/98d362bb-a1be-4dcd-84d1-4ccb3c321591], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1397,8 +1397,8 @@ class Student extends Person implement LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 
@@ -1479,8 +1479,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=83123b75-5da1-4968-ae0d-5292c6b1b171, answer=[5]
@@ -1515,7 +1515,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=d558d4c1-3fb9-4f31-ae30-a54219bd4b27, answer=[tests/Interfaces/MissingStageMethodImplementationTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=d558d4c1-3fb9-4f31-ae30-a54219bd4b27, answer=[tests/Interfaces/d558d4c1-3fb9-4f31-ae30-a54219bd4b27], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1591,8 +1591,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 
@@ -1678,8 +1678,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=33d2a39b-2b58-48a3-af7a-041666825dfb, answer=[4]
@@ -1714,7 +1714,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=271294cd-1afd-46b4-9835-de4d6c1f9648, answer=[tests/Interfaces/IncorrectVisibilityKeywordOnDisplayMethodTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=271294cd-1afd-46b4-9835-de4d6c1f9648, answer=[tests/Interfaces/271294cd-1afd-46b4-9835-de4d6c1f9648], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -1795,8 +1795,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 
@@ -1882,8 +1882,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Student("John", 15);
-$studentObject->display();
+$student = new Student("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=501e39d3-d998-4914-b77d-2cdcf21bda14, answer=[5]
@@ -1903,7 +1903,7 @@ Execute the program. What is its output?
 
 /// type=SS, id=e192c019-9859-4810-9f43-9286ff3aba24, answer=[1]
 
-In the statement `$studentObject = new Student("John", 15);` on line 22 of `Student.php`, replace `Student` with `Person`. Execute the program. What is the error message?
+In the statement `$student = new Student("John", 15);` on line 22 of `Student.php`, replace `Student` with `Person`. Execute the program. What is the error message?
 
  - Uncaught Error: Cannot instantiate abstract class `Person` on line number 22
 
@@ -1999,8 +1999,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Person("John", 15);
-$studentObject->display();
+$student = new Person("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=45162372-6c9f-4b9a-ad52-aea97f2cba71, answer=[4]
@@ -2101,8 +2101,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Person("John", 15);
-$studentObject->display();
+$student = new Person("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=e0cf514d-e1b4-408e-8c31-3967d1b3e474, answer=[5]
@@ -2203,8 +2203,8 @@ class Student extends Person implements LifeCycle
     }
 }
 
-$studentObject = new Person("John", 15);
-$studentObject->display();
+$student = new Person("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=4a2ab5d1-cfcf-4bec-9462-538e21cf6811, answer=[3]
@@ -2305,8 +2305,8 @@ class Student extends Person LifeCycle
     }
 }
 
-$studentObject = new Person("John", 15);
-$studentObject->display();
+$student = new Person("John", 15);
+$student->display();
 ?>
 ```
 /// type=SS, id=6bbd8c50-e982-4626-a663-373429dcc706, answer=[2]
@@ -2326,7 +2326,7 @@ In `Student.php`, remove the `extends` keyword from `class Student extends Perso
 :::
 
 
-/// type=CR, id=f67e7b3c-803d-4215-a8ac-f1a10138731a, answer=[tests/Interfaces/CorrectMultipleErrorsTest.php], filename=[LifeCycle.php,Person.php,Student.php]
+/// type=CR, id=f67e7b3c-803d-4215-a8ac-f1a10138731a, answer=[tests/Interfaces/f67e7b3c-803d-4215-a8ac-f1a10138731a], filename=[LifeCycle.php,Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is an adolescent human being.`.
 
@@ -2407,8 +2407,8 @@ class Student Person LifeCycle
     }
 }
 
-$studentObject = new Person("John", 15);
-$studentObject->display();
+$student = new Person("John", 15);
+$student->display();
 ?>
 ```
 
@@ -2419,9 +2419,9 @@ $studentObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=b447ca5d-c0f2-4664-8e83-ca91f39a71be, answer=[tests/Interfaces/CreateClassThatImplementsAnInterfaceTest.php], filename=[LifeCycle.php,Animal.php,Mammal.php]
+/// type=CR, id=b447ca5d-c0f2-4664-8e83-ca91f39a71be, answer=[tests/Interfaces/b447ca5d-c0f2-4664-8e83-ca91f39a71be], filename=[LifeCycle.php,Animal.php,Mammal.php]
 
-Given the `Animal` class and `LifeCycle` interface, write a program that uses an `implements` keyword to implement an interface. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the `Animal` class and `implements` the `LifeCycle` interface. Within the curly braces `{}`, add an implementation or method body to all abstract methods of the `LifeCycle` interface. Inside the `stage()` method body, add the statement `return "adult";`. Inside the `species()` method body, add a statement that returns the string `animal`. Then, add another `public` method `display()` that overrides the abstract `display()` method of the `Animal` class. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " is an " . $this->stage() . " " . $this->species() . "."`. After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
+Given the `Animal` class and `LifeCycle` interface, write a program that uses an `implements` keyword to implement an interface. In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal` that `extends` the `Animal` class and `implements` the `LifeCycle` interface. Within the curly braces `{}`, add an implementation or method body to all abstract methods of the `LifeCycle` interface. Inside the `stage()` method body, add the statement `return "adult";`. Inside the `species()` method body, add a statement that returns the string `animal`. Then, add another `public` method `display()` that overrides the abstract `display()` method of the `Animal` class. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " is an " . $this->stage() . " " . $this->species() . "."`. After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat` and `3`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
 ```php
 <?php

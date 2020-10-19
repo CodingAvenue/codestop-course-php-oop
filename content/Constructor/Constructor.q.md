@@ -940,7 +940,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=c9155a5e-7f86-4299-af7f-b85c639f1a30, answer=[tests/Constructor/MissingArgumentOnPersonConstructorTest.php]
+/// type=CR, id=c9155a5e-7f86-4299-af7f-b85c639f1a30, answer=[tests/Constructor/c9155a5e-7f86-4299-af7f-b85c639f1a30]
 
 Correct the code so that it outputs the string `John`.
 
@@ -1012,7 +1012,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=98a55312-4b58-47b9-9670-4ca02f77cf07, answer=[tests/Constructor/MissingFunctionKeywordOnConstructTest.php]
+/// type=CR, id=98a55312-4b58-47b9-9670-4ca02f77cf07, answer=[tests/Constructor/98a55312-4b58-47b9-9670-4ca02f77cf07]
 
 Correct the code so that it outputs the string `John`.
 
@@ -1128,7 +1128,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=18d21394-3978-4fba-824a-a308c9c3cbea, answer=[tests/Constructor/MissingCommaBetweenArgumentsTest.php]
+/// type=CR, id=18d21394-3978-4fba-824a-a308c9c3cbea, answer=[tests/Constructor/18d21394-3978-4fba-824a-a308c9c3cbea]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1258,7 +1258,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=803cb6e6-3751-4916-98ff-70515ff7d644, answer=[tests/Constructor/MissingCommaBetweenParametersTest.php]
+/// type=CR, id=803cb6e6-3751-4916-98ff-70515ff7d644, answer=[tests/Constructor/803cb6e6-3751-4916-98ff-70515ff7d644]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1388,7 +1388,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=171aaaf7-d26b-4fcd-8880-b972f862238e, answer=[tests/Constructor/MissingOneArgumentTest.php]
+/// type=CR, id=171aaaf7-d26b-4fcd-8880-b972f862238e, answer=[tests/Constructor/171aaaf7-d26b-4fcd-8880-b972f862238e]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1648,7 +1648,7 @@ Remove the argument `$age` from `if ($this->checkAge($age))` on line 10. Execute
 :::
 
 
-/// type=CR, id=71242cb0-e2e1-48f1-9dc3-1711f655a72d, answer=[tests/Constructor/CorrectMultipleErrorsTest.php]
+/// type=CR, id=71242cb0-e2e1-48f1-9dc3-1711f655a72d, answer=[tests/Constructor/71242cb0-e2e1-48f1-9dc3-1711f655a72d]
 
 Correct the code so that it outputs the string `James is 15 years old.`.
 
@@ -1705,7 +1705,7 @@ $person->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=38e843a8-6af8-42dc-9466-43537aa59b12, answer=[tests/Constructor/AddConstructorToClassTest.php]
+/// type=CR, id=38e843a8-6af8-42dc-9466-43537aa59b12, answer=[tests/Constructor/38e843a8-6af8-42dc-9466-43537aa59b12]
 
 Write a program that uses a `__construct()` method to add a constructor to a certain class. First, use a `class` keyword to declare a class named `Animal`. Within the curly braces `{}`, add the following statements:
 

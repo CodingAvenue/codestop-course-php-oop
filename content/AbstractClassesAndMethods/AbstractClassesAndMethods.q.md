@@ -73,12 +73,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=8780e109-fcad-4829-b5eb-30abbff40912, answer=[5]
@@ -171,21 +171,6 @@ Which statement best describes `parent::__construct($name, $age);` on line 9 of 
  - It removes the arguments `$name` and `$age` from the `__construct()` method of the parent class `Person` inside the child class `Student`.
 
 
-/// type=SS, id=75619d4e-0c88-4197-90af-2cd11a3948bb, answer=[1]
-
-In the `echo` statement on line 20 of `Student.php`, what does `parent::getName()` do?
-
- - It calls the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It removes the `getName()` method of the parent class `Person` from the child class `Student`.
-
- - It returns the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It creates the `getName()` method of the parent class `Person` inside the child class `Student`.
-
- - It defines the `getName()` method of the parent class `Person` inside the child class `Student`.
-
-
 /// type=MS, id=8b6cf284-8b97-45c4-8469-bb4428093cf9, answer=[3,4]
 
 Which statements correctly describe the `display()` method of the `Student` class?
@@ -203,22 +188,22 @@ Which statements correctly describe the `display()` method of the `Student` clas
 
 /// type=MS, id=de4e26cc-be03-4265-9cb7-5a7e43f9e9c5, answer=[2,5]
 
-Which statements correctly describe `$studentObject = new Student("John", 20, "BSCS");` on line 24 of `Student.php`?
+Which statements correctly describe `$student = new Student("John", 20, "BSCS");` on line 24 of `Student.php`?
 
- - It sets the arguments `John`, `20`, and `BSCS` to the `$studentObject` object.
+ - It sets the arguments `John`, `20`, and `BSCS` to the `$student` object.
 
- - It initializes the `$name`, `$age`, and `$course` properties of the `$studentObject` object.
+ - It initializes the `$name`, `$age`, and `$course` properties of the `$student` object.
 
- - It returns the `$studentObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
+ - It returns the `$student` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
 
- - It declares the `$studentObject` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
+ - It declares the `$student` object of the `Student` class with the parameters `John`, `20`, and `BSCS`.
 
- - It creates the `$studentObject` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
+ - It creates the `$student` object as an instance of the `Student` class passing the arguments `John`, `20`, and `BSCS`.
 
 
 /// type=MS, id=1216f8f7-639f-4be6-bec8-b10a64f36153, answer=[1,2]
 
-Which statements correctly describe `$studentObject->display();` on line 25 of `Student.php`?
+Which statements correctly describe `$student->display();` on line 25 of `Student.php`?
 
  - It displays the string `John is taking up BSCS.`.
 
@@ -302,12 +287,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=3f49fc2f-b8b8-4f97-a5b4-58de16ba0a3a, answer=[5]
@@ -396,12 +381,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=f5ebe944-1b68-4cde-86c3-63ad4600ef98, answer=[2]
@@ -490,12 +475,12 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=d82f8d76-a617-4227-b8d8-aca949b68d48, answer=[5]
@@ -584,12 +569,12 @@ class Student extends Person
 
     function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=9096d734-8fdf-431b-ad36-0c2d43406479, answer=[2]
@@ -678,12 +663,12 @@ class Student extends Person
 
     function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=ecdd62d2-e05f-4b85-85fc-ac8c7cf88047, answer=[2]
@@ -830,8 +815,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=a565fe91-eec6-46ee-92a1-7af6ab6b9b77, answer=[2]
@@ -870,9 +855,9 @@ Which statement best describes the error?
 
  - There is no semicolon `;` at the end of the statement on line 20 of `Student.php`.
 
- - There is no `abstract` keyword specified before `Person` on line 3 of `Student.php`.
+ - On line 29 of `Student.php`, the method call `$student->display();` is invalid.
 
- - On line 29 of `Student.php`, the method call `$studentObject->display();` is invalid.
+ - There is no `abstract` keyword specified before `Person` on line 3 of `Student.php`.
 
  - On line 40 of `Person.php`, the method definition `abstract public function display();` is invalid.
 
@@ -881,7 +866,7 @@ Which statement best describes the error?
 :::
 
 
-/// type=CR, id=15ac5a33-4d12-47a1-89d0-43f4c41c0618, answer=[tests/AbstractClassesAndMethods/UnimplementedAbstractMethodTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=15ac5a33-4d12-47a1-89d0-43f4c41c0618, answer=[tests/AbstractClassesAndMethods/15ac5a33-4d12-47a1-89d0-43f4c41c0618], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -949,8 +934,8 @@ class Student extends Person
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 
@@ -1024,12 +1009,12 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=11c966eb-2695-4808-a937-215572d8ee80, answer=[2]
@@ -1051,9 +1036,9 @@ Execute the program. What is the error message?
 
 Which statements correctly describe the error?
 
- - On line 25 of `Student.php`, the method call `$studentObject->display()` is invalid.
+ - On line 25 of `Student.php`, the method call `$student->display()` is invalid.
 
- - `$studentObject` is not allowed to access the protected method `display()` of the `Student` class.
+ - `$student` is not allowed to access the protected method `display()` of the `Student` class.
  
  - On line 18 of `Student.php`, the method definition `protected function display()` is invalid.
 
@@ -1064,7 +1049,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=0b8d656f-d71c-4787-9ba2-a16eaeeec79e, answer=[tests/AbstractClassesAndMethods/ProtectedMethodCallOnObjectTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=0b8d656f-d71c-4787-9ba2-a16eaeeec79e, answer=[tests/AbstractClassesAndMethods/0b8d656f-d71c-4787-9ba2-a16eaeeec79e], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1133,12 +1118,12 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 
@@ -1212,12 +1197,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=5229c4ae-9ebf-4112-a8ca-b36e126dd91b, answer=[4]
@@ -1252,7 +1237,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=a60a2677-fd0d-44d2-b7be-88b927102df8, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInPersonTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=a60a2677-fd0d-44d2-b7be-88b927102df8, answer=[tests/AbstractClassesAndMethods/a60a2677-fd0d-44d2-b7be-88b927102df8], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1321,12 +1306,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 
@@ -1400,12 +1385,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=7fadc6d6-dfaa-4eca-a132-71811b1573aa, answer=[1]
@@ -1440,7 +1425,7 @@ Which statements correctly describe the error?
 :::
 
 
-/// type=CR, id=b0142146-8669-4b24-8d49-1f6892288837, answer=[tests/AbstractClassesAndMethods/MissingAbstractKeywordInDisplayMethodTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=b0142146-8669-4b24-8d49-1f6892288837, answer=[tests/AbstractClassesAndMethods/b0142146-8669-4b24-8d49-1f6892288837], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -1509,12 +1494,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 
@@ -1588,12 +1573,12 @@ class Student extends Person
 
     public function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=ad0c0497-a9b5-4f72-a395-fc9cfe0a04c4, answer=[4]
@@ -1682,12 +1667,12 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=d3abcba9-fc83-4f34-b3eb-bdaf62c908c7, answer=[3]
@@ -1776,12 +1761,12 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=3e916f40-69d4-4ab9-b29e-1126f119e78d, answer=[3]
@@ -1870,12 +1855,12 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=608e898f-acb9-4295-8418-83c17a625659, answer=[2]
@@ -1964,12 +1949,12 @@ class Student extends Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 /// type=SS, id=46bda098-75cc-48b6-852d-8236eab517c6, answer=[1]
@@ -1989,7 +1974,7 @@ In `Student.php`, remove the `extends` keyword from `class Student extends Perso
 :::
 
 
-/// type=CR, id=4039bd83-6317-4a92-95f2-554be487fc47, answer=[tests/AbstractClassesAndMethods/CorrectMultipleErrorsTest.php], filename=[Person.php,Student.php]
+/// type=CR, id=4039bd83-6317-4a92-95f2-554be487fc47, answer=[tests/AbstractClassesAndMethods/4039bd83-6317-4a92-95f2-554be487fc47], filename=[Person.php,Student.php]
 
 Correct the code so that it outputs the string `John is taking up BSCS.`.
 
@@ -2058,12 +2043,12 @@ class Student  Person
 
     protected function display()
     {
-        echo parent::getName() . " is taking up " . $this->course . ".";
+        echo $this->getName() . " is taking up " . $this->course . ".";
     }
 }
 
-$studentObject = new Student("John", 20, "BSCS");
-$studentObject->display();
+$student = new Student("John", 20, "BSCS");
+$student->display();
 ?>
 ```
 
@@ -2074,7 +2059,7 @@ $studentObject->display();
 
 ### Part 4: Practice
 
-/// type=CR, id=8d32d57a-0fc1-4b3c-a85c-04a49a05b866, answer=[tests/AbstractClassesAndMethods/CreateAbstractClassAndMethodTest.php], filename=[Animal.php,Mammal.php]
+/// type=CR, id=8d32d57a-0fc1-4b3c-a85c-04a49a05b866, answer=[tests/AbstractClassesAndMethods/8d32d57a-0fc1-4b3c-a85c-04a49a05b866], filename=[Animal.php,Mammal.php]
 
 Write a program that uses an `abstract` keyword to define an abstract class and method. In the `Animal.php` tab, perform the following:
 
@@ -2088,7 +2073,7 @@ In the `Mammal.php` tab, use a `class` keyword to declare a class named `Mammal`
  
  2. A `__construct()` method with the parameters `$type`, `$age`, and `$name`. Inside the `__construct()` method body, add a statement that calls the parent class constructor `__construct()` passing the arguments `$type` and `$age`. Then, add another statement that assigns the value of `$name` to the `$name` property of the `Mammal` class. 
  
- 3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the abstract `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . parent::getType() . " named " . $this->getName() . " is a " . parent::getAge() . "-year old mammal."`. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. 
+ 3. After the `__constuct()` method definition, add a `public` method `display()` that overrides the abstract `display()` method of the parent class `Animal`. Inside the `display()` method body, add an `echo` statement to display the string `"The " . $this->getType() . " named " . $this->getName() . " is a " . $this->getAge() . "-year old mammal."`. Add another `public` method `getName()` that returns the value of the `$name` property of the `Mammal` class. 
  
 After the class declaration, add a statement that creates the `$petMammal` object an instance of the `Mammal` class passing the arguments `Cat`, `3`, and `Catsie`. Then, add another statement that calls the `display()` method of the `$petMammal` object. Run the program to view the output.
 
