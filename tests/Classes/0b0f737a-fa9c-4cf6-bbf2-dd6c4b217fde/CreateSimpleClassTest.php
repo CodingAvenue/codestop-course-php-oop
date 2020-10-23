@@ -109,6 +109,6 @@ class CreateSimpleClassTest extends TestCase
 		$value = $name->getSubNode()->getSubNode();
 		$dianaValue = $value->find('string[value="Diana"]');
 
-		$this->assertEquals(1, $dianaValue->count(), "Expecting the value 'Diana' assigned to the 'name' property.");
+		$this->assertEquals(1, $dianaValue->count(), "Expecting a string 'Diana' assigned to the 'name' property.");
 	}
 }

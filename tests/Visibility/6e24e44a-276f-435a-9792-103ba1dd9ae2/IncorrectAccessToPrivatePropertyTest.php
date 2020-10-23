@@ -94,7 +94,7 @@ class IncorrectAccessToPrivatePropertyTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
     
     public function testNameProperty()
@@ -132,7 +132,7 @@ class IncorrectAccessToPrivatePropertyTest extends TestCase
         $args = $setAge->getSubNode()->getSubnode();
         $value = $args->find('integer');
         
-        $this->assertEquals(1, $value->count(), "Expecting an integer argument in the 'setAge()' method call of 'person'.");
+        $this->assertEquals(1, $value->count(), "Expecting an integer as an argument in the 'setAge()' method call of 'person'.");
     }
 
     public function testClass()

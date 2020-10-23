@@ -188,7 +188,7 @@ class CreateClassWithPrivatePropertyAndMethodTest extends TestCase
         $args = $changeType->getSubNode()->getSubnode();
         $value = $args->find('string[value="Cat"]');
 
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Cat` in the 'changeType()' method call of 'pet'.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `Cat` in the 'changeType()' method call of 'pet'.");
     } 
 
     public function testSetAgeCallArgs()
@@ -197,7 +197,7 @@ class CreateClassWithPrivatePropertyAndMethodTest extends TestCase
         $args = $setAge->getSubNode()->getSubnode();
         $value = $args->find('float'); //Note: This is still needs testing
         
-        $this->assertEquals(1, $value->count(), "Expecting a float argument in the 'setAge()' method call of 'pet'.");
+        $this->assertEquals(1, $value->count(), "Expecting a float as an argument in the 'setAge()' method call of 'pet'.");
     }
 
     public function testReturnIsValid()

@@ -174,7 +174,7 @@ class CreateClassWithEncapsulatedPropertiesAndMethodTest extends TestCase
         $args = $setAge->getSubNode()->getSubnode();
         $value = $args->find('integer');
     
-        $this->assertEquals(1, $value->count(), "Expecting an integer argument in the 'setAge()' method call of 'pet'.");
+        $this->assertEquals(1, $value->count(), "Expecting an integer as an argument in the 'setAge()' method call of 'pet'.");
     } 
 
     public function testDisplayCall()
@@ -197,7 +197,7 @@ class CreateClassWithEncapsulatedPropertiesAndMethodTest extends TestCase
         $args = $changeType->getSubNode()->getSubnode();
         $value = $args->find('string[value="Rabbit"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Rabbit` in the 'changeType()' method call of 'pet'.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `Rabbit` in the 'changeType()' method call of 'pet'.");
     } 
 
     public function testReturnIsValid()
@@ -338,9 +338,9 @@ class CreateClassWithEncapsulatedPropertiesAndMethodTest extends TestCase
         $isValid = $setAge->find('method-call[name="isValid", variable="this"]');
         $args = $isValid->getSubNode()->getSubnode();
         $value = $args->find('variable[name="newAge"]');
-    
-        $this->assertEquals(1, $value->count(), "Expecting the argument `newAge` in the 'isValid()' method call of the `Animal` class itself.");
-    } 
+
+        $this->assertEquals(1, $value->count(), "Expecting an argument `newAge` in the 'isValid()' method call of the `Animal` class itself.");
+    }
 
     public function testGetTypeCall()
     {

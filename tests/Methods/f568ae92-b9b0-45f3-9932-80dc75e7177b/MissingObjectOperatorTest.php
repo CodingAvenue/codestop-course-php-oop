@@ -102,7 +102,7 @@ class MissingObjectOperatorTest extends TestCase
         $args = $changeName->getSubNode()->getSubnode();
         $value = $args->find('string[value="Charles"]');
    
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'person'.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `Charles` in the 'changeName()' method call of 'person'.");
     } 
     
     public function testClass()

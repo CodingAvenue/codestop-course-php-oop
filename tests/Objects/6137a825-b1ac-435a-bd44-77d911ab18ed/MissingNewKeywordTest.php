@@ -75,7 +75,7 @@ class MissingNewKeywordTest extends TestCase
         $subNodes = $obj->getSubnode();
         $eat = $subNodes->find('method[name="eat"]');
 
-        $this->assertEquals(1, $eat->count(), "Expecting an eat() method.");
+        $this->assertEquals(1, $eat->count(), "Expecting an `eat()` method.");
     }
 
     public function testNameProperty()

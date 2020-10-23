@@ -324,7 +324,7 @@ class AddConstructorToClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $isValid = $construct->find('method-call[name="isValid", variable="this"]');
-        
+
         $this->assertEquals(1, $isValid->count(), "Expecting one 'isValid()' method call in the `__construct()` method the `Animal` class itself.");
     }
 
@@ -334,7 +334,7 @@ class AddConstructorToClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         $getType = $display->find('method-call[name="getType", variable="this"]');
-        
+
         $this->assertEquals(1, $getType->count(), "Expecting one 'getType()' method call in the `display()` method of the `Animal` class itself.");
     }
 
@@ -344,7 +344,7 @@ class AddConstructorToClassTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         $getAge = $display->find('method-call[name="getAge", variable="this"]');
-        
+
         $this->assertEquals(1, $getAge->count(), "Expecting one 'getAge()' method call in the `display()` method of the `Animal` class itself.");
     }
 }

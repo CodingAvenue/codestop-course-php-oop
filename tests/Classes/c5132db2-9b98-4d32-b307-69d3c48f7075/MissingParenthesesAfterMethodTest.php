@@ -109,6 +109,6 @@ class MissingParenthesesAfterMethodTest extends TestCase
 		$value = $myProp->getSubNode()->getSubNode();
 		$string = $value->find('string[value="This is a class property."]');
 
-		$this->assertEquals(1, $string->count(), "Expecting the value 'This is a class property.' assigned to the 'myProp' property.");
+		$this->assertEquals(1, $string->count(), "Expecting a string 'This is a class property.' assigned to the 'myProp' property.");
 	}
 }

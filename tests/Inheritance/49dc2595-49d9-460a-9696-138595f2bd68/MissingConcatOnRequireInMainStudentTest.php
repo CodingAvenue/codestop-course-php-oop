@@ -148,7 +148,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $nameArgs = $parentArgs->getSubnode();
         $nameVar = $nameArgs->find('variable[name="name"]');
  
-        $this->assertEquals(1, $nameVar->count(), "Expecting a 'name' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $nameVar->count(), "Expecting an argument 'name' in the '__construct()' method call of the parent class.");
     }  
 
     public function testParentCallAgeArgs()
@@ -158,7 +158,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $ageArgs = $parentArgs->getSubnode();
         $ageVar = $ageArgs->find('variable[name="age"]');
  
-        $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $ageVar->count(), "Expecting an argument 'age' in the '__construct()' method call of the parent class.");
     }  
 
     public function testCoursePropertyCallCons()

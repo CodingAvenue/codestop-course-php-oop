@@ -180,7 +180,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $args = $greeting->getSubNode()->getSubnode();
         $value = $args->find('string[value="Good day"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Good day` in the 'greeting()' method call of the `Person` parent class.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `Good day` in the 'greeting()' method call of the `Person` parent class.");
     }
 
     public function testParentCallNameArgs()
@@ -193,7 +193,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $nameArgs = $parentArgs->getSubnode();
         $nameVar = $nameArgs->find('variable[name="name"]');
         
-        $this->assertEquals(1, $nameVar->count(), "Expecting a 'name' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $nameVar->count(), "Expecting an argument 'name' in the '__construct()' method call of the parent class.");
     }
 
     public function testParentCallAgeArgs()
@@ -206,7 +206,7 @@ class CorrectMultipleErrorsStudentTest extends TestCase
         $ageArgs = $parentArgs->getSubnode();
         $ageVar = $ageArgs->find('variable[name="age"]');
 
-        $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $ageVar->count(), "Expecting an argument 'age' in the '__construct()' method call of the parent class.");
     }
 
     public function testCoursePropertyCallCons()

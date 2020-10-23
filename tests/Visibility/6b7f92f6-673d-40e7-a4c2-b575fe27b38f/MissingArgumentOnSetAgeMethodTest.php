@@ -132,7 +132,7 @@ class MissingArgumentOnSetAgeMethodTest extends TestCase
         $args = $setAge->getSubNode()->getSubnode();
         $value = $args->find('integer');
         
-        $this->assertEquals(1, $value->count(), "Expecting an integer argument in the 'setAge()' method call of 'person'.");
+        $this->assertEquals(1, $value->count(), "Expecting an integer as an argument in the 'setAge()' method call of 'person'.");
     }
 
     public function testClass()

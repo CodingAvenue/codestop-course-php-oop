@@ -133,7 +133,7 @@ class ManipulateObjectMethodsTest extends TestCase
         $args = $changeType->getSubNode()->getSubnode();
         $value = $args->find('string[value="Cat"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Cat` in the 'changeType()' method call of 'pet'.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `Cat` in the 'changeType()' method call of 'pet'.");
     } 
 
     public function testTypePropertyCallDis()

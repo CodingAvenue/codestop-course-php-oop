@@ -126,7 +126,7 @@ class RemoveVisibilityKeywordOnConstantDeclarationCircularShapeTest extends Test
         $value = $pi->getSubNode()->getSubNode();
         $piValue = $value->find('float'); // NOTE: need to verify and improve this validation
 
-        $this->assertEquals(1, $piValue->count(), "Expecting a class `PI` constant value of type float.");
+        $this->assertEquals(1, $piValue->count(), "Expecting a class `PI` constant value of type `float`.");
     }
 
     public function testRadiusPropertyCall()

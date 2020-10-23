@@ -264,7 +264,7 @@ class MissingOneArgumentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $age = $construct->find('property-call[name="age", variable="this"]');
-        
+
         $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `__construct()` method of the `Person` class itself.");
     }
 
@@ -274,7 +274,7 @@ class MissingOneArgumentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $age = $setAge->find('property-call[name="age", variable="this"]');
-        
+
         $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `setAge()` method of the `Person` class itself.");
     }
 
@@ -314,7 +314,7 @@ class MissingOneArgumentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         $getAge = $display->find('method-call[name="getAge", variable="this"]');
-        
+
         $this->assertEquals(1, $getAge->count(), "Expecting one 'getAge()' method call in the `display()` method of the `Person` class itself.");
     }
     
@@ -326,10 +326,10 @@ class MissingOneArgumentTest extends TestCase
         $checkAge = $construct->find('method-call[name="checkAge", variable="this"]');
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="age"]');
-    
-        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
-    } 
-    
+
+        $this->assertEquals(1, $value->count(), "Expecting an argument `age` in the 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
+    }
+
     public function testCheckAgeCallArgs()
     {
         $obj = self::$code->find('class[name="Person"]');
@@ -338,7 +338,7 @@ class MissingOneArgumentTest extends TestCase
         $checkAge = $setAge->find('method-call[name="checkAge", variable="this"]');
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="newAge"]');
-    
-        $this->assertEquals(1, $value->count(), "Expecting the argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
-    } 
+
+        $this->assertEquals(1, $value->count(), "Expecting an argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
+    }
 }

@@ -337,7 +337,7 @@ class RemoveUnwantedSemicolonOnMethodPersonTest extends TestCase
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="age"]');
 
-        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `age` in the 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCallArgs()
@@ -349,7 +349,7 @@ class RemoveUnwantedSemicolonOnMethodPersonTest extends TestCase
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="newAge"]');
 
-        $this->assertEquals(1, $value->count(), "Expecting the argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
     }
 
     public function testDisplayCall()
@@ -393,4 +393,4 @@ class RemoveUnwantedSemicolonOnMethodPersonTest extends TestCase
 
         $this->assertEquals(1, $string->count(), "Expecting `/LifeCycle.php` as an argument in the `require_once()` statement.");
     }
-} 
+}

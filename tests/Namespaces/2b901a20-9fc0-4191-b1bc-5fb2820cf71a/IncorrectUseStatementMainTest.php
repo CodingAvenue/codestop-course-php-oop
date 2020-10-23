@@ -62,5 +62,5 @@ class IncorrectUseStatementMainTest extends TestCase
         $nodes = self::$code->find('use[class="App\User"]');
 
         $this->assertEquals(1, $nodes->count(), "Expecting one `use` statement for `App\User` namespace.");
-    }   
-} 
+    }
+}
