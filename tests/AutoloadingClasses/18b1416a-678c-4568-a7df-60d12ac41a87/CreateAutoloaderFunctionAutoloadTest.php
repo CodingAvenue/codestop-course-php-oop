@@ -49,7 +49,7 @@ class CreateAutoloaderFunctionAutoloadTest extends TestCase
         $args = $myAnimal->getSubNode()->getSubnode();
         $value = $args->find('string[value="myAnimalAutoloader"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `myAnimalAutoloader` in the 'spl_autoload_register()' function call.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `myAnimalAutoloader` in the 'spl_autoload_register()' function call.");
     } 
 
     public function testMyAnimalAutoloaderFunction()

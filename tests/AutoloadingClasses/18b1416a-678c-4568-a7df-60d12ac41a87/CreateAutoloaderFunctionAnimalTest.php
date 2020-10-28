@@ -228,6 +228,6 @@ class CreateAutoloaderFunctionAnimalTest extends TestCase
         $args = $isValid->getSubNode()->getSubnode();
         $value = $args->find('variable[name="age"]');
 
-        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'isValid()' method call in the `__construct()` method of the `Animal` class itself.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `age` in the 'isValid()' method call in the `__construct()` method of the `Animal` class itself.");
     }
 }

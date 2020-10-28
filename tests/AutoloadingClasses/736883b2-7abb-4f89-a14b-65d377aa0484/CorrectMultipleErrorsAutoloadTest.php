@@ -49,7 +49,7 @@ class CorrectMultipleErrorsAutoloadTest extends TestCase
         $args = $myAnimal->getSubNode()->getSubnode();
         $value = $args->find('string[value="myAutoloader"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `myAutoloader` in the first 'spl_autoload_register()' function call.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `myAutoloader` in the first 'spl_autoload_register()' function call.");
     }
 
     public function testFunctionCallArgs2()
@@ -58,7 +58,7 @@ class CorrectMultipleErrorsAutoloadTest extends TestCase
         $args = $myAnimal->getSubNode()->getSubnode();
         $value = $args->find('string[value="myShapesLoader"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `myShapesLoader` in the second 'spl_autoload_register()' function call.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `myShapesLoader` in the second 'spl_autoload_register()' function call.");
     }
 
     public function testRequireOnceCallShapes()
