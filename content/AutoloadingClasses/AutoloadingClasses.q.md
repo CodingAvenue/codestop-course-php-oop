@@ -2914,7 +2914,7 @@ class Mammal extends Animal implements LifeCycle
 
     public function display()
     {
-        echo "The " . parent::getType() . " is an " . $this->stage() . " " . $this->species() . ".";
+        echo "The " . $this->getType() . " is an " . $this->stage() . " " . $this->species() . ".";
     }
 }
 ?>
