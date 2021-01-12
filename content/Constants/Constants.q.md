@@ -509,7 +509,7 @@ Which statement is true about the `const` keyword?
  - It defines the visibility of a method.
 
 
-/// type=MS, id=eafc534e-6916-446e-b33a-c91f639d3da0, answer=[2,3,4,5]
+/// type=MS, id=eafc534e-6916-446e-b33a-c91f639d3da0, answer=[2,3,5]
 
 Which statements are true about a class constant?
 
@@ -539,7 +539,7 @@ Which statements are true about a class constant?
 <?php
 class Circle
 {
-    public const PI = 3.1416;
+    cosnt PI = 3.1416;
     
     public static function area($radius)
     {
@@ -577,22 +577,22 @@ What is the error message?
 
  - syntax error, unexpected `'3.1416'` (T_DNUMBER), expecting `'='` on line number 4
 
- - syntax error, unexpected `'const'` (T_CONST), expecting variable (T_VARIABLE) on line number 4
+ - syntax error, unexpected `'cosnt'` (T_STRING), expecting function (T_FUNCTION) or const (T_CONST) on line number 4
 
 
-/// type=MS, id=54ddf838-c0f6-46f4-94e5-cae11d6ff8bb, answer=[2,4,5]
+/// type=MS, id=54ddf838-c0f6-46f4-94e5-cae11d6ff8bb, answer=[1,3]
 
 Which statements correctly describe the error?
 
- - There is a `const` keyword between `public` and `PI` on line 4.
+ - On line 4, the `const` keyword is misspelled as `cosnt`.
 
  - Visibility keywords are not allowed in the constant definition.
 
+ - On line 4, the constant definition `cosnt PI = 3.1416;` is invalid.
+
  - On line 4, the constant name `PI` does not start with a dollar sign `$`. 
 
- - On line 4, the constant definition `public const PI = 3.1416;` is invalid.
-
- - There is a `public` visibility keyword before `const` in `public const PI = 3.1416;` on line 4.
+ - There is a `public` visibility keyword before `const` in `cosnt PI = 3.1416;` on line 4.
 
 :::
 
@@ -605,7 +605,7 @@ Correct the code so that it outputs the string `The PI value is: 3.1416`.
 <?php
 class Circle
 {
-    public const PI = 3.1416;
+    cosnt PI = 3.1416;
     
     public static function area($radius)
     {
@@ -910,7 +910,7 @@ $circle->display();
 <?php
 abstract class CircularShape
 {
-    public const PI = 3.1416;
+    define PI = 3.1416;
     private $radius;
     
     public function __construct($radius)
@@ -975,22 +975,22 @@ Execute the program. What is the error message?
 
  - syntax error, unexpected `'3.1416'` (T_DNUMBER), expecting `'='` on line number 4
 
- - syntax error, unexpected `'const'` (T_CONST), expecting variable (T_VARIABLE) on line number 4
+ - syntax error, unexpected `'define'` (T_STRING), expecting function (T_FUNCTION) in `CircularShape.php` on line number 4
 
 
-/// type=MS, id=5f514ff8-21cc-484b-a473-ec7a71f48e9c, answer=[1,4,5]
+/// type=MS, id=5f514ff8-21cc-484b-a473-ec7a71f48e9c, answer=[2,4]
 
 Which statements correctly describe the error?
 
  - Visibility keywords are not allowed in the constant definition.
 
- - There is a `const` keyword between `public` and `PI` on line 4 of `CircularShape.php`.
+ - On line 4 of `CircularShape.php`, the `const` keyword is replaced with `define`.
+
+ - On line 4 of `CircularShape.php`, the constant definition `define PI = 3.1416;` is invalid.
 
  - On line 4 of `CircularShape.php`, the constant name `PI` does not start with a dollar sign `$`. 
 
- - On line 4 of `CircularShape.php`, the constant definition `public const PI = 3.1416;` is invalid.
-
- - There is a `public` visibility keyword before `const` in `public const PI = 3.1416;` on line 4 of `CircularShape.php`.
+ - There is no `public` visibility keyword before `define` in `define PI = 3.1416;` on line 4 of `CircularShape.php`.
 
 :::
 
@@ -1003,7 +1003,7 @@ Correct the code so that it outputs the strings `Radius: 3.5`, `Diameter: 12.25`
 <?php
 abstract class CircularShape
 {
-    public const PI = 3.1416;
+    define PI = 3.1416;
     private $radius;
     
     public function __construct($radius)

@@ -10,8 +10,6 @@ To declare a constant, use the `const` keyword followed by the constant name; an
 
 A constant name should not start with a dollar sign `$` and should be in all uppercase with an underscore `_` as a separator. The examples are `PI`, `MY_CONSTANT`, and `CONST_VALUE`.
 
-A visibility keyword is not allowed in defining a class constant.
-
 The `self` keyword with the scope resolution operator `::` accesses a constant within a class method.
 
 A class name with the scope resolution operator `::` accesses a constant outside a class.
