@@ -25,7 +25,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -72,7 +72,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testGetAge()
@@ -81,7 +81,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
 
-        $this->assertEquals(1, $getAge->count(), "Expecting one getAge() method.");
+        $this->assertEquals(1, $getAge->count(), "Expecting a `getAge()` method.");
     }
 
     public function testGetName()
@@ -90,7 +90,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $getName = $subNodes->find('method[name="getName", type="public"]');
 
-        $this->assertEquals(1, $getName->count(), "Expecting one getName() method.");
+        $this->assertEquals(1, $getName->count(), "Expecting a `getName()` method.");
     }
 
     public function testSetAge()
@@ -99,7 +99,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
 
-        $this->assertEquals(1, $setAge->count(), "Expecting one setAge() method.");
+        $this->assertEquals(1, $setAge->count(), "Expecting a `setAge()` method.");
     }
 
     public function testCheckAge()
@@ -108,7 +108,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting one checkAge() method.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting a private `checkAge()` method.");
     }
 
     public function testConstruct()
@@ -117,7 +117,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
 
     public function testClassPerson()
@@ -134,7 +134,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $nodes = $checkAge->find('construct[name="return"]');
 
-        $this->assertEquals(2, $nodes->count(), "Expecting two return statements in the `checkAge()` method.");
+        $this->assertEquals(2, $nodes->count(), "Expecting two `return` statements in the `checkAge()` method.");
     }
 
     public function testReturnGet()
@@ -144,7 +144,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
         $nodes = $getAge->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getAge()` method.");
     }
 
     public function testReturnGetName()
@@ -154,7 +154,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $getName = $subNodes->find('method[name="getName", type="public"]');
         $nodes = $getName->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getName()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getName()` method.");
     }
 
     public function testIfCons()
@@ -164,7 +164,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $nodes = $construct->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `__construct()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `__construct()` method.");
     }
         
     public function testIfSet()
@@ -174,7 +174,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $nodes = $setAge->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `setAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `setAge()` method.");
     }
 
     public function testIfCheck()
@@ -184,7 +184,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $checkAge = $subNodes->find('method[name="checkAge", type="private"]');
         $nodes = $checkAge->find('construct[name="if"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one if statement in the `checkAge()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `if` statement in the `checkAge()` method.");
     }
     
     public function testNameParam()
@@ -234,7 +234,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $name = $construct->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `__construct()` method of the `Person` class itself.");
     }
 
     public function testNamePropertyCallGet()
@@ -244,7 +244,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $getName = $subNodes->find('method[name="getName", type="public"]');
         $name = $getName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `getName()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `getName()` method of the `Person` class itself.");
     }
 
     public function testNamePropertyCall()
@@ -254,7 +254,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $name = $display->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `display()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `display()` method of the `Person` class itself.");
     }
 
     public function testAgePropertyCallCons()
@@ -264,7 +264,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $age = $construct->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting one `age` property call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `__construct()` method of the `Person` class itself.");
     }
 
     public function testAgePropertyCallSet()
@@ -274,7 +274,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $age = $setAge->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting one `age` property call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `setAge()` method of the `Person` class itself.");
     }
 
     public function testAgePropertyCallGet()
@@ -284,7 +284,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $getAge = $subNodes->find('method[name="getAge", type="public"]');
         $age = $getAge->find('property-call[name="age", variable="this"]');
 
-        $this->assertEquals(1, $age->count(), "Expecting one `age` property call inside the `getAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $age->count(), "Expecting one `age` property call in the `getAge()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCall()
@@ -294,7 +294,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $checkAge = $setAge->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `setAge()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCallCons()
@@ -304,7 +304,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $checkAge = $construct->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `__construct()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCallArgs()
@@ -316,7 +316,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="age"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `age` in the 'checkAge()' method call inside the `__construct()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCallArgsSet()
@@ -328,7 +328,7 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="newAge"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
     }
 
     public function testGetAgeCall()
@@ -338,6 +338,6 @@ class IncorrectDisplayMethodVisibilityPersonTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $getAge = $display->find('method-call[name="getAge", variable="this"]');
 
-        $this->assertEquals(1, $getAge->count(), "Expecting a 'getAge()' method call inside the `display()` method of the `Person` class itself.");
+        $this->assertEquals(1, $getAge->count(), "Expecting one 'getAge()' method call in the `display()` method of the `Person` class itself.");
     }
 }

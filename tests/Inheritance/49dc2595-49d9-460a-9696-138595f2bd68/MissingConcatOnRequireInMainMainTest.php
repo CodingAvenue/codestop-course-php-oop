@@ -45,13 +45,21 @@ class MissingConcatOnRequireInMainMainTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="student"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'student'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'student'.");
     }   
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $args = $nodes->find('string[value="/Student.php"]');
+
+        $this->assertEquals(1, $args->count(), "Expecting `/Student.php` in the `require_once()` statement.");
     }
 }

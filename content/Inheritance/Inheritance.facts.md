@@ -54,7 +54,7 @@ class TestStudent extends TestPerson
 	
     public function display()
     {
-        echo parent::getTestName() . " is taking up " . $this->course . ".";
+        echo $this->getTestName() . " is taking up " . $this->course . ".";
     }
 }
 
@@ -83,7 +83,5 @@ In the `TestStudent` class declaration above, the code breaks down as follows:
  - `$this->course = $course;` assigns the value of the variable `$course` to the `$course` property of the `TestStudent` class.
 
  - `public function display() {...}` is the method definition that overrides the `display()` method of the parent class `TestPerson`. 
-
- - `parent::getTestName()` accesses the `getTestName()` method of the parent class `TestPerson`.
 
 It is a best practice to separate the class declaration from object instantiation to reduce complexity and increase the efficiency of a program.

@@ -34,7 +34,7 @@ class CreateAnObjectReferenceTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Animal` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method of the `Animal` class.");
     }
 
     public function testEchoMammal()
@@ -44,7 +44,7 @@ class CreateAnObjectReferenceTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Mammal` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method of the `Mammal` class.");
     }
 
     public function testAssignment()
@@ -109,7 +109,7 @@ class CreateAnObjectReferenceTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Animal` class.");
+        $this->assertEquals(1, $display->count(), "Expecting one `display()` method in the `Animal` class.");
     }
 
     public function testDisplayMammal()
@@ -118,14 +118,14 @@ class CreateAnObjectReferenceTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Mammal` class.");
+        $this->assertEquals(1, $display->count(), "Expecting one `display()` method in the `Mammal` class.");
     }
 
     public function testDisplayCallB()
     {
         $display = self::$code->find('method-call[name="display", variable="animalRef"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'animalRef'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'animalRef'.");
     }
 
     public function testDisplayCallC()

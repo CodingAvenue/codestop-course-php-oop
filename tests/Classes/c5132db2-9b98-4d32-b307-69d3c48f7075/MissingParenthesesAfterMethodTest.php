@@ -29,16 +29,30 @@ class MissingParenthesesAfterMethodTest extends TestCase
 
 	public function testEcho()
 	{
-		$nodes = self::$code->find('construct[name="echo"]');
+		$obj = self::$code->find('class[name="MyClass"]');
+		$subNodes = $obj->getSubnode();
+		$myMethod = $subNodes->find('method[name="myMethod"]');
+		$nodes = $myMethod->find('construct[name="echo"]');
 
-		$this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+		$this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `myMethod()` method.");
+	}
+
+	public function testStringInEcho()
+	{
+		$obj = self::$code->find('class[name="MyClass"]');
+		$subNodes = $obj->getSubnode();
+		$myMethod = $subNodes->find('method[name="myMethod"]');
+		$nodes = $myMethod->find('construct[name="echo"]');
+		$string = $nodes->find('string[value="This is a class method."]');
+
+		$this->assertEquals(1, $string->count(), "Expecting a string `This is a class method.` in the `echo` statement of the `myMethod()` method.");
 	}
 
 	public function testAssignment()
 	{
 		$nodes = self::$code->find('operator[name="assignment"]');
 
-		$this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'myObject'.");
+		$this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
 	}
 
 	public function testMyObjectVariable()
@@ -61,7 +75,7 @@ class MissingParenthesesAfterMethodTest extends TestCase
 		$subNodes = $obj->getSubnode();
 		$myMethod = $subNodes->find('method[name="myMethod"]');
 		
-		$this->assertEquals(1, $myMethod->count(), "Expecting a myMethod() method.");
+		$this->assertEquals(1, $myMethod->count(), "Expecting a `myMethod()` method.");
 	}
 
 	public function testMyPropVariable()
@@ -84,6 +98,17 @@ class MissingParenthesesAfterMethodTest extends TestCase
 	{
 		$myProp = self::$code->find('method-call[name="myMethod", variable="myObject"]');
 
-		$this->assertEquals(1, $myProp->count(), "Expecting a 'myMethod()' method call of 'myObject'.");
+		$this->assertEquals(1, $myProp->count(), "Expecting one 'myMethod()' method call of 'myObject'.");
+	}
+		
+	public function testNameValue()
+	{
+		$obj = self::$code->find('class[name="MyClass"]');
+		$subNodes = $obj->getSubnode();
+		$myProp = $subNodes->find('property[name="myProp", type="public"]');
+		$value = $myProp->getSubNode()->getSubNode();
+		$string = $value->find('string[value="This is a class property."]');
+
+		$this->assertEquals(1, $string->count(), "Expecting a string 'This is a class property.' assigned to the 'myProp' property.");
 	}
 }

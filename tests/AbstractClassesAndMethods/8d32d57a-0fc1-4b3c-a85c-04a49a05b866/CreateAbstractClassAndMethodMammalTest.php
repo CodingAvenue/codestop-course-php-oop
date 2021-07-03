@@ -188,7 +188,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
         $typeArgs = $parentArgs->getSubnode();
         $typeVar = $typeArgs->find('variable[name="type"]');
 
-        $this->assertEquals(1, $typeVar->count(), "Expecting a 'type' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $typeVar->count(), "Expecting an argument 'type' in the '__construct()' method call of the parent class.");
     }
 
     public function testParentCallAgeArgs()
@@ -198,7 +198,7 @@ class CreateAbstractClassAndMethodMammalTest extends TestCase
         $ageArgs = $parentArgs->getSubnode();
         $ageVar = $ageArgs->find('variable[name="age"]');
 
-        $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $ageVar->count(), "Expecting an argument 'age' in the '__construct()' method call of the parent class.");
     }
 
     public function testGetNameCall()

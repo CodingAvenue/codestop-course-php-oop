@@ -34,7 +34,7 @@ class IncorrectAmperandPositionTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Person` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method of the `Person` class.");
     }
 
     public function testEchoStudent()
@@ -44,7 +44,7 @@ class IncorrectAmperandPositionTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Student` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method of the `Student` class.");
     }
 
     public function testAssignment()
@@ -102,7 +102,7 @@ class IncorrectAmperandPositionTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Person` class.");
+        $this->assertEquals(1, $display->count(), "Expecting one `display()` method in the `Person` class.");
     }
 
     public function testDisplayStudent()
@@ -111,14 +111,14 @@ class IncorrectAmperandPositionTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Student` class.");
+        $this->assertEquals(1, $display->count(), "Expecting one `display()` method in the `Student` class.");
     }
 
     public function testDisplayCallA()
     {
         $display = self::$code->find('method-call[name="display", variable="person"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'person'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'person'.");
     }
 
     public function testObjectReference()

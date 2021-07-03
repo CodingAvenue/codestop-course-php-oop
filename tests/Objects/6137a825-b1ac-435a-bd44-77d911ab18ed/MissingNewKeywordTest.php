@@ -27,11 +27,25 @@ class MissingNewKeywordTest extends TestCase
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
 
-    public function testEcho()
+    public function testEchoInEat()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `eat()` method.");
+    }
+
+    public function testStringInEchoOfEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+        $string = $nodes->find('string[value="This is an eat() method."]');
+
+        $this->assertEquals(1, $string->count(), "Expecting a string `This is an eat() method.` in the `echo` statement of the `eat()` method.");
     }
 
     public function testAssignment()
@@ -61,7 +75,7 @@ class MissingNewKeywordTest extends TestCase
         $subNodes = $obj->getSubnode();
         $eat = $subNodes->find('method[name="eat"]');
 
-        $this->assertEquals(1, $eat->count(), "Expecting an eat() method.");
+        $this->assertEquals(1, $eat->count(), "Expecting an `eat()` method.");
     }
 
     public function testNameProperty()

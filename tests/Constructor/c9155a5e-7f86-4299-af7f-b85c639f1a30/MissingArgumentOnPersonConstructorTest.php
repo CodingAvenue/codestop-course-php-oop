@@ -31,7 +31,7 @@ class MissingArgumentOnPersonConstructorTest extends TestCase
     {
         $nodes = self::$code->find('construct[name="echo"]');
 		
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement.");
     }
     
     public function testAssignment()
@@ -64,7 +64,7 @@ class MissingArgumentOnPersonConstructorTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         
-        $this->assertEquals(1, $construct->count(), "Expecting a __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
     
     public function testNameProperty()
@@ -87,7 +87,7 @@ class MissingArgumentOnPersonConstructorTest extends TestCase
     {
         $name = self::$code->find('property-call[name="name", variable="person"]');
         
-        $this->assertEquals(1, $name->count(), "Expecting a 'name' property call of 'person'.");
+        $this->assertEquals(1, $name->count(), "Expecting one 'name' property call of 'person'.");
     }
 
     public function testNameParam()
@@ -107,6 +107,6 @@ class MissingArgumentOnPersonConstructorTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $name = $construct->find('property-call[name="name", variable="this"]');
         
-        $this->assertEquals(1, $name->count(), "Expecting a `name` property call inside the `__construct()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `__construct()` method of the `Person` class itself.");
     }
 }

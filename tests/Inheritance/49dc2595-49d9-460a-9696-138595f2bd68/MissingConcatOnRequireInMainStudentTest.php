@@ -25,7 +25,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -53,7 +53,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
         
-        $this->assertEquals(1, $display->count(), "Expecting one display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
         
     public function testConstruct()
@@ -62,7 +62,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
     
     public function testCourseProperty()
@@ -88,7 +88,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
         $nodes = $getCourse->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getCourse()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getCourse()` method.");
     }
     
     public function testNameParam()
@@ -128,17 +128,17 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $parent = $construct->find('static-call[class="parent", method="__construct"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent `Person` class in the `__construct()` method of the `Student` class.");
+        $this->assertEquals(1, $parent->count(), "Expecting one '__construct()' method call of the parent `Person` class in the `__construct()` method of the `Student` class.");
     }
 
-    public function testParentGetNameCall()
+    public function testThisGetNameCall()
     {
         $obj = self::$code->find('class[name="Student"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getName"]');
+        $method = $display->find('method-call[name="getName", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a 'getName()' method call of the parent `Person` class in the `display()` method of the `Student` class.");
+        $this->assertEquals(1, $method->count(), "Expecting one 'getName()' method call of the `Person` class in the `display()` method of the `Student` class.");
     }
 
     public function testParentCallNameArgs()
@@ -148,7 +148,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $nameArgs = $parentArgs->getSubnode();
         $nameVar = $nameArgs->find('variable[name="name"]');
  
-        $this->assertEquals(1, $nameVar->count(), "Expecting a 'name' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $nameVar->count(), "Expecting an argument 'name' in the '__construct()' method call of the parent class.");
     }  
 
     public function testParentCallAgeArgs()
@@ -158,7 +158,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $ageArgs = $parentArgs->getSubnode();
         $ageVar = $ageArgs->find('variable[name="age"]');
  
-        $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $ageVar->count(), "Expecting an argument 'age' in the '__construct()' method call of the parent class.");
     }  
 
     public function testCoursePropertyCallCons()
@@ -168,7 +168,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $course = $construct->find('property-call[name="course", variable="this"]');
 
-        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `__construct()` method of the `Student` class itself.");
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call in the `__construct()` method of the `Student` class itself.");
     }
 
     public function testCoursePropertyCallDis()
@@ -178,7 +178,7 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $course = $display->find('property-call[name="course", variable="this"]');
 
-        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `display()` method of the `Student` class itself.");
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call in the `display()` method of the `Student` class itself.");
     }
 
     public function testCoursePropertyCall()
@@ -188,13 +188,21 @@ class MissingConcatOnRequireInMainStudentTest extends TestCase
         $getCourse = $subNodes->find('method[name="getCourse", type="public"]');
         $course = $getCourse->find('property-call[name="course", variable="this"]');
 
-        $this->assertEquals(1, $course->count(), "Expecting one `course` property call inside the `getCourse()` method of the `Student` class itself.");
+        $this->assertEquals(1, $course->count(), "Expecting one `course` property call in the `getCourse()` method of the `Student` class itself.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $args = $nodes->find('string[value="/Person.php"]');
+
+        $this->assertEquals(1, $args->count(), "Expecting `/Person.php` in the `require_once()` statement.");
     }
 }

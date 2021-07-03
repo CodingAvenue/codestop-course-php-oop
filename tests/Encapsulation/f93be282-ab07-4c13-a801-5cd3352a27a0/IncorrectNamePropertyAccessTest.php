@@ -176,7 +176,7 @@ class IncorrectNamePropertyAccessTest extends TestCase
         $args = $setAge->getSubNode()->getSubnode();
         $value = $args->find('integer');
     
-        $this->assertEquals(1, $value->count(), "Expecting an integer argument in the 'setAge()' method call of 'person'.");
+        $this->assertEquals(1, $value->count(), "Expecting an integer as an argument in the 'setAge()' method call of 'person'.");
     } 
 
     public function testSetNameCall()
@@ -192,7 +192,7 @@ class IncorrectNamePropertyAccessTest extends TestCase
         $args = $setName->getSubNode()->getSubnode();
         $value = $args->find('string[value="John"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `John` in the 'setName()' method call of 'person'.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `John` in the 'setName()' method call of 'person'.");
     }
 
     public function testReturn()
@@ -334,6 +334,6 @@ class IncorrectNamePropertyAccessTest extends TestCase
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="newAge"]');
     
-        $this->assertEquals(1, $value->count(), "Expecting the argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `newAge` in the 'checkAge()' method call inside the `setAge()` method of the `Person` class itself.");
     }
 }

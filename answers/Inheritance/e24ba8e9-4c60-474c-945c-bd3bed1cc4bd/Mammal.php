@@ -18,7 +18,7 @@ class Mammal extends Animal
     	
     public function display()
     {
-        echo "The " . parent::getType() . " named " . $this->getName() . " is a " . parent::getAge() . "-year old mammal.";
+        echo "The " . $this->getType() . " named " . $this->getName() . " is a " . $this->getAge() . "-year old mammal.";
     }
 }
 

@@ -29,9 +29,12 @@ class MissingObjectOperatorTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $display = $subNodes->find('method[name="display"]');
+        $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
 
     public function testAssignment()
@@ -61,7 +64,7 @@ class MissingObjectOperatorTest extends TestCase
         $subNodes = $obj->getSubnode();
         $changeName = $subNodes->find('method[name="changeName"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a changeName() method.");
+        $this->assertEquals(1, $changeName->count(), "Expecting a `changeName()` method.");
     }
 
     public function testDisplay()
@@ -70,7 +73,7 @@ class MissingObjectOperatorTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testNameProperty()
@@ -99,7 +102,7 @@ class MissingObjectOperatorTest extends TestCase
         $args = $changeName->getSubNode()->getSubnode();
         $value = $args->find('string[value="Charles"]');
    
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Charles` in the 'changeName()' method call of 'person'.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `Charles` in the 'changeName()' method call of 'person'.");
     } 
     
     public function testClass()
@@ -113,14 +116,14 @@ class MissingObjectOperatorTest extends TestCase
     {
         $changeName = self::$code->find('method-call[name="changeName", variable="person"]');
 
-        $this->assertEquals(1, $changeName->count(), "Expecting a 'changeName()' method call of 'person'.");
+        $this->assertEquals(1, $changeName->count(), "Expecting one 'changeName()' method call of 'person'.");
     }  
 
     public function testDisplayCall()
     {
         $display = self::$code->find('method-call[name="display", variable="person"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'person'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'person'.");
     }
     
     public function testNewNameParam()
@@ -140,7 +143,7 @@ class MissingObjectOperatorTest extends TestCase
         $changeName = $subNodes->find('method[name="changeName"]');
         $name = $changeName->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `changeName()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `changeName()` method of the `Person` class itself.");
     }
 
     public function testNamePropertyCallDis()
@@ -150,6 +153,6 @@ class MissingObjectOperatorTest extends TestCase
         $display = $subNodes->find('method[name="display"]');
         $name = $display->find('property-call[name="name", variable="this"]');
 
-        $this->assertEquals(1, $name->count(), "Expecting one `name` property call inside the `display()` method of the `Person` class itself.");
+        $this->assertEquals(1, $name->count(), "Expecting one `name` property call in the `display()` method of the `Person` class itself.");
     }
 } 

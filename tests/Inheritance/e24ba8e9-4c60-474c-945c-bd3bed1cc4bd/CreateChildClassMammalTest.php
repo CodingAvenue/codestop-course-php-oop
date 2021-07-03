@@ -34,7 +34,7 @@ class CreateChildClassMammalTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method.");
     }
     
     public function testAssignment()
@@ -76,7 +76,7 @@ class CreateChildClassMammalTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method.");
+        $this->assertEquals(1, $display->count(), "Expecting a `display()` method.");
     }
 
     public function testConstruct()
@@ -85,7 +85,7 @@ class CreateChildClassMammalTest extends TestCase
         $subNodes = $obj->getSubnode();
         $construct = $subNodes->find('method[name="__construct", type="public"]');
 
-        $this->assertEquals(1, $construct->count(), "Expecting one __construct() method.");
+        $this->assertEquals(1, $construct->count(), "Expecting a `__construct()` method.");
     }
 
     public function testNameProperty()
@@ -108,7 +108,7 @@ class CreateChildClassMammalTest extends TestCase
     {
         $display = self::$code->find('method-call[name="display", variable="petMammal"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting a 'display()' method call of 'petMammal'.");
+        $this->assertEquals(1, $display->count(), "Expecting one 'display()' method call of 'petMammal'.");
     }
 
     public function testReturn()
@@ -118,7 +118,7 @@ class CreateChildClassMammalTest extends TestCase
         $getName = $subNodes->find('method[name="getName", type="public"]');
         $nodes = $getName->find('construct[name="return"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one return statement in the `getName()` method.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `return` statement in the `getName()` method.");
     }
 
     public function testNameParam()
@@ -158,27 +158,27 @@ class CreateChildClassMammalTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $parent = $construct->find('static-call[class="parent", method="__construct"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a '__construct()' method call of the parent `Animal` class in the `__construct()` method of the `Mammal` class.");
+        $this->assertEquals(1, $parent->count(), "Expecting one '__construct()' method call of the parent `Animal` class in the `__construct()` method of the `Mammal` class.");
     }
 
-    public function testParentGetTypeCall()
+    public function testThisGetTypeCall()
     {
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getType"]');
+        $method = $display->find('method-call[name="getType", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a 'getType()' method call of the parent `Animal` class in the `display()` method of the `Mammal` class.");
+        $this->assertEquals(1, $method->count(), "Expecting one 'getType()' method call of the `Animal` class in the `display()` method of the `Mammal` class.");
     }
 
-    public function testParentGetAgeCall()
+    public function testThisGetAgeCall()
     {
         $obj = self::$code->find('class[name="Mammal"]');
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
-        $parent = $display->find('static-call[class="parent", method="getAge"]');
+        $method = $display->find('method-call[name="getAge", variable="this"]');
 
-        $this->assertEquals(1, $parent->count(), "Expecting a 'getAge()' method call of the parent `Animal` class in the `display()` method of the `Mammal` class..");
+        $this->assertEquals(1, $method->count(), "Expecting one 'getAge()' method call of the `Animal` class in the `display()` method of the `Mammal` class.");
     }
 
     public function testParentCallTypeArgs()
@@ -191,7 +191,7 @@ class CreateChildClassMammalTest extends TestCase
         $typeArgs = $parentArgs->getSubnode();
         $typeVar = $typeArgs->find('variable[name="type"]');
 
-        $this->assertEquals(1, $typeVar->count(), "Expecting a 'type' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $typeVar->count(), "Expecting an argument 'type' in the '__construct()' method call of the parent class.");
     }
 
     public function testParentCallAgeArgs()
@@ -204,7 +204,7 @@ class CreateChildClassMammalTest extends TestCase
         $ageArgs = $parentArgs->getSubnode();
         $ageVar = $ageArgs->find('variable[name="age"]');
 
-        $this->assertEquals(1, $ageVar->count(), "Expecting an 'age' argument in the '__construct()' method call of the parent class.");
+        $this->assertEquals(1, $ageVar->count(), "Expecting an argument 'age' in the '__construct()' method call of the parent class.");
     }
 
     public function testGetNameCall()
@@ -214,13 +214,21 @@ class CreateChildClassMammalTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $getName = $display->find('method-call[name="getName", variable="this"]');
 
-        $this->assertEquals(1, $getName->count(), "Expecting a 'getName()' method call inside the `display()` method of the `Mammal` class itself.");
+        $this->assertEquals(1, $getName->count(), "Expecting one 'getName()' method call in the `display()` method of the `Mammal` class itself.");
     }
 
     public function testRequireOnceCall()
     {
         $nodes = self::$code->find('include[type="require_once"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a function call for require_once() function.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `require_once()` statement.");
+    }
+
+    public function testRequireOnceCallArgs()
+    {
+        $nodes = self::$code->find('include[type="require_once"]');
+        $args = $nodes->find('string[value="/Animal.php"]');
+
+        $this->assertEquals(1, $args->count(), "Expecting `/Animal.php` in the `require_once()` statement.");
     }
 }

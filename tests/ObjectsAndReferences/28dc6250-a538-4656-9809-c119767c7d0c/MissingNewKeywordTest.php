@@ -34,7 +34,7 @@ class MissingNewKeywordTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Person` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method of the `Person` class.");
     }
 
     public function testEchoStudent()
@@ -44,7 +44,7 @@ class MissingNewKeywordTest extends TestCase
         $display = $subNodes->find('method[name="display", type="public"]');
         $nodes = $display->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting one echo statement in the `display()` method of the `Student` class.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `display()` method of the `Student` class.");
     }
 
     public function testAssignment()
@@ -109,7 +109,7 @@ class MissingNewKeywordTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Person` class.");
+        $this->assertEquals(1, $display->count(), "Expecting one `display()` method in the `Person` class.");
     }
 
     public function testDisplayStudent()
@@ -118,7 +118,7 @@ class MissingNewKeywordTest extends TestCase
         $subNodes = $obj->getSubnode();
         $display = $subNodes->find('method[name="display", type="public"]');
 
-        $this->assertEquals(1, $display->count(), "Expecting one display() method in the `Student` class.");
+        $this->assertEquals(1, $display->count(), "Expecting one `display()` method in the `Student` class.");
     }
 
     public function testDisplayCallC()

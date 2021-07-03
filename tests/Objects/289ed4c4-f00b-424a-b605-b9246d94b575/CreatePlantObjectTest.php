@@ -29,16 +29,30 @@ class CreatePlantObjectTest extends TestCase
 
     public function testEcho()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Plant"]');
+        $subNodes = $obj->getSubnode();
+        $grow = $subNodes->find('method[name="grow"]');
+        $nodes = $grow->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `grow()` method.");
+    }
+
+    public function testStringInEcho()
+    {
+        $obj = self::$code->find('class[name="Plant"]');
+        $subNodes = $obj->getSubnode();
+        $grow = $subNodes->find('method[name="grow"]');
+        $nodes = $grow->find('construct[name="echo"]');
+        $string = $nodes->find('string[value="Plants grow everywhere."]');
+
+        $this->assertEquals(1, $nodes->count(), "Expecting a string `Plants grow everywhere.` in the `echo` statement of the `grow()` method.");
     }
 
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable `plant`.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
     }
 
     public function testPlantVariable()
@@ -61,7 +75,7 @@ class CreatePlantObjectTest extends TestCase
         $subNodes = $obj->getSubnode();
         $grow = $subNodes->find('method[name="grow"]');
 
-        $this->assertEquals(1, $grow->count(), "Expecting a grow() method.");
+        $this->assertEquals(1, $grow->count(), "Expecting a `grow()` method.");
     }
 
     public function testTypeProperty()
@@ -95,6 +109,6 @@ class CreatePlantObjectTest extends TestCase
     {
         $grow = self::$code->find('method-call[name="grow", variable="plant"]');
 
-        $this->assertEquals(1, $grow->count(), "Expecting a 'grow()' method call of 'plant'.");
+        $this->assertEquals(1, $grow->count(), "Expecting one 'grow()' method call of 'plant'.");
     }
 } 

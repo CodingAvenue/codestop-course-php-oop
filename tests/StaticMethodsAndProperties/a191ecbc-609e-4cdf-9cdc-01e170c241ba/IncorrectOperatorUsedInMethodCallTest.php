@@ -100,7 +100,7 @@ class IncorrectOperatorUsedInMethodCallTest extends TestCase
         $args = $personCall->getSubNode()->getSubnode();
         $value = $args->find('string[value="Hello"]');
 
-        $this->assertEquals(1, $value->count(), "Expecting the argument `Hello` in the 'greeting()' method call of the `Person` class itself.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `Hello` in the 'greeting()' method call of the `Person` class itself.");
     }
 
     public function testStaticPropertySelfCallGreeting()

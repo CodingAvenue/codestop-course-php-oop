@@ -27,18 +27,32 @@ class MissingParenthesesOnMethodTest extends TestCase
         $this->assertEquals($expected, $evaled['output'], "Expected output is \"$expected\".");
     }
 
-    public function testEcho()
+    public function testEchoInEat()
     {
-        $nodes = self::$code->find('construct[name="echo"]');
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting a single echo statement.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one `echo` statement in the `eat()` method.");
+    }
+
+    public function testStringInEchoOfEat()
+    {
+        $obj = self::$code->find('class[name="Person"]');
+        $subNodes = $obj->getSubnode();
+        $eat = $subNodes->find('method[name="eat"]');
+        $nodes = $eat->find('construct[name="echo"]');
+        $string = $nodes->find('string[value="This is an eat() method."]');
+
+        $this->assertEquals(1, $string->count(), "Expecting a string `This is an eat() method.` in the `echo` statement of the `eat()` method.");
     }
 
     public function testAssignment()
     {
         $nodes = self::$code->find('operator[name="assignment"]');
 
-        $this->assertEquals(1, $nodes->count(), "Expecting an assignment statement that assigns a value to the variable 'person'.");
+        $this->assertEquals(1, $nodes->count(), "Expecting one assignment statement.");
     }
 
     public function testPersonVariable()
@@ -61,7 +75,7 @@ class MissingParenthesesOnMethodTest extends TestCase
         $subNodes = $obj->getSubnode();
         $eat = $subNodes->find('method[name="eat"]');
 
-        $this->assertEquals(1, $eat->count(), "Expecting an eat() method.");
+        $this->assertEquals(1, $eat->count(), "Expecting an `eat()` method.");
     }
 
     public function testNameProperty()
@@ -95,6 +109,6 @@ class MissingParenthesesOnMethodTest extends TestCase
     {
         $eat = self::$code->find('method-call[name="eat", variable="person"]');
 
-        $this->assertEquals(1, $eat->count(), "Expecting an 'eat()' method call of 'person'.");
+        $this->assertEquals(1, $eat->count(), "Expecting one 'eat()' method call of 'person'.");
     }
 } 

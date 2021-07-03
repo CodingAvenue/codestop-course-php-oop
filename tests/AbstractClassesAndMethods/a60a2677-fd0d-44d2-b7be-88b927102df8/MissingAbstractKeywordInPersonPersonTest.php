@@ -274,7 +274,7 @@ class MissingAbstractKeywordInPersonPersonTest extends TestCase
         $construct = $subNodes->find('method[name="__construct", type="public"]');
         $checkAge = $construct->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `__construct()` method of the class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `__construct()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCall()
@@ -284,7 +284,7 @@ class MissingAbstractKeywordInPersonPersonTest extends TestCase
         $setAge = $subNodes->find('method[name="setAge", type="public"]');
         $checkAge = $setAge->find('method-call[name="checkAge", variable="this"]');
 
-        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `setAge()` method of the class itself.");
+        $this->assertEquals(1, $checkAge->count(), "Expecting one 'checkAge()' method call in the `setAge()` method of the `Person` class itself.");
     }
 
     public function testCheckAgeCallArgs()
@@ -296,7 +296,7 @@ class MissingAbstractKeywordInPersonPersonTest extends TestCase
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="age"]');
 
-        $this->assertEquals(1, $value->count(), "Expecting the argument `age` in the 'checkAge()' method call of the `__construct()` method.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `age` in the 'checkAge()' method call of the `__construct()` method.");
     }
     
     public function testCheckAgeCallArgsSet()
@@ -308,6 +308,6 @@ class MissingAbstractKeywordInPersonPersonTest extends TestCase
         $args = $checkAge->getSubNode()->getSubnode();
         $value = $args->find('variable[name="newAge"]');
 
-        $this->assertEquals(1, $value->count(), "Expecting the argument `newAge` in the 'checkAge()' method call of the `setAge()` method.");
+        $this->assertEquals(1, $value->count(), "Expecting an argument `newAge` in the 'checkAge()' method call of the `setAge()` method.");
     }
 }
